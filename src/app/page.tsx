@@ -221,14 +221,10 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  Measure: TSI AeroTrak 9306-V2 handheld (ISO 21501-4). Walk
-                  the patch, the warehouse door, then the future rack inlet.
-                </p>
-                <p>
-                  Remove: Abatement PREDATOR HEPA scrubber while the concrete
-                  is open and after paint. Then leave a Camfil City M (H14)
-                  running 24/7. HEPA vacuum the grout. Epoxy the patch.
-                  PurpleAir Flex stays for wildfire smoke only.
+                  Tonight only: door sweep (Kalispell Home Depot), Camfil City
+                  M, TSI AeroTrak 9306-V2 handheld if you buy a counter now,
+                  C19→6-20P cord, HEPA vacuum. Do not buy the 6310/6510,
+                  Vaisala, Setra, ceiling FFU, or PestWest tonight.
                 </p>
               </CardContent>
             </Card>
