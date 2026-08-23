@@ -221,10 +221,12 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  Tonight only: door sweep (Kalispell Home Depot), Camfil City
-                  M, TSI AeroTrak 9306-V2 handheld if you buy a counter now,
-                  C19→6-20P cord, HEPA vacuum. Do not buy the 6310/6510,
-                  Vaisala, Setra, ceiling FFU, or PestWest tonight.
+                  Cheap cart (aligned with Fable, Aug 23): local sweep +
+                  gasket + caulk; OEM shop-vac HEPA (Ridgid VF8000 class, not
+                  VF6000 “HEPA material”); Winix 5510 / leftover 5500-2 after
+                  paint (~$160–$200), PlasmaWave off; rent TSI 9306-V2
+                  (~$121–$140/day) after cure; UL 12 AWG C19→6-20P (~$22).
+                  Do not reuse the live 50 A tub cable as a PDU feed.
                 </p>
               </CardContent>
             </Card>
