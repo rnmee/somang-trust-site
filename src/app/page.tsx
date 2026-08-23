@@ -106,9 +106,11 @@ export default function Home() {
               <p>
                 서버룸은 “무균실”이 아닙니다. 목표는 ISO Class 8, 상대습도
                 약 30–50%(60% 미만), 그리고 창고보다 방이 살짝 양압인
-                상태입니다. 지금 기계는 NVL72가 아니라 Exxact GB300 타워(약
+                상태입니다.                 지금 기계는 NVL72가 아니라 Exxact GB300 타워(약
                 1.6 kW)입니다. 12k 히트펌프는 이 열을 감당할 수 있습니다.
-                더 급한 문제는 견적에 들어 있는 5-15P(15 A) 전원 케이블입니다.
+                6-20R 두 구멍은 240 V로 확인됐습니다. 새 벽은 지금 필수가
+                아닙니다. 타워를 열기 전에 콘크리트 패치를 에폭시하고,
+                페인트 후 환기·청소하면 됩니다.
               </p>
             </CardContent>
           </Card>
@@ -148,11 +150,11 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="border-destructive/40">
+            <Card>
               <CardHeader>
-                <CardTitle className="text-3xl font-semibold">15 A</CardTitle>
+                <CardTitle className="text-3xl font-semibold">240 V</CardTitle>
                 <CardDescription>
-                  NEMA 5-15P cable on the quote — too small
+                  Both 6-20R outlets, measured. Slots 10/12 right, 14/16 left
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -179,28 +181,54 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-destructive/40">
+            <Card>
               <CardHeader>
-                <CardTitle>Power: the 5-15P cable is the new first risk</CardTitle>
+                <CardTitle>Power: 240 V is confirmed. Buy the right cord</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  The quote includes a C19 to NEMA 5-15P cord. A 15 A / 120 V
-                  receptacle is 1,800 W peak. NEC continuous load is 80% =
-                  1,440 W / 12 A. A 1,600 W Titanium PSU at full load is about
-                  1,700 W from the wall, ~14 A. That trips breakers or browns
-                  the PSU during a long training run.
+                  Both 6-20R receptacles measure 240 V. Door card 10/12 =
+                  right hole, 14/16 = left hole. Maxivolt MV-100C stays on the
+                  panel. Remaining hardware gap: Exxact shipped a C19 →
+                  5-15P. Order a C19 → 6-20P. No adapter.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Card>
+              <CardHeader>
+                <CardTitle>This room, from the photo</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  Tiled floor, tiled dado, painted upper wall, window, and a
+                  raw concrete patch where the hot tub was. That patch is the
+                  dust factory. The tiles are already a cleanable surface.
+                  Building new walls now would make more dust, not less.
                 </p>
                 <p>
-                  As photographed: two NEMA 6-20R receptacles (240 V / 20 A)
-                  under the QO 100 A panel, plus a Maxivolt MV-100C surge
-                  unit (door label: Surge Protector). That receptacle type is
-                  correct. The tower needs a C19 → 6-20P cord, not the 5-15P
-                  Exxact shipped. Each 6-20R must sit on its own 2-pole 20 A
-                  breaker and read ~240 V. The door card still says Hot Tub /
-                  Left 220 / Right 220 / Heat Pump; those labels do not match
-                  the breaker bodies in the photo. Do not first-power the
-                  tower until an electrician maps those two outlets.
+                  A new partition is not required before first power-on. A
+                  closable door to the warehouse is. Paint next week, then
+                  clean, then unbox. Do not tent or fog this room for
+                  termites.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Buy now for dust (this room)</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  Measure: TSI AeroTrak 9306-V2 handheld (ISO 21501-4). Walk
+                  the patch, the warehouse door, then the future rack inlet.
+                </p>
+                <p>
+                  Remove: Abatement PREDATOR HEPA scrubber while the concrete
+                  is open and after paint. Then leave a Camfil City M (H14)
+                  running 24/7. HEPA vacuum the grout. Epoxy the patch.
+                  PurpleAir Flex stays for wildfire smoke only.
                 </p>
               </CardContent>
             </Card>
@@ -474,9 +502,9 @@ export default function Home() {
           </h2>
           <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
             <li>
-              Confirmed machine: Exxact Valence VWS-158270643, ~1.6 kW wall
-              heat. The 12k heat pump can hold it. Do not energize on the
-              included 5-15P cord. Dedicated 20 A circuit first.
+              Confirmed machine and 240 V 6-20R (10/12 right, 14/16 left).
+              Order a C19 → 6-20P cord. Do not build new walls before paint.
+              Epoxy the hot-tub patch, paint, vent, HEPA-clean, then unbox.
             </li>
             <li>
               Grind and epoxy the slab. Paint walls with SW Pre-Cat or
