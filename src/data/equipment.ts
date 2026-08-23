@@ -131,8 +131,8 @@ export const pests: Gear[] = [
 export const finishes: Gear[] = [
   {
     role: "Walls — the Sherwin-Williams product you were probably quoted",
-    pick: "Sherwin-Williams Pro Industrial Pre-Catalyzed Waterbased Epoxy, Eg-Shel (K45 series)",
-    why: "This is the one-part “best commercial epoxy paint” SW stores push when someone says server room / hospital / cleanable. Low odor, scrubbable, does not shed like flat latex. SW’s own Data Center Facility Guide also lists Pro Industrial Waterbased Catalyzed Epoxy (two-part, harder) and Pro Industrial Acrylic for server halls.",
+    pick: "Sherwin-Williams SW 7065 Argos, Emerald or Duration Interior Acrylic Latex, Eggshell + primer (chosen for this closet)",
+    why: "Argos is the color. Eggshell is the sheen that wipes without looking like a bathroom. Premium low-VOC latex is enough on drywall in a closet this size. Pro Industrial Pre-Cat Epoxy is optional overkill here — keep two-part epoxy for the bare concrete floor, not the walls. Do not let anyone switch the walls to flat.",
     est: "Store quote, usually $80–$120/gal",
     href: "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/protective-marine/na/us/en-us/pdfs/marketing-uploads/Data-Center-Facility-Guide-SW.pdf",
     priority: "buy",

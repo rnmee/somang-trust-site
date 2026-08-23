@@ -202,16 +202,16 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  Tiled floor, tiled dado, painted upper wall, window, and a
-                  raw concrete patch where the hot tub was. That patch is the
-                  dust factory. The tiles are already a cleanable surface.
-                  Building new walls now would make more dust, not less.
+                  The server closet already has a door. That is the warehouse
+                  door. Close it. Add a sweep. SW 7065 Argos in premium
+                  low-VOC eggshell (Emerald or Duration) plus primer is enough
+                  for these drywall walls. Save epoxy for the bare concrete
+                  floor, not the walls.
                 </p>
                 <p>
-                  A new partition is not required before first power-on. A
-                  closable door to the warehouse is. Paint next week, then
-                  clean, then unbox. Do not tent or fog this room for
-                  termites.
+                  HEPA-vac the powder at the baseboards before anyone opens a
+                  can. Paint walls, then epoxy the slab. Air the room 48–72
+                  hours after the last coat before the crate opens.
                 </p>
               </CardContent>
             </Card>
