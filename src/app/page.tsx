@@ -192,12 +192,15 @@ export default function Home() {
                   the PSU during a long training run.
                 </p>
                 <p>
-                  Have the electrician put this tower on its own circuit:
-                  20 A / 120 V (5-20R) minimum, or 208–240 V / 20 A if the
-                  panel allows. The PSU is 100–240 V; similar 1600 W stations
-                  only give the full 1600 W above ~115 V. Do not share the
-                  branch with the heat pump, lights, or shop tools. Single PSU,
-                  no redundancy — a tripped breaker is an instant shutdown.
+                  As photographed: two NEMA 6-20R receptacles (240 V / 20 A)
+                  under the QO 100 A panel, plus a Maxivolt MV-100C surge
+                  unit (door label: Surge Protector). That receptacle type is
+                  correct. The tower needs a C19 → 6-20P cord, not the 5-15P
+                  Exxact shipped. Each 6-20R must sit on its own 2-pole 20 A
+                  breaker and read ~240 V. The door card still says Hot Tub /
+                  Left 220 / Right 220 / Heat Pump; those labels do not match
+                  the breaker bodies in the photo. Do not first-power the
+                  tower until an electrician maps those two outlets.
                 </p>
               </CardContent>
             </Card>
