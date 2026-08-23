@@ -1,0 +1,43 @@
+# Server-room air brief — intellicAIr, LLC
+
+Internal research brief for the Columbia Falls, Montana headquarters: the 8×8 server room, the adjacent warehouse, dust (viable vs non-viable), and whether any of that throttles a GB300-class server.
+
+## What this is
+
+A single-page reference you can open, share with a contractor, or keep next to the PurpleAir display. It is not a building permit, an electrical design, or an NVIDIA install guide.
+
+**The finding, in one line:** dust does not throttle a GPU. Heat does. Dust only helps heat win. ASHRAE wants ISO 14644-1 Class 8, not a sterile operating room.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+The app listens on [http://127.0.0.1:43147](http://127.0.0.1:43147).
+
+```bash
+npm run build
+npm start
+```
+
+## What is on the page
+
+1. Direct answer and a short Korean summary
+2. Why 12,000 BTU (~3.5 kW) is the number most likely to throttle you first
+3. Viable vs non-viable particles, ISO Class 8 limits, and which metrics actually move GPU clocks
+4. How warehouse dust couples into the server room (Shehabi / LBNL indoor–outdoor model)
+5. Primary papers with links (ASHRAE TC 9.9, LBNL, IBM/Singh, ASME, ISO, ISA)
+6. Buy list: lab particle counter, Vaisala T/RH, room-to-warehouse pressure, H14 FFU / Camfil, insect glue-board, Sherwin-Williams coatings
+
+PurpleAir Flex stays for wildfire PM2.5 and a public widget. It is not an ISO 14644 instrument.
+
+## Before the crate opens
+
+1. Confirm the exact GB300 model and nameplate kW (a full NVL72 rack is ~140 kW and liquid-cooled).
+2. Epoxy the new slab and paint walls with Sherwin-Williams Pro Industrial Pre-Catalyzed Waterbased Epoxy (or the two-part catalyzed epoxy).
+3. Seal the door and old hot-tub penetrations. Keep the room positive to the warehouse.
+4. Do not unbox until Class 8 holds, RH is about 30–50%, and cooling has headroom for the real watts.
+
+Prepared for Mee / intellicAIr, LLC.
