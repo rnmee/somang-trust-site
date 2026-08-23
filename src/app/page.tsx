@@ -106,9 +106,9 @@ export default function Home() {
               <p>
                 서버룸은 “무균실”이 아닙니다. 목표는 ISO Class 8, 상대습도
                 약 30–50%(60% 미만), 그리고 창고보다 방이 살짝 양압인
-                상태입니다. 12,000 BTU 히트펌프는 약 3.5 kW 냉각입니다. 이
-                숫자가 GB300 발열보다 작으면, 먼지보다 열이 먼저 문제를
-                만듭니다.
+                상태입니다. 지금 기계는 NVL72가 아니라 Exxact GB300 타워(약
+                1.6 kW)입니다. 12k 히트펌프는 이 열을 감당할 수 있습니다.
+                더 급한 문제는 견적에 들어 있는 5-15P(15 A) 전원 케이블입니다.
               </p>
             </CardContent>
           </Card>
@@ -117,50 +117,91 @@ export default function Home() {
         <section id="cooling" className="scroll-mt-24 space-y-6">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              The number that will throttle you first
+              Your machine: Exxact Valence VWS-158270643
             </h2>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              12,000 BTU/h ÷ 3,412 = 3.5 kW of cooling. An 8×8 room also has
-              wall gain, lights, and the heat pump’s own waste heat, so usable
-              IT cooling is closer to 2.5–3 kW. A GB300-class box is not a
-              workstation. A full NVIDIA GB300 NVL72 rack is ~132–155 kW and
-              is liquid-cooled by design (~90% liquid / ~10% air). Even a
-              single GB300-class node is often several kilowatts. If nameplate
-              watts exceed about 2.5 kW continuous, this heat pump — not dust —
-              is the throttle.
+              This is not an NVL72 rack. Quote 171597-1 is an NVIDIA DGX
+              Station–class tower: Grace 72-core + B300 (GB300, 1400 W chip
+              TDP), 496 GB LPDDR5X + 252 GB HBM3e, plus one RTX PRO 6000
+              Blackwell Max-Q (300 W) for display. NVIDIA rates the whole
+              station at <strong className="text-foreground">1,600 W total
+              system power</strong>. The 1400 W chip and the 300 W card cannot
+              both sit at nameplate at once — the 1600 W PSU is the budget.
+              Heat into the 8×8 room is about 1.6–1.8 kW, plus a 32&quot; 4K
+              monitor.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
               <CardHeader>
-                <CardTitle className="text-3xl font-semibold">3.5 kW</CardTitle>
-                <CardDescription>12k BTU heat pump, theoretical</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-3xl font-semibold">~10 kW</CardTitle>
+                <CardTitle className="text-3xl font-semibold">1.6 kW</CardTitle>
                 <CardDescription>
-                  Typical single high-density AI node, air or hybrid
+                  This tower, wall heat at full load
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle className="text-3xl font-semibold">140 kW</CardTitle>
+                <CardTitle className="text-3xl font-semibold">3.5 kW</CardTitle>
                 <CardDescription>
-                  GB300 NVL72 rack, mostly liquid
+                  12k BTU heat pump, theoretical
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-destructive/40">
+              <CardHeader>
+                <CardTitle className="text-3xl font-semibold">15 A</CardTitle>
+                <CardDescription>
+                  NEMA 5-15P cable on the quote — too small
                 </CardDescription>
               </CardHeader>
             </Card>
           </div>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            Do not open the crate until you know which GB300 you received and
-            whether it needs a CDU / facility water loop. Epoxy and HEPA will
-            not fix a cooling-capacity miss. ASHRAE’s edge bulletin (2020)
-            says the chain is: dust fouls filters and heat sinks → airflow
-            falls → fan power rises → processors throttle.
-          </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Card>
+              <CardHeader>
+                <CardTitle>Cooling: the 12k unit can hold this box</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  12,000 BTU/h ÷ 3,412 = 3.5 kW. Against ~1.7 kW of IT heat in
+                  64 ft² you have roughly 2× headroom on paper, even after a
+                  leaky former storage envelope. This is no longer the first
+                  throttle.
+                </p>
+                <p>
+                  Still place it like a small data hall: tower intake clear,
+                  exhaust not blowing into the heat-pump return, inlet air
+                  18–22 °C, RH 30–50%. DGX Station–class boxes often use
+                  internal liquid loops, but that heat still leaves the chassis
+                  as hot air. Dust on the radiator or filters is how clocks
+                  sag later.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-destructive/40">
+              <CardHeader>
+                <CardTitle>Power: the 5-15P cable is the new first risk</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  The quote includes a C19 to NEMA 5-15P cord. A 15 A / 120 V
+                  receptacle is 1,800 W peak. NEC continuous load is 80% =
+                  1,440 W / 12 A. A 1,600 W Titanium PSU at full load is about
+                  1,700 W from the wall, ~14 A. That trips breakers or browns
+                  the PSU during a long training run.
+                </p>
+                <p>
+                  Have the electrician put this tower on its own circuit:
+                  20 A / 120 V (5-20R) minimum, or 208–240 V / 20 A if the
+                  panel allows. The PSU is 100–240 V; similar 1600 W stations
+                  only give the full 1600 W above ~115 V. Do not share the
+                  branch with the heat pump, lights, or shop tools. Single PSU,
+                  no redundancy — a tripped breaker is an instant shutdown.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
         <section id="standards" className="scroll-mt-24 space-y-6">
@@ -430,8 +471,9 @@ export default function Home() {
           </h2>
           <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
             <li>
-              Confirm GB300 model, nameplate kW, and whether liquid cooling is
-              required. Size cooling to that number, not to the 8×8 folklore.
+              Confirmed machine: Exxact Valence VWS-158270643, ~1.6 kW wall
+              heat. The 12k heat pump can hold it. Do not energize on the
+              included 5-15P cord. Dedicated 20 A circuit first.
             </li>
             <li>
               Grind and epoxy the slab. Paint walls with SW Pre-Cat or

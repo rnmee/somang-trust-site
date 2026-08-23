@@ -20,7 +20,7 @@ export function SiteHeader() {
           <div>
             <p className="text-sm font-medium leading-none">intellicAIr, LLC</p>
             <p className="mt-1 text-xs text-muted-foreground">
-              Columbia Falls HQ · 8×8 server room brief
+              Columbia Falls HQ · Exxact GB300 tower brief
             </p>
           </div>
         </div>

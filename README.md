@@ -8,6 +8,8 @@ A single-page reference you can open, share with a contractor, or keep next to t
 
 **The finding, in one line:** dust does not throttle a GPU. Heat does. Dust only helps heat win. ASHRAE wants ISO 14644-1 Class 8, not a sterile operating room.
 
+**The machine on site:** Exxact Valence VWS-158270643 (NVIDIA DGX Station–class GB300 tower), 1600 W system power — not an NVL72 rack. The 12k BTU heat pump can hold ~1.7 kW of IT heat. The included C19-to-NEMA 5-15P cable cannot; this box needs a dedicated 20 A circuit.
+
 ## Run locally
 
 ```bash
