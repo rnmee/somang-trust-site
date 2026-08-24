@@ -42,4 +42,16 @@ PurpleAir Flex stays for wildfire PM2.5 and a public widget. It is not an ISO 14
 3. Seal the door and old hot-tub penetrations. Keep the room positive to the warehouse.
 4. Do not unbox until Class 8 holds, RH is about 30–50%, and cooling has headroom for the real watts.
 
+## Publish TN-2026-01 to intelli-care.ai (Cloudflare)
+
+The file your OpenAI website agent should deploy is:
+
+`public/tn-2026-01.html`
+
+It is a self-contained page (inline CSS, no build). Publish it at **https://intelli-care.ai/tn-2026-01** and link it from the homepage and footer as “Technical Note TN-2026-01”. Do not rewrite the facts or the color name **Argos** (SW 7065).
+
+Local preview of that same file:
+
+[http://127.0.0.1:43147/tn-2026-01.html](http://127.0.0.1:43147/tn-2026-01.html)
+
 Prepared for Mee / intellicAIr, LLC.
