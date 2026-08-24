@@ -35,10 +35,10 @@ export function SiteHeader() {
             </a>
           ))}
           <a
-            href="/tn-2026-01.html"
+            href="/research"
             className="rounded-sm px-1 py-0.5 hover:text-foreground"
           >
-            TN-2026-01
+            Research
           </a>
           <Badge variant="secondary" className="font-mono text-[10px]">
             24 Aug 2026

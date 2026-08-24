@@ -42,16 +42,21 @@ A PurpleAir Flex (indoor) was ordered 22 August 2026 and is on manufacturer back
 3. Seal the door and old hot-tub penetrations. Keep the room positive to the warehouse.
 4. Do not unbox until Class 8 holds, RH is about 30–50%, and cooling has headroom for the real watts.
 
-## Publish TN-2026-01 to intelli-care.ai (Cloudflare)
+## Publish the research note to intelli-care.ai (Cloudflare)
 
-The file your OpenAI website agent should deploy is:
+**Homepage stays https://intelli-care.ai.** This note is a second page, not a replacement.
 
-`public/tn-2026-01.html`
+The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (self-contained, no build).
 
-It is a self-contained page (inline CSS, no build). Publish it at **https://intelli-care.ai/tn-2026-01** and link it from the homepage and footer as “Technical Note TN-2026-01”. Do not rewrite the facts or the color name **Argos** (SW 7065).
+1. Keep the existing company homepage at `/`.
+2. Publish this file at **https://intelli-care.ai/research**.
+3. Add a header and footer menu item on the main site: **Research → /research**. Do not make people type `tn-2026-01`.
+4. 301-redirect `/tn-2026-01` and `/tn-2026-01.html` to `/research`. The document number stays on the page.
+5. Do not rewrite the facts or the color name **Argos** (SW 7065).
 
 Local preview of that same file:
 
-[http://127.0.0.1:43147/tn-2026-01.html](http://127.0.0.1:43147/tn-2026-01.html)
+- Short path: [http://127.0.0.1:43147/research](http://127.0.0.1:43147/research)
+- File path: [http://127.0.0.1:43147/tn-2026-01.html](http://127.0.0.1:43147/tn-2026-01.html)
 
 Prepared for Mee / intellicAIr, LLC.
