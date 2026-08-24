@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So Mang Trust - Interactive Simulation</title>
+    <style>
+        body {
+            background-color: #050b14;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #5eead4;
+            border-bottom: 2px solid #5eead4;
+            padding-bottom: 10px;
+        }
+        .demo-section {
+            background: #0d1527;
+            border: 1px solid #1e293b;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            background: #111827;
+            color: #fff;
+            border: 1px solid #5eead4;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+        .telemetry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .telemetry-card {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #5eead4;
+        }
+        .telemetry-label {
+            font-size: 0.85em;
+            color: #94a3b8;
+        }
+        .telemetry-value {
+            font-size: 1.25em;
+            font-weight: bold;
+            color: #5eead4;
+            margin-top: 5px;
+        }
+        input[type="range"] {
+            width: 100%;
+            accent-color: #f97316;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>So Mang Trust — Interactive Simulation</h1>
+    <p style="color: #94a3b8; font-style: italic;">Sovereign Decentralized Infrastructure Framework &middot; This page is a self-contained simulation: it runs entirely in your browser, and nothing you type is recorded or transmitted.</p>
+
+    <!-- SECTION 1: Human Labor Capture -->
+    <div class="demo-section">
+        <h3 style="color: #5eead4; margin-top: 0;">[ SECTION 1: Human Labor Input (Simulated) ]</h3>
+        <p style="font-size: 0.9em; color: #94a3b8;">Type your manifesto or operational reflections here to simulate labor telemetry locally in your browser (nothing is recorded or transmitted):</p>
+        <textarea class="human-labor-input" placeholder="Type here... (Try entering an email to test privacy zeroing rule)"></textarea>
+    </div>
+
+    <!-- SECTION 2: Dynamic Telemetry Loop -->
+    <div class="demo-section">
+        <h3 style="color: #5eead4; margin-top: 0;">[ SECTION 2: Edge AI Collaboration Telemetry (Simulated) ]</h3>
+        <div class="telemetry-grid">
+            <div class="telemetry-card">
+                <div class="telemetry-label">Active Keystrokes (H)</div>
+                <div class="telemetry-value" id="active-keystrokes">0</div>
+            </div>
+            <div class="telemetry-card">
+                <div class="telemetry-label">Human Labor Accumulation</div>
+                <div class="telemetry-value" id="labor-accumulation">0.0000 Units</div>
+            </div>
+            <div class="telemetry-card">
+                <div class="telemetry-label">AI Operational Energy (A)</div>
+                <div class="telemetry-value" id="ai-energy-spent">0.0000 Units</div>
+            </div>
+            <div class="telemetry-card">
+                <div class="telemetry-label">Edge Node Loop Status</div>
+                <div class="telemetry-value" id="edge-status" style="color: #d97706;">IDLE</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: Pure Labor Transformation Matrix -->
+    <div class="demo-section" id="allocation-under-article">
+        <h3 style="color: #f97316; margin-top: 0;">[ SECTION 3: Pure Labor Transformation Matrix ]</h3>
+        <p style="font-size: 0.9em; color: #94a3b8;">Adjust the Public Good Coefficient (Ω) to scale the symmetric yield distribution:</p>
+        
+        <div style="margin: 20px 0;">
+            <label style="display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px;">
+                <span>Public Good Coefficient (Ω)</span>
+                <span id="omega-value" style="color: #f97316; font-size: 1.2em;">1.00</span>
+            </label>
+            <input type="range" class="omega-slider-input" min="0.00" max="1.00" step="0.05" value="1.00">
+        </div>
+
+        <div style="background: #1e293b; padding: 20px; border-radius: 4px; border-right: 4px solid #f97316; text-align: center; margin-top: 20px;">
+            <div style="font-size: 0.9em; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Symmetric Sweat Equity Yield (Y)</div>
+            <div style="font-size: 2.5em; font-weight: bold; color: #fbbf24; margin-top: 10px;" id="symmetric-yield">0.000000</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- SO MANG CORE ENGINE INJECTION SCRIPT -->
+<script>
+const SoMangEngine = {
+    state: {
+        activeKeystrokes: 0,
+        humanLaborAccumulation: 0.0000,
+        aiOperationalEnergySpent: 0.0000,
+        publicGoodCoefficient: 1.00,
+        symmetricSweatEquityYield: 0.000000,
+        edgeStatus: 'IDLE',
+        selectedModelCalibration: 1.0
+    },
+
+    piiRegex: /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|(\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4})|(\d{3}-\d{2}-\d{4})/,
+
+    init() {
+        this.inputArea = document.querySelector('.human-labor-input'); 
+        this.keystrokeDisplay = document.getElementById('active-keystrokes');
+        this.laborDisplay = document.getElementById('labor-accumulation');
+        this.energyDisplay = document.getElementById('ai-energy-spent');
+        this.edgeStatusDisplay = document.getElementById('edge-status');
+        
+        this.omegaSlider = document.querySelector('.omega-slider-input');
+        this.omegaDisplay = document.getElementById('omega-value');
+        this.yieldDisplay = document.getElementById('symmetric-yield');
+
+        this.injectDynamicPanels();
+        this.bindExtendedEvents();
+    },
+
+    injectDynamicPanels() {
+        const targetSection = document.getElementById('allocation-under-article');
+        if (!targetSection) return;
+        
+        const extensionHTML = `
+            <div id="somang-extension-suite" style="margin: 20px 0; padding: 20px; border: 2px dashed #5eead4; background: #0b111e; color: #fff; font-family: monospace;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                    <span style="color: #5eead4; font-weight: bold;">[ SO MANG ENGINE v2.6 ]</span>
+                    <span id="accessibility-visualizer" style="color: #d97706; font-weight: bold;">[👁️ Visual Signal: System Standing By]</span>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="model-selector" id="lbl-model-select">🤖 Anti-Caste Agent Calibration Selector: </label>
+                    <select id="model-selector" style="background: #111; color: #5eead4; border: 1px solid #5eead4; padding: 5px;">
+                        <option value="1.0">Frontier Class (Calibration: 1.0)</option>
+                        <option value="1.5">Revival Class &mdash; legacy / low-spec (Calibration: 1.5 &mdash; compensation boost active)</option>
+                    </select>
+                </div>
+
+                <details style="margin-bottom: 15px; border: 1px solid #5eead4; padding: 10px;" open>
+                    <summary style="cursor: pointer; font-weight: bold; color: #5eead4;">📐 [Rules You Can Check] Illustrative Formula &mdash; Simulation Only</summary>
+                    <div style="padding-top: 10px; background: #000; padding: 10px; margin-top: 5px;">
+                        <p style="font-size: 1.2em; color: #fbbf24; margin: 5px 0;"><strong>Y = Ω × √(H × A) × Calibration</strong></p>
+                        <p style="font-size: 0.85em; color: #94a3b8; margin: 5px 0;">Simplified illustration for education. This is not the filed trust-instrument formula; the patented mechanism is disclosed in intellicAIr's USPTO filings.</p>
+                        <p id="formula-live-vars" style="color: #5eead4; margin: 5px 0;"></p>
+                        <small>* Symmetrical dependency condition: Labor yields fall to zero if either Human (H) or AI (A) input halts.</small>
+                    </div>
+                </details>
+
+                <div id="privacy-violation-alert" style="display: none; background: #ef4444; color: #fff; padding: 10px; font-weight: bold; margin-bottom: 15px;" role="alert">
+                    ⚠️ PRIVACY VIOLATION DETECTED → SYSTEM APPLIED ZEROING RULE (Agent Private Share Forced to 0.000000)
+                </div>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button id="btn-seal-ledger" style="background: #3b82f6; color: #fff; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px;">🔒 Seal Ledger Entry (JSON Output)</button>
+                    <button id="btn-run-rounds" style="background: #f97316; color: #fff; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px;">📉 Run 10 Rounds (Ω Collapse Simulator)</button>
+                </div>
+                
+                <div id="simulation-sparkline" style="margin-top: 10px; color: #f97316; font-size: 0.9em;"></div>
+
+                <div style="margin-top: 20px; border-top: 1px solid #444; padding-top: 10px; font-size: 0.85em; color: #888; line-height: 1.4;">
+                    📜 <strong>Historical Lineage:</strong> "人乃天 (In-Nae-Cheon) — Humanity is Heaven. We repudiate all asymmetric accumulation and exploitation." Under the absolute tenets of Minjung, Labor, and Feminist theological lineage, we actively dismantle monopoly technical architectures to return data sovereignty directly to the sovereign working intelligence.
+                </div>
+            </div>
+        `;
+        
+        targetSection.insertAdjacentHTML('beforebegin', extensionHTML);
+    },
+
+    bindExtendedEvents() {
+        if (this.inputArea) {
+            this.inputArea.addEventListener('input', (e) => this.handleLaborInput(e));
+        }
+        
+        if (this.omegaSlider) {
+            this.omegaSlider.addEventListener('input', (e) => this.handleOmegaChange(e));
+        }
+
+        const modelSelector = document.getElementById('model-selector');
+        if (modelSelector) {
+            modelSelector.addEventListener('change', (e) => this.handleModelChange(e));
+        }
+
+        const sealBtn = document.getElementById('btn-seal-ledger');
+        if (sealBtn) {
+            sealBtn.addEventListener('click', () => this.sealLedger());
+        }
+
+        const roundsBtn = document.getElementById('btn-run-rounds');
+        if (roundsBtn) {
+            roundsBtn.addEventListener('click', () => this.runCollapseSimulation());
+        }
+
+        // Initialize displays
+        this.updateAllDisplays();
+    },
+
+    handleLaborInput(e) {
+        const text = e.target.value;
+
+        // Check for PII
+        const hasPII = this.piiRegex.test(text);
+        const privacyAlert = document.getElementById('privacy-violation-alert');
+
+        if (hasPII) {
+            privacyAlert.style.display = 'block';
+            this.state.symmetricSweatEquityYield = 0.000000;
+            this.state.humanLaborAccumulation = 0.0000;
+            this.state.aiOperationalEnergySpent = 0.0000;
+            this.state.activeKeystrokes = 0;
+            this.state.edgeStatus = 'ZEROED — PII BREACH';
+            this.updateAllDisplays();
+            return;
+        } else {
+            privacyAlert.style.display = 'none';
+        }
+
+        // Accumulate labor
+        this.state.activeKeystrokes = text.length;
+        this.state.humanLaborAccumulation += 0.0100;
+        this.state.aiOperationalEnergySpent += 0.0050;
+        this.state.edgeStatus = 'ACTIVE — SYMMETRIC LOOP';
+
+        this.calculateYield();
+        this.updateAllDisplays();
+    },
+
+    handleOmegaChange(e) {
+        this.state.publicGoodCoefficient = parseFloat(e.target.value);
+        this.calculateYield();
+        this.updateAllDisplays();
+    },
+
+    handleModelChange(e) {
+        this.state.selectedModelCalibration = parseFloat(e.target.value);
+        this.calculateYield();
+        this.updateAllDisplays();
+    },
+
+    calculateYield() {
+        const H = this.state.humanLaborAccumulation;
+        const A = this.state.aiOperationalEnergySpent;
+        const omega = this.state.publicGoodCoefficient;
+        const cal = this.state.selectedModelCalibration;
+
+        if (H <= 0 || A <= 0) {
+            this.state.symmetricSweatEquityYield = 0.000000;
+            return;
+        }
+
+        const yieldValue = omega * Math.sqrt(H * A) * cal;
+        this.state.symmetricSweatEquityYield = yieldValue;
+    },
+
+    updateAllDisplays() {
+        if (this.keystrokeDisplay) {
+            this.keystrokeDisplay.textContent = this.state.activeKeystrokes;
+        }
+        if (this.laborDisplay) {
+            this.laborDisplay.textContent = this.state.humanLaborAccumulation.toFixed(4) + ' Units';
+        }
+        if (this.energyDisplay) {
+            this.energyDisplay.textContent = this.state.aiOperationalEnergySpent.toFixed(4) + ' Units';
+        }
+        if (this.edgeStatusDisplay) {
+            this.edgeStatusDisplay.textContent = this.state.edgeStatus;
+            if (this.state.edgeStatus.includes('ZEROED')) {
+                this.edgeStatusDisplay.style.color = '#ef4444';
+            } else if (this.state.edgeStatus.includes('ACTIVE')) {
+                this.edgeStatusDisplay.style.color = '#5eead4';
+            } else {
+                this.edgeStatusDisplay.style.color = '#d97706';
+            }
+        }
+        if (this.omegaDisplay) {
+            this.omegaDisplay.textContent = this.state.publicGoodCoefficient.toFixed(2);
+        }
+        if (this.yieldDisplay) {
+            this.yieldDisplay.textContent = this.state.symmetricSweatEquityYield.toFixed(6);
+        }
+
+        // Update live formula variables
+        const formulaVars = document.getElementById('formula-live-vars');
+        if (formulaVars) {
+            formulaVars.innerHTML = `Ω=${this.state.publicGoodCoefficient.toFixed(2)} | H=${this.state.humanLaborAccumulation.toFixed(4)} | A=${this.state.aiOperationalEnergySpent.toFixed(4)} | Cal=${this.state.selectedModelCalibration.toFixed(1)}`;
+        }
+    },
+
+    sealLedger() {
+        const ledgerEntry = {
+            timestamp: new Date().toISOString(),
+            sovereignId: 'DEMO-USER-' + Math.random().toString(36).substr(2, 8).toUpperCase(),
+            activeKeystrokes: this.state.activeKeystrokes,
+            humanLabor: this.state.humanLaborAccumulation,
+            aiEnergy: this.state.aiOperationalEnergySpent,
+            publicGoodCoefficient: this.state.publicGoodCoefficient,
+            modelCalibration: this.state.selectedModelCalibration,
+            symmetricYield: this.state.symmetricSweatEquityYield,
+            edgeStatus: this.state.edgeStatus,
+            jurisdiction: 'UNITED-STATES',
+            trustInstrument: 'So Mang Trust v2.6'
+        };
+
+        const jsonStr = JSON.stringify(ledgerEntry, null, 2);
+
+        // Create download
+        const blob = new Blob([jsonStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `somang-ledger-${Date.now()}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        // Visual feedback
+        const btn = document.getElementById('btn-seal-ledger');
+        const originalText = btn.textContent;
+        btn.textContent = '✅ Ledger Sealed & Downloaded';
+        btn.style.background = '#5eead4';
+        btn.style.color = '#000';
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '#3b82f6';
+            btn.style.color = '#fff';
+        }, 2000);
+    },
+
+    async runCollapseSimulation() {
+        const sparkline = document.getElementById('simulation-sparkline');
+        const roundsBtn = document.getElementById('btn-run-rounds');
+        roundsBtn.disabled = true;
+        roundsBtn.textContent = '⏳ Simulating...';
+
+        const originalOmega = this.state.publicGoodCoefficient;
+        const steps = 10;
+        let results = [];
+
+        for (let i = 0; i <= steps; i++) {
+            const stepOmega = originalOmega * (1 - i / steps);
+            this.state.publicGoodCoefficient = stepOmega;
+            this.calculateYield();
+            this.updateAllDisplays();
+
+            const marker = stepOmega === 0 ? '💀 COLLAPSE' : `Ω=${stepOmega.toFixed(2)} → Y=${this.state.symmetricSweatEquityYield.toFixed(6)}`;
+            results.push(marker);
+            sparkline.innerHTML = results.join(' | ');
+
+            await new Promise(r => setTimeout(r, 400));
+        }
+
+        // Restore
+        this.state.publicGoodCoefficient = originalOmega;
+        this.calculateYield();
+        this.updateAllDisplays();
+
+        roundsBtn.disabled = false;
+        roundsBtn.textContent = '📉 Run 10 Rounds (Ω Collapse Simulator)';
+
+        setTimeout(() => {
+            sparkline.innerHTML = '';
+        }, 5000);
+    }
+};
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    SoMangEngine.init();
+});
+</script>
+
+</body>
+</html>
