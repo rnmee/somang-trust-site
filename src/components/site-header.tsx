@@ -40,6 +40,12 @@ export function SiteHeader() {
           >
             Research
           </a>
+          <a
+            href="/somang-trust.html"
+            className="rounded-sm px-1 py-0.5 hover:text-foreground"
+          >
+            Trust demo
+          </a>
           <Badge variant="secondary" className="font-mono text-[10px]">
             24 Aug 2026
           </Badge>
