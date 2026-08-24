@@ -371,8 +371,9 @@ export default function Home() {
                 </p>
                 <p>Occasional insects (they ride air currents toward warmth).</p>
                 <p>
-                  Wildfire smoke in late summer (PM2.5 + gases) — PurpleAir is
-                  actually the right sensor for that outdoor/indoor spike.
+                  Wildfire smoke in late summer (PM2.5 + gases) — an indoor
+                  PurpleAir Flex, once it arrives, can show the indoor spike.
+                  It is not an outdoor station.
                 </p>
               </CardContent>
             </Card>
@@ -464,7 +465,8 @@ export default function Home() {
               What to buy for this site
             </h2>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              PurpleAir Flex stays. It is the public wildfire / PM2.5 display.
+              A PurpleAir Flex (indoor) is on backorder (ordered 22 Aug 2026).
+              It is an indoor PM2.5 display, not an outdoor wildfire node.
               For cleanliness, throttling, warehouse coupling, and bugs you
               need lab instruments and a pressure cascade, not a second
               consumer sensor.
@@ -519,8 +521,8 @@ export default function Home() {
             </li>
             <li>
               Place Vaisala T/RH at the future rack inlet. Place the TSI
-              particle counter at the same point. Keep PurpleAir for PM2.5 /
-              smoke on the website.
+              particle counter at the same point. Keep the indoor PurpleAir
+              Flex for indoor PM2.5 once it arrives — not as an outdoor feed.
             </li>
             <li>
               Do not unbox until ISO Class 8 holds with the door closed, RH is

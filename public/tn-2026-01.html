@@ -29,6 +29,8 @@
     1. Publish this file as the document at /tn-2026-01.
     2. Link it from the homepage and the site footer as “Technical Note TN-2026-01”.
     3. Do not rewrite the facts, sources, or the color name Argos (SW 7065).
+       Do not restore a 30-day monitoring pledge. PurpleAir Flex is indoor
+       only, ordered 22 August 2026, on backorder — not an outdoor station.
     4. If the live site already has a header/footer, you may drop our masthead
        and keep <main class="sheet"> — but keep this page’s type and colors
        so the note still reads as a technical publication, not a landing-page section.
@@ -45,6 +47,7 @@
   "description": "We declined a default partition wall for an 8×8 AI closet and wrote the protocol that will verify that decision with measurements.",
   "datePublished": "2026-08-23",
   "dateModified": "2026-08-24",
+  "version": "1.4",
   "inLanguage": "en-US",
   "url": "https://intelli-care.ai/tn-2026-01",
   "author": {
@@ -228,7 +231,7 @@
   .ledger-row.struck{color:var(--vermilion)}
   .ledger-row.struck > span:first-child > .item,
   .ledger-row.struck > span:last-child{text-decoration:line-through}
-  .ledger-row.struck .note{
+  .ledger-row .note{
     text-decoration:none;
     font-size:.7rem;
     display:block;
@@ -247,6 +250,16 @@
     text-align:center;
     line-height:1.5;
   }
+  .notice{
+    font-size:.95rem;
+    color:var(--ink-soft);
+    background:var(--ledger-bg);
+    border:1px solid var(--rule);
+    padding:.95rem 1.1rem;
+    margin:0 0 1.7rem;
+    line-height:1.6;
+  }
+  .notice strong{color:var(--ink);font-weight:600}
   ul{margin:0 0 1.05rem 1.15rem}
   li{margin-bottom:.85rem;padding-left:.2rem}
   li strong{font-weight:600}
@@ -298,7 +311,7 @@
     body{background:#fff;font-size:11pt;line-height:1.55}
     .skip,.masthead{display:none}
     .sheet{padding:0;max-width:none}
-    .abstract,.ledger,.callout{break-inside:avoid}
+    .abstract,.ledger,.callout,.notice{break-inside:avoid}
     a{color:inherit;text-decoration:none}
     .status-chip{color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   }
@@ -308,7 +321,7 @@
   <a class="skip" href="#note">Skip to the note</a>
   <header class="masthead">
     <a href="https://intelli-care.ai">intellicAIr, LLC</a>
-    <span class="rev">TN-2026-01 · Rev 1.3</span>
+    <span class="rev">TN-2026-01 · Rev 1.4</span>
   </header>
 <main id="note" class="sheet">
   <article>
@@ -320,7 +333,7 @@
     <span><strong>Author</strong> Mee Chung Kim, RN &mdash; Founder &amp; CEO</span>
     <span><strong>Location</strong> Columbia Falls, Montana</span>
     <span><strong>Date</strong> August 2026</span>
-    <span><strong>Revision</strong> 1.3 &mdash; for intelli-care.ai</span>
+    <span><strong>Revision</strong> 1.4 &mdash; for intelli-care.ai</span>
     <span class="wide"><strong>Status</strong> <span class="status-chip">Protocol &middot; data pending</span></span>
   </div>
 
@@ -328,7 +341,7 @@
     <span class="lede">Abstract</span>
     <p>Generic guidance for a small on-premise AI closet often starts with construction: a new partition wall, a cleanroom-grade envelope, sometimes even sterile-room finishes. We evaluated that instinct against this facility &mdash; a 1996 site-built outbuilding on a poured-concrete foundation, with an already enclosed 8&nbsp;&times;&nbsp;8&nbsp;ft room, a dedicated 12,000&nbsp;BTU/h heat pump, and a workstation-class GB300 node of about 1.6&nbsp;kW &mdash; and declined the wall as the default. This note records why. We still seal the existing door, stop the bare slab from dusting, paint the drywall, and verify the air with measurements. Construction remains an escalation if the data asks for it. Estimated capital not spent on an unneeded partition: several thousand dollars, left available for compute.</p>
   </div>
-  <p class="fig-caption">Baseline and 30-day monitoring results will be appended to this note when collected.</p>
+  <p class="notice"><strong>What this page is not.</strong> It is the written protocol, not a live air-quality feed and not a pledge that a 30-day monitoring campaign is underway or scheduled. A PurpleAir Flex (indoor) was ordered on 22&nbsp;August 2026 and is on manufacturer backorder. Indoor figures will be added here if and when we have them. This site did not order an outdoor station.</p>
 
   <h2><span class="no">01</span>The facility, as it actually is</h2>
   <p>Generic server-room guidance assumes a generic room. Ours is specific. The host structure was built in 1996 on a poured-concrete foundation &mdash; a site-built outbuilding, not a mobile unit. We are its third owners. The candidate server room is an enclosed 8&nbsp;&times;&nbsp;8&nbsp;ft interior closet with finished drywall, an existing doorway, an interior electrical subpanel, and two measured 240&nbsp;V NEMA&nbsp;6-20R receptacles. For most of our tenure the closet served as ski storage and stayed visually clean. That history is not the present tense. Carpet has been removed. The slab is now bare concrete and is dusting at the baseboards. Adjacent space that once held a hot tub was decommissioned and, on our understanding, was never tied to a sewage connection, which removes one common moisture path; it does not by itself prove the closet air is clean today.</p>
@@ -345,7 +358,7 @@
     <li><strong>Seal the existing envelope.</strong> Keep the doorway we already have. Add a door sweep, full-perimeter gasket or weatherstrip, and caulk at remaining seams, the ceiling grille if it is not a heat-pump path, and cable penetrations. If the present leaf is hollow-core, a solid-core replacement can wait; the sweep cannot. Materials cost is comparable to a tank of gas.</li>
     <li><strong>Prepare the surfaces.</strong> HEPA-vacuum the powder at the slab edge (a garage wet/dry vac without a certified HEPA cartridge is not a substitute; it re-aerosolizes fines). Prime and paint drywall in a premium low-VOC acrylic-latex eggshell &mdash; Sherwin-Williams <em>SW&nbsp;7065 Argos</em>, or <em>SW&nbsp;7015 Repose Gray</em> if the can on site is that color. Eggshell, not flat. Then seal the bare concrete with a two-part floor epoxy or an equivalent concrete sealer made for slabs. That coat is dust control. It is not optional ESD theater. ACL Staticide 6300 ESD Safety Shield is a coating for plastics (acrylic, PET, PVC, polycarbonate housings and bins). It is not a concrete sealer and is not in this program.</li>
     <li><strong>Hold humidity, then static.</strong> For this duty cycle, electrostatic risk is managed with RH, not with a topical on latex paint. Aim 30&ndash;50% RH at the tower inlet. Below ~20&ndash;25% in deep winter, add moisture. Above ~60%, settled hygroscopic dust can become conductive.</li>
-    <li><strong>Monitor, then escalate.</strong> After paint and slab cure, record a 24-hour baseline at equipment-intake height: temperature, RH, and a consumer optical PM trend (PM2.5 / PM10). PurpleAir Flex, already on order, is the outdoor / wildfire instrument and a public PM2.5 feed; it is not an ISO&nbsp;14644 counter, and by default it reports to PurpleAir&rsquo;s cloud. That is not a fully air-gapped telemetry posture. If on-premise-only environmental data is a hard requirement, the sensor must be firewalled or replaced with a logger that does not phone home. Periodic verification uses a rental survey-grade optical particle counter (for example TSI AeroTrak 9306-V2, ISO&nbsp;21501-4) reading counts per cubic meter at 0.3 / 0.5 / 5&nbsp;&micro;m. Buy that instrument only if the rental record shows a need the cheap sensor cannot meet. Alert ladder: repeat HEPA clean &rarr; add filtered supply or a room HEPA/carbon unit (True HEPA; ionization off) &rarr; and only then, construction.</li>
+    <li><strong>Monitor, then escalate.</strong> After paint and slab cure &mdash; and after the indoor sensor actually arrives &mdash; the first measurement we want is a 24-hour indoor baseline at equipment-intake height: temperature, RH, and a consumer optical PM trend (PM2.5 / PM10). The instrument on order is a PurpleAir Flex in the indoor configuration (ordered 22&nbsp;August 2026; manufacturer backorder as of this writing). It is an indoor consumer PM sensor and, if we later enable it, a public indoor PM2.5 feed. It is not an outdoor weather station, not a wildfire-network node, and not an ISO&nbsp;14644 counter. Smoke that later leaks into the building may still appear as indoor PM2.5; that is not the same as an outdoor record. By default the Flex reports to PurpleAir&rsquo;s cloud. That is not a fully air-gapped telemetry posture. If on-premise-only environmental data is a hard requirement, the sensor must be firewalled or replaced with a logger that does not phone home. Periodic verification uses a rental survey-grade optical particle counter (for example TSI AeroTrak 9306-V2, ISO&nbsp;21501-4) reading counts per cubic meter at 0.3 / 0.5 / 5&nbsp;&micro;m. Buy that instrument only if a rental record shows a need the cheap sensor cannot meet. Alert ladder: repeat HEPA clean &rarr; add filtered supply or a room HEPA/carbon unit (True HEPA; ionization off) &rarr; and only then, construction.</li>
   </ul>
   <p>A sealed, cleaned, climate-controlled closet with a sealed slab and a closed door is the operational need. ISO Class&nbsp;5 sterile rooms are for semiconductor fabrication. ISO Class&nbsp;8 is the ASHRAE datacom cleanliness target and is typically met by filtration and housekeeping, not by a new stud wall. Should a later room host device-level work with genuine contamination sensitivity, this monitoring record is the baseline that will say so.</p>
 
@@ -361,7 +374,7 @@
     <div class="ledger-row"><span>Concrete slab sealer / two-part floor epoxy, 64 ft&sup2;</span><span>~$80&ndash;$200</span></div>
     <div class="ledger-row"><span>True HEPA + carbon room unit after paint (Winix-class)</span><span>~$160&ndash;$200</span></div>
     <div class="ledger-row"><span>C19 to NEMA 6-20P cord, UL, 12 AWG</span><span>~$22&ndash;$30</span></div>
-    <div class="ledger-row"><span>Outdoor / wildfire PM sensor (PurpleAir Flex, already ordered)</span><span>on order</span></div>
+    <div class="ledger-row"><span>PurpleAir Flex (indoor) &mdash; ordered 22 Aug 2026<span class="note">manufacturer backorder; not an outdoor station</span></span><span>backorder</span></div>
     <div class="ledger-row"><span>Survey OPC (TSI 9306-V2 class), rental after cure</span><span>~$120/day or ~$340/week</span></div>
     <div class="ledger-row"><span>Dust-free deep clean</span><span>labor</span></div>
     <div class="ledger-rule"></div>
@@ -371,7 +384,7 @@
   <p class="fig-caption">Fig. 1 &mdash; The wall we did not build, and the plastic coating we did not misuse, as line items.</p>
 
   <h2><span class="no">05</span>Verification plan</h2>
-  <p>A consumer optical sensor provides the 24/7 PM trend and, if placed outdoors, the wildfire record. It reports mass-approximate PM, not ISO particle counts. After the slab and paint have cured and the door sweep is on, we rent a survey-grade counter for about one week: closet center, tower inlet, and the warehouse side of the door, door closed, then again after the fans have run. Pass/fail is ISO&nbsp;14644-1 Class&nbsp;8 at the inlet (3,520,000 particles &ge;0.5&nbsp;&micro;m per m&sup3;). Capital purchase waits for a baseline that a rental and a cheap sensor cannot explain. The same evidence rule we applied to the wall.</p>
+  <p>Once the indoor PurpleAir Flex arrives, it can provide a continuous indoor PM trend. It does not provide an outdoor wildfire record. It reports mass-approximate PM, not ISO particle counts. After the slab and paint have cured and the door sweep is on, the intended check is a short rental of a survey-grade counter: closet center, tower inlet, and the warehouse side of the door, door closed, then again after the fans have run. That rental is a method, not a booked week. Pass/fail, if we run it, is ISO&nbsp;14644-1 Class&nbsp;8 at the inlet (3,520,000 particles &ge;0.5&nbsp;&micro;m per m&sup3;). Capital purchase waits for a baseline that a rental and a cheap indoor sensor cannot explain. The same evidence rule we applied to the wall.</p>
 
   <h2><span class="no">06</span>Sources</h2>
   <ol class="refs">
@@ -383,10 +396,11 @@
     <li><span class="rn">[6]</span> NVIDIA. DGX Station product literature: total system power 1,600&nbsp;W. <a href="https://www.nvidia.com/en-us/products/workstations/dgx-station/" rel="noopener noreferrer">nvidia.com</a></li>
     <li><span class="rn">[7]</span> ACL Staticide. <em>6300 ESD Safety Shield</em> &mdash; intended for acrylic, PET, PETG, PVC, and polycarbonate, not concrete slabs. <a href="https://www.aclstaticide.com/products/staticide-esd-safety-shield" rel="noopener noreferrer">aclstaticide.com</a></li>
     <li><span class="rn">[8]</span> Sherwin-Williams. Color SW&nbsp;7065 is Argos, not Matrix Gray. <a href="https://www.sherwin-williams.com/en-us/color/color-family/neutrals/SW7065" rel="noopener noreferrer">sherwin-williams.com</a></li>
+    <li><span class="rn">[9]</span> PurpleAir. <em>Flex</em> product page. The official SKU is Flex; indoor vs outdoor is configuration and placement, not a second cleanliness class. This site ordered the indoor configuration. Flex listed on backorder as of August 2026. <a href="https://www2.purpleair.com/products/purpleair-flex" rel="noopener noreferrer">purpleair.com</a></li>
   </ol>
 
   <h2><span class="no">07</span>Limitations</h2>
-  <p>This is a single-facility case note, not a controlled study. It is specific to this structure, this climate, and one 1.6&nbsp;kW tower. It is not a building permit, an electrical design, or an NVIDIA install guide. Local codes and a licensed electrician govern the 240&nbsp;V circuits and the idle 50&nbsp;A former hot-tub breaker &mdash; the panel slot may have future value; the abandoned wet-location cable does not. Baseline and longitudinal data will be appended as collected, including any finding that contradicts the decision documented here. If the data asks for the wall, the wall gets built. That is the point of measuring.</p>
+  <p>This is a single-facility case note, not a controlled study, and not a 30-day monitoring pledge. It is specific to this structure, this climate, and one 1.6&nbsp;kW tower. It is not a building permit, an electrical design, or an NVIDIA install guide. Local codes and a licensed electrician govern the 240&nbsp;V circuits and the idle 50&nbsp;A former hot-tub breaker &mdash; the panel slot may have future value; the abandoned wet-location cable does not. If indoor measurements are later recorded, they will be appended here, including any finding that contradicts the decision documented here. If the data asks for the wall, the wall gets built. That is the point of measuring.</p>
 
   <p class="callout">Bricks are easy to sell. Measurements are hard to argue&nbsp;with.</p>
   </article>

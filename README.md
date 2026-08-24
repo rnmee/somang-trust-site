@@ -33,7 +33,7 @@ npm start
 5. Primary papers with links (ASHRAE TC 9.9, LBNL, IBM/Singh, ASME, ISO, ISA)
 6. Buy list: lab particle counter, Vaisala T/RH, room-to-warehouse pressure, H14 FFU / Camfil, insect glue-board, Sherwin-Williams coatings
 
-PurpleAir Flex stays for wildfire PM2.5 and a public widget. It is not an ISO 14644 instrument.
+A PurpleAir Flex (indoor) was ordered 22 August 2026 and is on manufacturer backorder. It is not an outdoor wildfire station and not an ISO 14644 instrument.
 
 ## Before the crate opens
 
