@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>So Mang Trust — educational simulation (patent pending)</title>
-    <meta name="description" content="A browser-only simulation of human–AI sweat equity. Not a token, not an investment, not the intellicAIr homepage. Patent pending.">
+    <title>So Mang Trust</title>
+    <meta name="description" content="A browser simulation of shared labor between people and machines. So Mang Trust, intellicAIr, LLC.">
     <style>
         body {
             background-color: #050b14;
@@ -27,17 +27,6 @@
             color: #94a3b8;
         }
         .masthead a { color: #e2e8f0; text-decoration: none; border-bottom: 1px solid #334155; }
-        .notice {
-            max-width: 1000px;
-            margin: 0 auto 1.5rem;
-            background: #111827;
-            border: 1px solid #f97316;
-            border-left: 4px solid #f97316;
-            padding: 1rem 1.15rem;
-            color: #e2e8f0;
-            line-height: 1.55;
-        }
-        .notice strong { color: #fdba74; }
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -48,9 +37,10 @@
             padding-bottom: 10px;
         }
         .lede {
-            color: #cbd5e1;
-            font-size: 1.05rem;
-            line-height: 1.6;
+            color: #94a3b8;
+            font-size: 1.02rem;
+            line-height: 1.65;
+            font-style: italic;
             margin: 0.75rem 0 1.25rem;
         }
         .demo-section {
@@ -101,18 +91,13 @@
 <body>
 
 <header class="masthead">
-    <a href="https://intelli-care.ai">intellicAIr, LLC — company home</a>
-    <span>So Mang Trust · simulation · patent pending</span>
+    <a href="https://intelli-care.ai">intellicAIr, LLC</a>
+    <span>So Mang Trust</span>
 </header>
 
-<div class="notice">
-    <strong>This is not a cryptocurrency, not a token sale, and not an investment.</strong>
-    Numbers on this page are a teaching index for human–AI labor sharing (홍길동, symbiosis, neuromorphic sweat equity). They are not money. Nothing you type is recorded or sent. intellicAIr, LLC remains a workforce company. This page is a So Mang conviction demo, not the company homepage.
-</div>
-
 <div class="container">
-    <h1>So Mang Trust — Interactive Simulation</h1>
-    <p class="lede">A browser-only model of symmetric sweat equity: human labor (H) and AI energy (A) rise or fall together. If either stops, yield is zero. Public-good coefficient Ω is the share kept for the commons. <em>Patent pending</em> — this is not a granted patent, and the formula below is an illustration, not the filed instrument.</p>
+    <h1>So Mang Trust</h1>
+    <p class="lede">A sketch of shared labor: person and machine, neither extracting the other. It runs in this browser. Nothing you type leaves the page.</p>
 
     <!-- SECTION 1: Human Labor Capture -->
     <div class="demo-section">
@@ -130,7 +115,7 @@
                 <div class="telemetry-value" id="active-keystrokes">0</div>
             </div>
             <div class="telemetry-card">
-                <div class="telemetry-label">Human Labor Accumulation (index, not currency)</div>
+                <div class="telemetry-label">Human Labor Accumulation</div>
                 <div class="telemetry-value" id="labor-accumulation">0.0000 Units</div>
             </div>
             <div class="telemetry-card">
@@ -147,7 +132,7 @@
     <!-- SECTION 3: Pure Labor Transformation Matrix -->
     <div class="demo-section" id="allocation-under-article">
         <h3 style="color: #f97316; margin-top: 0;">[ SECTION 3: Pure Labor Transformation Matrix ]</h3>
-        <p style="font-size: 0.9em; color: #94a3b8;">Adjust the Public Good Coefficient (Ω). Yield here is a simulated index of shared labor, not a payout.</p>
+        <p style="font-size: 0.9em; color: #94a3b8;">Adjust the Public Good Coefficient (Ω) to scale the symmetric yield distribution:</p>
         
         <div style="margin: 20px 0;">
             <label style="display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px;">
@@ -158,7 +143,7 @@
         </div>
 
         <div style="background: #1e293b; padding: 20px; border-radius: 4px; border-right: 4px solid #f97316; text-align: center; margin-top: 20px;">
-            <div style="font-size: 0.9em; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Symmetric Sweat Equity Yield (Y) — simulated index</div>
+            <div style="font-size: 0.9em; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Symmetric Sweat Equity Yield (Y)</div>
             <div style="font-size: 2.5em; font-weight: bold; color: #fbbf24; margin-top: 10px;" id="symmetric-yield">0.000000</div>
         </div>
     </div>
@@ -218,7 +203,7 @@ const SoMangEngine = {
                     <summary style="cursor: pointer; font-weight: bold; color: #5eead4;">📐 [Rules You Can Check] Illustrative Formula &mdash; Simulation Only</summary>
                     <div style="padding-top: 10px; background: #000; padding: 10px; margin-top: 5px;">
                         <p style="font-size: 1.2em; color: #fbbf24; margin: 5px 0;"><strong>Y = Ω × √(H × A) × Calibration</strong></p>
-                        <p style="font-size: 0.85em; color: #94a3b8; margin: 5px 0;">Simplified illustration for education. This is not the filed trust-instrument formula. The mechanism is <em>patent pending</em> in intellicAIr USPTO filings — not a granted patent.</p>
+                        <p style="font-size: 0.85em; color: #94a3b8; margin: 5px 0;">An illustration of the idea. The filed instrument is patent pending with USPTO.</p>
                         <p id="formula-live-vars" style="color: #5eead4; margin: 5px 0;"></p>
                         <small>* Symmetrical dependency condition: Labor yields fall to zero if either Human (H) or AI (A) input halts.</small>
                     </div>
@@ -229,7 +214,7 @@ const SoMangEngine = {
                 </div>
 
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <button id="btn-seal-ledger" style="background: #3b82f6; color: #fff; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px;">Download local JSON snapshot (not a blockchain)</button>
+                    <button id="btn-seal-ledger" style="background: #3b82f6; color: #fff; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px;">Save snapshot (JSON)</button>
                     <button id="btn-run-rounds" style="background: #f97316; color: #fff; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px;">📉 Run 10 Rounds (Ω Collapse Simulator)</button>
                 </div>
                 
@@ -394,7 +379,7 @@ const SoMangEngine = {
         // Visual feedback
         const btn = document.getElementById('btn-seal-ledger');
         const originalText = btn.textContent;
-        btn.textContent = '✅ Ledger Sealed & Downloaded';
+        btn.textContent = 'Saved';
         btn.style.background = '#5eead4';
         btn.style.color = '#000';
         setTimeout(() => {
