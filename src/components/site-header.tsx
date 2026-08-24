@@ -34,8 +34,14 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
+          <a
+            href="/tn-2026-01.html"
+            className="rounded-sm px-1 py-0.5 hover:text-foreground"
+          >
+            TN-2026-01
+          </a>
           <Badge variant="secondary" className="font-mono text-[10px]">
-            23 Aug 2026
+            24 Aug 2026
           </Badge>
         </nav>
       </div>
