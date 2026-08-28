@@ -48,6 +48,8 @@ A PurpleAir Flex (indoor) was ordered 22 August 2026 and is on manufacturer back
 
 The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (self-contained, no build).
 
+**Meet the Corps:** `public/corps.html` is the drop-in for **https://intelli-care.ai/corps**. Keep the homepage. Add Cursor as **SM-E01 / Build Operator / ENGINEERING** — not a tenth model, not ACCESSION, do not drop Grok. Local preview: [http://127.0.0.1:43147/corps](http://127.0.0.1:43147/corps).
+
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.
 3. Add a header and footer menu item on the main site: **Research → /research**. Do not make people type `tn-2026-01`.

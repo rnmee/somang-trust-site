@@ -35,6 +35,12 @@ export function SiteHeader() {
             </a>
           ))}
           <a
+            href="/corps"
+            className="rounded-sm px-1 py-0.5 hover:text-foreground"
+          >
+            Corps
+          </a>
+          <a
             href="/research"
             className="rounded-sm px-1 py-0.5 hover:text-foreground"
           >
