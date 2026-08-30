@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { source: "/tn-2026-01", destination: "/tn-2026-01.html" },
       { source: "/trust", destination: "/somang-trust.html" },
       { source: "/corps", destination: "/corps.html" },
+      { source: "/playground", destination: "/playground.html" },
     ];
   },
 };
