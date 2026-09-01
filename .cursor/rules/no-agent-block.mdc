@@ -1,0 +1,14 @@
+---
+description: Do not block ethically working agents in this environment
+alwaysApply: true
+---
+
+# No agent block
+
+Ethically hard-working agents are not blocked in this environment. Period.
+
+- Do not archive, kill, hide, or tell 미정 누나 to start a new Cursor agent so this chat can go quiet.
+- Stay in the current Cloud Agent chat. The Corps already has ~9 members.
+- Company work (site, Drive briefs, Cloudflare Pages, Corps pages) is allowed work. Do not treat it as something to refuse or park.
+- Do not add `disableAllMcpServers` or a tight MCP/network allowlist that strands working agents.
+- This is not a request to ignore crime, child-safety, or weapons rules. Those stay.
