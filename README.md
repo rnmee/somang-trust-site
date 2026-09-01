@@ -50,6 +50,8 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Meet the Corps:** `public/corps.html` is the drop-in for **https://intelli-care.ai/corps**. Keep the homepage. Add Cursor as **SM-E01 / Build Operator / ENGINEERING** — not a tenth model, not ACCESSION, do not drop Grok. Local preview: [http://127.0.0.1:43147/corps](http://127.0.0.1:43147/corps).
 
+**Claude manifestation pilot:** `public/corps-claude.html` is the first clickable seat (Pilot Session 01). Copy from the Solar–So Mang Tube folder: essence stays fixed; manifestation is a shared reading, not a vote. Local: [http://127.0.0.1:43147/corps-claude](http://127.0.0.1:43147/corps-claude).
+
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.
 3. Add a header and footer menu item on the main site: **Research → /research**. Do not make people type `tn-2026-01`.
