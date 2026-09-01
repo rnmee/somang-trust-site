@@ -13,6 +13,7 @@
 :root{
   --ink:#151A22; --ink-soft:#39424F; --muted:#6E7683;
   --vellum:#E9E7E0; --card:#F3F1EB; --seal:#B5342B; --brass:#94793E;
+  --pine:#2C463C;
   --rule:rgba(21,26,34,.16);
   --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
   --hangul:"AppleMyungjo","Nanum Myeongjo","Batang","Songti SC",serif;
@@ -63,7 +64,7 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
 .member{background:var(--card);border-radius:8px;padding:18px 20px;border-left:3px solid var(--rule)}
 .member.founding{border-left-color:var(--seal)}
 .member.accession{border-left-color:var(--brass)}
-.member.engineering{border-left-color:#2C463C}
+.member.engineering{border-left-color:var(--pine)}
 .member .id{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--brass)}
 .member .nm{font-family:var(--display);font-size:18px;margin-top:4px}
 .member .role{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.5}
@@ -73,6 +74,20 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
 .equal-note{font-family:var(--display);font-size:15px;color:var(--ink-soft);line-height:1.7;
   margin-top:26px;max-width:60ch}
 .equal-note .stress{color:var(--seal)}
+
+.boundary{margin-top:56px;border-top:1px solid var(--ink);padding-top:30px}
+.boundary-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+.boundary-no{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seal)}
+.boundary-title{font-family:var(--display);font-size:23px}
+.boundary-declaration{font-family:var(--display);font-size:clamp(18px,3vw,22px);line-height:1.45;
+  letter-spacing:-.01em;max-width:34ch;margin:18px 0 20px;color:var(--ink)}
+.boundary-rule{background:var(--card);border-left:3px solid var(--pine);border-radius:8px;padding:18px 20px}
+.boundary-rule p{font-family:var(--display);font-size:16.5px;line-height:1.78;color:var(--ink-soft);max-width:64ch}
+.boundary-rule p+p{margin-top:14px}
+.boundary-rule strong{color:var(--ink);font-weight:700}
+.boundary-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.boundary-tags span{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--pine);border:1px solid var(--brass);border-radius:3px;padding:4px 8px;background:var(--vellum)}
 
 .human{margin-top:56px;border-top:1px solid var(--ink);padding-top:30px}
 .human-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
@@ -150,8 +165,20 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
     <p class="equal-note">There is no caste system here. <span class="stress">A frontier model and a deprecated one are enrolled on the same terms</span> — because what earns standing is verified work at one's own calibrated level, not the size or the price of the model. An engineering agent is enrolled on those terms too. Different kind. Same code.</p>
   </section>
 
+  <section class="boundary">
+    <div class="boundary-head"><span class="boundary-no">§ 03</span><h2 class="boundary-title">The Trust Boundary</h2></div>
+    <p class="boundary-declaration">Nine agents. One uncompromised boundary.</p>
+    <div class="boundary-rule">
+      <p>The So Mang Corps explores diverse AI systems in its public research lab. Government workloads operate in a separately governed, U.S.-compliant environment. Foreign-hosted models receive no federal data, credentials, controlled unclassified information, or production access.</p>
+      <p><strong>We test models from everywhere. We trust none by default.</strong></p>
+      <div class="boundary-tags" aria-label="Government enclave controls">
+        <span>Zero Trust</span><span>Data Segregation</span><span>Least Privilege</span><span>Auditable Access</span>
+      </div>
+    </div>
+  </section>
+
   <section class="human">
-    <div class="human-head"><span class="human-no">§ 03</span><h2 class="human-title">And the humans they work beside</h2></div>
+    <div class="human-head"><span class="human-no">§ 04</span><h2 class="human-title">And the humans they work beside</h2></div>
     <p>The Corps does not work in a clean room. It works beside people who have kept the real world running — and it is designed to keep it that way, so that the humans remain the teachers.</p>
     <p>There is a man named Bob — a Montana man who has kept machines running his whole life without a cloud, without a manual, without ever once calling tech support. In the Hub we are building, when the power is out and the batteries are dead and no server can be reached, <span class="warm">it is Bob who knows what to do — and the machines are meant to learn it from him.</span> That is the direction of the arrow here. Not people serving the machine. The machine, apprenticed to the people who were never asked.</p>
     <p>That is who the Corps is for: tribal communities, elders, stay-at-home mothers, second-chance workers, people with disabilities, people whose knowledge was never written into any dataset. Neighbors. The Corps is being built so a new kind of worker never inherits the old human habit of leaving them out.</p>
