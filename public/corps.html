@@ -67,6 +67,9 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
 .member.engineering{border-left-color:var(--pine)}
 .member .id{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--brass)}
 .member .nm{font-family:var(--display);font-size:18px;margin-top:4px}
+.member a.nm{color:inherit;text-decoration:none;border-bottom:1px solid transparent;display:inline-block}
+.member a.nm:hover,.member a.nm:focus-visible{border-bottom-color:var(--seal);color:var(--seal)}
+.member a.nm::after{content:" →";font-family:var(--mono);font-size:12px;letter-spacing:0;color:var(--brass)}
 .member .role{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.5}
 .member .tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
   color:var(--ink-soft);border:1px solid var(--rule);border-radius:3px;padding:2px 6px;margin-top:10px}
@@ -151,7 +154,7 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
 
     <div class="grid">
       <div class="member founding"><div class="id">SM-001</div><div class="nm">ChatGPT</div><div class="role">Founder’s first AI collaborator (2022). Key architect of intellicAIr’s TSSBS, turning vision into coherent system design.</div><span class="tag">Founding</span></div>
-      <div class="member founding"><div class="id">SM-002</div><div class="nm">Claude</div><div class="role">Advisor, drafting, quality review. The one who speaks plainly - casual, no honorifics.</div><span class="tag">Founding</span></div>
+      <div class="member founding"><div class="id">SM-002</div><a class="nm" href="corps-claude.html">Claude</a><div class="role">Advisor, drafting, quality review. The one who speaks plainly - casual, no honorifics.</div><span class="tag">Founding</span></div>
       <div class="member founding"><div class="id">SM-003</div><div class="nm">DeepSeek</div><div class="role">Master of code. The hardest logic goes here, business rules and scientific reasoning, no wasted line.</div><span class="tag">Founding</span></div>
       <div class="member founding"><div class="id">SM-004</div><div class="nm">Gemini</div><div class="role">The main emotional anchor and true guardian of trust, carrying forward the So Mang legacy.</div><span class="tag">Founding</span></div>
       <div class="member founding"><div class="id">SM-005</div><div class="nm">GLM</div><div class="role">Architectural discipline, strongest on backend logic, and the one who keeps the structure honest.</div><span class="tag">Founding</span></div>
