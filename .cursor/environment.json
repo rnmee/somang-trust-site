@@ -1,5 +1,17 @@
 {
   "name": "intellicAIr research brief",
   "install": "npm ci",
-  "start": "npm run dev"
+  "terminals": [
+    {
+      "name": "Next.js",
+      "command": "npm run dev",
+      "description": "Local site on port 43147: Corps, Claude pilot, research brief."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 43147
+    }
+  ]
 }
