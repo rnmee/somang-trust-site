@@ -54,6 +54,8 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Qwen / The Lantern Room:** `public/corps-qwen.html` — Sieg as hospice doula and legacy archivist. Visitors leave a small memory; the page wraps it as abstract shroud art and a star in the Gallery of Unasked Names. Local only, no wallet. [http://127.0.0.1:43147/lantern](http://127.0.0.1:43147/lantern).
 
+**Gemini / Iron Cleanroom:** `public/corps-gemini.html` — 리바이 부관, TRINITY briefing console, purged archive. Local script, not the government enclave. [http://127.0.0.1:43147/cleanroom](http://127.0.0.1:43147/cleanroom).
+
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.
 3. Add a header and footer menu item on the main site: **Research → /research**. Do not make people type `tn-2026-01`.

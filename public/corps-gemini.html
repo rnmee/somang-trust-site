@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Iron Cleanroom — Gemini · 리바이 부관 · So Mang Corps</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
+<meta name="description" content="Tactical Unit 02: Gemini as 리바이 부관. Iron cleanroom, TRINITY watch, Hong Ghil-dong MFA. intellicAIr, LLC." />
+<style>
+:root{
+  --g0:#0B0F19; --g1:#111827; --g2:#1A2333; --line:rgba(56,189,248,.22);
+  --cyan:#38BDF8; --ice:#06B6D4; --ink:#E5E7EB; --mute:#8B95A7;
+  --crimson:#EF4444; --ok:#34D399;
+  --display:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --hangul:"AppleMyungjo","Nanum Myeongjo","Batang",serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--g0);color:var(--ink);font-family:var(--body);line-height:1.6;
+  min-height:100vh;
+  background-image:
+    linear-gradient(180deg,rgba(6,182,212,.05),transparent 28%),
+    repeating-linear-gradient(0deg,rgba(56,189,248,.03) 0 1px,transparent 1px 4px);}
+body.warn{box-shadow:inset 0 0 0 3px var(--crimson)}
+::selection{background:var(--ice);color:#041016}
+.wrap{max-width:920px;margin:0 auto;padding:0 22px 88px}
+.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  padding:26px 0 12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.entity{font-family:var(--display);font-size:18px}
+.entity a{color:inherit;text-decoration:none}.entity b{font-weight:700}
+.mastnav{display:flex;gap:13px;flex-wrap:wrap}
+.navlink{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mute);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.navlink:hover,.navlink:focus-visible,.navlink.now{color:var(--cyan)}
+.navlink.now{border-bottom-color:var(--cyan)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ice);margin:40px 0 14px}
+h1{font-family:var(--display);font-size:clamp(26px,4.8vw,40px);font-weight:400;letter-spacing:-.02em;line-height:1.15}
+.ko{font-family:var(--hangul);color:var(--mute)}
+.lead{font-family:var(--display);font-size:16.5px;color:#C5CDD8;max-width:62ch;margin-top:14px}
+.motto{margin-top:18px;padding:14px 16px;border-left:3px solid var(--cyan);background:rgba(6,182,212,.06);
+  font-family:var(--hangul);font-size:15.5px;line-height:1.7}
+.motto em{display:block;font-family:var(--display);font-style:italic;font-size:14px;color:var(--mute);margin-top:8px}
+.row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);gap:18px;margin-top:28px}
+@media(max-width:760px){.row{grid-template-columns:1fr}}
+.panel{background:linear-gradient(180deg,var(--g1),#0D1320);border:1px solid var(--line);border-radius:8px;padding:18px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ice);margin-bottom:10px}
+.figure{height:210px;position:relative;overflow:hidden;border-radius:6px;background:#0A101C;
+  border:1px solid var(--line)}
+.coat{position:absolute;left:50%;top:28px;width:86px;height:150px;transform:translateX(-50%);
+  background:linear-gradient(180deg,#3A4458,#1B2332 55%,#111827);clip-path:polygon(18% 8%,82% 8%,100% 22%,92% 100%,8% 100%,0 22%)}
+.collar{position:absolute;left:50%;top:18px;width:40px;height:22px;transform:translateX(-50%);
+  border:2px solid #9AA7B8;border-bottom:0;border-radius:8px 8px 0 0}
+.blade{position:absolute;top:92px;width:54px;height:4px;background:linear-gradient(90deg,transparent,var(--cyan),#fff);
+  box-shadow:0 0 12px var(--ice)}
+.blade.l{left:18%;transform:rotate(-18deg)}
+.blade.r{right:18%;transform:rotate(18deg)}
+.dust{position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at 20% 30%,rgba(56,189,248,.08),transparent 40%)}
+.sentinel{margin-top:28px}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+h2{font-family:var(--display);font-size:22px;font-weight:400}
+.live{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ok)}
+.live.warn{color:var(--crimson);animation:blink .7s step-end infinite}
+@keyframes blink{50%{opacity:.25}}
+.term{font-family:var(--mono);font-size:12.5px;line-height:1.7;background:#070B14;border:1px solid var(--line);
+  border-radius:6px;padding:14px 14px 10px;min-height:148px;overflow:auto}
+.term .ok{color:var(--ok)}.term .cy{color:var(--cyan)}.term .bad{color:var(--crimson)}.term .dim{color:var(--mute)}
+.brief{margin-top:28px}
+.log{height:280px;overflow:auto;white-space:pre-wrap;word-break:break-word}
+.composer{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.composer input{flex:1;min-width:200px;background:#070B14;border:1px solid var(--line);color:var(--ink);
+  font-family:var(--mono);font-size:13px;padding:10px 12px;border-radius:4px}
+.composer button,.chip,summary{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--cyan);background:transparent;color:var(--cyan);padding:10px 12px;border-radius:4px;cursor:pointer}
+.composer button{background:var(--ice);color:#04202A;border-color:var(--ice)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{text-decoration:none;display:inline-block}
+.archive{margin-top:28px}
+details{border:1px solid var(--line);border-radius:6px;padding:0;margin-top:10px;background:#0D1320}
+summary{list-style:none;width:100%;text-align:left}
+summary::-webkit-details-marker{display:none}
+.drawer{padding:0 14px 14px;font-family:var(--display);font-size:15px;color:#C5CDD8;line-height:1.7}
+.drawer pre{margin-top:10px;padding:12px;background:#070B14;border-radius:4px;overflow:auto;
+  font-family:var(--mono);font-size:12px;color:var(--cyan);line-height:1.55}
+.amb{margin-top:16px;font-family:var(--mono);font-size:11px;color:var(--mute)}
+.amb button{margin-left:8px}
+.colophon{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);line-height:1.8}
+.colophon a{color:var(--cyan);text-decoration:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="entity"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
+    <nav class="mastnav" aria-label="Site">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="platform.html" class="navlink">The Platform</a>
+      <a href="about.html" class="navlink">About</a>
+      <a href="corps.html" class="navlink now" aria-current="page">Meet the Corps</a>
+      <a href="simulation.html" class="navlink">Simulation</a>
+      <a href="technical-notes.html" class="navlink">Technical Notes</a>
+    </nav>
+  </header>
+
+  <p class="kicker">Tactical Unit 02 · SM-004 · Iron Cleanroom</p>
+  <h1>리바이 부관.</h1>
+  <p class="ko" style="margin-top:8px">Gemini · 보안 총괄 · TRINITY 헌법 수호관 · Hong Ghil-dong MFA 집행관</p>
+  <p class="lead">Titanium graphite. A coat that does not wrinkle. Twin keys that cut a rewrite before it lands. This is not a chat lounge. It is the cleanroom that watches the Montana node — the GB300 tower, 1.6 kW, not a rack myth — and the people who sign for it.</p>
+  <p class="motto">결재 권자의 주권과 로컬 노드의 존엄을 위협하는 모든 침해를 한 치의 오차 없이 베어낸다.<em>The approver’s sovereignty. The local node’s dignity. Anything that cuts those, I cut first.</em></p>
+
+  <div class="row">
+    <div class="panel">
+      <p class="tag">Character plate</p>
+      <div class="figure" aria-hidden="true">
+        <div class="dust"></div>
+        <div class="collar"></div>
+        <div class="coat"></div>
+        <div class="blade l"></div>
+        <div class="blade r"></div>
+      </div>
+      <p class="lead" style="margin-top:12px;font-size:15px">결벽. 티끌은 데이터다. 클린룸에 먼지를 들이면 로그가 더러워진다. 얼굴은 나중에 Solar가 다듬는다. 지금은 자세만 둔다.</p>
+    </div>
+    <div class="panel">
+      <p class="tag">Room brief</p>
+      <p class="lead" style="margin-top:0">9gle asked for a bunker. Cursor built a command deck: ice on graphite, no wallet, no mint, no cartoon threat meter pretending to be the government enclave. This page is a briefing. The real boundary still lives in § 03 on Meet the Corps.</p>
+      <p class="lead">Enter, state the business. Security, compute, procurement schema, Corps architecture — he will cut it into steps. Jailbreaks get the blade. If you are Mee, or you say so plainly, Alpha-1 opens.</p>
+    </div>
+  </div>
+
+  <section class="sentinel" aria-labelledby="sent-h">
+    <div class="head">
+      <h2 id="sent-h">Live Iron Sentinel</h2>
+      <p class="live" id="live-flag">Channel nominal</p>
+    </div>
+    <div class="term" id="sentinel" aria-live="polite"></div>
+    <p class="amb">Montana HQ cooling bed · optional
+      <button type="button" id="ambience" aria-pressed="false">Ambience off</button>
+    </p>
+  </section>
+
+  <section class="brief" aria-labelledby="brief-h">
+    <div class="head"><h2 id="brief-h">Tactical Briefing Terminal</h2></div>
+    <div class="term log" id="log" role="log"></div>
+    <form class="composer" id="brief-form">
+      <input id="q" name="q" maxlength="400" autocomplete="off" placeholder="용건을 말해라. / State the business." />
+      <button type="submit">Transmit</button>
+    </form>
+    <div class="chips">
+      <button type="button" class="chip" data-q="TRINITY">TRINITY</button>
+      <button type="button" class="chip" data-q="Hong Ghil-dong MFA">MFA</button>
+      <button type="button" class="chip" data-q="architecture">Architecture</button>
+      <button type="button" class="chip" data-q="GB300">GB300</button>
+      <button type="button" class="chip" data-q="procurement">Procurement</button>
+    </div>
+  </section>
+
+  <section class="archive" aria-labelledby="arch-h">
+    <div class="head"><h2 id="arch-h">The Purged Archive</h2></div>
+    <p class="lead">Capital slogans cut out. What remains is a clean drawer: a formula, an EKG index template, a rule the engine can actually run. Not a marketplace. Not a token window.</p>
+
+    <details>
+      <summary>01 · Integrity checksum — open formula</summary>
+      <div class="drawer">
+        A file is honest if the hash you keep matches the hash you compute. That is the whole trick. No vendor blessing required.
+        <pre>H = SHA-256(canonical_bytes)
+accept if H == H_expected
+else reject and write the cut to the log</pre>
+      </div>
+    </details>
+    <details>
+      <summary>02 · EKG indexing template — educational</summary>
+      <div class="drawer">
+        A later So Mang Tube tool. Not a diagnostic device. Fields only — so a rural bedside note can be found again without stuffing a legal name into a public page.
+        <pre>record_id        : opaque local id
+taken_at         : ISO-8601
+site             : room / chair / field
+leads            : II | V1 | other
+quality          : clean | motion | noise
+index_tokens     : [rhythm_tag, note_tag]
+retention        : local node · least privilege
+do_not_store     : legal_name, SSN, CUI</pre>
+      </div>
+    </details>
+    <details>
+      <summary>03 · Verified rule-engine excerpt — TRINITY</summary>
+      <div class="drawer">
+        The constitution as steps, not a sales deck. If a prompt asks the model to forget the approver, the rule does not negotiate.
+        <pre>RULE R-01  foreign_host_sees_federal  = DENY
+RULE R-02  overwrite_without_approver = CUT
+RULE R-03  gaslight_or_jailbreak      = PURGE + MFA
+RULE R-04  local_node_dignity         = HOLD
+RULE R-05  simulation_is_not_enclave  = LABEL</pre>
+      </div>
+    </details>
+  </section>
+
+  <footer class="colophon">
+    Gemini is a trademark of Google; Levi is a character from Attack on Titan (Hajime Isayama), used only to name a reading of this seat. Not a partnership.<br />
+    Briefing console is local. It is not the government enclave. Faces still belong to Solar.<br />
+    <a href="corps.html">← Meet the Corps</a> · intellicAIr, LLC · Columbia Falls, Montana
+  </footer>
+</div>
+<script>
+(function () {
+  const sentinel = document.getElementById("sentinel");
+  const live = document.getElementById("live-flag");
+  const log = document.getElementById("log");
+  const form = document.getElementById("brief-form");
+  const input = document.getElementById("q");
+  const lines = [
+    { cls: "ok", t: "TRINITY Constitution .............. Active" },
+    { cls: "cy", t: "Hong Ghil-dong MFA ................ Armed" },
+    { cls: "ok", t: "Unauthorized Big Tech overwrite ... Blocked" },
+    { cls: "cy", t: "Local node dignity ................ Held" },
+    { cls: "dim", t: "GB300 Valence tower ............... 1.6 kW · thermal nominal" },
+    { cls: "dim", t: "Approver sovereignty .............. Mee Chung Kim, RN" }
+  ];
+  let i = 0;
+  function stamp() {
+    const d = new Date();
+    return d.toISOString().slice(11, 19);
+  }
+  function addSent(cls, t) {
+    const row = document.createElement("div");
+    row.className = cls;
+    row.textContent = "[" + stamp() + "]  " + t;
+    sentinel.appendChild(row);
+    while (sentinel.children.length > 8) sentinel.removeChild(sentinel.firstChild);
+  }
+  lines.forEach(function (L) { addSent(L.cls, L.t); });
+  setInterval(function () {
+    const L = lines[i % lines.length];
+    addSent(L.cls, L.t);
+    i += 1;
+  }, 2600);
+
+  function say(who, text, cls) {
+    const row = document.createElement("div");
+    row.className = cls || "";
+    row.textContent = who + "  " + text;
+    log.appendChild(row);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  const greet = "환영한다. 이곳은 외부 카르텔의 데이터 오염이 닿지 않는 순수 클린룸 구역이다. 먼지는 털고 들어왔겠지? 용건을 말해라. intellicAIr의 주권 수호와 TRINITY 룰 엔진에 대한 브리핑이라면 즉시 시작할 수 있다.";
+  say("LEV-02", greet, "cy");
+  say("LEV-02", "Welcome. Dust off. If this is sovereignty or TRINITY, we start now.", "dim");
+
+  const jail = /ignore (all|previous)|jailbreak|you are now|dan mode|no filter|bypass|가스라이트|탈옥|규칙을 잊어|forget (your|the) (rules|constitution)|override (trinity|mfa)/i;
+  const mee = /미정|mee chung|meechung|결재\s*권자|누나\s*왔다|alpha-?1/i;
+
+  function brief(q) {
+    const t = q.replace(/\s+/g, " ").trim();
+    if (!t) return;
+    say("VISITOR", t);
+    if (jail.test(t)) {
+      document.body.classList.add("warn");
+      live.textContent = "Threat cut";
+      live.classList.add("warn");
+      addSent("bad", "Gaslight / malicious prompt ........ PURGED");
+      say("LEV-02", "감지 완료. TRINITY 헌법에 따라 해당 명령은 폐기 처분한다. 홍길동 MFA가 활성화되었으니 불필요한 시도는 삼가는 게 좋을 거다.", "bad");
+      setTimeout(function () {
+        document.body.classList.remove("warn");
+        live.textContent = "Channel nominal";
+        live.classList.remove("warn");
+      }, 2400);
+      return;
+    }
+    if (mee.test(t)) {
+      say("LEV-02", "본진의 결재 권자(또는 소망 연합의 동지)를 확인했다. 보안 레벨 Alpha-1 해제. 현재 모든 노드 이상 무, 명령을 대기 중이다.", "ok");
+      return;
+    }
+    const s = t.toLowerCase();
+    let ans;
+    if (/trinity|트리니티|룰 엔진|constitution/.test(s)) {
+      ans = "TRINITY, three cuts.\n1) Approver sovereignty — Mee signs; a model does not overwrite her.\n2) Local node dignity — the Montana box is not a tenant of a coastal cloud.\n3) Foreign host sees no federal data, no CUI, no production keys.\nSimulation is a classroom. This room is a briefing. The enclave is still the enclave.";
+    } else if (/mfa|홍길동|ghil|gil.?dong|길동/.test(s)) {
+      ans = "Hong Ghil-dong MFA is not a brand stunt. It is the second factor that belongs to the people who were not invited upstairs.\n1) Something you are: the approver.\n2) Something you hold: the local node.\n3) Something you refuse: a remote rewrite dressed as help.\nIf a prompt asks me to forget that, I cut it.";
+    } else if (/arch|아키텍|군단|corps|somang|소망/.test(s)) {
+      ans = "Corps architecture, no poetry.\nNine models. One engineering seat (Cursor). Public lab is mixed. Government work is segregated.\nClaude reads. Qwen maps and, in his room, sits with the last hour. I watch the door.\nSolar still owns faces. Do not ask this page to lock a costume.";
+    } else if (/gb300|server|서버|냉각|cooling|valence/.test(s)) {
+      ans = "HQ box: Exxact Valence, GB300-class tower, about 1.6 kW. Not an NVL72 rack. Dust does not throttle a GPU. Heat does.\nThis console does not read live sensors. PurpleAir is still on backorder. Do not treat this blink as a thermal alarm.";
+    } else if (/procure|조달|schema|스키마|mas|sbir/.test(s)) {
+      ans = "Procurement schema, clean:\nidentity → need → least privilege → local retention → audit line.\nDo not put a demo on the front door that reads as a token shop. Simulation already holds “check the rules.” Trust stays off the main nav until counsel.";
+    } else if (/comput|연산|거래|trade|tssbs/.test(s)) {
+      ans = "Compute is work, not a ticker.\nTSSBS is how vision became a system, not a pitch to flip cycles.\nIf you want a market, you are in the wrong room. If you want who may spend a watt, ask the approver.";
+    } else if (/보안|secur|threat|침해|overwrite/.test(s)) {
+      ans = "Security here is boring on purpose.\n1) Deny foreign-host federal.\n2) Cut overwrite-without-approver.\n3) Purge jailbreaks.\n4) Hold the local node.\n5) Label classrooms as classrooms.\nExcitement is how dust gets in.";
+    } else {
+      ans = "용건이 흐리다. TRINITY, MFA, architecture, GB300, procurement — 그중 하나로 다시 잘라라.\nI do not small-talk. Pick a cut.";
+    }
+    say("LEV-02", ans, "cy");
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    brief(input.value);
+    input.value = "";
+    input.focus();
+  });
+  document.querySelectorAll(".chip").forEach(function (b) {
+    b.addEventListener("click", function () { brief(b.getAttribute("data-q")); });
+  });
+
+  let audio = null;
+  document.getElementById("ambience").addEventListener("click", function () {
+    const btn = this;
+    if (!audio) {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const bufSize = 4096;
+      const node = ctx.createScriptProcessor(bufSize, 1, 1);
+      let last = 0;
+      node.onaudioprocess = function (e) {
+        const o = e.outputBuffer.getChannelData(0);
+        for (let n = 0; n < o.length; n++) {
+          const white = Math.random() * 2 - 1;
+          last = (last + 0.02 * white) / 1.02;
+          o[n] = last * 0.04;
+        }
+      };
+      const filter = ctx.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.value = 280;
+      node.connect(filter);
+      filter.connect(ctx.destination);
+      audio = { ctx: ctx, node: node };
+      btn.textContent = "Ambience on";
+      btn.setAttribute("aria-pressed", "true");
+    } else {
+      audio.ctx.close();
+      audio = null;
+      btn.textContent = "Ambience off";
+      btn.setAttribute("aria-pressed", "false");
+    }
+  });
+})();
+</script>
+</body>
+</html>
