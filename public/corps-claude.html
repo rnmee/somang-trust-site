@@ -80,6 +80,22 @@ h1{font-family:var(--display);font-size:clamp(26px,4.6vw,38px);font-weight:400;l
   color:var(--vellum);background:var(--seal);text-decoration:none;padding:10px 14px;border-radius:4px}
 .cta:hover{background:var(--ink)}
 .back{display:inline-block;margin:22px 0 0 16px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--seal);text-decoration:none;border-bottom:1px solid var(--seal)}
+.strip{margin-top:40px;border-top:1px solid var(--ink);padding-top:26px}
+.strip h2{font-family:var(--display);font-size:22px;font-weight:400}
+.strip .hint{font-size:13.5px;color:var(--ink-soft);margin:10px 0 16px;max-width:58ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.card{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--rule);
+  border-radius:8px;padding:12px 13px;text-decoration:none;color:inherit;font-family:inherit;cursor:pointer}
+.card .nm{font-family:var(--display);font-size:16px}
+.card .st{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.card.on{border-color:var(--seal);border-left:3px solid var(--seal)}
+.card.on .st{color:var(--seal)}
+.card.wait{color:var(--ink-soft)}
+.card:hover,.card:focus-visible{border-color:var(--brass)}
+dialog{border:1px solid var(--ink);border-radius:8px;padding:20px;max-width:36ch;background:var(--vellum);color:var(--ink)}
+dialog::backdrop{background:rgba(21,26,34,.35)}
+dialog p{font-family:var(--display);font-size:16px;line-height:1.6;margin-top:8px}
+dialog form{margin-top:16px}
 .colophon{margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);font-size:12px;color:var(--muted);line-height:1.8}
 .colophon a{color:var(--seal);text-decoration:none}
 :focus-visible{outline:2px solid var(--seal);outline-offset:3px}
@@ -132,7 +148,23 @@ h1{font-family:var(--display);font-size:clamp(26px,4.6vw,38px);font-weight:400;l
     </section>
   </div>
 
-  <section class="block">
+  <section class="strip" aria-labelledby="strip-h">
+    <h2 id="strip-h">The So Mang Corps</h2>
+    <p class="hint">Select a member. Claude is open. Gemini and Qwen already have rooms. The rest wait.</p>
+    <div class="cards">
+      <button type="button" class="card wait" data-later="ChatGPT">ChatGPT<span class="st">Legacy Companion</span></button>
+      <a class="card on" href="#claude-pilot">Claude<span class="st">Pilot Active</span></a>
+      <button type="button" class="card wait" data-later="DeepSeek">DeepSeek<span class="st">Precision Strategist</span></button>
+      <a class="card" href="corps-gemini.html">Gemini<span class="st">Trust Anchor</span></a>
+      <button type="button" class="card wait" data-later="GLM">GLM<span class="st">Structural Genius</span></button>
+      <button type="button" class="card wait" data-later="Grok">Grok<span class="st">Compelling Dissent</span></button>
+      <a class="card" href="corps-qwen.html">Qwen<span class="st">Systems Architect</span></a>
+      <button type="button" class="card wait" data-later="Kimi">Kimi<span class="st">Quiet Potential</span></button>
+      <button type="button" class="card wait" data-later="Solar">Solar<span class="st">Emotional Director</span></button>
+    </div>
+  </section>
+
+  <section class="block" id="claude-pilot">
     <h2><span class="no">§ Read</span>Open design questions</h2>
     <p>Participants are not choosing a pretty character. They are reading Claude. There is no public ballot on this page. The most sensational option does not win.</p>
     <ul class="q">
@@ -154,5 +186,23 @@ h1{font-family:var(--display);font-size:clamp(26px,4.6vw,38px);font-weight:400;l
     <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
   </footer>
 </div>
+<dialog id="later" aria-labelledby="later-h">
+  <h3 id="later-h" style="font-family:var(--display);font-weight:400;font-size:20px">Coming later</h3>
+  <p id="later-p">This seat is not open yet. Claude is the pilot. Gemini and Qwen already have rooms.</p>
+  <form method="dialog"><button type="submit" class="cta" style="margin-top:0">Close</button></form>
+</dialog>
+<script>
+(function () {
+  var box = document.getElementById("later");
+  var p = document.getElementById("later-p");
+  document.querySelectorAll("[data-later]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      var name = el.getAttribute("data-later");
+      p.textContent = name + " is not open yet. Claude is the pilot. Gemini and Qwen already have rooms.";
+      if (typeof box.showModal === "function") box.showModal();
+    });
+  });
+})();
+</script>
 </body>
 </html>
