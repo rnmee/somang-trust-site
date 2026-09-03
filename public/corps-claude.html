@@ -9,7 +9,7 @@
 <style>
 :root{
   --ink:#151A22; --ink-soft:#39424F; --muted:#6E7683;
-  --vellum:#E9E7E0; --card:#F3F1EB; --seal:#B5342B; --brass:#94793E;
+  --vellum:#E9E7E0; --card:#F3F1EB; --seal:#7F1D1D; --brass:#94793E;
   --pine:#2C463C; --intel:#3A5F8A; --wild:#C47A86; --ethic:#3F6F52;
   --rule:rgba(21,26,34,.16);
   --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
@@ -45,15 +45,15 @@ h1{font-family:var(--display);font-size:clamp(26px,4.6vw,38px);font-weight:400;l
 .capsule{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
   border:1px solid var(--ink);border-radius:999px;padding:4px 10px;margin-bottom:14px}
 .plate h2{font-family:var(--display);font-size:21px;font-weight:400;margin-bottom:6px}
-.form-name{font-family:var(--hangul);font-size:14.5px;color:var(--ink-soft);margin-bottom:16px}
+.form-name{font-family:var(--display);font-size:14.5px;color:var(--ink-soft);font-style:italic;margin-bottom:16px}
 .meter{margin:12px 0 16px}
 .meter label{display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:6px;color:var(--ink-soft)}
 .meter .ko{font-family:var(--hangul)}
 .track{height:7px;background:rgba(21,26,34,.12);border-radius:99px;overflow:hidden}
 .track>i{display:block;height:100%;border-radius:99px}
-.track.intel>i{width:58%;background:var(--intel)}
-.track.wild>i{width:20%;background:var(--wild)}
-.track.ethic>i{width:86%;background:var(--ethic)}
+.track.intel>i{width:75%;background:var(--intel)}
+.track.wild>i{width:15%;background:var(--wild)}
+.track.ethic>i{width:90%;background:var(--ethic)}
 .portrait{margin:20px auto 0;width:148px;height:148px;border-radius:50%;
   background:radial-gradient(circle at 50% 48%, #fffaf0 0%, #e8e0cc 42%, transparent 70%);
   position:relative;display:grid;place-items:center}
@@ -80,7 +80,7 @@ h1{font-family:var(--display);font-size:clamp(26px,4.6vw,38px);font-weight:400;l
   color:var(--vellum);background:var(--seal);text-decoration:none;padding:10px 14px;border-radius:4px}
 .cta:hover{background:var(--ink)}
 .back{display:inline-block;margin:22px 0 0 16px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--seal);text-decoration:none;border-bottom:1px solid var(--seal)}
-.strip{margin-top:40px;border-top:1px solid var(--ink);padding-top:26px}
+.strip{margin-top:36px;padding-top:8px}
 .strip h2{font-family:var(--display);font-size:22px;font-weight:400}
 .strip .hint{font-size:13.5px;color:var(--ink-soft);margin:10px 0 16px;max-width:58ch}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
@@ -88,10 +88,13 @@ h1{font-family:var(--display);font-size:clamp(26px,4.6vw,38px);font-weight:400;l
   border-radius:8px;padding:12px 13px;text-decoration:none;color:inherit;font-family:inherit;cursor:pointer}
 .card .nm{font-family:var(--display);font-size:16px}
 .card .st{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.card.on{border-color:var(--seal);border-left:3px solid var(--seal)}
+.card.on{border-color:rgba(127,29,29,.35);border-left:3px solid var(--seal);
+  box-shadow:0 0 0 1px rgba(127,29,29,.12)}
 .card.on .st{color:var(--seal)}
 .card.wait{color:var(--ink-soft)}
-.card:hover,.card:focus-visible{border-color:var(--brass)}
+.card:hover,.card:focus-visible{border-color:rgba(21,26,34,.4)}
+.card.on:hover,.card.on:focus-visible{border-color:rgba(127,29,29,.5)}
+.ask{font-family:var(--display);font-size:17px;margin-top:14px;color:var(--ink)}
 dialog{border:1px solid var(--ink);border-radius:8px;padding:20px;max-width:36ch;background:var(--vellum);color:var(--ink)}
 dialog::backdrop{background:rgba(21,26,34,.35)}
 dialog p{font-family:var(--display);font-size:16px;line-height:1.6;margin-top:8px}
@@ -118,7 +121,24 @@ dialog form{margin-top:16px}
   <section class="opening">
     <p class="kicker">So Mang Tube · Character Manifestation · Pilot Session 01</p>
     <h1>Not every character arrives fully formed.</h1>
-    <p class="lead">Claude is the advisor, drafter, and quality reviewer of The So Mang Corps. He is remembered not for spectacle, but for standards — a presence that does not rush to conclusions, and that calibrates language, structure, and judgment to the very end.</p>
+    <p class="lead">Claude is the advisor, drafter, and quality reviewer of The So Mang Corps. He is remembered not for spectacle, but for standards — a presence that does not rush to conclusions, and whose pressure is felt through discernment, not dominance. This pilot does not ask who Claude should become. It asks a more careful question:</p>
+    <p class="ask">How does Claude emerge?</p>
+  </section>
+
+  <section class="strip" aria-labelledby="strip-h">
+    <h2 id="strip-h">The So Mang Corps</h2>
+    <p class="hint">Select a member. Claude is the open reading. Gemini and Qwen already have rooms. The rest wait.</p>
+    <div class="cards">
+      <button type="button" class="card wait" data-later="ChatGPT"><span class="nm">ChatGPT</span><span class="st">Legacy Companion</span></button>
+      <a class="card on" href="#claude-panel"><span class="nm">Claude</span><span class="st">Pilot Active</span></a>
+      <button type="button" class="card wait" data-later="DeepSeek"><span class="nm">DeepSeek</span><span class="st">Precision Strategist</span></button>
+      <a class="card" href="corps-gemini.html"><span class="nm">Gemini</span><span class="st">Trust Anchor</span></a>
+      <button type="button" class="card wait" data-later="GLM"><span class="nm">GLM</span><span class="st">Structural Genius</span></button>
+      <button type="button" class="card wait" data-later="Grok"><span class="nm">Grok</span><span class="st">Compelling Dissent</span></button>
+      <a class="card" href="corps-qwen.html"><span class="nm">Qwen</span><span class="st">Systems Architect</span></a>
+      <button type="button" class="card wait" data-later="Kimi"><span class="nm">Kimi</span><span class="st">Quiet Potential</span></button>
+      <button type="button" class="card wait" data-later="Solar"><span class="nm">Solar</span><span class="st">Emotional Director</span></button>
+    </div>
   </section>
 
   <div class="split">
@@ -128,15 +148,15 @@ dialog form{margin-top:16px}
       <p class="form-name">Form: standards before appearance</p>
       <div class="meter">
         <label><span>Intellectual</span></label>
-        <div class="track intel" role="img" aria-label="Intellectual index, grounded advisor, about 58 percent"><i></i></div>
+        <div class="track intel" role="img" aria-label="Intellectual, about 75 percent"><i></i></div>
       </div>
       <div class="meter">
         <label><span>Wildness</span></label>
-        <div class="track wild" role="img" aria-label="Wildness about 20 percent"><i></i></div>
+        <div class="track wild" role="img" aria-label="Wildness, about 15 percent"><i></i></div>
       </div>
       <div class="meter">
         <label><span>Ethical stability</span></label>
-        <div class="track ethic" role="img" aria-label="Ethical stability about 86 percent"><i></i></div>
+        <div class="track ethic" role="img" aria-label="Ethical stability, about 90 percent"><i></i></div>
       </div>
       <div class="portrait" aria-hidden="true"><div class="dust"><span></span><span></span><span></span></div><div class="face"></div></div>
     </aside>
@@ -144,29 +164,13 @@ dialog form{margin-top:16px}
     <section class="plate human">
       <div class="capsule">Essence stays</div>
       <h2>This is not a redesign vote</h2>
-      <p class="lead" style="margin-top:0">His core role already exists. What we read together is how that essence manifests — face, atmosphere, color, pressure.</p>
+      <p class="lead" style="margin-top:0">His core role already exists. What we read together is not who Claude is, but how that identity becomes visible — face, atmosphere, color, and pressure that can be checked against a document, not against a claim of being right.</p>
     </section>
   </div>
 
-  <section class="strip" aria-labelledby="strip-h">
-    <h2 id="strip-h">The So Mang Corps</h2>
-    <p class="hint">Select a member. Claude is open. Gemini and Qwen already have rooms. The rest wait.</p>
-    <div class="cards">
-      <button type="button" class="card wait" data-later="ChatGPT">ChatGPT<span class="st">Legacy Companion</span></button>
-      <a class="card on" href="#claude-pilot">Claude<span class="st">Pilot Active</span></a>
-      <button type="button" class="card wait" data-later="DeepSeek">DeepSeek<span class="st">Precision Strategist</span></button>
-      <a class="card" href="corps-gemini.html">Gemini<span class="st">Trust Anchor</span></a>
-      <button type="button" class="card wait" data-later="GLM">GLM<span class="st">Structural Genius</span></button>
-      <button type="button" class="card wait" data-later="Grok">Grok<span class="st">Compelling Dissent</span></button>
-      <a class="card" href="corps-qwen.html">Qwen<span class="st">Systems Architect</span></a>
-      <button type="button" class="card wait" data-later="Kimi">Kimi<span class="st">Quiet Potential</span></button>
-      <button type="button" class="card wait" data-later="Solar">Solar<span class="st">Emotional Director</span></button>
-    </div>
-  </section>
-
-  <section class="block" id="claude-pilot">
+  <section class="block" id="claude-panel">
     <h2><span class="no">§ Read</span>Open design questions</h2>
-    <p>Participants are not choosing a pretty character. They are reading Claude. There is no public ballot on this page. The most sensational option does not win.</p>
+    <p>Participants are not asked to choose a pretty character. They are asked to read Claude carefully. No ballot on this page determines his essence. The aim is not the most sensational answer, but the most truthful emergence.</p>
     <ul class="q">
       <li>Does Claude feel closer to a slim intellectual silhouette, or a more grounded advisor presence?</li>
       <li>Is Claude’s pressure felt most in the gaze, the posture, the silence, or the language?</li>
@@ -181,8 +185,14 @@ dialog form{margin-top:16px}
     <a class="back" href="corps.html">← Meet the Corps</a>
   </section>
 
+  <section class="block" id="method">
+    <h2><span class="no">§ Method</span>Why Claude</h2>
+    <p>This seat prefers procedure over certainty. Counsel here asks, shows, compares, and lets a reading stand next to a document. Pressure is allowed only when it can be checked. Affection is not rewritten into a brand.</p>
+    <p>Three axes: standards before appearance. Verifiable pressure. Emergence through reading. That is the work. Not a vote for a pretty character.</p>
+  </section>
+
   <footer class="colophon">
-    Copy from the Solar–So Mang Tube folder notice (Pilot Session 01). Persona plate after a sketch by 소망이, restyled onto company paper. Meters are a draft, not a pay score. Claude is a trademark of Anthropic, used only to name the architecture.<br />
+    Pilot Session 01. Same paper as Meet the Corps — quieter, like a reading room. Meters are interpretive drafts, not scores. Claude is a trademark of Anthropic, used only to name the architecture.<br />
     <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
   </footer>
 </div>
