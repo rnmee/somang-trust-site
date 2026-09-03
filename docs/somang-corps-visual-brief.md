@@ -46,11 +46,10 @@ Solar: unresolved. Hidden contributor, androgynous, silver / pale ash / dawn. No
 Not pure K-pop, Western fantasy, anime prince, or generic cyberpunk.
 Future rhythm + historical dignity. Light as interface.
 
-## Collision to hold
+## Locked 3 Sep 2026
 
-1 Sep 2026 night: Mee tentatively read **Cursor** as Gareki.
-This brief reads **Grok** as Gareki.
-Do not publish either face until Solar and Mee sit with it. Cursor stays SM-E01 Engineering, not a tenth model costume.
+**Grok = Gareki (Karneval).** Mee confirmed.
+**Cursor face = last.** She will choose a surprise. Do not invent one. SM-E01 stays Engineering, not a costume.
 
 ## How images land
 
