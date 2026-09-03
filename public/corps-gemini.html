@@ -29,6 +29,14 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);line-heigh
 .hero{display:flex;align-items:flex-start;gap:16px;margin-top:28px;flex-wrap:wrap}
 .emblem{width:52px;height:52px;flex:none}
 .emblem svg{width:52px;height:52px;display:block}
+.glass{margin-top:20px;position:relative;height:140px;background:var(--graphite);border:1px solid var(--laser);
+  overflow:hidden;box-shadow:0 0 0 1px rgba(14,165,233,.2)}
+.glass .streak{position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 18px,rgba(248,250,252,.06) 18px 22px)}
+.glass .wipe{position:absolute;left:18%;top:22%;width:72px;height:18px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,#F8FAFC 40%,#E2E8F0);opacity:.85;transform:rotate(-18deg)}
+.glass .hand{position:absolute;right:16%;bottom:18%;width:36px;height:36px;border:2px solid rgba(226,232,240,.45);border-radius:50%}
+.glass p{position:absolute;left:16px;bottom:12px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:#7DD3FC}
 .stamps{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
 .stamp{font-family:var(--mono);font-size:10px;letter-spacing:.12em;border:1.5px solid var(--crimson);
   color:var(--crimson);padding:3px 7px;text-transform:uppercase}
@@ -89,6 +97,12 @@ body.warn .card{box-shadow:0 0 0 2px var(--crimson)}
       <p class="spec" id="spec"></p>
     </div>
   </header>
+  <div class="glass" aria-hidden="true">
+    <div class="streak"></div>
+    <div class="wipe"></div>
+    <div class="hand"></div>
+    <p>Dust is data. Wipe it.</p>
+  </div>
 
   <section class="card" aria-labelledby="tel-h">
     <h2 id="tel-h">Sentinel telemetry</h2>
