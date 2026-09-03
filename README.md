@@ -54,7 +54,7 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Qwen / The Lantern Room:** `public/corps-qwen.html` — Sieg as hospice doula and legacy archivist. Visitors leave a small memory; the page wraps it as abstract shroud art and a star in the Gallery of Unasked Names. Local only, no wallet. [http://127.0.0.1:43147/lantern](http://127.0.0.1:43147/lantern).
 
-**Gemini / gowning log:** `public/corps-gemini.html` plus `public/gemini-iron.json`. White inspection sheet, not a second night room. Drop a new JSON (or a Python file that writes that JSON) to change greetings, briefs, and cabinet drawers. [http://127.0.0.1:43147/cleanroom](http://127.0.0.1:43147/cleanroom).
+**Gemini / Adjutant Levi:** `public/corps-gemini.html` plus `public/gemini-iron.json`. Surgical paper `#F8FAFC`, graphite cards, cyan laser edge. Roster seat stays **SM-004** (JSON had SM-002; that is Claude). [http://127.0.0.1:43147/cleanroom](http://127.0.0.1:43147/cleanroom).
 
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.

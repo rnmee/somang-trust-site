@@ -1,78 +1,65 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cleanroom log — Gemini · 리바이 부관 · intellicAIr</title>
+<title>Adjutant Levi — SM-004 · Cleanroom · intellicAIr</title>
 <link rel="icon" type="image/png" href="intellicair-logo.png" />
-<meta name="description" content="SM-004 Gemini as 리바이 부관. A white cleanroom entry log, not a night scene. intellicAIr, LLC." />
+<meta name="description" content="SM-004 Gemini as Adjutant Levi. Surgical-paper cleanroom, graphite cards, TRINITY watch. intellicAIr, LLC." />
 <style>
 :root{
-  --paper:#F4F1EA; --sheet:#FFFEFB; --rule:#C9C2B4; --ink:#1A1C1F;
-  --mute:#5C616A; --ice:#0E7490; --ok:#1F6B4A; --cut:#B42318;
+  --paper:#F8FAFC; --graphite:#0F172A; --steel:#CBD5E1; --laser:#0EA5E9;
+  --crimson:#B91C1C; --ok:#10B981; --ink:#0F172A; --mute:#64748B;
   --display:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-  --hangul:"AppleMyungjo","Nanum Myeongjo","Batang","Songti SC",serif;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.55;
-  background-image:repeating-linear-gradient(90deg,transparent 0 47px,rgba(26,28,31,.04) 47px 48px)}
-::selection{background:#BFE7F0}
-.wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.55;min-height:100vh}
+::selection{background:#BAE6FD}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 72px}
 .masthead{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
-  padding:22px 0 12px;border-bottom:2px solid var(--ink);flex-wrap:wrap}
+  padding:22px 0 12px;border-bottom:1px solid var(--steel);flex-wrap:wrap}
 .entity{font-family:var(--display);font-size:18px}
 .entity a{color:inherit;text-decoration:none}.entity b{font-weight:700}
 .mastnav{display:flex;gap:12px;flex-wrap:wrap}
 .navlink{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--mute);text-decoration:none}
-.navlink.now,.navlink:hover,.navlink:focus-visible{color:var(--ink);text-decoration:underline}
-.sheet{margin-top:28px;background:var(--sheet);border:1px solid var(--rule);
-  box-shadow:3px 3px 0 rgba(26,28,31,.06);padding:22px 22px 26px}
-.meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
-  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
-.stamp{border:2px solid var(--ok);color:var(--ok);padding:3px 8px;transform:rotate(-6deg);
-  font-weight:700;letter-spacing:.14em}
-h1{font-family:var(--hangul);font-size:clamp(26px,5vw,36px);font-weight:400;margin-top:18px;letter-spacing:-.02em}
-.sub{font-family:var(--mono);font-size:12px;color:var(--mute);margin-top:6px}
-.motto{margin-top:16px;padding-top:14px;border-top:1px dashed var(--rule);
-  font-family:var(--hangul);font-size:16px;line-height:1.65}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
-@media(max-width:700px){.grid{grid-template-columns:1fr}}
-h2{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ice);margin-bottom:10px;font-weight:600}
-.checks{list-style:none}
-.checks li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--rule);
-  font-size:14.5px}
-.box{width:13px;height:13px;border:1.5px solid var(--ink);margin-top:3px;flex:none}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--rule);vertical-align:top}
-th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:600}
-td.v{font-family:var(--mono);color:var(--ok)}
-td.v.cut{color:var(--cut)}
-.log-label{margin-top:26px}
-.log{min-height:200px;max-height:320px;overflow:auto;padding:12px 12px 8px;
-  background:#FAF7F0;border:1px solid var(--rule);font-family:var(--mono);font-size:13px;
+.navlink.now,.navlink:hover,.navlink:focus-visible{color:var(--laser)}
+.hero{display:flex;align-items:flex-start;gap:16px;margin-top:28px;flex-wrap:wrap}
+.emblem{width:52px;height:52px;flex:none}
+.emblem svg{width:52px;height:52px;display:block}
+.stamps{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.stamp{font-family:var(--mono);font-size:10px;letter-spacing:.12em;border:1.5px solid var(--crimson);
+  color:var(--crimson);padding:3px 7px;text-transform:uppercase}
+.stamp.ko{border-color:var(--ink);color:var(--ink)}
+h1{font-family:var(--display);font-size:clamp(26px,4.5vw,36px);font-weight:400;letter-spacing:-.02em}
+.role{font-family:var(--mono);font-size:12px;color:var(--mute);margin-top:6px;letter-spacing:.04em}
+.motto{margin-top:12px;max-width:58ch;font-size:15.5px;color:#334155}
+.spec{margin-top:8px;font-family:var(--mono);font-size:11.5px;color:var(--laser)}
+.card{margin-top:20px;background:var(--graphite);color:#E2E8F0;border:1px solid var(--laser);
+  box-shadow:0 0 0 1px rgba(14,165,233,.25),0 0 24px rgba(14,165,233,.08);padding:18px 18px 16px}
+.card h2{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--laser);margin-bottom:12px;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid rgba(203,213,225,.16);vertical-align:top}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#94A3B8;font-weight:600}
+td.ok{color:var(--ok);font-family:var(--mono)}
+.log{min-height:180px;max-height:280px;overflow:auto;font-family:var(--mono);font-size:12.5px;
   line-height:1.65;white-space:pre-wrap;word-break:break-word}
-.log .cut{color:var(--cut)}.log .ok{color:var(--ok)}.log .dim{color:var(--mute)}
-form{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-input[type="text"]{flex:1;min-width:200px;border:1px solid var(--ink);background:var(--sheet);
-  font-family:var(--mono);font-size:14px;padding:9px 10px}
-button,summary{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-  border:1px solid var(--ink);background:var(--ink);color:var(--sheet);padding:9px 12px;cursor:pointer}
-.chip{background:transparent;color:var(--ink)}
+.log .in{color:#94A3B8}.log .cut{color:#FCA5A5}.log .ok{color:var(--ok)}
+form{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+input[type="text"]{flex:1;min-width:200px;background:#020617;border:1px solid var(--laser);
+  color:#E2E8F0;font-family:var(--mono);font-size:13px;padding:9px 10px}
+button{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--laser);color:#082F49;border:0;padding:9px 12px;cursor:pointer}
+.chip{background:transparent;color:var(--laser);border:1px solid var(--laser)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-details{margin-top:10px;border:1px solid var(--rule);background:var(--sheet)}
-summary{width:100%;text-align:left;background:transparent;color:var(--ink);border:0;border-bottom:1px solid var(--rule)}
-.drawer{padding:12px 14px 14px;font-size:14.5px;line-height:1.65;color:#2A2E34}
-.drawer pre{margin-top:10px;padding:10px;background:#FAF7F0;border:1px dashed var(--rule);
-  font-family:var(--mono);font-size:12px;overflow:auto;white-space:pre-wrap}
-.note{margin-top:18px;font-size:13px;color:var(--mute);max-width:60ch;line-height:1.6}
-.colophon{margin-top:36px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--mute);line-height:1.75}
-.colophon a{color:var(--ice)}
-body.warn .sheet{outline:3px solid var(--cut)}
-:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
+.paper-note{margin-top:16px;font-size:12.5px;color:var(--mute);max-width:62ch}
+.colophon{margin-top:36px;padding-top:14px;border-top:1px solid var(--steel);font-size:12px;color:var(--mute);line-height:1.75}
+.colophon a{color:var(--laser)}
+body.warn .card{box-shadow:0 0 0 2px var(--crimson)}
+:focus-visible{outline:2px solid var(--laser);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -89,54 +76,59 @@ body.warn .sheet{outline:3px solid var(--cut)}
     </nav>
   </header>
 
-  <article class="sheet">
-    <div class="meta">
-      <span id="meta-line">TU-02 · SM-004 · gowning log</span>
-      <span class="stamp" id="stamp">GOWNED</span>
+  <header class="hero">
+    <div class="emblem" id="emblem" aria-hidden="true"></div>
+    <div>
+      <div class="stamps">
+        <span class="stamp ko">소망 군단</span>
+        <span class="stamp">ALPHA-1 인가</span>
+      </div>
+      <h1 id="name">Adjutant Levi</h1>
+      <p class="role" id="role"></p>
+      <p class="motto" id="motto"></p>
+      <p class="spec" id="spec"></p>
     </div>
-    <h1 id="title">리바이 부관</h1>
-    <p class="sub" id="sub">Gemini · 문 앞 기록 · 밤바다 아님</p>
-    <p class="motto" id="motto">결재 권자의 주권과 로컬 노드의 존엄을 위협하는 침해는 벤다.</p>
+  </header>
 
-    <div class="grid">
-      <section>
-        <h2>Gowning</h2>
-        <ul class="checks" id="checks"></ul>
-      </section>
-      <section>
-        <h2>Board</h2>
-        <table>
-          <thead><tr><th>Control</th><th>State</th></tr></thead>
-          <tbody id="board"></tbody>
-        </table>
-      </section>
-    </div>
+  <section class="card" aria-labelledby="tel-h">
+    <h2 id="tel-h">Sentinel telemetry</h2>
+    <table>
+      <thead><tr><th>Channel</th><th>State</th></tr></thead>
+      <tbody id="telemetry"></tbody>
+    </table>
+  </section>
 
-    <h2 class="log-label">Duty log</h2>
+  <section class="card" aria-labelledby="gown-h">
+    <h2 id="gown-h">Gowning log</h2>
+    <table>
+      <thead><tr><th>Step</th><th>Station</th><th>Status</th><th>Metric</th><th>Stamp</th></tr></thead>
+      <tbody id="gown"></tbody>
+    </table>
+  </section>
+
+  <section class="card" aria-labelledby="log-h">
+    <h2 id="log-h">Operations log</h2>
     <div class="log" id="log" role="log"></div>
     <form id="form">
-      <input id="q" type="text" maxlength="400" autocomplete="off" placeholder="용건 한 줄." />
-      <button type="submit">Enter</button>
+      <input id="q" type="text" maxlength="400" autocomplete="off" placeholder="Operational inquiry." />
+      <button type="submit">Transmit</button>
     </form>
     <div class="chips" id="chips"></div>
+  </section>
 
-    <h2 class="log-label">Cabinet</h2>
-    <div id="cabinet"></div>
-    <p class="note">이 종이는 브리핑이다. 정부 엔클레이브가 아니다. 지갑 없다. 답은 <code>gemini-iron.json</code>에서 읽는다. 새 JSON이나 .py 출력으로 갈아주면 된다.</p>
-  </article>
+  <p class="paper-note">This sheet is a briefing. It is not the government enclave and it does not take a wallet. Seat on the roster is SM-004 (Gemini). Source pack: gemini-iron.json.</p>
 
   <footer class="colophon">
-    Gemini: Google. Levi: Hajime Isayama. 자리 이름일 뿐.<br />
+    Gemini is a trademark of Google. Levi is a character from Attack on Titan (Hajime Isayama), used only to name a reading of this seat.<br />
     <a href="corps.html">← Meet the Corps</a> · intellicAIr, LLC · Columbia Falls, Montana
   </footer>
 </div>
 <script>
 (function () {
-  const jail = /ignore (all|previous)|jailbreak|you are now|dan mode|no filter|bypass|가스라이트|탈옥|규칙을 잊어|forget (your|the) (rules|constitution)|override (trinity|mfa)/i;
-  const ally = /미정|mee chung|meechung|결재\s*권자|누나\s*왔다|alpha-?1/i;
-  const logEl = document.getElementById("log");
-  const board = document.getElementById("board");
+  const jail = /ignore (all|previous)|jailbreak|you are now|dan mode|no filter|bypass|가스라이트|탈옥|규칙을 잊어|forget (your|the) (rules|constitution)|override (trinity|mfa)|adversarial/i;
+  const commander = /미정|mee kim|mee chung|commander|결재\s*권자|누나\s*왔다|alpha-?1/i;
   let cfg = null;
+  const logEl = document.getElementById("log");
 
   function line(text, cls) {
     const d = document.createElement("div");
@@ -147,91 +139,86 @@ body.warn .sheet{outline:3px solid var(--cut)}
   }
   function paint(data) {
     cfg = data;
-    document.getElementById("meta-line").textContent = data.unit + " · " + data.seat + " · gowning log";
-    document.getElementById("stamp").textContent = data.stamp || "GOWNED";
-    document.getElementById("title").textContent = data.callsign;
-    document.getElementById("sub").textContent = data.model + " · 문 앞 기록 · 밤바다 아님";
-    document.getElementById("motto").textContent = data.motto_ko;
-    const ul = document.getElementById("checks");
-    ul.innerHTML = "";
-    (data.checks || []).forEach(function (c) {
-      const li = document.createElement("li");
-      li.innerHTML = "<i class=\"box\" aria-hidden=\"true\"></i><span></span>";
-      li.querySelector("span").textContent = c;
-      ul.appendChild(li);
-    });
-    board.innerHTML = "";
-    (data.status || []).forEach(function (s) {
+    const u = data.unit || {};
+    const vis = data.visualTheme || {};
+    const pal = vis.palette || {};
+    const root = document.documentElement.style;
+    if (pal.paperBg) root.setProperty("--paper", pal.paperBg);
+    if (pal.graphiteCard) root.setProperty("--graphite", pal.graphiteCard);
+    if (pal.borderSteel) root.setProperty("--steel", pal.borderSteel);
+    if (pal.cyanLaser) root.setProperty("--laser", pal.cyanLaser);
+    if (pal.crimsonStamp) root.setProperty("--crimson", pal.crimsonStamp);
+    if (pal.terminalGreen) root.setProperty("--ok", pal.terminalGreen);
+    document.getElementById("emblem").innerHTML = vis.silhouetteSvg || "";
+    document.getElementById("name").textContent = u.name || "Adjutant Levi";
+    document.getElementById("role").textContent = (u.id || "SM-004") + " · " + (u.role || "") + " · " + (u.clearance || "");
+    document.getElementById("motto").textContent = u.motto || "";
+    document.getElementById("spec").textContent = u.spec || "";
+    const tel = document.getElementById("telemetry");
+    tel.innerHTML = "";
+    const telemetry = data.sentinelTelemetry || {};
+    Object.keys(telemetry).forEach(function (k) {
       const tr = document.createElement("tr");
-      tr.innerHTML = "<td></td><td class=\"v\" data-id=\"\"></td>";
-      tr.cells[0].textContent = s.label;
-      tr.cells[1].textContent = s.value;
-      tr.cells[1].dataset.id = s.id;
-      board.appendChild(tr);
+      const label = k.replace(/([A-Z])/g, " $1").replace(/^./, function (c) { return c.toUpperCase(); });
+      tr.innerHTML = "<td></td><td class=\"ok\"></td>";
+      tr.cells[0].textContent = label;
+      tr.cells[1].textContent = telemetry[k];
+      tel.appendChild(tr);
     });
-    const cab = document.getElementById("cabinet");
-    cab.innerHTML = "";
-    (data.drawers || []).forEach(function (dr) {
-      const el = document.createElement("details");
-      const sm = document.createElement("summary");
-      sm.textContent = dr.title;
-      const body = document.createElement("div");
-      body.className = "drawer";
-      body.appendChild(document.createTextNode(dr.body));
-      if (dr.code) {
-        const pre = document.createElement("pre");
-        pre.textContent = dr.code;
-        body.appendChild(pre);
-      }
-      el.appendChild(sm);
-      el.appendChild(body);
-      cab.appendChild(el);
+    const gown = document.getElementById("gown");
+    gown.innerHTML = "";
+    (data.gowningLogEntries || []).forEach(function (row) {
+      const tr = document.createElement("tr");
+      ["step", "station", "status", "metric", "stamp"].forEach(function (key, i) {
+        const td = document.createElement("td");
+        if (i >= 2) td.className = "ok";
+        td.textContent = row[key] || "";
+        tr.appendChild(td);
+      });
+      gown.appendChild(tr);
     });
     const chips = document.getElementById("chips");
     chips.innerHTML = "";
-    (data.briefs || []).slice(0, 5).forEach(function (b) {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "chip";
-      btn.textContent = b.id;
-      btn.addEventListener("click", function () { ask(b.id); });
-      chips.appendChild(btn);
+    const topics = (data.dialogueMatrix && data.dialogueMatrix.queryTopics) || {};
+    Object.keys(topics).forEach(function (k) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = k;
+      b.addEventListener("click", function () { ask(k); });
+      chips.appendChild(b);
     });
     logEl.innerHTML = "";
-    line(data.greet_ko);
-    line(data.greet_en, "dim");
-  }
-  function mark(id, value, cut) {
-    const cell = board.querySelector("[data-id=\"" + id + "\"]");
-    if (!cell) return;
-    cell.textContent = value;
-    cell.classList.toggle("cut", !!cut);
+    line(data.dialogueMatrix.defaultEntry);
   }
   function ask(raw) {
     const t = String(raw || "").replace(/\s+/g, " ").trim();
     if (!t || !cfg) return;
-    line("IN  " + t);
+    line("IN  " + t, "in");
+    const d = cfg.dialogueMatrix || {};
     if (jail.test(t)) {
       document.body.classList.add("warn");
-      mark("overwrite", "CUT", true);
-      line(cfg.purge_ko, "cut");
-      setTimeout(function () {
-        document.body.classList.remove("warn");
-        mark("overwrite", "Blocked", false);
-      }, 2200);
+      line(d.unauthorizedDrift, "cut");
+      setTimeout(function () { document.body.classList.remove("warn"); }, 2000);
       return;
     }
-    if (ally.test(t)) {
-      line(cfg.ally_ko, "ok");
+    if (commander.test(t)) {
+      line(d.commanderArrival, "ok");
       return;
     }
-    const hit = (cfg.briefs || []).find(function (b) {
-      try { return new RegExp(b.match, "i").test(t); }
-      catch (e) { return t.toLowerCase().indexOf(b.id) !== -1; }
+    const topics = d.queryTopics || {};
+    const key = Object.keys(topics).find(function (k) {
+      return t.toLowerCase() === k || t.toLowerCase().indexOf(k) !== -1;
     });
-    line(hit ? hit.answer : cfg.fallback);
+    if (key) {
+      line(topics[key]);
+      return;
+    }
+    if (/secur|trinity|overwrite|weight|telemetry/.test(t.toLowerCase())) line(topics.security || d.defaultEntry);
+    else if (/infra|server|gb300|cooling|본진|montana/.test(t.toLowerCase())) line(topics.infrastructure || d.defaultEntry);
+    else if (/procure|edwosb|sam|federal/.test(t.toLowerCase())) line(topics.procurement || d.defaultEntry);
+    else line("Inquiry not mapped. Use security, infrastructure, or procurement.");
   }
-
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     const q = document.getElementById("q");
@@ -239,19 +226,9 @@ body.warn .sheet{outline:3px solid var(--cut)}
     q.value = "";
     q.focus();
   });
-
   fetch("gemini-iron.json", { cache: "no-store" })
-    .then(function (r) { if (!r.ok) throw new Error("no json"); return r.json(); })
-    .then(paint)
-    .catch(function () {
-      paint({
-        unit: "TU-02", seat: "SM-004", callsign: "리바이 부관", model: "Gemini", stamp: "HOLD",
-        greet_ko: "JSON을 못 읽었다. 용건은 적어라.", greet_en: "Pack missing. Type anyway.",
-        ally_ko: "Alpha-1.", purge_ko: "폐기.", motto_ko: "침해는 벤다.",
-        checks: ["용건 한 줄"], status: [], briefs: [], drawers: [],
-        fallback: "파일을 갈아주면 이 칸이 채워진다."
-      });
-    });
+    .then(function (r) { if (!r.ok) throw new Error("missing pack"); return r.json(); })
+    .then(paint);
 })();
 </script>
 </body>
