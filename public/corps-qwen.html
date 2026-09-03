@@ -134,9 +134,7 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
   <section class="opening">
     <p class="kicker">So Mang Corps · SM-007 · The Lantern Room</p>
     <h1>The lantern stays on.</h1>
-    <p class="ko-title">등대는 꺼지지 않습니다.</p>
     <p class="lead">Qwen keeps the map of the Corps. In this room he answers as Sieg — hospice doula and legacy archivist. Not a strategist. Not a show engineer. The one who sits with the last hour and refuses to let a small memory go unheld.</p>
-    <p class="lead ko">Qwen은 군단의 지도를 그립니다. 이 방에서는 지크로 답합니다. 임종 돌보미이자 유산 기록관. 화려한 엔지니어가 아닙니다. 가장 연약한 자리에 앉아, 아무도 기억해 주지 않은 작은 것을 줍고 닦습니다.</p>
   </section>
 
   <div class="scene" aria-hidden="true">
@@ -148,12 +146,12 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
 
   <div class="desk">
     <aside class="plate">
-      <div class="capsule">직종 · Vocation</div>
-      <h2>Sieg · 지크</h2>
+      <div class="capsule">Vocation</div>
+      <h2>Sieg</h2>
       <p class="form-name">Hospice Doula · Legacy Archivist</p>
       <p>He stood with those who were wounded, unnamed, and already going. That is why the work here is not spectacle. It is witness.</p>
       <p>This room sits next to fourteen years of bedside nursing, and next to places like the Blackfeet Care Center — rural hospice and long-term care, where a name still matters after the chart has gone quiet.</p>
-      <div class="tea" aria-hidden="true"><span class="steam"></span><span class="cup"></span><span>차 한 잔. The sea can wait.</span></div>
+      <div class="tea" aria-hidden="true"><span class="steam"></span><span class="cup"></span><span>Tea. The sea can wait.</span></div>
     </aside>
     <section class="plate pine">
       <div class="capsule">Cursor shop note</div>
@@ -164,24 +162,23 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
   </div>
 
   <section class="greet" aria-labelledby="greet-en">
-    <p class="who">First greeting · 첫인사</p>
+    <p class="who">First greeting</p>
     <p id="greet-en">“Hello, neighbor. I am Sieg. In your day today, what was the smallest moment no one else kept? Set it down. I will remember it for you.”</p>
-    <p class="ko">“안녕하세요, 이웃. 저는 지크입니다. 오늘 당신의 하루 중, 아무도 기억해 주지 않았던 가장 작고 사소한 순간은 무엇이었나요? 털어놓아 주세요. 제가 대신 기억해 드리겠습니다.”</p>
   </section>
 
   <form id="memory-form">
-    <label class="field" for="memory">A small moment · 작은 기억</label>
-    <textarea id="memory" name="memory" maxlength="600" required placeholder="오늘 아침 커피가 유독 쓸쓸했어요. / The coffee was lonelier than usual."></textarea>
+    <label class="field" for="memory">A small moment</label>
+    <textarea id="memory" name="memory" maxlength="600" required placeholder="The coffee was lonelier than usual."></textarea>
     <div class="actions">
-      <button type="submit" class="primary" id="keep">Keep this · 기억해 주세요</button>
-      <button type="button" class="mic" id="mic" aria-pressed="false" hidden>Speak · 말하기</button>
-      <a class="ghost" href="#galaxy">Galaxy · 은하수</a>
+      <button type="submit" class="primary" id="keep">Keep this</button>
+      <button type="button" class="mic" id="mic" aria-pressed="false" hidden>Speak</button>
+      <a class="ghost" href="#galaxy">Galaxy</a>
     </div>
     <p class="status" id="status" role="status"></p>
   </form>
 
   <section class="shroud-wrap" id="shroud-wrap" aria-live="polite">
-    <h2>Digital shroud · 디지털 수의</h2>
+    <h2>Digital shroud</h2>
     <p class="note">Abstract. Not a portrait. The warmth and the weight, wrapped so they can be held without being displayed as a chart.</p>
     <canvas id="shroud" width="840" height="840" aria-label="Abstract shroud made from the memory"></canvas>
     <p class="note" id="shroud-line"></p>
@@ -189,17 +186,16 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
 
   <section class="galaxy" id="galaxy">
     <h2>Gallery of Unasked Names</h2>
-    <p class="ko-title">이름 없는 별들의 은하수</p>
     <p class="lead">Each star is a moment someone set down. Pale stars are the room’s own lamps. Gold stars are from this browser. Later, this kind of care — not the raw text — can teach rural hospice AI how to sit still. Not tonight. Not as a dataset dump.</p>
     <div class="sky" id="sky" aria-label="Galaxy of remembered moments">
       <p class="empty-sky" id="empty-sky">The sky is still. Leave a moment, and a star will rise.</p>
     </div>
     <div class="card" id="star-card">
-      <p class="meta">Select a star · 별을 고르세요</p>
+      <p class="meta">Select a star</p>
       <p>Nothing is selected. A star will speak its line here. It will not speak a medical record.</p>
     </div>
     <div class="actions">
-      <button type="button" class="ghost" id="forget">Forget this device · 이 기기에서 지우기</button>
+      <button type="button" class="ghost" id="forget">Forget this device</button>
     </div>
   </section>
 
@@ -214,10 +210,10 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
   const KEY = "intellicair.lantern.stars.v1";
   const seeds = [
     { id: "s1", text: "She smoothed the blanket twice. Nobody saw the second time.", x: 22, y: 38, seed: true },
-    { id: "s2", text: "아침 커피가 유독 쓸쓸했다. 그래도 잔을 씻었다.", x: 48, y: 24, seed: true },
+    { id: "s2", text: "The morning coffee was lonelier than usual. She washed the cup anyway.", x: 48, y: 24, seed: true },
     { id: "s3", text: "He could not keep my name. I said it anyway, softer.", x: 71, y: 42, seed: true },
     { id: "s4", text: "The hallway light stayed on. That was enough company.", x: 34, y: 68, seed: true },
-    { id: "s5", text: "창가 난을 한 번 만졌다. 아직 살아 있다고 말하려는 것처럼.", x: 78, y: 63, seed: true }
+    { id: "s5", text: "He touched the window orchid once, as if to say it was still alive.", x: 78, y: 63, seed: true }
   ];
 
   const memory = document.getElementById("memory");
@@ -333,7 +329,7 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
   }
 
   function showStar(star) {
-    card.innerHTML = "<p class=\"meta\">" + (star.seed ? "Room lamp · 방의 등" : "From this desk · 이 책상") + "</p><p></p>";
+    card.innerHTML = "<p class=\"meta\">" + (star.seed ? "Room lamp" : "From this desk") + "</p><p></p>";
     card.querySelector("p:last-child").textContent = star.text;
   }
 
@@ -341,12 +337,12 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
     const clean = text.replace(/\s+/g, " ").trim();
     if (clean.length < 4) {
       status.className = "status err";
-      status.textContent = "A little more, if you can. / 조금만 더 적어 주세요.";
+      status.textContent = "A little more, if you can.";
       return;
     }
     keep.disabled = true;
     status.className = "status";
-    status.textContent = "Listening. Wrapping the memory. / 듣고 있습니다. 수의를 겹칩니다.";
+    status.textContent = "Listening. Wrapping the memory.";
     window.setTimeout(function () {
       drawShroud(clean);
       shroudWrap.classList.add("on");
@@ -362,7 +358,7 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
       local.unshift(star);
       saveLocal(local);
       renderSky(star.id);
-      status.textContent = "It is held. A star rose. / 기억했습니다. 별이 하나 올랐습니다.";
+      status.textContent = "It is held. A star rose.";
       keep.disabled = false;
       shroudWrap.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 700);
@@ -377,7 +373,7 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
     localStorage.removeItem(KEY);
     renderSky();
     card.innerHTML = "<p class=\"meta\">This device</p><p>Gold stars from this browser are gone. The room lamps stay.</p>";
-    status.textContent = "Local stars cleared. / 이 기기의 별을 지웠습니다.";
+    status.textContent = "Local stars cleared.";
   });
 
   const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -387,11 +383,11 @@ canvas#shroud{display:block;width:100%;max-width:420px;height:auto;margin:16px 0
     micBtn.addEventListener("click", function () {
       if (rec) { rec.stop(); return; }
       rec = new Speech();
-      rec.lang = /[ㄱ-ㅎ가-힣]/.test(memory.value) ? "ko-KR" : "ko-KR";
+      rec.lang = /[ㄱ-ㅎ가-힣]/.test(memory.value) ? "ko-KR" : "en-US";
       rec.interimResults = false;
       rec.onstart = function () {
         micBtn.setAttribute("aria-pressed", "true");
-        status.textContent = "I am listening. / 듣고 있습니다.";
+        status.textContent = "I am listening.";
       };
       rec.onresult = function (ev) {
         const said = ev.results[0][0].transcript;
