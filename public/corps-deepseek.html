@@ -51,10 +51,10 @@ h1{font-family:var(--display);font-size:clamp(26px,4.6vw,38px);font-weight:400;l
 .track.prec>i{width:92%;background:var(--seal)}
 .track.warm>i{width:48%;background:var(--amber)}
 .track.risk>i{width:84%;background:var(--rose)}
-.mark{margin:18px auto 0;width:148px;height:148px;border-radius:50%;
-  background:radial-gradient(circle at 50% 48%, #f4f1ea 0%, #d5d0c6 46%, transparent 72%);
-  position:relative;display:grid;place-items:center}
-.mark svg{width:72px;height:72px}
+.modes{margin-top:18px;display:flex;gap:8px;align-items:center}
+.modes i{display:block;height:2px;border-radius:99px}
+.modes i:first-child{width:58%;background:var(--seal)}
+.modes i:last-child{width:28%;background:var(--amber)}
 .block{margin-top:40px;border-top:1px solid var(--ink);padding-top:26px}
 .block h2{font-family:var(--display);font-size:22px;font-weight:400}
 .no{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seal);margin-right:8px}
@@ -149,13 +149,7 @@ dialog form{margin-top:16px}
         <label><span>Risk sensitivity</span></label>
         <div class="track risk" role="img" aria-label="Risk sensitivity, about 84 percent"><i></i></div>
       </div>
-      <div class="mark" aria-hidden="true">
-        <svg viewBox="0 0 72 72" fill="none">
-          <circle cx="36" cy="36" r="28" stroke="#1E293B" stroke-width="1.4"/>
-          <path d="M36 10 V62" stroke="#1E293B" stroke-width="1.4"/>
-          <path d="M18 48 C26 40 30 34 36 36 C42 38 46 44 54 48" stroke="#A16207" stroke-width="1.6"/>
-        </svg>
-      </div>
+      <div class="modes" aria-hidden="true"><i></i><i></i></div>
     </aside>
 
     <section class="plate warm">
