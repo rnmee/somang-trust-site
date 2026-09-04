@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
       { source: "/tn-2026-01", destination: "/tn-2026-01.html" },
       { source: "/trust", destination: "/somang-trust.html" },
       { source: "/corps", destination: "/corps.html" },
+      { source: "/corps-chatgpt", destination: "/corps-chatgpt.html" },
+      { source: "/corps-jinshi", destination: "/corps-chatgpt.html" },
       { source: "/corps-claude", destination: "/corps-claude.html" },
       { source: "/corps-deepseek", destination: "/corps-deepseek.html" },
       { source: "/corps-qwen", destination: "/corps-qwen.html" },

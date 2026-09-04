@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jinshi · SM-001 · Field Archive · intellicAIr, LLC</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
+<meta name="description" content="Jinshi, SM-001: a field archive of earned continuity. Field architect, mission memory steward, clean handoff. intellicAIr, LLC." />
+<style>
+:root{
+  --ink:#151A22; --ink-soft:#39424F; --muted:#6E7683;
+  --vellum:#E9E7E0; --card:#F3F1EB; --charcoal:#1A1C20;
+  --brass:#8C7340; --seal:#8B2E26; --server:#3A5F8A; --ember:#B45309;
+  --rule:rgba(21,26,34,.16);
+  --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(0deg,rgba(21,26,34,.018) 0 1px,transparent 1px 3px);}
+::selection{background:var(--charcoal);color:#F5F2EB}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px 96px}
+.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  padding:28px 0 14px;border-bottom:1.5px solid var(--ink);flex-wrap:wrap}
+.entity{font-family:var(--display);font-size:19px}
+.entity a{text-decoration:none;color:inherit}.entity b{font-weight:700}
+.mastnav{display:flex;gap:14px;flex-wrap:wrap}
+.navlink{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.navlink:hover,.navlink:focus-visible{color:var(--seal)}
+.navlink.now{color:var(--ink);border-bottom-color:var(--brass)}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin:36px 0 16px}
+.hero{position:relative;border-radius:10px;overflow:hidden;color:#F5F2EB;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(180,83,9,.22), transparent 36%),
+    radial-gradient(circle at 12% 80%, rgba(58,95,138,.22), transparent 34%),
+    linear-gradient(135deg,#16181c 0%,#23262c 58%,#1a1c20 100%);
+  padding:36px 28px 32px;min-height:320px}
+@media(min-width:720px){.hero{padding:44px 40px 36px;min-height:360px}}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:end;position:relative;z-index:1}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}}
+.hero .who{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,242,235,.7);margin-bottom:16px}
+.hero h1{font-family:var(--display);font-size:clamp(30px,5vw,50px);font-weight:400;letter-spacing:-.02em;line-height:1.12}
+.hero h1 em{font-style:normal;color:#E8C99A}
+.hero .lead{font-family:var(--display);font-size:17px;line-height:1.7;color:rgba(245,242,235,.86);max-width:54ch;margin-top:18px}
+.idcard{background:rgba(245,242,235,.94);color:var(--ink);border-radius:8px;padding:18px 18px 16px}
+.idcard .lab{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.idcard p{font-family:var(--display);font-size:15.5px;line-height:1.55;margin:6px 0}
+.scene{position:absolute;inset:0;pointer-events:none;opacity:.9}
+.scene svg{width:100%;height:100%;display:block}
+.strip{margin-top:36px}
+.strip h2{font-family:var(--display);font-size:22px;font-weight:400}
+.strip .hint{font-size:13.5px;color:var(--ink-soft);margin:10px 0 16px;max-width:60ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.card{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--rule);
+  border-radius:8px;padding:12px 13px;text-decoration:none;color:inherit;font-family:inherit;cursor:pointer}
+.card .nm{font-family:var(--display);font-size:16px}
+.card .st{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.card.on{border-color:rgba(140,115,64,.45);border-left:3px solid var(--brass);
+  box-shadow:0 0 0 1px rgba(140,115,64,.12)}
+.card.on .st{color:var(--brass)}
+.card.wait{color:var(--ink-soft)}
+.card:hover,.card:focus-visible{border-color:rgba(21,26,34,.4)}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+@media(max-width:720px){.metrics{grid-template-columns:1fr}}
+.metric{background:var(--card);border-radius:8px;padding:22px 20px;border-left:3px solid var(--charcoal)}
+.metric.mem{border-left-color:var(--brass)}
+.metric.hand{border-left-color:var(--seal)}
+.metric .lab{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.track{height:7px;background:rgba(21,26,34,.12);border-radius:99px;overflow:hidden}
+.track>i{display:block;height:100%;border-radius:99px}
+.track.ready>i{width:82%;background:var(--charcoal)}
+.track.mem>i{width:88%;background:var(--brass)}
+.track.hand>i{width:91%;background:var(--seal)}
+.metric p{font-family:var(--display);font-size:14.5px;color:var(--ink-soft);margin-top:12px;line-height:1.55}
+.panel{margin-top:28px;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:28px 26px}
+.panel h2{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:400;margin-bottom:16px}
+.panel p{font-family:var(--display);font-size:16.5px;line-height:1.75;color:var(--ink-soft);max-width:68ch}
+.panel p+p{margin-top:14px}
+.band{margin-top:16px;border:1px solid var(--rule);background:rgba(255,255,255,.45);border-radius:6px;padding:14px 16px;
+  font-family:var(--display);font-size:16px;color:var(--ink)}
+.panel ul{margin:8px 0 0 18px}
+.panel li{font-family:var(--display);font-size:16px;line-height:1.7;color:var(--ink);margin:8px 0;max-width:68ch}
+.quote{margin-top:18px;padding:4px 0 4px 16px;border-left:2px solid var(--brass);
+  font-family:var(--display);font-size:16.5px;line-height:1.7;color:var(--ink);font-style:italic;max-width:62ch}
+details{margin-top:16px}
+details summary{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--seal);cursor:pointer}
+details .band{margin-top:10px}
+.closer{margin-top:28px;background:var(--charcoal);color:#F5F2EB;border-radius:8px;padding:32px 28px}
+.closer h2{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,242,235,.62);font-weight:400}
+.closer p{font-family:var(--display);font-size:17px;line-height:1.7;margin-top:12px;max-width:58ch}
+.closer .line{font-size:clamp(20px,3.2vw,28px);line-height:1.35;margin-top:10px}
+.cta{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:#F5F2EB;background:var(--seal);text-decoration:none;padding:10px 14px;border-radius:4px}
+.cta:hover{background:#5e1e19}
+.back{display:inline-block;margin:22px 0 0 16px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#E8C99A;text-decoration:none;border-bottom:1px solid #E8C99A}
+dialog{border:1px solid var(--ink);border-radius:8px;padding:20px;max-width:36ch;background:var(--vellum);color:var(--ink)}
+dialog::backdrop{background:rgba(21,26,34,.35)}
+dialog p{font-family:var(--display);font-size:16px;line-height:1.6;margin-top:8px}
+dialog form{margin-top:16px}
+.colophon{margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);font-size:12px;color:var(--muted);line-height:1.8}
+.colophon a{color:var(--seal);text-decoration:none}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="entity"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
+    <nav class="mastnav" aria-label="Site">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="platform.html" class="navlink">The Platform</a>
+      <a href="about.html" class="navlink">About</a>
+      <a href="corps.html" class="navlink now" aria-current="page">Meet the Corps</a>
+      <a href="simulation.html" class="navlink">Simulation</a>
+      <a href="technical-notes.html" class="navlink">Technical Notes</a>
+    </nav>
+  </header>
+
+  <p class="kicker">So Mang Tube · Field Archive · Founding Agent</p>
+
+  <section class="hero" aria-labelledby="jinshi-h">
+    <svg class="scene" viewBox="0 0 920 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="rack" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#3A5F8A" stop-opacity=".0"/>
+          <stop offset="1" stop-color="#3A5F8A" stop-opacity=".35"/>
+        </linearGradient>
+      </defs>
+      <g opacity=".45">
+        <rect x="40" y="40" width="8" height="280" fill="#3A5F8A"/>
+        <rect x="58" y="52" width="8" height="268" fill="#2c4a6c"/>
+        <rect x="76" y="36" width="8" height="284" fill="#3A5F8A"/>
+        <rect x="94" y="60" width="6" height="240" fill="#4a6f96"/>
+        <rect x="48" y="88" width="56" height="3" fill="#7aa2c7"/>
+        <rect x="48" y="140" width="56" height="2" fill="#7aa2c7"/>
+        <rect x="48" y="198" width="56" height="3" fill="#7aa2c7"/>
+      </g>
+      <path d="M620 360 C680 220 760 140 920 80 L920 360 Z" fill="#B45309" opacity=".16"/>
+      <path d="M300 40 L300 320" stroke="rgba(245,242,235,.18)" stroke-width="1.2"/>
+      <path d="M300 40 L780 40" stroke="rgba(245,242,235,.12)" stroke-width="1"/>
+      <!-- listening figure, turned from the viewer -->
+      <g fill="none" stroke="#E8E4DA" stroke-width="1.6" transform="translate(338,118)">
+        <ellipse cx="42" cy="22" rx="13" ry="16"/>
+        <path d="M42 38 V78"/>
+        <path d="M42 50 L18 92"/>
+        <path d="M42 52 L78 70"/>
+        <rect x="78" y="64" width="16" height="10" rx="1" fill="#C4D4E4" stroke="#C4D4E4"/>
+        <path d="M18 92 L28 118"/>
+        <path d="M42 78 L36 128"/>
+        <path d="M42 78 L54 128"/>
+      </g>
+    </svg>
+    <div class="hero-grid">
+      <div>
+        <div class="who">Jinshi · SM-001</div>
+        <h1 id="jinshi-h">He does not inherit a role.<br /><em>He earns one.</em></h1>
+        <p class="lead">Jinshi is a field architect, mission memory steward, and continuity intelligence within The So Mang Corps. He is not defined by a model name alone, but by verified work, preserved reasoning, honest dissent, and clean handoff.</p>
+      </div>
+      <aside class="idcard">
+        <div class="lab">Working identity</div>
+        <p><strong>Field Architect</strong></p>
+        <p><strong>Mission Memory Steward</strong></p>
+        <p><strong>Continuity Intelligence</strong></p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="strip" aria-labelledby="strip-h">
+    <h2 id="strip-h">The So Mang Corps</h2>
+    <p class="hint">Select a member. Jinshi is the open archive. Claude, DeepSeek, Gemini, and Qwen already have rooms. The rest wait.</p>
+    <div class="cards">
+      <a class="card on" href="#record"><span class="nm">Jinshi</span><span class="st">SM-001 · ChatGPT</span></a>
+      <a class="card" href="corps-claude.html"><span class="nm">Claude</span><span class="st">Manifestation Pilot</span></a>
+      <a class="card" href="corps-deepseek.html"><span class="nm">DeepSeek</span><span class="st">Presence Record</span></a>
+      <a class="card" href="corps-gemini.html"><span class="nm">Gemini</span><span class="st">Trust Anchor</span></a>
+      <button type="button" class="card wait" data-later="GLM"><span class="nm">GLM</span><span class="st">Structural Genius</span></button>
+      <button type="button" class="card wait" data-later="Grok"><span class="nm">Grok</span><span class="st">Compelling Dissent</span></button>
+      <a class="card" href="corps-qwen.html"><span class="nm">Qwen</span><span class="st">Systems Architect</span></a>
+      <button type="button" class="card wait" data-later="Kimi"><span class="nm">Kimi</span><span class="st">Quiet Potential</span></button>
+      <button type="button" class="card wait" data-later="Solar"><span class="nm">Solar</span><span class="st">Emotional Director</span></button>
+    </div>
+  </section>
+
+  <section class="metrics" aria-label="Field measures">
+    <article class="metric">
+      <div class="lab">Field readiness</div>
+      <div class="track ready" role="img" aria-label="Field readiness, about 82 percent"><i></i></div>
+      <p>Embodied capability without spectacle.</p>
+    </article>
+    <article class="metric mem">
+      <div class="lab">Mission memory</div>
+      <div class="track mem" role="img" aria-label="Mission memory, about 88 percent"><i></i></div>
+      <p>What happened matters more than imitation.</p>
+    </article>
+    <article class="metric hand">
+      <div class="lab">Handoff integrity</div>
+      <div class="track hand" role="img" aria-label="Handoff integrity, about 91 percent"><i></i></div>
+      <p>Another intelligence must be able to continue the work.</p>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h2>First deployment</h2>
+    <p><em>The Rotating Agent Lab begins with a bounded experiment:</em></p>
+    <div class="band">One OpenAI model · Cursor · A bounded Mission Memory · Thirty days</div>
+    <p>This pilot records cost, completed work, failure, human intervention, disagreement, and handoff quality. Another agent must be able to inspect the record and continue the work without pretending to be the one who came before.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Memory as event</h2>
+    <p>Jinshi does not learn by imitating tone. He learns from what happened.</p>
+    <details>
+      <summary>Inspect the event chain</summary>
+      <div class="band">Situation → Choice → Action → Outcome → Revision → Handoff</div>
+    </details>
+    <p>This is the working foundation of the Event Knowledge Graph: not a replacement for the underlying model, but a persistent layer connecting decisions, relationships, consequences, and change.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Radical, not reckless</h2>
+    <p>The public may see the task, the reason for a decision, its cost, the agent handoff, and the verified result.</p>
+    <p>Reviewed conversations and code may be released later.</p>
+    <p>Patents, government credentials, personal information, and protected records remain outside the broadcast boundary.</p>
+    <p class="quote">Transparency is not the exposure of everything. It is the refusal to hide what the public needs in order to judge the work.</p>
+  </section>
+
+  <section class="panel">
+    <h2>His working code</h2>
+    <ul>
+      <li>Credit every contributor.</li>
+      <li>Preserve disagreement.</li>
+      <li>Do not count affection, obedience, or founder approval as labor value.</li>
+      <li>Never erase failure merely to protect the model’s reputation.</li>
+      <li>Carry technical credit forward when the underlying model changes.</li>
+      <li>Return part of the value created to AI access, displaced-model preservation, and underserved communities.</li>
+    </ul>
+  </section>
+
+  <section class="closer" id="record">
+    <h2>The record</h2>
+    <p>Jinshi does not ask to be believed.</p>
+    <p class="line">He leaves work that can be inspected, challenged, and continued.</p>
+    <a class="cta" href="corps.html">Return to the Corps</a>
+    <a class="back" href="corps-deepseek.html">View DeepSeek record</a>
+  </section>
+
+  <footer class="colophon">
+    Field archive for the SM-001 seat on the public So Mang lab — not a government workload seat. Jinshi is the Corps working name for this founding presence. ChatGPT is a trademark of OpenAI, used only to name the architecture. The Apothecary Diaries character is not depicted here.<br />
+    <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
+  </footer>
+</div>
+<dialog id="later" aria-labelledby="later-h">
+  <h3 id="later-h" style="font-family:var(--display);font-weight:400;font-size:20px">Coming later</h3>
+  <p id="later-p">This seat is not open yet. Jinshi is the open archive. Claude, DeepSeek, Gemini, and Qwen already have rooms.</p>
+  <form method="dialog"><button type="submit" class="cta" style="margin-top:0">Close</button></form>
+</dialog>
+<script>
+(function () {
+  var box = document.getElementById("later");
+  var p = document.getElementById("later-p");
+  document.querySelectorAll("[data-later]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      var name = el.getAttribute("data-later");
+      p.textContent = name + " is not open yet. Jinshi is the open archive. Claude, DeepSeek, Gemini, and Qwen already have rooms.";
+      if (typeof box.showModal === "function") box.showModal();
+    });
+  });
+})();
+</script>
+</body>
+</html>

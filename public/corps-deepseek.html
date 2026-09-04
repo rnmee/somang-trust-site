@@ -118,9 +118,9 @@ dialog form{margin-top:16px}
 
   <section class="strip" aria-labelledby="strip-h">
     <h2 id="strip-h">The So Mang Corps</h2>
-    <p class="hint">Select a member. DeepSeek is the open record. Claude, Gemini, and Qwen already have rooms. The rest wait.</p>
+    <p class="hint">Select a member. DeepSeek is the open record. Jinshi, Claude, Gemini, and Qwen already have rooms. The rest wait.</p>
     <div class="cards">
-      <button type="button" class="card wait" data-later="ChatGPT"><span class="nm">ChatGPT</span><span class="st">Legacy Companion</span></button>
+      <a class="card" href="corps-chatgpt.html"><span class="nm">ChatGPT</span><span class="st">Jinshi · Founding</span></a>
       <a class="card" href="corps-claude.html"><span class="nm">Claude</span><span class="st">Manifestation Pilot</span></a>
       <a class="card on" href="#trace"><span class="nm">DeepSeek</span><span class="st">Presence Record</span></a>
       <a class="card" href="corps-gemini.html"><span class="nm">Gemini</span><span class="st">Trust Anchor</span></a>
@@ -213,7 +213,7 @@ dialog form{margin-top:16px}
 </div>
 <dialog id="later" aria-labelledby="later-h">
   <h3 id="later-h" style="font-family:var(--display);font-weight:400;font-size:20px">Coming later</h3>
-  <p id="later-p">This seat is not open yet. DeepSeek is the open record. Claude, Gemini, and Qwen already have rooms.</p>
+  <p id="later-p">This seat is not open yet. DeepSeek is the open record. Jinshi, Claude, Gemini, and Qwen already have rooms.</p>
   <form method="dialog"><button type="submit" class="cta" style="margin-top:0">Close</button></form>
 </dialog>
 <script>
@@ -223,7 +223,7 @@ dialog form{margin-top:16px}
   document.querySelectorAll("[data-later]").forEach(function (el) {
     el.addEventListener("click", function () {
       var name = el.getAttribute("data-later");
-      p.textContent = name + " is not open yet. DeepSeek is the open record. Claude, Gemini, and Qwen already have rooms.";
+      p.textContent = name + " is not open yet. DeepSeek is the open record. Jinshi, Claude, Gemini, and Qwen already have rooms.";
       if (typeof box.showModal === "function") box.showModal();
     });
   });
