@@ -29,14 +29,19 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);line-heigh
 .hero{display:flex;align-items:flex-start;gap:16px;margin-top:28px;flex-wrap:wrap}
 .emblem{width:52px;height:52px;flex:none}
 .emblem svg{width:52px;height:52px;display:block}
-.glass{margin-top:20px;position:relative;height:140px;background:var(--graphite);border:1px solid var(--laser);
-  overflow:hidden;box-shadow:0 0 0 1px rgba(14,165,233,.2)}
-.glass .streak{position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 18px,rgba(248,250,252,.06) 18px 22px)}
-.glass .wipe{position:absolute;left:18%;top:22%;width:72px;height:18px;border-radius:2px;
+.protocol{margin-top:20px;max-width:34rem;background:var(--graphite);color:#E2E8F0;border:1px solid var(--steel);
+  padding:0;display:grid;grid-template-columns:104px 1fr}
+@media(max-width:560px){.protocol{grid-template-columns:1fr}}
+.protocol .glass{position:relative;height:104px;background:#020617;overflow:hidden;border-right:1px solid var(--steel)}
+@media(max-width:560px){.protocol .glass{height:72px;border-right:0;border-bottom:1px solid var(--steel)}}
+.protocol .streak{position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 14px,rgba(248,250,252,.05) 14px 17px)}
+.protocol .wipe{position:absolute;left:16%;top:28%;width:46px;height:10px;border-radius:1px;
   background:linear-gradient(90deg,transparent,#F8FAFC 40%,#E2E8F0);opacity:.85;transform:rotate(-18deg)}
-.glass .hand{position:absolute;right:16%;bottom:18%;width:36px;height:36px;border:2px solid rgba(226,232,240,.45);border-radius:50%}
-.glass p{position:absolute;left:16px;bottom:12px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
-  text-transform:uppercase;color:#7DD3FC}
+.protocol .hand{position:absolute;right:14%;bottom:16%;width:22px;height:22px;border:1.5px solid rgba(226,232,240,.45);border-radius:50%}
+.protocol .copy{padding:12px 14px 13px}
+.protocol .lab{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--laser)}
+.protocol p{font-family:var(--display);font-size:14.5px;line-height:1.5;margin-top:6px;color:#E2E8F0}
+.protocol .note{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:#94A3B8;margin-top:8px}
 .stamps{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
 .stamp{font-family:var(--mono);font-size:10px;letter-spacing:.12em;border:1.5px solid var(--crimson);
   color:var(--crimson);padding:3px 7px;text-transform:uppercase}
@@ -97,12 +102,18 @@ body.warn .card{box-shadow:0 0 0 2px var(--crimson)}
       <p class="spec" id="spec"></p>
     </div>
   </header>
-  <div class="glass" aria-hidden="true">
-    <div class="streak"></div>
-    <div class="wipe"></div>
-    <div class="hand"></div>
-    <p>Dust is data. Wipe it.</p>
-  </div>
+  <aside class="protocol" aria-labelledby="odp-h">
+    <div class="glass" aria-hidden="true">
+      <div class="streak"></div>
+      <div class="wipe"></div>
+      <div class="hand"></div>
+    </div>
+    <div class="copy">
+      <div class="lab" id="odp-h">Levi · Off-Duty Protocol 01</div>
+      <p>Trust begins with a surface no one remembered to inspect.</p>
+      <p class="note">Observed behavior. Not a portrait. Quality assurance, off the clock.</p>
+    </div>
+  </aside>
 
   <section class="card" aria-labelledby="tel-h">
     <h2 id="tel-h">Sentinel telemetry</h2>
