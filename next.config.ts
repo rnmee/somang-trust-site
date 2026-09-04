@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
       { source: "/trust", destination: "/somang-trust.html" },
       { source: "/corps", destination: "/corps.html" },
       { source: "/corps-claude", destination: "/corps-claude.html" },
+      { source: "/corps-deepseek", destination: "/corps-deepseek.html" },
+      { source: "/presence", destination: "/corps-deepseek.html" },
       { source: "/corps-qwen", destination: "/corps-qwen.html" },
       { source: "/lantern", destination: "/corps-qwen.html" },
       { source: "/corps-gemini", destination: "/corps-gemini.html" },
