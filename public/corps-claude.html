@@ -54,17 +54,6 @@ h1{font-family:var(--display);font-size:clamp(26px,4.6vw,38px);font-weight:400;l
 .track.intel>i{width:75%;background:var(--intel)}
 .track.wild>i{width:15%;background:var(--wild)}
 .track.ethic>i{width:90%;background:var(--ethic)}
-.portrait{margin:20px auto 0;width:148px;height:148px;border-radius:50%;
-  background:radial-gradient(circle at 50% 48%, #fffaf0 0%, #e8e0cc 42%, transparent 70%);
-  position:relative;display:grid;place-items:center}
-.face{width:46px;height:54px;border:1.6px solid var(--ink);border-radius:42% 42% 48% 48%;position:relative}
-.face::before{content:"";position:absolute;width:4px;height:4px;left:12px;top:20px;border-radius:50%;background:var(--ink);box-shadow:16px 0 0 var(--ink)}
-.face::after{content:"";position:absolute;width:11px;height:4px;left:16px;top:34px;border-bottom:1.6px solid var(--ink);border-radius:0 0 10px 10px}
-.dust{position:absolute;inset:0;pointer-events:none}
-.dust span{position:absolute;width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7)}
-.dust span:nth-child(1){left:18%;top:28%}
-.dust span:nth-child(2){right:16%;top:36%;width:7px;height:7px}
-.dust span:nth-child(3){left:28%;bottom:22%;width:4px;height:4px}
 .block{margin-top:40px;border-top:1px solid var(--ink);padding-top:26px}
 .block h2{font-family:var(--display);font-size:22px;font-weight:400}
 .no{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seal);margin-right:8px}
@@ -158,7 +147,6 @@ dialog form{margin-top:16px}
         <label><span>Ethical stability</span></label>
         <div class="track ethic" role="img" aria-label="Ethical stability, about 90 percent"><i></i></div>
       </div>
-      <div class="portrait" aria-hidden="true"><div class="dust"><span></span><span></span><span></span></div><div class="face"></div></div>
     </aside>
 
     <section class="plate human">
