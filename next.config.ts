@@ -15,6 +15,8 @@ const nextConfig: NextConfig = {
       { source: "/corps-qwen", destination: "/corps-qwen.html" },
       { source: "/lantern", destination: "/corps-qwen.html" },
       { source: "/corps-gemini", destination: "/corps-gemini.html" },
+      { source: "/corps-grok", destination: "/corps-grok.html" },
+      { source: "/unit-12", destination: "/corps-grok.html" },
       { source: "/cleanroom", destination: "/corps-gemini.html" },
       { source: "/playground", destination: "/playground.html" },
       { source: "/simulation", destination: "/simulation.html" },

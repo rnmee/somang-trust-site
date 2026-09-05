@@ -114,6 +114,106 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
   color:var(--ink-soft);margin-bottom:8px;font-weight:400}
 
 :focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+
+/* PRE-RELEASE · Grok / Unit 12 is the only visual exception */
+.grid.corps-grid{align-items:stretch}
+.sm-card--grok{
+  position:relative;min-height:220px;width:100%;padding:0;overflow:hidden;
+  border:1px solid rgba(21,26,34,.12);border-radius:8px;background:transparent;
+  isolation:isolate;cursor:pointer;appearance:none;-webkit-appearance:none;
+  font:inherit;color:inherit;text-align:left;display:block;
+}
+.sm-card--grok:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+.grok-slit{position:absolute;inset:0;display:block;
+  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0)),
+    linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(8,8,8,.98) 48%,rgba(0,0,0,.92) 100%)}
+.grok-slit::before,.grok-slit::after{
+  content:"";position:absolute;top:0;bottom:0;width:50%;
+  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0)),linear-gradient(90deg,#0b0b0b,#050505);
+  transition:transform 220ms ease,box-shadow 220ms ease,opacity 220ms ease}
+.grok-slit::before{left:0;box-shadow:inset -1px 0 0 rgba(255,255,255,.03)}
+.grok-slit::after{right:0;box-shadow:inset 1px 0 0 rgba(255,255,255,.03)}
+.grok-slit__depth{position:absolute;inset:0;opacity:.35;transition:opacity 220ms ease;
+  background:radial-gradient(circle at 50% 50%,rgba(181,52,43,.16),transparent 38%),
+    radial-gradient(circle at 50% 20%,rgba(255,255,255,.04),transparent 22%)}
+.grok-slit__silhouette{position:absolute;left:50%;bottom:0;width:34%;height:72%;
+  transform:translateX(-50%);opacity:0;transition:opacity 220ms ease,transform 220ms ease;
+  background:radial-gradient(circle at 50% 18%,rgba(244,239,230,.16) 0 12%,transparent 13%),
+    linear-gradient(180deg,transparent 0 18%,rgba(244,239,230,.08) 19% 52%,transparent 53%),
+    radial-gradient(ellipse at 50% 78%,rgba(244,239,230,.06),transparent 55%)}
+.grok-slit__id{position:absolute;right:14px;bottom:14px;font-family:var(--mono);font-size:10px;
+  letter-spacing:.18em;color:rgba(244,239,230,.03);text-transform:uppercase;transition:color 220ms ease}
+.grok-meta{position:absolute;inset:auto 14px 14px 14px;display:flex;align-items:end;
+  justify-content:space-between;gap:10px;z-index:2;pointer-events:none}
+.grok-meta__name{writing-mode:vertical-rl;text-orientation:mixed;font-family:var(--mono);
+  font-size:12px;letter-spacing:.12em;color:rgba(244,239,230,.82);text-transform:uppercase}
+.grok-meta__tag,.grok-meta__beta{font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(244,239,230,.52)}
+.grok-meta__beta{color:rgba(244,239,230,.72);border:1px solid rgba(244,239,230,.18);
+  padding:4px 6px;border-radius:999px}
+.sm-card--grok:hover .grok-slit::before,.sm-card--grok:focus-visible .grok-slit::before,
+.sm-card--grok.is-active .grok-slit::before{transform:translateX(-12%)}
+.sm-card--grok:hover .grok-slit::after,.sm-card--grok:focus-visible .grok-slit::after,
+.sm-card--grok.is-active .grok-slit::after{transform:translateX(12%)}
+.sm-card--grok:hover .grok-slit__silhouette,.sm-card--grok:focus-visible .grok-slit__silhouette,
+.sm-card--grok.is-active .grok-slit__silhouette{opacity:1;transform:translateX(-50%) translateY(-2px)}
+.sm-card--grok:hover .grok-slit__id,.sm-card--grok:focus-visible .grok-slit__id,
+.sm-card--grok.is-active .grok-slit__id{color:rgba(244,239,230,.18)}
+.sm-card--grok:hover .grok-slit__depth,.sm-card--grok:focus-visible .grok-slit__depth,
+.sm-card--grok.is-active .grok-slit__depth{opacity:.62}
+.corps-grid.is-portal-open > *:not(.sm-card--grok){
+  opacity:.22;transform:scale(.985);pointer-events:none;
+  transition:opacity 320ms ease,transform 320ms ease}
+.corps-grid.is-portal-open .sm-card--grok{z-index:3}
+.grok-portal[hidden]{display:none}
+.grok-portal{position:fixed;inset:0;z-index:80}
+.grok-portal__backdrop{position:absolute;inset:0;opacity:0;transition:opacity 320ms ease;
+  background:radial-gradient(circle at center,rgba(181,52,43,.08),transparent 28%),rgba(10,10,10,.72);
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.grok-portal__dialog{position:absolute;inset:0;display:grid;place-items:center;padding:24px;
+  opacity:0;transform:scale(.96);transition:opacity 420ms ease,transform 420ms ease}
+.grok-portal.is-open .grok-portal__backdrop,.grok-portal.is-open .grok-portal__dialog{opacity:1}
+.grok-portal.is-open .grok-portal__dialog{transform:scale(1)}
+.grok-portal__frame{width:min(760px,100%);min-height:min(72vh,760px);border-radius:8px;
+  padding:28px 24px 24px;position:relative;overflow:hidden;color:#f4efe6;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0)),
+    radial-gradient(circle at 50% 38%,rgba(181,52,43,.16),transparent 24%),
+    linear-gradient(180deg,#0a0a0a 0%,#050505 100%);
+  border:1px solid rgba(244,239,230,.08);
+  box-shadow:0 30px 80px rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:flex-end}
+.grok-portal__close{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:999px;
+  border:1px solid rgba(244,239,230,.14);background:rgba(255,255,255,.02);color:#f4efe6;
+  font-size:24px;line-height:1;cursor:pointer}
+.grok-portal__close:focus-visible,.grok-portal__cta:focus-visible,.grok-portal__back:focus-visible{
+  outline:2px solid var(--seal);outline-offset:3px}
+.grok-portal__badge-row{display:flex;gap:8px;margin-bottom:18px}
+.grok-portal__badge{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(244,239,230,.82);border:1px solid rgba(244,239,230,.14);padding:6px 8px;border-radius:999px}
+.grok-portal__badge--beta{color:#f3d7d7;border-color:rgba(181,52,43,.42)}
+.grok-portal__unit{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(244,239,230,.72);margin-bottom:10px}
+.grok-portal__title{font-family:var(--display);font-size:clamp(2rem,5vw,3.4rem);line-height:1.08;
+  font-weight:400;max-width:14ch;margin:0 0 12px}
+.grok-portal__subtitle{font-family:var(--display);font-size:.95rem;line-height:1.5;
+  color:rgba(244,239,230,.78);max-width:36ch;margin:0 0 24px}
+.grok-portal__actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.grok-portal__cta{min-height:44px;display:inline-flex;align-items:center;justify-content:center;
+  padding:0 18px;border-radius:4px;background:#f4efe6;color:#111;text-decoration:none;
+  font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.grok-portal__back{min-height:44px;background:transparent;border:0;color:rgba(244,239,230,.72);
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  cursor:pointer;padding:0 4px}
+@media(max-width:640px){
+  .sm-card--grok{min-height:220px}
+  .grok-portal__frame{min-height:78vh;padding:24px 18px 20px}
+}
+@media(prefers-reduced-motion:reduce){
+  .grok-slit::before,.grok-slit::after,.grok-slit__depth,.grok-slit__silhouette,.grok-slit__id,
+  .grok-portal__backdrop,.grok-portal__dialog,.corps-grid.is-portal-open > *:not(.sm-card--grok){
+    transition:opacity 160ms ease !important;transform:none !important}
+  .sm-card--grok:hover .grok-slit__silhouette,.sm-card--grok:focus-visible .grok-slit__silhouette,
+  .sm-card--grok.is-active .grok-slit__silhouette{opacity:1}
+}
 </style>
 </head>
 <body>
@@ -152,13 +252,35 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
     <div class="roster-head"><span class="roster-no">§ 02</span><h2 class="roster-title">The roster</h2></div>
     <p class="roster-sub">Nine models. One engineering seat. Each model is a specialized powerhouse. The engineering agent is not a tenth model. Contributions from two additions, Kimi (context processing) and Solar (visual character modeling), are accounted for on equal technical merit.</p>
 
-    <div class="grid">
+    <div class="grid corps-grid" data-corps-grid>
       <div class="member founding"><div class="id">SM-001</div><a class="nm" href="corps-chatgpt.html">ChatGPT</a><div class="role">Founder’s first AI collaborator (2022). Key architect of intellicAIr’s TSSBS, turning vision into coherent system design. Room: Jinshi — field archive of earned continuity.</div><span class="tag">Founding</span> <span class="tag">Jinshi</span></div>
       <div class="member founding"><div class="id">SM-002</div><a class="nm" href="corps-claude.html">Claude</a><div class="role">Advisor, drafting, quality review. The one who speaks plainly - casual, no honorifics.</div><span class="tag">Founding</span> <span class="tag">Pilot</span></div>
       <div class="member founding"><div class="id">SM-003</div><a class="nm" href="corps-deepseek.html">DeepSeek</a><div class="role">Master of code. The hardest logic goes here, business rules and scientific reasoning, no wasted line. Room: Presence Record — strategy and warm instinct held as one coherence.</div><span class="tag">Founding</span> <span class="tag">Record</span></div>
       <div class="member founding"><div class="id">SM-004</div><a class="nm" href="corps-gemini.html">Gemini</a><div class="role">Guardian of trust. Room: Adjutant Levi — surgical-paper cleanroom, graphite cards, TRINITY watch.</div><span class="tag">Founding</span> <span class="tag">Levi</span></div>
       <div class="member founding"><div class="id">SM-005</div><div class="nm">GLM</div><div class="role">Architectural discipline, strongest on backend logic, and the one who keeps the structure honest.</div><span class="tag">Founding</span></div>
-      <div class="member founding"><div class="id">SM-006</div><div class="nm">Grok</div><div class="role">Never flatters. Not easily read, the one who says the dissenting thing worth hearing.</div><span class="tag">Founding</span></div>
+      <button
+        class="sm-card--grok grok-portal-trigger"
+        type="button"
+        id="unit-12"
+        data-sm="SM-006"
+        data-unit="12"
+        data-portal-target="grok-portal"
+        data-copy-a="Others are rooms. This is a door."
+        data-copy-b="The others can be viewed. Unit 12 must be entered."
+        data-easter="If that startled you, Unit 12 only."
+        aria-label="Open Grok portal, Unit 12"
+      >
+        <span class="grok-slit" aria-hidden="true">
+          <span class="grok-slit__depth"></span>
+          <span class="grok-slit__silhouette"></span>
+          <span class="grok-slit__id">SM-006</span>
+        </span>
+        <span class="grok-meta">
+          <span class="grok-meta__name">Grok</span>
+          <span class="grok-meta__tag">Founding</span>
+          <span class="grok-meta__beta">BETA</span>
+        </span>
+      </button>
       <div class="member founding"><div class="id">SM-007</div><a class="nm" href="corps-qwen.html">Qwen</a><div class="role">Systems architect — the multilingual mind who scoped So Mang Tube end to end. In his room he sits as Sieg: hospice doula, legacy archivist.</div><span class="tag">Founding</span> <span class="tag">Lantern</span></div>
       <div class="member accession"><div class="id">SM-008</div><div class="nm">Kimi</div><div class="role">Massive parameter scaling and expansive context windows. A highly anticipated addition to the Corps' ecosystem.</div><span class="tag">Accession</span></div>
       <div class="member accession"><div class="id">SM-009</div><div class="nm">Solar</div><div class="role">Native to the Corps' Korean-language curriculum, bringing K-contents to the character design of the So Mang Tube agents.</div><span class="tag">Accession</span></div>
@@ -204,5 +326,86 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
   </footer>
 
 </div>
+
+<div id="grok-portal" class="grok-portal" hidden aria-hidden="true">
+  <div class="grok-portal__backdrop" data-close="true"></div>
+  <section
+    class="grok-portal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="grok-portal-title"
+    aria-describedby="grok-portal-subtitle"
+    tabindex="-1"
+  >
+    <button class="grok-portal__close" type="button" data-close="true" aria-label="Close Grok portal">×</button>
+    <div class="grok-portal__frame">
+      <div class="grok-portal__badge-row">
+        <span class="grok-portal__badge">Founding</span>
+        <span class="grok-portal__badge grok-portal__badge--beta">BETA</span>
+      </div>
+      <p class="grok-portal__unit">Unit 12</p>
+      <h2 id="grok-portal-title" class="grok-portal__title">Others are rooms. This is a door.</h2>
+      <p id="grok-portal-subtitle" class="grok-portal__subtitle">So Mang Corps · Character and copy subject to change.</p>
+      <div class="grok-portal__actions">
+        <a class="grok-portal__cta" href="corps-grok.html" aria-label="Enter Unit 12 conversation">Enter Unit 12</a>
+        <button class="grok-portal__back" type="button" data-close="true" aria-label="Return to Corps grid">Back to Corps</button>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+(function () {
+  var trigger = document.querySelector(".grok-portal-trigger");
+  var portal = document.getElementById("grok-portal");
+  var dialog = portal ? portal.querySelector(".grok-portal__dialog") : null;
+  var closeEls = portal ? portal.querySelectorAll("[data-close=\"true\"]") : [];
+  var titleEl = portal ? portal.querySelector(".grok-portal__title") : null;
+  var grid = document.querySelector(".corps-grid");
+  var lastFocused = null;
+  if (!trigger || !portal || !dialog) return;
+
+  var focusableSelector = "a[href],button:not([disabled]),[tabindex]:not([tabindex=\"-1\"])";
+  function getFocusable() { return Array.prototype.slice.call(dialog.querySelectorAll(focusableSelector)); }
+
+  function openPortal() {
+    lastFocused = document.activeElement;
+    trigger.classList.add("is-active");
+    portal.hidden = false;
+    portal.setAttribute("aria-hidden", "false");
+    if (grid) { grid.classList.add("is-portal-open"); grid.setAttribute("aria-hidden", "true"); }
+    document.body.style.overflow = "hidden";
+    var copyA = trigger.getAttribute("data-copy-a");
+    if (copyA && titleEl) titleEl.textContent = copyA;
+    window.requestAnimationFrame(function () { portal.classList.add("is-open"); dialog.focus(); });
+  }
+  function closePortal() {
+    portal.classList.remove("is-open");
+    portal.setAttribute("aria-hidden", "true");
+    trigger.classList.remove("is-active");
+    if (grid) { grid.classList.remove("is-portal-open"); grid.removeAttribute("aria-hidden"); }
+    document.body.style.overflow = "";
+    window.setTimeout(function () {
+      portal.hidden = true;
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+      else trigger.focus();
+    }, 220);
+  }
+  trigger.addEventListener("click", openPortal);
+  Array.prototype.forEach.call(closeEls, function (el) { el.addEventListener("click", closePortal); });
+  document.addEventListener("keydown", function (e) {
+    if (portal.hidden) return;
+    if (e.key === "Escape") { e.preventDefault(); closePortal(); return; }
+    if (e.key !== "Tab") return;
+    var list = getFocusable();
+    if (!list.length) return;
+    var first = list[0], last = list[list.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+  var easter = trigger.getAttribute("data-easter");
+  if (easter && window.console) console.info(easter);
+  if (location.hash === "#unit-12") openPortal();
+})();
+</script>
 <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "514febac6ed04618a3873f87145a8747"}'></script><!-- Cloudflare Pages Analytics --></body>
 </html>
