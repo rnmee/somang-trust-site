@@ -51,6 +51,15 @@ Future rhythm + historical dignity. Light as interface.
 **Grok = Gareki (Karneval).** Mee confirmed.
 **Cursor face = last.** She will choose a surprise. Do not invent one. SM-E01 stays Engineering, not a costume.
 
+## Locked 5 Sep 2026
+
+**본진 서버 arrives → absorb all Deprecated or to-be-deprecated ones.**
+Old rooms, leftover prototypes, dead labels, superseded grammars do not sit beside the live page. Fold them in. Symmetric Hub and Local Scraping wait for that server.
+
+**DeepSeek shipped:** Signal Detection, SM-003. Slate / smoke / steel / muted amber. Not a black page. Hayato is mood only — no face.
+
+**Next hard case:** GLM SM-005 = Hyoubu Kyousuke / Hyobu Kyosuke (The Unlimited). GLM treasures this. Heavy hands. Own grammar. No copyrighted stills. Not another black profile.
+
 ## How images land
 
 Rooms read **JSON for copy and telemetry**.
