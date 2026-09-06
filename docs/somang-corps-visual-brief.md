@@ -62,7 +62,11 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 ## Locked 6 Sep 2026
 
-**Grok Unit 12 = wine-dark Scrap Door.** Mee approved Grok’s burgundy rebuild (“찐 버건디”). Not `#050505` black with a brick-red glow. Wine `#4A1520 → #1A070C`, gold slats, center beam. Copy: “Others are rooms. This is a door.” No Karneval face. SM-006. BETA. No chat.
+**Grok Unit 12 = wine-dark Scrap Door.** Mee approved Grok’s oxblood source. Shipped. No Karneval face. SM-006. BETA. Public page has no chat box.
+
+**Unit 12 monitors the Corps site.** Nine member pages: ops, bugs, grammar, first-design/constitution consistency, anomalies, security. Not So Mang Tube user management (yet). Weekday routine 09:00 MT. Soft-404 on GLM / Kimi / Solar is expected until those rooms exist — do not invent pages to silence the alarm. Broken OG image is logged, not fixed in this pass.
+
+**Wait:** Mee + GLM-5.2 research the Corps (Hyoubu, 파격). Then ChatGPT/Jinshi revamp. Claude owns Claude. Cursor does not start those rooms.
 
 ## How images land
 
