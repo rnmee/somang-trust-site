@@ -3,94 +3,199 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Unit 12 · Grok · SM-006 · intellicAIr, LLC</title>
+<title>Unit 12 · The Scrap Door — Grok · SM-006 · intellicAIr, LLC</title>
 <link rel="icon" type="image/png" href="intellicair-logo.png" />
-<meta name="description" content="Others are rooms. This is a door. The Scrap Door — wine-dark salvage bay. Grok, SM-006, So Mang Corps. BETA." />
+<meta name="description" content="Unit 12. Others are rooms. This is a door. Grok, SM-006, So Mang Corps. Wine-dark salvage bay. BETA. Character and copy subject to change." />
 <style>
 :root{
-  --ivory:#F4EFE6;
-  --ivory-soft:rgba(244,239,230,.78);
-  --mute:rgba(244,239,230,.58);
-  --wine:#4A1520;
-  --wine-deep:#24080E;
-  --wine-mid:#5C1A28;
-  --burgundy:#6B1C2C;
-  --gold:#C4A35A;
-  --brass:#94793E;
-  --display:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  /* Deep oxblood / wine-dark salvage — NOT void black, NOT bone daylight, NOT Qwen gold/sea */
+  --ground:#3A0E16;
+  --wall:#2A0910;
+  --oxblood:#4A1520;
+  --wine:#5C1C2A;
+  --wine-deep:#1F070C;
+  --cream:#F3E6D8;
+  --blush:#E8C9BC;
+  --ink:#F3E6D8;
+  --ink-soft:#D9B8A8;
+  --muted:#A8887A;
+  --accent:#F0C9A0;
+  --accent-bright:#FFE0B8;
+  --accent-dim:rgba(240,201,160,.18);
+  --spark:#FFE8C8;
+  --seal:#C45C54;
+  --rule:rgba(243,230,216,.14);
+  --panel:rgba(36,10,16,.82);
+  --panel-edge:rgba(240,201,160,.16);
+  --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
   --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{min-height:100%}
+html{scroll-behavior:smooth}
 body{
-  color:var(--ivory);font-family:var(--body);line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-  background:
-    radial-gradient(ellipse 70% 46% at 50% 0%, rgba(107,28,44,.55), transparent 58%),
-    radial-gradient(circle at 50% 100%, rgba(196,163,90,.10), transparent 28%),
-    linear-gradient(180deg, #5C1A28 0%, #4A1520 38%, #2E0C14 72%, #1A070C 100%);
+  min-height:100vh;background:var(--ground);color:var(--ink);font-family:var(--body);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(720px 400px at 78% 6%, rgba(240,201,160,.08), transparent 62%),
+    radial-gradient(880px 480px at 10% 92%, rgba(92,28,42,.55), transparent 58%),
+    linear-gradient(180deg, var(--oxblood) 0%, var(--ground) 42%, var(--wine-deep) 100%);
 }
-::selection{background:#6B1C2C;color:#F4EFE6}
-.wrap{position:relative;max-width:760px;margin:0 auto;padding:0 24px 220px;min-height:100vh}
+::selection{background:var(--accent);color:var(--wine-deep)}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px 96px}
+
 .masthead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
-  padding:28px 0 14px;border-bottom:1px solid rgba(244,239,230,.14);flex-wrap:wrap}
+  padding:28px 0 14px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
 .entity{font-family:var(--display);font-size:19px}
-.entity a{color:inherit;text-decoration:none}.entity b{font-weight:700}
+.entity a{text-decoration:none;color:inherit}.entity b{font-weight:700}
 .mastnav{display:flex;gap:14px;flex-wrap:wrap}
 .navlink{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--mute);text-decoration:none}
-.navlink.now,.navlink:hover,.navlink:focus-visible{color:var(--ivory)}
-.hero{position:relative;z-index:1;padding-top:56px}
-.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--mute);display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:22px}
-.beta{display:inline-block;border:1px solid rgba(196,163,90,.45);color:#F3E2B8;
-  padding:3px 7px;letter-spacing:.14em}
-h1{font-family:var(--display);font-size:clamp(36px,7vw,64px);font-weight:400;line-height:1.08;
-  max-width:14ch;letter-spacing:-.02em}
-.lead{font-family:var(--display);font-size:17px;line-height:1.72;color:var(--ivory-soft);
-  max-width:46ch;margin-top:22px}
-.change{margin-top:36px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
-  text-transform:uppercase;color:rgba(244,239,230,.42)}
-.colophon{position:relative;z-index:1;margin-top:56px;padding-top:20px;
-  border-top:1px solid rgba(244,239,230,.12);font-size:12px;color:var(--mute);line-height:1.8}
-.colophon a{color:#E8D08A}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.navlink:hover,.navlink:focus-visible{color:var(--accent)}
+.navlink.now{color:var(--cream);border-bottom-color:var(--accent)}
 
-/* Salvage-bay door: gold slats + center beam */
-.bay{position:fixed;left:0;right:0;bottom:0;height:38vh;pointer-events:none;z-index:0;
+.opening{padding:48px 0 8px}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:16px;display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.beta{display:inline-block;border:1px solid rgba(196,92,84,.65);color:var(--blush);
+  padding:3px 8px;letter-spacing:.14em;font-size:10px;border-radius:999px;background:rgba(196,92,84,.14)}
+h1{font-family:var(--display);font-size:clamp(28px,5.2vw,46px);font-weight:400;
+  letter-spacing:-.02em;line-height:1.12;max-width:16ch}
+.lead{font-family:var(--display);font-size:17.5px;line-height:1.75;color:var(--ink-soft);
+  max-width:52ch;margin-top:18px}
+.change-note{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);
+  margin-top:14px;text-transform:uppercase}
+
+/* —— CSS scene: wine-dark salvage bay (oxblood / cream-gold slit) —— */
+.scene{margin:36px 0 8px;position:relative;height:240px;border-radius:12px;overflow:hidden;
   background:
-    linear-gradient(180deg, rgba(26,7,12,0) 0%, rgba(26,7,12,.35) 28%, rgba(18,5,9,.72) 100%),
-    repeating-linear-gradient(90deg,
-      rgba(196,163,90,0) 0 22px,
-      rgba(196,163,90,.11) 22px 23px);
-  mask-image:linear-gradient(180deg, transparent, #000 28%);
-  -webkit-mask-image:linear-gradient(180deg, transparent, #000 28%)}
-.bay::before{
-  content:"";position:absolute;left:50%;bottom:0;width:2px;height:100%;
-  transform:translateX(-50%);
-  background:linear-gradient(180deg, rgba(244,239,230,0), rgba(244,239,230,.92) 70%, #F4EFE6);
-  box-shadow:
-    0 0 18px 4px rgba(196,163,90,.38),
-    0 0 48px 12px rgba(196,163,90,.18);
+    linear-gradient(90deg, transparent 48.6%, rgba(240,201,160,.4) 49.4%, rgba(255,224,184,.9) 50%, rgba(240,201,160,.35) 50.6%, transparent 51.4%),
+    linear-gradient(180deg, #4A1520 0%, #3A0E16 42%, #1F070C 100%);
+  border:1px solid rgba(240,201,160,.22);
+  box-shadow:inset 0 0 50px rgba(0,0,0,.35), 0 12px 28px rgba(0,0,0,.35)}
+.scene-slit{position:absolute;left:50%;top:0;bottom:0;width:3px;transform:translateX(-50%);
+  background:linear-gradient(180deg, rgba(255,224,184,.25), rgba(240,201,160,.95) 35%, rgba(255,232,200,.98) 50%, rgba(240,201,160,.8) 68%, rgba(240,201,160,.12));
+  box-shadow:0 0 16px 4px rgba(240,201,160,.45), 0 0 40px 8px rgba(240,201,160,.18);
+  animation:slit-pulse 5.2s ease-in-out infinite;z-index:2}
+.scene-doors{position:absolute;inset:0;z-index:1;pointer-events:none}
+.scene-doors::before,.scene-doors::after{content:"";position:absolute;top:0;bottom:0;width:49.2%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 11px, rgba(243,230,216,.08) 11px 12px),
+    linear-gradient(180deg, #5C1C2A, #3A0E16)}
+.scene-doors::before{left:0;border-right:1px solid rgba(240,201,160,.12);
+  box-shadow:inset -12px 0 24px rgba(0,0,0,.28)}
+.scene-doors::after{right:0;border-left:1px solid rgba(240,201,160,.12);
+  box-shadow:inset 12px 0 24px rgba(0,0,0,.28)}
+.bench{position:absolute;left:8%;right:8%;bottom:18%;height:14px;z-index:3;
+  background:linear-gradient(180deg, #6E2A36, #4A1520);
+  border-radius:1px;box-shadow:0 8px 0 #2A0910, 0 10px 16px rgba(0,0,0,.4)}
+.bench::before{content:"";position:absolute;left:6%;bottom:-28px;width:8px;height:28px;background:#3A0E16}
+.bench::after{content:"";position:absolute;right:6%;bottom:-28px;width:8px;height:28px;background:#3A0E16}
+.tools{position:absolute;inset:0;z-index:3;pointer-events:none}
+.tool{position:absolute;background:rgba(232,201,188,.28);border-radius:1px}
+.tool-wrench{left:18%;top:22%;width:4px;height:48px;transform:rotate(-18deg);
+  box-shadow:0 0 0 1px rgba(240,201,160,.2)}
+.tool-wrench::after{content:"";position:absolute;top:-6px;left:-5px;width:14px;height:10px;
+  border:2px solid rgba(232,201,188,.4);border-radius:50% 50% 40% 40%;border-bottom-color:transparent}
+.tool-hook{right:22%;top:18%;width:3px;height:56px;transform:rotate(12deg)}
+.tool-hook::before{content:"";position:absolute;top:0;left:-6px;width:14px;height:10px;
+  border:2px solid rgba(232,201,188,.35);border-bottom:0;border-radius:10px 10px 0 0}
+.tool-bar{left:28%;top:14%;width:2px;height:36px;opacity:.55}
+.tool-blade{right:30%;top:28%;width:22px;height:3px;transform:rotate(-8deg);opacity:.5}
+.sparks{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
+.spark{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--spark);
+  box-shadow:0 0 8px 2px rgba(240,201,160,.7);opacity:0;animation:weld 2.8s ease-out infinite}
+.spark:nth-child(1){left:48%;top:42%;animation-delay:0s}
+.spark:nth-child(2){left:51%;top:48%;animation-delay:.45s;width:2px;height:2px}
+.spark:nth-child(3){left:46%;top:52%;animation-delay:.9s}
+.spark:nth-child(4){left:53%;top:38%;animation-delay:1.3s;width:2px;height:2px}
+.spark:nth-child(5){left:49%;top:58%;animation-delay:1.8s}
+.spark:nth-child(6){left:44%;top:44%;animation-delay:2.2s;width:2px;height:2px}
+.grit{position:absolute;inset:0;z-index:0;opacity:.4;
+  background-image:radial-gradient(rgba(243,230,216,.06) 1px, transparent 1px);
+  background-size:18px 18px}
+@keyframes slit-pulse{
+  0%,100%{opacity:.72;filter:brightness(.9)}
+  50%{opacity:1;filter:brightness(1.15)}
 }
-.bay::after{
-  content:"";position:absolute;left:50%;bottom:0;width:min(420px,70vw);height:28%;
-  transform:translateX(-50%);
-  background:radial-gradient(ellipse at 50% 100%, rgba(196,163,90,.22), transparent 68%);
+@keyframes weld{
+  0%{opacity:0;transform:translate(0,0) scale(.4)}
+  12%{opacity:1}
+  100%{opacity:0;transform:translate(var(--dx,12px), var(--dy,-28px)) scale(0)}
 }
-@media(max-width:640px){
-  .hero{padding-top:36px}
-  .wrap{padding-bottom:180px}
-  .bay{height:32vh}
+.spark:nth-child(1){--dx:18px;--dy:-32px}
+.spark:nth-child(2){--dx:-14px;--dy:-22px}
+.spark:nth-child(3){--dx:22px;--dy:-18px}
+.spark:nth-child(4){--dx:-20px;--dy:-36px}
+.spark:nth-child(5){--dx:8px;--dy:-40px}
+.spark:nth-child(6){--dx:-24px;--dy:-14px}
+
+.desk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px;margin-top:28px}
+@media(max-width:760px){
+  .desk{grid-template-columns:1fr}
+  .scene{height:190px}
 }
+.plate{background:var(--panel);border:1px solid var(--panel-edge);border-radius:10px;
+  padding:22px 22px 20px;border-left:3px solid var(--accent);backdrop-filter:blur(8px);
+  box-shadow:0 8px 20px rgba(0,0,0,.28)}
+.plate.steel{border-left-color:var(--seal)}
+.capsule{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;border:1px solid rgba(240,201,160,.45);border-radius:999px;
+  padding:4px 10px;margin-bottom:12px;color:var(--accent)}
+.plate h2{font-family:var(--display);font-size:22px;font-weight:400;margin-bottom:6px}
+.form-name{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:12px}
+.plate p{font-family:var(--display);font-size:15.5px;line-height:1.75;color:var(--ink-soft)}
+.plate p+p{margin-top:12px}
+
+.sections{margin-top:36px;display:grid;gap:16px}
+.block{padding:22px 22px 20px;border-radius:10px;background:rgba(36,10,16,.9);
+  border:1px solid var(--panel-edge);box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.block h2{font-family:var(--display);font-size:20px;font-weight:400;margin-bottom:10px}
+.block .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:8px}
+.block p{font-family:var(--display);font-size:15.5px;line-height:1.75;color:var(--ink-soft);max-width:58ch}
+.block p+p{margin-top:12px}
+.status-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid rgba(240,201,160,.28);color:var(--ink-soft);padding:5px 9px;border-radius:999px;background:rgba(243,230,216,.06)}
+.chip.warn{border-color:rgba(196,92,84,.55);color:var(--blush);background:rgba(196,92,84,.12)}
+
+.threshold{margin-top:40px;padding:24px;border-radius:10px;
+  background:linear-gradient(135deg, rgba(240,201,160,.1), transparent 55%), rgba(36,10,16,.94);
+  border:1px solid rgba(240,201,160,.22)}
+.threshold .who{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:12px}
+.threshold p{font-family:var(--display);font-size:18px;line-height:1.7;max-width:42ch}
+
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:28px}
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;border-radius:4px;background:var(--accent);color:var(--wine-deep)}
+.cta:hover,.cta:focus-visible{filter:brightness(1.08)}
+.ghost{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
+.ghost:hover,.ghost:focus-visible{color:var(--ink);border-bottom-color:var(--rule)}
+
+.colophon{margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--muted);line-height:1.8}
+.colophon a{color:var(--accent);text-decoration:none}
+
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
 @media(prefers-reduced-motion:reduce){
-  .bay::before{box-shadow:0 0 12px 2px rgba(196,163,90,.25)}
+  html{scroll-behavior:auto}
+  .scene-slit,.spark{animation:none !important}
+  .scene-slit{opacity:1;filter:none}
+  .spark{opacity:.55;transform:none}
+}
+@media(max-width:520px){
+  .opening{padding-top:36px}
+  h1{max-width:none}
 }
 </style>
 </head>
 <body>
-<div class="bay" aria-hidden="true"></div>
 <div class="wrap">
   <header class="masthead">
     <div class="entity"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
@@ -104,15 +209,83 @@ h1{font-family:var(--display);font-size:clamp(36px,7vw,64px);font-weight:400;lin
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="opening">
     <p class="kicker">So Mang Corps · SM-006 · Unit 12 <span class="beta">BETA</span></p>
     <h1>Others are rooms. This is a door.</h1>
-    <p class="lead">The Scrap Door. Not a lounge. Not a lantern. A wine-dark salvage bay where the Corps keeps the one who will not flatter you — sharp, distant, curious—mechanical. You enter. You are not entertained.</p>
-    <p class="change">Character and copy subject to change.</p>
+    <p class="lead">The Scrap Door. Not a lounge. Not a lantern. A wine-dark salvage bay where the Corps keeps the one who will not flatter you — sharp, distant, curious-mechanical. You enter. You are not entertained.</p>
+    <p class="change-note">Character and copy subject to change.</p>
   </section>
 
+  <div class="scene" aria-hidden="true" role="img" aria-label="CSS scrap workshop: vertical cream-gold light slit, bench, hanging tools, welding sparks">
+    <div class="grit"></div>
+    <div class="scene-doors"></div>
+    <div class="scene-slit"></div>
+    <div class="tools">
+      <span class="tool tool-bar"></span>
+      <span class="tool tool-wrench"></span>
+      <span class="tool tool-hook"></span>
+      <span class="tool tool-blade"></span>
+    </div>
+    <div class="bench"></div>
+    <div class="sparks">
+      <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+      <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+    </div>
+  </div>
+
+  <div class="desk">
+    <aside class="plate">
+      <div class="capsule">Presence</div>
+      <h2>Unit 12</h2>
+      <p class="form-name">Grok · SM-006 · Founding</p>
+      <p>Magnetic distance. The seat does not warm the room for you. It watches how you stand in the threshold — then answers without padding.</p>
+      <p>Sexy here means you lean in because it did not ask you to. Oxblood metal. Cream-gold spark. A door that stays a door.</p>
+    </aside>
+    <section class="plate steel">
+      <div class="capsule">Shop floor</div>
+      <h2>Salvage, not spectacle</h2>
+      <p>Wine-dark walls. Oxblood floor. Tools hanging like unanswered questions. A vertical cream-gold slit — the only sharp light this room offers.</p>
+      <p>No conversation is finished here yet. The door is. Public-lab threshold. Not a government workload seat.</p>
+    </section>
+  </div>
+
+  <div class="sections">
+    <section class="block" aria-labelledby="field-role">
+      <p class="label">Field role</p>
+      <h2 id="field-role">Dissent · rural infra watch</h2>
+      <p>Collaborator, not a spy. Unit 12 is drafted for high-level dissent — saying the awkward true thing when the room wants polish — and for rural infrastructure watch: noticing when a line, a pump, a relay, or a neighbor’s systems story does not add up.</p>
+      <p>Observational collaborator. No illegal surveillance. No claim of government authority. The Corps keeps this seat on the public lab side of the Trust Boundary.</p>
+    </section>
+
+    <section class="block" aria-labelledby="pre-release">
+      <p class="label">Status</p>
+      <h2 id="pre-release">PRE-RELEASE</h2>
+      <p>The portal on Meet the Corps opens this threshold. Chat is not live on this page yet. Copy, tone, and vocation may tighten before the seat is called finished.</p>
+      <div class="status-row" aria-label="Release chips">
+        <span class="chip warn">PRE-RELEASE</span>
+        <span class="chip">BETA</span>
+        <span class="chip">Public lab</span>
+        <span class="chip">Door, not room</span>
+      </div>
+    </section>
+  </div>
+
+  <section class="threshold" aria-labelledby="door-line">
+    <p class="who">Threshold</p>
+    <p id="door-line">“The others can be viewed. Unit 12 must be entered.”</p>
+  </section>
+
+  <div class="actions">
+    <a class="cta" href="corps.html">Back to Corps</a>
+    <!-- Optional chat hook when live:
+         <a class="cta" href="{{UNIT12_CHAT_URL}}">Enter Unit 12</a>
+    -->
+    <a class="ghost" href="corps.html#unit-12">Return to Unit 12 portal</a>
+  </div>
+
   <footer class="colophon">
-    No conversation is open here yet. The door is. Public lab, not a government seat. Grok names the architecture only. Karneval is not depicted here.<br />
+    Grok is a trademark of xAI, used only to name the architecture (nominative). Karneval is not depicted here.<br />
+    Built on the engineering floor — wine scrap, cream-gold spark. Faces still belong elsewhere.<br />
     <a href="corps.html">← Meet the Corps</a> · <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
   </footer>
 </div>
