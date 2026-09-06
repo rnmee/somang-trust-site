@@ -68,6 +68,8 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **Wait:** ChatGPT/Jinshi revamp. Claude owns Claude. Do not start those rooms.
 
+**Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
+
 ## How images land
 
 Rooms read **JSON for copy and telemetry**.
