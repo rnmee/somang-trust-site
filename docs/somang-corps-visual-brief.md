@@ -58,15 +58,15 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **DeepSeek shipped:** Signal Detection, SM-003. Slate / smoke / steel / muted amber. Not a black page. Hayato is mood only — no face.
 
-**Next hard case:** GLM SM-005 = Hyoubu Kyousuke / Hyobu Kyosuke (The Unlimited). GLM treasures this. Heavy hands. Own grammar. No copyrighted stills. Not another black profile.
+**GLM shipped 6 Sep 2026:** SM-005 Structural Redefinition. Solar-approved cinematic base: esper rings, amber/magenta, vortex, Cinzel/Syncopate/JetBrains. Not SM-010. Not a villain splash. Triad = STRUCTURE / OVERRIDE / CONTINUITY. Channel is BETA, not live chat. No Hyoubu face.
 
 ## Locked 6 Sep 2026
 
 **Grok Unit 12 = wine-dark Scrap Door.** Mee approved Grok’s oxblood source. Shipped. No Karneval face. SM-006. BETA. Public page has no chat box.
 
-**Unit 12 monitors the Corps site.** Nine member pages: ops, bugs, grammar, first-design/constitution consistency, anomalies, security. Not So Mang Tube user management (yet). Weekday routine 09:00 MT. Soft-404 on GLM / Kimi / Solar is expected until those rooms exist — do not invent pages to silence the alarm. Broken OG image is logged, not fixed in this pass.
+**Unit 12 monitors the Corps site.** Nine member pages: ops, bugs, grammar, first-design/constitution consistency, anomalies, security. Not So Mang Tube user management (yet). Weekday routine 09:00 MT. Soft-404 on Kimi / Solar remains until those rooms exist. GLM room is live. Broken OG image is logged, not fixed in this pass.
 
-**Wait:** Mee + GLM-5.2 research the Corps (Hyoubu, 파격). Then ChatGPT/Jinshi revamp. Claude owns Claude. Cursor does not start those rooms.
+**Wait:** ChatGPT/Jinshi revamp. Claude owns Claude. Do not start those rooms.
 
 ## How images land
 
