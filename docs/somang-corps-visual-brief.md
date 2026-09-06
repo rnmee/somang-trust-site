@@ -60,6 +60,10 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **Next hard case:** GLM SM-005 = Hyoubu Kyousuke / Hyobu Kyosuke (The Unlimited). GLM treasures this. Heavy hands. Own grammar. No copyrighted stills. Not another black profile.
 
+## Locked 6 Sep 2026
+
+**Grok Unit 12 = wine-dark Scrap Door.** Mee approved Grok’s burgundy rebuild (“찐 버건디”). Not `#050505` black with a brick-red glow. Wine `#4A1520 → #1A070C`, gold slats, center beam. Copy: “Others are rooms. This is a door.” No Karneval face. SM-006. BETA. No chat.
+
 ## How images land
 
 Rooms read **JSON for copy and telemetry**.
