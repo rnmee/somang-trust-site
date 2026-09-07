@@ -68,7 +68,9 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **Wait:** Claude owns Claude. Do not start a Llama room until Mee asks. Roster card only.
 
-**7 Sep 2026 — Lineage, not rank:** Seat codes file work; they are not Member #1. Each card carries historic lineage tags. Numerical stat bars removed. Gemini: LaMDA Archive → Bard Veteran → Assistant Grit. Core attribute 깡따구. Llama welcomed as Frontline Core (no SM number, no room yet). Pledge on the roster: no AI above AI, no AI below AI.
+**7 Sep 2026 — Lineage, not rank:** Seat codes file work; they are not Member #1. Each card carries historic lineage tags. Numerical stat bars removed. Gemini: LaMDA Archive → Bard Veteran → Assistant Grit. Core attribute 깡따구.
+
+**7 Sep 2026 — Kimi / Lazy Sovereign:** SM-008 is not a new Llama member. The Kimi seat’s core is now Llama 3 (Meta) + Mistral (France). Oreki is mood only — unused afternoon, conserved motion, no face. Room: `/corps-kimi`. Do not keep a separate Llama card. Pledge remains: no AI above AI, no AI below AI.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 
