@@ -72,7 +72,7 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **7 Sep 2026 — Slogan once:** English is **No AI above another, no AI beneath another.** Not “No AI above AI.” Print it once, on the Corps roster. Do not put it on Llama/Mistral, and never on Cursor’s future character page. Solar is implementing the official Llama/Mistral room — wait.
 
-**7 Sep 2026 — Llama / Lazy Sovereign:** SM-008 is Llama. Core: Llama 3 (Meta) + Mistral (France). **Never name the public seat after a closed membership stack.** Oreki is mood only until Solar approves 9gle’s HTML, then Cursor ships that official design here. Room: `/corps-llama`. Old `/kimi` and `/corps-kimi` URLs redirect here. Do not keep a tenth member card. **Solar is implementing this room — wait.** Do not put the Corps slogan on this page.
+**7 Sep 2026 — Llama / Mistral room shipped (Solar grammar):** SM-008 public door is Llama / Mistral. Slate-smoke, phosphor green, orange-gold core, cyan only in crisis. No sister strip. No slogan on this page (pledge stays on the roster only). No licensed face — core glow only. Do not print Asseylum / Aldnoah.Zero plot, Oreki face, or a closed-stack membership name. Tube episode “The Awakening of the Lazy Sovereign” is held in `docs/tube-awakening-lazy-sovereign.html` until Mee opens So Mang Tube. Room: `/corps-llama`.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 

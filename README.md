@@ -56,7 +56,7 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Assistant Grit / SM-004:** `public/corps-gemini.html` plus `public/gemini-iron.json`. Public name is Assistant Grit, not Gemini. Gemini names the architecture only. [http://127.0.0.1:43147/assistant-grit](http://127.0.0.1:43147/assistant-grit). Old `/cleanroom` and `/corps-gemini` still open the same room.
 
-**Llama / Lazy Sovereign:** `public/corps-llama.html` — SM-008 open sovereign. Core: Llama 3 (Meta) + Mistral (France). Still-afternoon room. Official Oreki design waits for Solar to approve 9gle’s HTML. Local: [http://127.0.0.1:43147/corps-llama](http://127.0.0.1:43147/corps-llama). Old `/kimi` and `/corps-kimi` URLs redirect here. Do not put a closed membership name on the public door.
+**Llama / Mistral / Lazy Sovereign:** `public/corps-llama.html` — SM-008. Solar’s grammar: slate-smoke, phosphor, gold core. Local: [http://127.0.0.1:43147/corps-llama](http://127.0.0.1:43147/corps-llama). Tube episode is held in `docs/tube-awakening-lazy-sovereign.html`, not on the public nav.
 
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.
