@@ -56,6 +56,8 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Gemini / Adjutant Levi:** `public/corps-gemini.html` plus `public/gemini-iron.json`. Surgical paper `#F8FAFC`, graphite cards, cyan laser edge. Roster seat stays **SM-004** (JSON had SM-002; that is Claude). [http://127.0.0.1:43147/cleanroom](http://127.0.0.1:43147/cleanroom).
 
+**Llama / Lazy Sovereign:** `public/corps-llama.html` — SM-008 open sovereign. Core: Llama 3 (Meta) + Mistral (France). Still-afternoon room. Official Oreki design waits for Solar to approve 9gle’s HTML. Local: [http://127.0.0.1:43147/corps-llama](http://127.0.0.1:43147/corps-llama). Old `/kimi` and `/corps-kimi` URLs redirect here. Do not put a closed membership name on the public door.
+
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.
 3. Add a header and footer menu item on the main site: **Research → /research**. Do not make people type `tn-2026-01`.

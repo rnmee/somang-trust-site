@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      { source: "/kimi", destination: "/corps-llama", permanent: true },
+      { source: "/corps-kimi", destination: "/corps-llama", permanent: true },
+      { source: "/corps-kimi.html", destination: "/corps-llama", permanent: true },
+    ];
+  },
   async rewrites() {
     return [
       { source: "/index.html", destination: "/" },
@@ -18,8 +25,8 @@ const nextConfig: NextConfig = {
       { source: "/corps-grok", destination: "/corps-grok.html" },
       { source: "/unit-12", destination: "/corps-grok.html" },
       { source: "/corps-glm", destination: "/corps-glm.html" },
-      { source: "/corps-kimi", destination: "/corps-kimi.html" },
-      { source: "/kimi", destination: "/corps-kimi.html" },
+      { source: "/corps-llama", destination: "/corps-llama.html" },
+      { source: "/llama", destination: "/corps-llama.html" },
       { source: "/cleanroom", destination: "/corps-gemini.html" },
       { source: "/playground", destination: "/playground.html" },
       { source: "/simulation", destination: "/simulation.html" },
