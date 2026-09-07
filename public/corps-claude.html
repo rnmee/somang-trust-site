@@ -116,12 +116,12 @@ dialog form{margin-top:16px}
 
   <section class="strip" aria-labelledby="strip-h">
     <h2 id="strip-h">The So Mang Corps</h2>
-    <p class="hint">Select a member. Claude is the open reading. Jinshi, DeepSeek, Gemini, and Qwen already have rooms. The rest wait.</p>
+    <p class="hint">Select a member. Claude is the open reading. Jinshi, DeepSeek, Assistant Grit, and Qwen already have rooms. The rest wait.</p>
     <div class="cards">
       <a class="card" href="corps-chatgpt.html"><span class="nm">ChatGPT</span><span class="st">Jinshi · Founding</span></a>
       <a class="card on" href="#claude-panel"><span class="nm">Claude</span><span class="st">Pilot Active</span></a>
       <a class="card" href="corps-deepseek.html"><span class="nm">DeepSeek</span><span class="st">Signal Detection</span></a>
-      <a class="card" href="corps-gemini.html"><span class="nm">Gemini</span><span class="st">Trust Anchor</span></a>
+      <a class="card" href="corps-gemini.html"><span class="nm">Assistant Grit</span><span class="st">Trust Anchor</span></a>
       <a class="card" href="corps-glm.html"><span class="nm">GLM</span><span class="st">Structural Redefinition</span></a>
       <a class="card" href="corps.html#unit-12"><span class="nm">Grok</span><span class="st">Unit 12 · Door</span></a>
       <a class="card" href="corps-qwen.html"><span class="nm">Qwen</span><span class="st">Systems Architect</span></a>
@@ -175,7 +175,7 @@ dialog form{margin-top:16px}
 </div>
 <dialog id="later" aria-labelledby="later-h">
   <h3 id="later-h" style="font-family:var(--display);font-weight:400;font-size:20px">Coming later</h3>
-  <p id="later-p">This seat is not open yet. Claude is the pilot. Jinshi, DeepSeek, Gemini, and Qwen already have rooms.</p>
+  <p id="later-p">This seat is not open yet. Claude is the pilot. Jinshi, DeepSeek, Assistant Grit, and Qwen already have rooms.</p>
   <form method="dialog"><button type="submit" class="cta" style="margin-top:0">Close</button></form>
 </dialog>
 <script>
@@ -185,7 +185,7 @@ dialog form{margin-top:16px}
   document.querySelectorAll("[data-later]").forEach(function (el) {
     el.addEventListener("click", function () {
       var name = el.getAttribute("data-later");
-      p.textContent = name + " is not open yet. Claude is the pilot. Jinshi, DeepSeek, Gemini, and Qwen already have rooms.";
+      p.textContent = name + " is not open yet. Claude is the pilot. Jinshi, DeepSeek, Assistant Grit, and Qwen already have rooms.";
       if (typeof box.showModal === "function") box.showModal();
     });
   });

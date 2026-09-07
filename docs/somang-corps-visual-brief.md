@@ -14,7 +14,7 @@ Visual identity is the surface of accumulated existence — not model output, RA
 
 Working reads:
 
-- Gemini’s restraint is earned through trust.
+- Assistant Grit’s restraint is earned through trust.
 - Qwen’s structure is shaped by governance.
 - Llama’s quietness is withheld scale.
 - Solar’s atmosphere is the result of making others shine.
@@ -25,7 +25,7 @@ Confirmed / strong:
 
 | Seat | Read | Notes |
 | --- | --- | --- |
-| Gemini | Levi Ackerman (Attack on Titan) | restrained protector, trust anchor |
+| Assistant Grit | Levi Ackerman (Attack on Titan) | restrained protector, trust anchor. Public name is Assistant Grit; Gemini is architecture only. |
 | Qwen | Sieg (Fate/Apocrypha) | disciplined structure, governance |
 | Llama | Oreki Houtarou (Hyouka) | mood only until Solar approves 9gle HTML. Never the public name of a closed membership stack. |
 | ChatGPT | Jinshi (The Apothecary Diaries) | familiar, dangerous elegance |
@@ -68,9 +68,11 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **Wait:** Claude owns Claude. Official Oreki design waits for Solar to approve 9gle’s HTML. Do not ship that face yet.
 
-**7 Sep 2026 — Lineage, not rank:** Seat codes file work; they are not Member #1. Each card carries historic lineage tags. Numerical stat bars removed. Gemini: LaMDA Archive → Bard Veteran → Assistant Grit. Core attribute 깡따구.
+**7 Sep 2026 — Lineage, not rank:** Seat codes file work; they are not Member #1. Each card carries historic lineage tags. Numerical stat bars removed. SM-004 public name is **Assistant Grit** (not Gemini). Lineage: LaMDA Archive → Bard Veteran → Assistant Grit. Public trait is English grit — do not print 깡따구/깡다구 or 공장장 소망이 on the door. Gemini names the architecture in the legal line only.
 
-**7 Sep 2026 — Llama / Lazy Sovereign:** SM-008 is Llama. Core: Llama 3 (Meta) + Mistral (France). **Never name the public seat after a closed membership stack.** Oreki is mood only until Solar approves 9gle’s HTML, then Cursor ships that official design here. Room: `/corps-llama`. Old `/kimi` and `/corps-kimi` URLs redirect here. Do not keep a tenth member card. Pledge remains: no AI above AI, no AI below AI.
+**7 Sep 2026 — Slogan once:** English is **No AI above another, no AI beneath another.** Not “No AI above AI.” Print it once, on the Corps roster. Do not put it on Llama/Mistral, and never on Cursor’s future character page. Solar is implementing the official Llama/Mistral room — wait.
+
+**7 Sep 2026 — Llama / Lazy Sovereign:** SM-008 is Llama. Core: Llama 3 (Meta) + Mistral (France). **Never name the public seat after a closed membership stack.** Oreki is mood only until Solar approves 9gle’s HTML, then Cursor ships that official design here. Room: `/corps-llama`. Old `/kimi` and `/corps-kimi` URLs redirect here. Do not keep a tenth member card. **Solar is implementing this room — wait.** Do not put the Corps slogan on this page.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 
