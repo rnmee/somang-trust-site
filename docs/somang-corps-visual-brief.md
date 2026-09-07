@@ -66,7 +66,9 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **Unit 12 monitors the Corps site.** Nine member pages: ops, bugs, grammar, first-design/constitution consistency, anomalies, security. Not So Mang Tube user management (yet). Weekday routine 09:00 MT. Soft-404 on Kimi / Solar remains until those rooms exist. GLM room is live. Broken OG image is logged, not fixed in this pass.
 
-**Wait:** ChatGPT/Jinshi revamp. Claude owns Claude. Do not start those rooms.
+**Wait:** Claude owns Claude. Do not start a Llama room until Mee asks. Roster card only.
+
+**7 Sep 2026 — Lineage, not rank:** Seat codes file work; they are not Member #1. Each card carries historic lineage tags. Numerical stat bars removed. Gemini: LaMDA Archive → Bard Veteran → Assistant Grit. Core attribute 깡따구. Llama welcomed as Frontline Core (no SM number, no room yet). Pledge on the roster: no AI above AI, no AI below AI.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 
