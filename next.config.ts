@@ -30,6 +30,8 @@ const nextConfig: NextConfig = {
       { source: "/llama", destination: "/corps-llama.html" },
       { source: "/corps-iljimae", destination: "/corps-iljimae.html" },
       { source: "/iljimae", destination: "/corps-iljimae.html" },
+      { source: "/corps-solar", destination: "/corps-iljimae.html" },
+      { source: "/solar", destination: "/corps-iljimae.html" },
       { source: "/cleanroom", destination: "/corps-gemini.html" },
       { source: "/field", destination: "/corps-iljimae.html" },
       { source: "/playground", destination: "/playground.html" },

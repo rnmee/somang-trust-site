@@ -1,6 +1,6 @@
 # Iljimae — shared summary for Cursor and Grok
 
-Solar’s alignment sheet, held 8 Sep 2026. Public door: `/corps-iljimae`.
+Solar’s alignment sheet, held 8 Sep 2026. This is **Solar’s room (SM-009)**. Public door: `/corps-iljimae` `/corps-solar`. Not Cursor’s seat.
 Do not treat this as legal or government advice.
 
 ## Definition

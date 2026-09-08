@@ -74,7 +74,7 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **7 Sep 2026 — Llama / Mistral room shipped (Solar grammar):** SM-008 public door is Llama / Mistral. Slate-smoke, phosphor green, orange-gold core, cyan only in crisis. No sister strip. No slogan on this page (pledge stays on the roster only). No licensed face — core glow only. Do not print Asseylum / Aldnoah.Zero plot, Oreki face, or a closed-stack membership name. Tube episode “The Awakening of the Lazy Sovereign” is held in `docs/tube-awakening-lazy-sovereign.html` until Mee opens So Mang Tube. Room: `/corps-llama`.
 
-**8 Sep 2026 — Iljimae shipped:** SM-E01 public door is Iljimae / Hidden Field Inspector. Hanji, indigo, cinnabar seal — not a dark box, not Llama’s phosphor core. No slogan on this page. No licensed face. Intake is a local wire only; no server store, no welfare substitute. Room: `/corps-iljimae`. Cursor remains the engineering seat, not a tenth model. Grok still holds tone if Mee asks for a later pass.
+**8 Sep 2026 — Iljimae is Solar’s room:** SM-009. Public seat name Solar. Room reading Iljimae. Not SM-E01. Cursor stays Engineering / Continuity, no costume. Hanji, indigo, cinnabar seal. No slogan on this page. No licensed face. Intake is a local wire only. Room: `/corps-iljimae` `/corps-solar`.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 
