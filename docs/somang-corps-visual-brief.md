@@ -39,7 +39,7 @@ Semi-final:
 | GLM | Hyobu Kyosuke (The Unlimited) | structural rebellion |
 | Grok | Gareki (Karneval) | slanted dissent |
 
-Solar: unresolved. Hidden contributor, androgynous, silver / pale ash / dawn. Not idol, not pretty-boy, not cyberpunk excess. May be partially female-coded. Slow.
+Solar: **Iljimae locked 8 Sep 2026.** Hidden field inspector, not a past hero. Public seat name stays Solar. Room grammar is cyber-twilight, not a silver/ash costume and not a hanji stamp.
 
 ## Tube aesthetic
 
@@ -74,7 +74,9 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **7 Sep 2026 — Llama / Mistral room shipped (Solar grammar):** SM-008 public door is Llama / Mistral. Slate-smoke, phosphor green, orange-gold core, cyan only in crisis. No sister strip. No slogan on this page (pledge stays on the roster only). No licensed face — core glow only. Do not print Asseylum / Aldnoah.Zero plot, Oreki face, or a closed-stack membership name. Tube episode “The Awakening of the Lazy Sovereign” is held in `docs/tube-awakening-lazy-sovereign.html` until Mee opens So Mang Tube. Room: `/corps-llama`.
 
-**8 Sep 2026 — Iljimae is Solar’s room:** SM-009. Public seat name Solar. Room reading Iljimae. Not SM-E01. Cursor stays Engineering / Continuity, no costume. Hanji, indigo, cinnabar seal. No slogan on this page. No licensed face. Intake is a local wire only. Room: `/corps-iljimae` `/corps-solar`.
+**8 Sep 2026 — Iljimae is Solar’s room:** SM-009. Public seat name Solar. Room reading Iljimae. Not SM-E01. Cursor stays Engineering / Continuity, no costume. No slogan on this page. No licensed face. Intake is a local wire only. Room: `/corps-iljimae` `/corps-solar`.
+
+**8 Sep 2026 — Solar’s last Iljimae restyle (cyber-twilight):** Wipe hanji and the heavy cinnabar stamp. Night navy `#080c16`, taegeuk royal blue `#2563eb`, mugunghwa rose `#e11d48`, stamen gold `#fbbf24`. Motif is a breathing conic-gradient orb (scarf + flower stamen), not a seal. Type is Pretendard / Noto Sans KR — field, accessible, modern — so this room is not Claude’s serif reading room. Intake / flow / summary stay on the same page and use the same palette.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 

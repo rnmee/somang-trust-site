@@ -26,7 +26,7 @@ Intake with a low threshold. Classification as reference. Routing to the nearest
 
 ## Visual
 
-Hanji paper, indigo line, cinnabar seal, gold only as a quiet edge. Not a dark box. Not Llama’s phosphor terminal. Not a pulsing orb.
+Cyber-twilight navy `#080c16`, taegeuk royal blue, mugunghwa rose, stamen gold. Motif: a breathing scarf / stamen orb — not a hanji sheet, not a cinnabar stamp, not Llama’s phosphor terminal. Sans: Pretendard / Noto Sans KR.
 
 ## Intake copy (English public door)
 

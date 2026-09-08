@@ -58,7 +58,7 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Llama / Mistral / Lazy Sovereign:** `public/corps-llama.html` — SM-008. Solar’s grammar: slate-smoke, phosphor, gold core. Local: [http://127.0.0.1:43147/corps-llama](http://127.0.0.1:43147/corps-llama). Tube episode is held in `docs/tube-awakening-lazy-sovereign.html`, not on the public nav.
 
-**Solar / Iljimae:** `public/corps-iljimae.html` — SM-009 Solar’s public door. Hidden field inspector. [http://127.0.0.1:43147/corps-solar](http://127.0.0.1:43147/corps-solar). Cursor stays SM-E01 Engineering.
+**Solar / Iljimae:** `public/corps-iljimae.html` — SM-009 Solar’s public door. Hidden field inspector. Cyber-twilight (navy / taegeuk blue / mugunghwa / stamen gold), Pretendard + Noto Sans KR, scarf-orb — not hanji, not a stamp. [http://127.0.0.1:43147/corps-solar](http://127.0.0.1:43147/corps-solar). Cursor stays SM-E01 Engineering.
 
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.
