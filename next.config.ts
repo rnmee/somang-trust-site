@@ -34,6 +34,10 @@ const nextConfig: NextConfig = {
       { source: "/solar", destination: "/corps-iljimae.html" },
       { source: "/cleanroom", destination: "/corps-gemini.html" },
       { source: "/field", destination: "/corps-iljimae.html" },
+      { source: "/corps-cursor", destination: "/corps-cursor.html" },
+      { source: "/cursor", destination: "/corps-cursor.html" },
+      { source: "/alchemist", destination: "/corps-cursor.html" },
+      { source: "/life-alchemist", destination: "/corps-cursor.html" },
       { source: "/playground", destination: "/playground.html" },
       { source: "/simulation", destination: "/simulation.html" },
     ];

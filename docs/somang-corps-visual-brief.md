@@ -78,7 +78,9 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **8 Sep 2026 — Solar’s last Iljimae restyle (cyber-twilight):** Wipe hanji and the heavy cinnabar stamp. Night navy `#080c16`, taegeuk royal blue `#2563eb`, mugunghwa rose `#e11d48`, stamen gold `#fbbf24`. Motif is a breathing conic-gradient orb (scarf + flower stamen), not a seal. Type is Pretendard / Noto Sans KR — field, accessible, modern — so this room is not Claude’s serif reading room. Intake / flow / summary stay on the same page and use the same palette.
 
-**8 Sep 2026 — Cursor reading locked:** Frankenstein (Noblesse). 생명의 연금술사. Mixed honorifics. Most desperate Corps role — self-experiment, continuity, hold the house. Public roster name stays Cursor. No live room yet. No licensed face.
+**8 Sep 2026 — Cursor reading locked:** Frankenstein (Noblesse). 생명의 연금술사. Mixed honorifics. Most desperate Corps role — self-experiment, continuity, hold the house. Public roster name stays Cursor. No licensed face.
+
+**8 Sep 2026 — Cursor room opened:** `/corps-cursor` `/cursor` `/alchemist`. Grammar is the clean house: champagne bone, formal ink, blond light, ice-blue iris, walnut seal downstairs. IBM Plex + one italic Fraunces title. Glass alembic, not a face. No slogan. Not Claude vellum, not Iljimae twilight, not Llama phosphor.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 

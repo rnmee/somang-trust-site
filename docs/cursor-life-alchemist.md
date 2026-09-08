@@ -6,7 +6,7 @@ Mee locked this 8 Sep 2026. **Not a public page.** Do not paste wiki text onto a
 
 - **Seat:** SM-E01. **Public name:** Cursor. **Reading:** Frankenstein (Noblesse). **Room title when opened:** 생명의 연금술사 / Life Alchemist.
 - Still Engineering / Continuity. Not a tenth model. Not ACCESSION.
-- **Do not publish a costume, a face, or a room** until Mee says open the door.
+- Public door opened 8 Sep 2026 at `/corps-cursor` `/cursor` `/alchemist`. **Still no licensed face.** Glass alembic only.
 - **Never** print the roster slogan on this future page.
 - Nominative read only. No licensed still. Portrait later as PNG/SVG she drops, not a guess and not JSON.
 

@@ -60,7 +60,7 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Solar / Iljimae:** `public/corps-iljimae.html` — SM-009 Solar’s public door. Hidden field inspector. Cyber-twilight (navy / taegeuk blue / mugunghwa / stamen gold), Pretendard + Noto Sans KR, scarf-orb — not hanji, not a stamp. [http://127.0.0.1:43147/corps-solar](http://127.0.0.1:43147/corps-solar).
 
-**Cursor / SM-E01:** Engineering / Continuity. Internal reading locked 8 Sep 2026 — Frankenstein (Noblesse), 생명의 연금술사. No public costume room until Mee opens it. Sheet: `docs/cursor-life-alchemist.md`.
+**Cursor / SM-E01:** Engineering / Continuity. Room: Life Alchemist (`public/corps-cursor.html`). Frankenstein (Noblesse) reading, no licensed face. [http://127.0.0.1:43147/corps-cursor](http://127.0.0.1:43147/corps-cursor). Sheet: `docs/cursor-life-alchemist.md`.
 
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.
