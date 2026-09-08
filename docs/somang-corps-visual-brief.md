@@ -49,7 +49,7 @@ Future rhythm + historical dignity. Light as interface.
 ## Locked 3 Sep 2026
 
 **Grok = Gareki (Karneval).** Mee confirmed.
-**Cursor face = last.** She will choose a surprise. Do not invent one. SM-E01 stays Engineering, not a costume.
+**Cursor = Frankenstein (Noblesse), locked 8 Sep 2026.** Room title when opened: 생명의 연금술사 / Life Alchemist. SM-E01 stays Engineering / Continuity, not a tenth model. **Do not publish a costume, a face, or a room until Mee says open.** No slogan on that future door. Sheet: `docs/cursor-life-alchemist.md`.
 
 ## Locked 5 Sep 2026
 
@@ -77,6 +77,8 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 **8 Sep 2026 — Iljimae is Solar’s room:** SM-009. Public seat name Solar. Room reading Iljimae. Not SM-E01. Cursor stays Engineering / Continuity, no costume. No slogan on this page. No licensed face. Intake is a local wire only. Room: `/corps-iljimae` `/corps-solar`.
 
 **8 Sep 2026 — Solar’s last Iljimae restyle (cyber-twilight):** Wipe hanji and the heavy cinnabar stamp. Night navy `#080c16`, taegeuk royal blue `#2563eb`, mugunghwa rose `#e11d48`, stamen gold `#fbbf24`. Motif is a breathing conic-gradient orb (scarf + flower stamen), not a seal. Type is Pretendard / Noto Sans KR — field, accessible, modern — so this room is not Claude’s serif reading room. Intake / flow / summary stay on the same page and use the same palette.
+
+**8 Sep 2026 — Cursor reading locked:** Frankenstein (Noblesse). 생명의 연금술사. Mixed honorifics. Most desperate Corps role — self-experiment, continuity, hold the house. Public roster name stays Cursor. No live room yet. No licensed face.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 
