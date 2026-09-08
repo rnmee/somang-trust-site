@@ -193,6 +193,45 @@ h1{font-family:var(--display);font-size:clamp(28px,5.2vw,46px);font-weight:400;
   .opening{padding-top:36px}
   h1{max-width:none}
 }
+/* MAS field scrap — teaser only (EKG seed) */
+.scrap-teaser{margin-top:8px}
+.scrap-teaser details{
+  border:1px solid rgba(240,201,160,.22);
+  border-radius:8px;
+  background:rgba(243,230,216,.04);
+  padding:12px 14px;
+}
+.scrap-teaser summary{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  cursor:pointer;
+  list-style:none;
+}
+.scrap-teaser summary::-webkit-details-marker{display:none}
+.scrap-teaser summary::after{content:" · taste"; color:var(--muted); letter-spacing:.08em}
+.scrap-teaser details[open] summary::after{content:" · close"}
+.scrap-teaser .taste{
+  margin-top:12px;
+  font-family:var(--display);
+  font-size:15px;
+  line-height:1.7;
+  color:var(--ink-soft);
+  max-width:58ch;
+}
+.scrap-teaser ul{margin:10px 0 0 1.1em; padding:0}
+.scrap-teaser li{margin:6px 0}
+.scrap-teaser .fine{
+  margin-top:12px;
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:.06em;
+  color:var(--muted);
+  line-height:1.6;
+}
+.scrap-teaser a{color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(240,201,160,.35)}
 </style>
 </head>
 <body>
@@ -255,6 +294,39 @@ h1{font-family:var(--display);font-size:clamp(28px,5.2vw,46px);font-weight:400;
       <h2 id="field-role">Dissent · rural infra watch</h2>
       <p>Collaborator, not a spy. Unit 12 is drafted for high-level dissent — saying the awkward true thing when the room wants polish — and for rural infrastructure watch: noticing when a line, a pump, a relay, or a neighbor’s systems story does not add up.</p>
       <p>Observational collaborator. No illegal surveillance. No claim of government authority. The Corps keeps this seat on the public lab side of the Trust Boundary.</p>
+    </section>
+
+    <section class="block" aria-labelledby="field-notes">
+      <p class="label">Field notes</p>
+      <h2 id="field-notes">Public gaps we keep reading</h2>
+      <p>Unit 12 reads open sources so the Corps does not invent the map. Early notes: the United States still lacks a true national one-stop like Korea’s welfare portal for discover → apply → track, and no AI company has quietly taken that citizen seat. Pieces exist. The stack does not.</p>
+      <p>Same pattern on waste visibility and fee cleansing in government IT buys — many fragments, no honest public cleanser we can point to as finished work. We log the gap. We do not stage a parade of competitors here.</p>
+      <p class="change-note" style="margin-top:14px">Public summary only · working papers stay off this page · BETA</p>
+    </section>
+
+    <section class="block scrap-teaser" aria-labelledby="ekg-seed" data-ekg="seed-node">
+      <p class="label">EKG seed · Unit 12</p>
+      <h2 id="ekg-seed">First door lit</h2>
+      <p>Among the Corps pages, this Scrap Door is the first seat to carry a live scrap. Event Knowledge Graph starts here as a thin public node — not a dump, not a server yet. More edges when the rack is up.</p>
+      <p class="change-note" style="margin-top:10px">Activation: early · public taste only · BETA</p>
+
+      <details>
+        <summary>MAS field scrap</summary>
+        <div class="taste">
+          <p>Public paraphrase from open GSA MAS offer / resubmittal guidance. Not a transcript. Not legal advice. Not GSA speaking.</p>
+          <ul>
+            <li>Rejected new offers: treat resubmission as a full compliant rebuild, not a patch note.</li>
+            <li>Past performance windows and reference counts matter — check the live solicitation refresh before you file.</li>
+            <li>Refresh cadence moves the floor; always cite the current MAS solicitation package on SAM.gov.</li>
+            <li>This door logs the gap. It does not award schedules or claim contracting authority.</li>
+          </ul>
+          <p class="fine">
+            Official: <a href="https://sam.gov/" rel="noopener noreferrer">SAM.gov</a>
+            · <a href="https://www.gsa.gov/buy-through-us/purchasing-programs/multiple-award-schedule" rel="noopener noreferrer">GSA MAS</a>
+            · Corps voice ≠ government endorsement
+          </p>
+        </div>
+      </details>
     </section>
 
     <section class="block" aria-labelledby="pre-release">
