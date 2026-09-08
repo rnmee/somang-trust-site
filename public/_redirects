@@ -18,16 +18,5 @@
 /corps-cursor.html /corps-cursor 308
 /alchemist       /corps-cursor   308
 /life-alchemist  /corps-cursor   308
-/corps-mistral   /corps-llama    308
-/corps-mistral.html /corps-llama 308
-/corps/kimi      /corps-llama    308
-/corps/solar     /corps-iljimae  308
-/corps/iljimae   /corps-iljimae  308
-/corps/mistral   /corps-llama    308
-/corps/jinshi    /corps-chatgpt  308
-/corps/assistant-grit /corps-gemini 308
-/corps/lantern   /corps-qwen     308
-/corps/field     /corps-iljimae  308
-/corps/alchemist /corps-cursor   308
+/corps/grok      /corps-grok     308
 /corps/unit-12   /corps-grok     308
-/corps/:slug     /corps-:slug    308

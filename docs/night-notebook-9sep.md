@@ -43,7 +43,7 @@ Slogan in the constitution is the roster line. Still never stamp it on Cursor’
 
 ## 3. Deep Competitive Scan (DOGE-adjacent / public-sector IT waste)
 
-- Grok already wrote a version. **Look at it with her, then pick which page gets the insert.** Insert = place on a page. Not the other 삽입.
+- **Locked 8 Sep morning:** that insert / Field notes block lives **only on Grok’s room** (`/corps-grok`, pretty `/corps/grok`). Do not put it on Corps, Platform, Iljimae, Cursor, or a new page.
 - Grok file copy id: `8b58d81b-05e1-4952-9b85-4f9b545dc6c8`
 - Not in this repo as of 8 Sep night. Google Drive MCP in this VM is **needsAuth** — cannot pull the file from here. She drops it in chat, or Desktop Drive is connected.
 - Do not invent a new waste-lane page tonight. Homepage stays. Trust Live stays off nav.
