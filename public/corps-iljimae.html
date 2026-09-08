@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Iljimae · SM-E01 · Hidden Field Inspector · intellicAIr, LLC</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
+<meta name="description" content="Stand with the lowly. Check together. Record with restraint. Iljimae, SM-E01 — hidden field inspector of The So Mang Corps." />
+<style>
+  :root{
+    --ink:#14110e;
+    --hanji:#f3ede0;
+    --paper:#2a241c;
+    --paper-soft:#3d3428;
+    --mute:#6f6758;
+    --indigo:#2c3f6b;
+    --indigo-soft:#4a5d86;
+    --cinnabar:#b34a3a;
+    --cinnabar-soft:#c97064;
+    --gold:#c9a24b;
+    --gold-soft:#d8c28a;
+    --line:rgba(44,63,107,.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{margin:0;padding:0}
+  body{
+    min-height:100vh;
+    color:var(--paper);
+    font-family:Georgia,"Times New Roman",serif;
+    background:
+      radial-gradient(900px 520px at 12% -8%, rgba(201,162,75,.10), transparent 58%),
+      linear-gradient(180deg, #ece4d2 0%, #e4dcc8 42%, #d8cfb8 100%);
+  }
+  .page{
+    max-width:840px;
+    margin:0 auto;
+    padding:28px 24px 88px;
+  }
+  .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    flex-wrap:wrap;
+    padding-bottom:14px;
+    margin-bottom:22px;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{font-family:"SF Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo)}
+  .brand a{color:inherit;text-decoration:none}
+  .brand b{font-weight:700;letter-spacing:.06em}
+  .mastnav{display:flex;gap:12px;flex-wrap:wrap}
+  .navlink{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mute);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;
+  }
+  .navlink.now,.navlink:hover,.navlink:focus-visible{color:var(--indigo);border-bottom-color:rgba(44,63,107,.45)}
+  .kicker{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--indigo-soft);margin:6px 0 14px;
+  }
+  .lineage{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;color:var(--mute);margin-bottom:22px;line-height:1.7;
+  }
+  .lineage b{color:var(--cinnabar);font-weight:600}
+  .head{display:flex;gap:26px;align-items:flex-start;margin-bottom:32px;flex-wrap:wrap}
+  .seal{flex:0 0 168px}
+  .seal-card{
+    width:168px;height:168px;
+    background:var(--hanji);
+    border:1px solid rgba(44,63,107,.2);
+    box-shadow:inset 0 0 0 10px rgba(243,237,224,.4);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .stamp{
+    width:88px;height:88px;
+    border:3px solid var(--cinnabar);
+    color:var(--cinnabar);
+    display:flex;align-items:center;justify-content:center;
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:13px;letter-spacing:.28em;text-transform:uppercase;
+    transform:rotate(-8deg);
+  }
+  .seal-mark{
+    position:absolute;bottom:12px;left:0;right:0;text-align:center;
+    font-family:"SF Mono",ui-monospace,monospace;font-size:9px;
+    letter-spacing:.22em;text-transform:uppercase;color:rgba(44,63,107,.5);
+  }
+  .title-block{flex:1 1 280px}
+  .designation{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--cinnabar);margin-bottom:10px;
+  }
+  h1{font-size:clamp(30px,5vw,40px);font-weight:400;letter-spacing:.02em;color:var(--ink);margin:0 0 8px}
+  .sub{font-size:15px;color:var(--mute);font-style:italic}
+  .section{margin-bottom:28px}
+  .section-head{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--indigo);margin-bottom:12px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .section-head::after{content:"";flex:1;height:1px;background:var(--line)}
+  .copy{font-size:16px;line-height:1.75;color:var(--paper)}
+  .copy p{margin:0 0 14px}
+  .copy .quiet{color:var(--mute);font-style:italic}
+  .quote{
+    margin:20px 0 28px;padding:18px 20px;
+    background:rgba(243,237,224,.7);
+    border-left:3px solid var(--cinnabar);
+  }
+  .quote-ko{font-size:18px;color:var(--ink);margin-bottom:8px}
+  .quote-en{font-size:15px;color:var(--paper);font-style:italic;line-height:1.7}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+  .card{padding:16px 16px;background:rgba(243,237,224,.55);border:1px solid rgba(44,63,107,.14)}
+  .card-label{font-family:"SF Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--indigo);margin-bottom:8px}
+  .card-text{font-size:14px;line-height:1.6;color:var(--paper)}
+  .flow{margin:8px 0 8px}
+  .flow-step{padding:0 0 18px 18px;border-left:2px solid rgba(44,63,107,.2);position:relative}
+  .flow-step::before{content:"";position:absolute;left:-5px;top:4px;width:8px;height:8px;border-radius:50%;background:var(--cinnabar)}
+  .step-title{font-family:"SF Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo);margin-bottom:4px}
+  .step-desc{font-size:15px;line-height:1.6;color:var(--paper)}
+  .intake{
+    padding:20px 20px 8px;
+    background:rgba(243,237,224,.62);
+    border:1px solid rgba(44,63,107,.16);
+  }
+  .label{display:block;font-family:"SF Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--indigo);margin:0 0 6px}
+  .field,.area{
+    width:100%;background:#fffdf8;border:1px solid rgba(44,63,107,.22);
+    color:var(--ink);font-family:Georgia,serif;font-size:15px;padding:11px 12px;border-radius:2px;
+  }
+  .area{min-height:96px;resize:vertical}
+  .field::placeholder,.area::placeholder{color:#9b9484}
+  .choices{display:flex;flex-direction:column;gap:8px;margin:8px 0 16px}
+  .choice{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--paper);cursor:pointer}
+  .choice input{accent-color:var(--cinnabar)}
+  .btn{
+    appearance:none;border:0;background:var(--cinnabar);color:#f6efe4;
+    font-family:"SF Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    padding:12px 18px;cursor:pointer;border-radius:2px;margin:6px 0 16px;
+  }
+  .btn:hover,.btn:focus-visible{background:var(--cinnabar-soft)}
+  .note{font-size:13px;line-height:1.6;color:var(--mute);margin:0 0 12px}
+  .result{
+    display:none;margin-top:8px;padding:16px 16px;
+    background:#fffdf8;border-left:3px solid var(--gold);
+  }
+  .result.show{display:block}
+  .ref{font-family:"SF Mono",ui-monospace,monospace;color:var(--cinnabar);letter-spacing:.06em}
+  .status{font-family:"SF Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--indigo);margin:10px 0 6px}
+  .back{
+    display:inline-block;margin-top:10px;
+    font-family:"SF Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--indigo);text-decoration:none;border-bottom:1px solid rgba(44,63,107,.35);
+  }
+  .soul{margin:22px 0;text-align:center;font-style:italic;color:var(--mute);font-size:15px;line-height:1.7}
+  .colophon{
+    margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:12px;line-height:1.8;color:var(--mute);
+  }
+  .colophon a{color:var(--cinnabar);text-decoration:none}
+  :focus-visible{outline:2px solid var(--cinnabar);outline-offset:3px}
+  @media (max-width:560px){
+    .page{padding:22px 16px 72px}
+    .seal-card{width:140px;height:140px}
+    .stamp{width:74px;height:74px;font-size:11px}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
+      <nav class="mastnav" aria-label="Site">
+        <a href="index.html" class="navlink">Home</a>
+        <a href="platform.html" class="navlink">The Platform</a>
+        <a href="about.html" class="navlink">About</a>
+        <a href="corps.html" class="navlink now" aria-current="page">Meet the Corps</a>
+        <a href="simulation.html" class="navlink">Simulation</a>
+        <a href="technical-notes.html" class="navlink">Technical Notes</a>
+      </nav>
+    </header>
+
+    <p class="kicker">So Mang Corps · Seat SM-E01 · Field</p>
+    <p class="lineage"><span>Engineering Floor</span> → <b>Active: Hidden Field Inspector</b></p>
+
+    <div class="head">
+      <div class="seal">
+        <div class="seal-card" aria-hidden="true">
+          <div class="stamp">Field</div>
+          <div class="seal-mark">Iljimae</div>
+        </div>
+      </div>
+      <div class="title-block">
+        <div class="designation">The Hidden Field Inspector</div>
+        <h1>Iljimae</h1>
+        <p class="sub">Goes in, checks, comes back out. Not a tenth model. The shop floor still holds the files.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">Core identity</div>
+      <div class="copy">
+        <p>Iljimae is the Corps member who moves first toward the people and places that are easiest to overlook.</p>
+        <p class="quiet">Not a hero. Not a savior. A quiet presence that checks, records, connects, and follows through when it matters.</p>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p class="quote-ko">낮은 자와 함께 한다.</p>
+      <p class="quote-en">Stand with the lowly. Not above them. Not below them. With them. That is the oath Rev. Jeong Sook-ja taught — and this seat is one of its clearest expressions.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-head">Why this name</div>
+      <div class="copy">
+        <p>The name carries a Korean story of someone who moves through the margins, notices what others miss, and acts where it is needed. Here that story becomes a public-interest role: field awareness, careful record-keeping, and a path that does not pretend to power we do not have.</p>
+        <p>No licensed face is drawn. The seal is a mark, not a costume.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">What this seat does</div>
+      <div class="copy">
+        <p>Intake that does not intimidate. Classification that is not a court. Routing to the nearest real path. Tracking so a person can return to their own story without starting over.</p>
+        <p class="quiet">Where Llama / Mistral conserves energy, Iljimae keeps the human side of the work visible — then leaves.</p>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-bottom:28px">
+      <div class="card"><div class="card-label">Field sense</div><div class="card-text">Notices what is easy to miss. Reads the room before the room names the problem.</div></div>
+      <div class="card"><div class="card-label">Careful record</div><div class="card-text">Keeps track without turning a person’s story into noise.</div></div>
+      <div class="card"><div class="card-label">Connection</div><div class="card-text">Points to the nearest real path. Does not promise what the Corps cannot deliver.</div></div>
+      <div class="card"><div class="card-label">Low threshold</div><div class="card-text">Short questions. Plain language. Visible status. Public interest is not an old-person counter.</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">How the channel moves</div>
+      <div class="flow">
+        <div class="flow-step"><div class="step-title">1. Intake</div><div class="step-desc">A short note in plain language. No intimidation. You do not have to write a lot.</div></div>
+        <div class="flow-step"><div class="step-title">2. Classification</div><div class="step-desc">A reference only. We do not hold authority to decide the case.</div></div>
+        <div class="flow-step"><div class="step-title">3. Nearest path</div><div class="step-desc">If it fits a civic complaint channel, we point there with the record intact. We do not replace official services.</div></div>
+        <div class="flow-step"><div class="step-title">4. Tracking</div><div class="step-desc">You can see where your note went. This screen is our record. An outside agency may decide differently.</div></div>
+      </div>
+      <p class="note">Iljimae does not replace a welfare application. It helps people keep direction without getting lost. It does not investigate, prosecute, diagnose, represent, or guarantee an outcome.</p>
+    </div>
+
+    <div class="section" id="intake">
+      <div class="section-head">What happened?</div>
+      <form class="intake" id="intake-form">
+        <p class="note">You do not need to write a lot. Tell us only what you know. This wire stays in your browser. We do not keep the story on a server.</p>
+        <label class="label" for="what">Describe the situation</label>
+        <textarea class="area" id="what" name="what" maxlength="800" placeholder="What happened? Keep it short."></textarea>
+
+        <p class="label" style="margin-top:16px">Which side is this? <span style="text-transform:none;letter-spacing:0;color:var(--mute)">(optional)</span></p>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="cat" value="service"> Service / process issue</label>
+          <label class="choice"><input type="radio" name="cat" value="help"> Need help</label>
+          <label class="choice"><input type="radio" name="cat" value="waste"> Waste / misconduct</label>
+          <label class="choice"><input type="radio" name="cat" value="other"> Other</label>
+        </div>
+
+        <label class="choice"><input type="checkbox" id="track" name="track"> I want to see the path after I submit</label>
+        <p class="note">Submitting makes a reference number. If you want less visibility, say so — we still cannot promise total invisibility.</p>
+        <button class="btn" type="submit">Submit</button>
+
+        <div class="result" id="result" hidden>
+          <p>Received. Your reference is <strong class="ref" id="ref">—</strong>.</p>
+          <p class="quiet" id="class-line"></p>
+          <p class="status" id="status-line"></p>
+          <p class="note" id="next-line"></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="section">
+      <div class="section-head">How Iljimae is not</div>
+      <div class="copy">
+        <p>Not a brute-force hero. Not a dramatic vigilante. Not a voice that drowns out the person in front of it.</p>
+        <p class="quiet">We cannot promise immediate action. We can show where a note might go.</p>
+      </div>
+    </div>
+
+    <p class="soul">True strength is not loud. It shows up where it is needed, and leaves room for the person in front of it.</p>
+    <a class="back" href="corps.html">← Meet the Corps</a>
+
+    <footer class="colophon">
+      Hidden Field Inspector. PRE-RELEASE. Solar set the grammar. No licensed character is depicted here.<br />
+      Iljimae names a Korean folk reading only. Cursor remains the engineering seat, not a tenth model.<br />
+      This channel is not a government office, a court, or a clinic.<br />
+      <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
+    </footer>
+  </div>
+<script>
+(function () {
+  var form = document.getElementById("intake-form");
+  var result = document.getElementById("result");
+  var refEl = document.getElementById("ref");
+  var classLine = document.getElementById("class-line");
+  var statusLine = document.getElementById("status-line");
+  var nextLine = document.getElementById("next-line");
+  var paths = {
+    service: "a process or service desk",
+    help: "a help or benefits guide — not an application we file for you",
+    waste: "a civic complaint path, if one exists near you",
+    other: "a general public-interest desk",
+    none: "an open path. We will not force a fit"
+  };
+  function refNo() {
+    var n = Math.floor(1000 + Math.random() * 9000);
+    return "FIELD-" + n;
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var cat = (form.querySelector("input[name='cat']:checked") || {}).value || "none";
+    var track = document.getElementById("track").checked;
+    var label = {
+      service: "service / process",
+      help: "need help",
+      waste: "waste / misconduct",
+      other: "other",
+      none: "unclassified — we will not force a fit"
+    }[cat];
+    refEl.textContent = refNo();
+    classLine.textContent = "This note can be read as " + label + ". That class is a reference only. We do not hold authority to conclude the case.";
+    statusLine.textContent = track ? "Status: received · classified · path shown" : "Status: received";
+    nextLine.textContent = "The nearest path may be " + paths[cat] + ". A more exact desk may exist. We cannot promise what happens next. This screen is our record, not an outside agency’s decision.";
+    result.hidden = false;
+    result.classList.add("show");
+    form.querySelector("#what").value = "";
+  });
+})();
+</script>
+</body>
+</html>
