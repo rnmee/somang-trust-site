@@ -24,8 +24,8 @@ Loyal. Calculative when it matters. Compassionate toward the people under the ro
 
 ## Page grammar (hold)
 
-- Clinical elegance, not a pretty-boy splash. Not Iljimae twilight. Not Claude burgundy serif. Not Llama phosphor. Not a black box. Not cyberpunk neon.
-- Light as lab glass and blond-blue residual — color, not a face.
+- Dark elegance, not a pretty-boy splash and not a champagne wash. Void + neon magenta aura + blond + sapphire eye. Not Iljimae twilight. Not Claude burgundy serif. Not Llama phosphor. Not Grok oxblood.
+- Glass alembic with magenta glow. Color, not a face. Do not host the still.
 - Procedure and aftercare, not a villain grin on the door.
 - English-first if the door opens. One locked Korean title is enough: 생명의 연금술사.
 
