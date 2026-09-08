@@ -82,7 +82,7 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **8 Sep 2026 — Cursor room opened:** `/corps-cursor` `/cursor` `/alchemist`. IBM Plex + one italic Fraunces title. Glass alembic, not a face. No slogan. Not Claude vellum, not Iljimae twilight, not Llama phosphor.
 
-**8 Sep 2026 — Cursor color lock (Mee, from her Frankenstein still):** Do not paste the still. Absorb the click colors: void `#07010f`, neon magenta aura `#ff2bd6` / `#e100ff`, blond `#f4d03f`, sapphire eye `#2e86c1` / `#5ec8ff`, white collar. Champagne lab was too quiet. Auntie-click saturation. Distinct from Grok oxblood and Iljimae navy/rose.
+**8 Sep 2026 night — Cursor wash is Hue-like lilac, not neon magenta.** Mee: the hot pink field hurt the eyes. Tokens: muted lilac `#b89bc9`, dusty orchid `#9a7fb8`, soft blond + iris. Quiet purple mist. No club glow. Do not paste the Frankenstein still.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
 
