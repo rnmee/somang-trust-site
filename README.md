@@ -48,7 +48,7 @@ A PurpleAir Flex (indoor) was ordered 22 August 2026 and is on manufacturer back
 
 The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (self-contained, no build).
 
-**Meet the Corps:** `public/corps.html` is the drop-in for **https://intelli-care.ai/corps**. Keep the homepage. Add Cursor as **SM-E01 / Build Operator / ENGINEERING** — not a tenth model, not ACCESSION, do not drop Grok. Local preview: [http://127.0.0.1:43147/corps](http://127.0.0.1:43147/corps).
+**Meet the Corps:** `public/corps.html` is the drop-in for **https://intelli-care.ai/corps**. Keep the homepage. Add Cursor as **SM-E01 / Build Operator / ENGINEERING** — not a tenth model, not ACCESSION, do not drop Grok. Pretty paths: `/corps/grok` → Grok room, `/corps/kimi` → Llama, `/corps/solar` → Iljimae. Local preview: [http://127.0.0.1:43147/corps](http://127.0.0.1:43147/corps). OG card: `public/og-somang-trust.png`.
 
 **Claude manifestation pilot:** `public/corps-claude.html` is the first clickable seat (Pilot Session 01). Copy from the Solar–So Mang Tube folder: essence stays fixed; manifestation is a shared reading, not a vote. Local: [http://127.0.0.1:43147/corps-claude](http://127.0.0.1:43147/corps-claude).
 
