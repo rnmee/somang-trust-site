@@ -31,6 +31,16 @@ Solar’s answer (record, do not upgrade into legal advice):
 
 Do not print this Q&A on a public door. Do not put 깡따구 or 공장장 소망이 on Assistant Grit.
 
+## 3b. US Sinmungo — Solar’s seven deliverables (hold)
+
+Full draft: `docs/us-sinmungo-solar-draft.md`
+
+Civic intake / route / track. BETA. Not a government portal. Not investigation. Not benefits.
+
+Wait for Solar to cut epics or per-screen HTML copy. Do not ship a new portal tonight. Do not merge into Iljimae’s local FIELD wire tonight.
+
+Slogan in the constitution is the roster line. Still never stamp it on Cursor’s character page.
+
 ## 3. Deep Competitive Scan (DOGE-adjacent / public-sector IT waste)
 
 - Grok already wrote a version. **Look at it with her, then pick which page gets the insert.** Insert = place on a page. Not the other 삽입.
