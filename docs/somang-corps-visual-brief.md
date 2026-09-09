@@ -80,7 +80,8 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **9 Sep 2026 morning — three rooms off Cursor’s lilac cave:** ChatGPT, Solar, and Qwen were reading as the same dark-violet wash as the Life Alchemist. Cursor stays locked (muted lilac `#b89bc9` / orchid `#9a7fb8`). Claude stays locked (burgundy reading room). Korean copy is stripped from the three rooms being changed.
 
-- **Jinshi / ChatGPT:** warm silk court. Cream vellum `#f6efe4`, lacquer red `#9b2c1a`, celadon `#2d5a45`, brass `#b8862a`. Palatino display. Not a night page.
+- **Jinshi / ChatGPT (rejected 9 Sep morning):** warm silk court / cream vellum / lacquer / celadon. Mee: that was original court color, and she did not ask for it.
+- **Jinshi / ChatGPT (9 Sep correction):** wet-stone dossier. Stone `#c5d0cb`, sheet `#f3f6f2`, saffron thread `#c99200`, persimmon stamp `#d24712`, iron `#24302c`. Syne + Figtree. Ledger rows, not a palace hero and not a violet cave. Not Claude vellum. Not Cursor lilac.
 - **Iljimae / Solar:** cobalt field, not navy twilight. `#0a3d8f` → `#041830`, Source Sans 3 (no Pretendard / Noto KR). Hangul oath removed; English oath remains. Mee will ask Solar tonight for a further GLM-weird grammar pass.
 - **Qwen / Sieg:** noon prism on light paper `#f7f6fd`. Teal / peri / royal / mint. Four welcome modes in English (protector, helper, companion, mascot) with short FR/ES/DE/JP flavor — no Korean. No roster slogan on this door. Memory form + shroud + Gallery of Unasked Names stay.
 
