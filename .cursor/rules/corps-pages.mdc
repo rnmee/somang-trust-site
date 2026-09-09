@@ -1,0 +1,34 @@
+---
+description: Required design and safety rules for So Mang Corps member pages
+globs: public/corps*.html
+alwaysApply: false
+---
+
+# So Mang Corps page rule
+
+Read `@AGENTS.md` and `@docs/CORPS-DESIGN-BIBLE.md` before editing any file matched by this rule.
+
+## Mandatory behavior
+
+1. Treat every Corps member page as a distinct authored room, not a variant of a shared visual template.
+2. Do not clone another member page and replace only its name, color variables, or text.
+3. Preserve shared navigation, factual notices, accessibility, and working links.
+4. Modify only the requested member page and its explicitly required assets.
+5. If the founder supplies an approved HTML file or ZIP, install those files without redesigning or paraphrasing them.
+6. Before a broad structural edit, briefly state the intended spatial structure, palette, motion language, and interaction metaphor.
+7. Do not publish or deploy unless explicitly requested.
+
+## Required verification
+
+- Confirm every referenced local asset exists.
+- Confirm relative links still target the intended files or anchors.
+- Check HTML and JavaScript syntax.
+- Check narrow-screen behavior.
+- Preserve keyboard focus and `prefers-reduced-motion` behavior.
+- Report exactly which files changed.
+
+## Jinshi protection
+
+The approved Jinshi / ChatGPT direction is **Lotus Archive**: black-plum space, amethyst haze, pale pink lotus, restrained ember, vertical archival composition, fade-and-emerge sections, and a clickable lotus that releases petals from above.
+
+Do not replace it with blue-gray styling, Gemini's visual temperature, or a card-dashboard composition unless the founder explicitly revokes the Lotus Archive direction.
