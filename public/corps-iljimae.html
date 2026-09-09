@@ -8,32 +8,31 @@
 <meta name="description" content="Not a past hero. A low, modern field inspector in the shade. Solar’s room: Iljimae, SM-009." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --ink:#080c16;
-    --ink-deep:#03050a;
-    --paper:#f1f5f9;
-    --paper-dim:#94a3b8;
-    --taegeuk-blue:#2563eb;
-    --taegeuk-blue-glow:#3b82f6;
+    --ink:#041830;
+    --ink-deep:#02101f;
+    --paper:#eef6ff;
+    --paper-dim:#9bb4cc;
+    --taegeuk-blue:#1565c0;
+    --taegeuk-blue-glow:#42a5f5;
     --mugunghwa:#e11d48;
     --mugunghwa-soft:#fb7185;
-    --stamen-gold:#fbbf24;
-    --phosphor:#38bdf8;
-    --smoke:#1e293b;
-    --line:rgba(148,163,184,.15);
+    --stamen-gold:#f6c445;
+    --phosphor:#7dd3fc;
+    --smoke:#0a2744;
+    --line:rgba(66,165,245,.22);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{margin:0;padding:0}
   body{
     background:
-      radial-gradient(1000px 600px at 10% 10%, rgba(37,99,235,.12), transparent 60%),
-      radial-gradient(800px 500px at 90% 80%, rgba(225,29,72,.08), transparent 60%),
-      var(--ink);
+      radial-gradient(1000px 600px at 8% 0%, rgba(21,101,192,.35), transparent 58%),
+      radial-gradient(800px 500px at 92% 88%, rgba(225,29,72,.16), transparent 55%),
+      linear-gradient(180deg, #0a3d8f 0%, #041830 48%, #02101f 100%);
     color:var(--paper);
-    font-family:"Pretendard","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-family:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
     min-height:100vh;
     -webkit-font-smoothing:antialiased;
   }
@@ -43,7 +42,7 @@
     padding:44px 26px 80px;
     border-left:1px solid var(--line);
     border-right:1px solid var(--line);
-    background:linear-gradient(180deg, rgba(30,41,59,.2), rgba(8,12,22,.9));
+    background:linear-gradient(180deg, rgba(10,61,143,.18), rgba(4,24,48,.88));
   }
   .topbar{
     display:flex;justify-content:space-between;align-items:baseline;
@@ -175,7 +174,7 @@
   .label{display:block;font-family:"SF Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--phosphor);margin:0 0 6px}
   .area{
     width:100%;background:rgba(3,5,10,.55);border:1px solid var(--line);
-    color:var(--paper);font-family:"Pretendard","Noto Sans KR",sans-serif;font-size:15px;
+    color:var(--paper);font-family:"Source Sans 3",sans-serif;font-size:15px;
     padding:12px;border-radius:6px;min-height:96px;resize:vertical;
   }
   .area::placeholder{color:#64748b}
@@ -268,7 +267,6 @@
     </div>
 
     <div class="quote">
-      <p class="quote-ko">낮은 자와 함께 한다.</p>
       <p class="quote-en">Stand with the lowly. Not above them. Not below them. With them. That is the So Mang Corps oath as Rev. Jeong Sook-ja taught it — and Iljimae is one of its clearest expressions.</p>
     </div>
 

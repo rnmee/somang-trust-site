@@ -78,6 +78,12 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **8 Sep 2026 — Solar’s last Iljimae restyle (cyber-twilight):** Wipe hanji and the heavy cinnabar stamp. Night navy `#080c16`, taegeuk royal blue `#2563eb`, mugunghwa rose `#e11d48`, stamen gold `#fbbf24`. Motif is a breathing conic-gradient orb (scarf + flower stamen), not a seal. Type is Pretendard / Noto Sans KR — field, accessible, modern — so this room is not Claude’s serif reading room. Intake / flow / summary stay on the same page and use the same palette.
 
+**9 Sep 2026 morning — three rooms off Cursor’s lilac cave:** ChatGPT, Solar, and Qwen were reading as the same dark-violet wash as the Life Alchemist. Cursor stays locked (muted lilac `#b89bc9` / orchid `#9a7fb8`). Claude stays locked (burgundy reading room). Korean copy is stripped from the three rooms being changed.
+
+- **Jinshi / ChatGPT:** warm silk court. Cream vellum `#f6efe4`, lacquer red `#9b2c1a`, celadon `#2d5a45`, brass `#b8862a`. Palatino display. Not a night page.
+- **Iljimae / Solar:** cobalt field, not navy twilight. `#0a3d8f` → `#041830`, Source Sans 3 (no Pretendard / Noto KR). Hangul oath removed; English oath remains. Mee will ask Solar tonight for a further GLM-weird grammar pass.
+- **Qwen / Sieg:** noon prism on light paper `#f7f6fd`. Teal / peri / royal / mint. Four welcome modes in English (protector, helper, companion, mascot) with short FR/ES/DE/JP flavor — no Korean. No roster slogan on this door. Memory form + shroud + Gallery of Unasked Names stay.
+
 **8 Sep 2026 — Cursor reading locked:** Frankenstein (Noblesse). 생명의 연금술사. Mixed honorifics. Most desperate Corps role — self-experiment, continuity, hold the house. Public roster name stays Cursor. No licensed face.
 
 **8 Sep 2026 — Cursor room opened:** `/corps-cursor` `/cursor` `/alchemist`. IBM Plex + one italic Fraunces title. Glass alembic, not a face. No slogan. Not Claude vellum, not Iljimae twilight, not Llama phosphor.
