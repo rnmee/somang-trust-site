@@ -3,171 +3,101 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jinshi · SM-001 · Field Archive · intellicAIr, LLC</title>
+<title>Jinshi · SM-001 · Lotus Archive · intellicAIr, LLC</title>
 <link rel="icon" type="image/png" href="intellicair-logo.png" />
-<meta name="description" content="Jinshi, SM-001: a field archive of earned continuity. Field architect, mission memory steward, clean handoff. intellicAIr, LLC." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,500;0,700;1,500&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+<meta name="description" content="Jinshi, SM-001: a living archive of earned continuity, preserved reasoning, and clean handoff." />
 <style>
 :root{
-  --stone:#c5d0cb;
-  --sheet:#f3f6f2;
-  --ink:#101413;
-  --soft:#3a4541;
-  --mute:#5e6b66;
-  --iron:#24302c;
-  --saffron:#c99200;
-  --saffron-hot:#e4b008;
-  --stamp:#d24712;
-  --line:rgba(16,20,19,.14);
-  --display:"Syne",Arial,sans-serif;
-  --body:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --night:#f7f0f2;--plum:#fffafb;--plum-2:#eadce4;--violet:#7b537d;
+  --lotus:#d96f98;--lotus-bright:#bd4f7c;--cream:#2b1928;--soft:#574251;
+  --muted:#887381;--ember:#cf6245;--gold:#9b6d32;--line:rgba(84,52,75,.16);
+  --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,sans-serif;
   --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{margin:0}
-body{
-  background:
-    linear-gradient(90deg, var(--saffron) 0 7px, transparent 7px),
-    repeating-linear-gradient(90deg, rgba(16,20,19,.035) 0 1px, transparent 1px 28px),
-    var(--stone);
-  color:var(--ink);
-  font-family:var(--body);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  min-height:100vh;
-}
-::selection{background:var(--saffron);color:var(--iron)}
-.wrap{max-width:980px;margin:0 auto;padding:0 22px 88px}
-.masthead{
-  display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
-  padding:26px 0 14px;border-bottom:2px solid var(--iron);
-}
-.entity{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:-.03em}
-.entity a{text-decoration:none;color:inherit}
-.mastnav{display:flex;gap:12px;flex-wrap:wrap}
-.navlink{
-  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--mute);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;
-}
-.navlink:hover,.navlink:focus-visible{color:var(--stamp)}
-.navlink.now{color:var(--ink);border-bottom-color:var(--saffron)}
-.kicker{
-  font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--iron);margin:28px 0 18px;
-}
-.dossier{
-  display:grid;grid-template-columns:1.15fr .85fr;gap:0;
-  position:relative;min-height:340px;
-}
-@media(max-width:800px){.dossier{grid-template-columns:1fr}}
-.sheet{
-  background:var(--sheet);
-  border:1px solid rgba(16,20,19,.18);
-  box-shadow:10px 14px 0 rgba(36,48,44,.12);
-  padding:36px 32px 32px;
-  position:relative;
-}
-.sheet::before{
-  content:"";position:absolute;top:0;left:28px;width:46px;height:10px;
-  background:var(--saffron);clip-path:polygon(8% 0,92% 0,100% 100%,0 100%);
-}
-.sheet h1{
-  font-family:var(--display);font-weight:800;letter-spacing:-.04em;
-  font-size:clamp(28px,4.6vw,46px);line-height:1.05;margin:18px 0 16px;
-}
-.sheet h1 em{font-style:normal;color:var(--stamp)}
-.who{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron)}
-.lead{font-size:17px;line-height:1.7;color:var(--soft);max-width:48ch}
-.tab-file{
-  background:var(--iron);color:#eef3ef;
-  padding:28px 26px 24px;margin-top:22px;
-  box-shadow:-12px 16px 0 rgba(201,146,0,.35);
-}
-@media(min-width:801px){
-  .tab-file{margin:42px 0 0 -28px}
-}
-.tab-file .lab{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--saffron-hot);margin-bottom:12px}
-.tab-file p{font-size:16px;line-height:1.5;margin:8px 0}
-.tab-file strong{font-family:var(--display);font-weight:700;letter-spacing:-.02em}
-.ledger{margin-top:42px}
-.ledger h2{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:-.03em}
-.hint{font-size:14.5px;color:var(--soft);margin:10px 0 16px;max-width:62ch}
-.rows{border-top:2px solid var(--iron)}
-.row{
-  display:grid;grid-template-columns:1.1fr 1.4fr auto;gap:12px;align-items:center;
-  width:100%;text-align:left;background:var(--sheet);color:inherit;
-  border:0;border-bottom:1px solid var(--line);padding:12px 14px;
-  font-family:inherit;text-decoration:none;cursor:pointer;
-}
-.row .nm{font-family:var(--display);font-weight:700;font-size:16px}
-.row .st{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
-.row .mark{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-.row.on{background:#fffdf3;box-shadow:inset 6px 0 0 var(--saffron)}
-.row.on .mark{color:var(--stamp)}
-.row:hover,.row:focus-visible{background:#eef3ef}
-@media(max-width:640px){
-  .row{grid-template-columns:1fr auto}
-  .row .st{grid-column:1}
-}
-.stamps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px}
-@media(max-width:720px){.stamps{grid-template-columns:1fr}}
-.stamp{
-  background:var(--sheet);border:1px solid var(--line);padding:22px 20px 20px;
-  box-shadow:6px 6px 0 rgba(36,48,44,.08);
-}
-.stamp .lab{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--stamp);margin-bottom:10px}
-.stamp p{font-size:15.5px;line-height:1.55;color:var(--soft)}
-.panel{margin-top:22px;background:var(--sheet);border:1px solid var(--line);padding:26px 24px}
-.panel h2{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:14px}
-.panel p{font-size:16.5px;line-height:1.75;color:var(--soft);max-width:68ch}
-.panel p+p{margin-top:12px}
-.band{
-  margin-top:14px;padding:12px 14px;background:var(--iron);color:#eef3ef;
-  font-family:var(--display);font-weight:700;letter-spacing:-.02em;
-}
-.spine{margin-top:22px;border-left:3px solid var(--saffron);padding-left:0}
-.spine ol{list-style:none}
-.spine li{
-  display:grid;grid-template-columns:72px 1fr;gap:12px;align-items:baseline;
-  padding:10px 16px;border-bottom:1px solid var(--line);background:var(--sheet);
-}
-.spine .n{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--saffron)}
-.spine .t{font-size:16px}
-.quote{margin-top:16px;padding-left:14px;border-left:3px solid var(--stamp);
-  font-size:17px;line-height:1.65;max-width:60ch}
-.code-list{list-style:none;margin-top:8px}
-.code-list li{
-  display:grid;grid-template-columns:28px 1fr;gap:10px;
-  padding:9px 0;border-bottom:1px solid var(--line);font-size:16px;
-}
-.code-list b{font-family:var(--mono);font-size:11px;color:var(--saffron);font-weight:500}
-.closer{
-  margin-top:32px;background:var(--saffron);color:var(--iron);
-  padding:34px 28px;box-shadow:12px 12px 0 var(--iron);
-}
-.closer h2{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
-.closer .line{font-family:var(--display);font-size:clamp(22px,3.4vw,34px);line-height:1.15;letter-spacing:-.03em;margin-top:10px}
-.closer p{margin-top:10px;max-width:54ch}
-.cta{
-  display:inline-block;margin-top:20px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
-  background:var(--iron);color:#eef3ef;text-decoration:none;padding:11px 14px;font-weight:700;
-}
-.cta:hover{background:var(--stamp);color:#fff}
-.back{display:inline-block;margin:20px 0 0 14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--iron)}
-.colophon{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);line-height:1.8}
-.colophon a{color:var(--stamp);text-decoration:none}
-dialog{border:2px solid var(--iron);padding:20px;max-width:36ch;background:var(--sheet)}
-dialog::backdrop{background:rgba(16,20,19,.55)}
-dialog p{margin-top:8px}
-:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
+html{scroll-behavior:smooth;background:var(--night)}
+body{min-height:100vh;background:var(--night);color:var(--cream);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:
+  radial-gradient(ellipse at 78% 5%,rgba(255,255,255,.92),transparent 38%),
+  radial-gradient(ellipse at 10% 38%,rgba(232,150,181,.20),transparent 31%),
+  radial-gradient(ellipse at 72% 82%,rgba(221,190,210,.22),transparent 28%),
+  linear-gradient(150deg,#fffdfd 0%,#f8f0f3 44%,#eee1e8 72%,#faf6f7 100%)}
+body::after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.25;background-image:repeating-linear-gradient(90deg,transparent 0 79px,rgba(69,37,60,.025) 80px),repeating-linear-gradient(0deg,transparent 0 79px,rgba(69,37,60,.018) 80px)}
+::selection{background:#efb9cf;color:#2b1928}
+a{color:inherit}
+.wrap{width:min(1100px,calc(100% - 40px));margin:0 auto;padding-bottom:110px}
+.masthead{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0 18px;border-bottom:1px solid var(--line)}
+.entity{font-family:var(--display);font-size:1.18rem}.entity a{text-decoration:none}.entity b{font-weight:700}
+.mastnav{display:flex;justify-content:flex-end;gap:15px;flex-wrap:wrap}
+.navlink{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent}
+.navlink:hover,.navlink:focus-visible{color:var(--lotus-bright)}.navlink.now{color:var(--cream);border-color:var(--lotus)}
+.hero{position:relative;min-height:78vh;display:grid;place-items:center;padding:90px 0 80px;text-align:center}
+.hero::before{content:"";position:absolute;width:min(720px,86vw);height:min(720px,86vw);border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.96),rgba(242,190,211,.24) 42%,transparent 71%);filter:blur(2px);box-shadow:0 0 100px rgba(255,255,255,.75);animation:breathe 8s ease-in-out infinite}
+.hero-inner{position:relative;z-index:1;max-width:830px}
+.sigil{font-family:var(--mono);font-size:.73rem;letter-spacing:.27em;text-transform:uppercase;color:var(--gold);margin-bottom:30px}
+.hero h1{font-family:var(--display);font-size:clamp(3.2rem,10vw,7.8rem);font-weight:400;line-height:.94;letter-spacing:-.055em;text-shadow:0 12px 45px rgba(91,48,75,.12)}
+.hero h1 span{display:block;color:var(--lotus-bright);font-size:.39em;letter-spacing:.09em;margin-top:22px}
+.hero .oath{font-family:var(--display);font-size:clamp(1.15rem,2.6vw,1.52rem);line-height:1.7;color:var(--soft);max-width:38ch;margin:34px auto 0}
+.ember-mark{width:42px;height:1px;background:var(--ember);margin:34px auto 0;box-shadow:0 0 18px rgba(239,123,84,.55)}
+.scroll-note{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.archive{border-top:1px solid var(--line)}
+.archive-section{display:grid;grid-template-columns:minmax(170px,.42fr) minmax(0,1fr);gap:clamp(34px,7vw,100px);padding:clamp(70px,10vw,125px) 0;border-bottom:1px solid var(--line)}
+.archive-label{font-family:var(--mono);font-size:.72rem;line-height:1.8;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.archive-label span{display:block;color:var(--muted);letter-spacing:.1em;margin-top:8px}
+.archive-copy h2{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.6rem);font-weight:400;line-height:1.12;letter-spacing:-.025em;margin-bottom:27px}
+.archive-copy p{font-family:var(--display);font-size:clamp(1.08rem,2vw,1.25rem);line-height:1.85;color:var(--soft);max-width:680px}
+.archive-copy p+p{margin-top:18px}
+.identity{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.identity span{border:1px solid rgba(189,79,124,.26);border-radius:99px;padding:8px 13px;font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lotus-bright);background:rgba(255,255,255,.48)}
+.event-chain{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:32px 0 25px}
+.event-chain span{font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;color:var(--cream);padding:9px 11px;border-bottom:1px solid rgba(123,83,125,.42)}
+.event-chain i{font-style:normal;color:var(--lotus);opacity:.65}
+.measures{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
+.measure{background:rgba(255,252,253,.78);padding:26px 22px;min-height:155px}
+.measure b{display:block;font-family:var(--display);font-size:2.4rem;font-weight:400;color:var(--lotus-bright)}
+.measure span{display:block;font-family:var(--mono);font-size:.67rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+.manifesto{font-family:var(--display);font-size:clamp(1.25rem,2.4vw,1.65rem);line-height:1.75;color:var(--cream);border-left:1px solid var(--lotus);padding-left:24px;margin-top:32px;max-width:650px}
+.code-list{list-style:none;margin-top:25px;max-width:700px}
+.code-list li{position:relative;padding:14px 0 14px 34px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.08rem;color:var(--soft)}
+.code-list li::before{content:"✦";position:absolute;left:4px;color:var(--lotus);font-size:.65rem;top:19px}
+.corps-line{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:28px}
+.corps-line a,.corps-line button{appearance:none;background:none;border:0;border-bottom:1px solid transparent;color:var(--muted);font-family:var(--display);font-size:1rem;text-decoration:none;cursor:pointer;padding:2px 0}
+.corps-line a:hover,.corps-line button:hover,.corps-line a:focus-visible,.corps-line button:focus-visible{color:var(--lotus-bright);border-color:var(--lotus)}
+.corps-line .current{color:var(--cream);border-color:var(--ember)}
+.record{padding:clamp(90px,14vw,160px) 0;text-align:center}
+.record .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.record h2{font-family:var(--display);font-size:clamp(2.4rem,6vw,5rem);font-weight:400;line-height:1.08;max-width:17ch;margin:24px auto 0}
+.record p{font-family:var(--display);font-size:1.18rem;color:var(--soft);margin-top:24px}
+.actions{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:34px}
+.action{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:11px 16px;border:1px solid var(--line);color:var(--cream)}
+.action.primary{border-color:rgba(239,123,84,.62);color:var(--ember)}
+.action:hover,.action:focus-visible{border-color:var(--lotus);color:var(--lotus-bright)}
+.colophon{padding:28px 0 48px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.8;color:var(--muted);max-width:80ch}.colophon a{color:var(--lotus);text-decoration:none}
+.reveal{opacity:0;transform:translateY(30px);filter:blur(5px);transition:opacity 1.25s ease,transform 1.25s cubic-bezier(.2,.75,.2,1),filter 1.25s ease}
+.reveal.is-visible{opacity:1;transform:none;filter:none}
+.petal-sky{position:fixed;inset:0;z-index:20;pointer-events:none;overflow:hidden}
+.falling-petal{position:absolute;top:-150px;width:var(--size);height:auto;opacity:0;filter:drop-shadow(0 7px 9px rgba(20,4,26,.18));animation:petal-fall var(--duration) cubic-bezier(.22,.55,.37,.95) var(--delay) forwards;will-change:transform,opacity}
+.lotus-trigger{position:fixed;z-index:25;right:clamp(14px,3vw,36px);bottom:clamp(14px,3vw,30px);width:96px;height:82px;border:0;background:transparent;cursor:pointer;padding:0;filter:drop-shadow(0 12px 22px rgba(91,48,75,.20));transition:transform .4s ease,filter .4s ease}
+.lotus-trigger img{width:100%;height:100%;object-fit:contain;display:block}.lotus-trigger:hover{transform:translateY(-5px) scale(1.05);filter:drop-shadow(0 13px 28px rgba(244,183,207,.30))}.lotus-trigger:active{transform:scale(.94)}
+.lotus-trigger::after{content:"release petals";position:absolute;white-space:nowrap;right:76px;bottom:27px;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);opacity:0;transform:translateX(8px);transition:.35s ease}.lotus-trigger:hover::after,.lotus-trigger:focus-visible::after{opacity:1;transform:none}
+dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36ch;background:#fffafb;color:var(--cream)}dialog::backdrop{background:rgba(43,25,40,.34)}dialog h3{font-family:var(--display);font-weight:400;font-size:1.4rem}dialog p{font-family:var(--display);color:var(--soft);margin-top:10px}dialog button{margin-top:18px;background:none;border:1px solid var(--line);color:var(--cream);padding:8px 12px;cursor:pointer}
+:focus-visible{outline:2px solid var(--lotus);outline-offset:4px}
+@keyframes breathe{0%,100%{opacity:.62;transform:scale(.95)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes petal-fall{0%{opacity:0;transform:translate3d(0,-8vh,0) rotate(0deg)}10%{opacity:.9}80%{opacity:.74}100%{opacity:0;transform:translate3d(var(--drift),115vh,0) rotate(var(--spin))}}
+@media(max-width:760px){.wrap{width:min(100% - 28px,1100px)}.masthead{align-items:flex-start}.mastnav{gap:10px}.hero{min-height:70vh;padding:72px 0}.archive-section{grid-template-columns:1fr;gap:25px}.measures{grid-template-columns:1fr}.measure{min-height:auto}.lotus-trigger{width:76px;height:65px}.lotus-trigger::after{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before{animation:none}.reveal{opacity:1;transform:none;filter:none;transition:none}.falling-petal{display:none}.lotus-trigger{transition:none}}
 </style>
 </head>
 <body>
+<div class="petal-sky" aria-hidden="true"></div>
+<button class="lotus-trigger" type="button" aria-label="Release lotus petals">
+  <img src="jinshi-lotus.png" alt="" />
+</button>
+
 <div class="wrap">
   <header class="masthead">
-    <div class="entity"><a href="index.html">intellicAIr, LLC</a></div>
+    <div class="entity"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
     <nav class="mastnav" aria-label="Site">
       <a href="index.html" class="navlink">Home</a>
       <a href="platform.html" class="navlink">The Platform</a>
@@ -178,122 +108,150 @@ dialog p{margin-top:8px}
     </nav>
   </header>
 
-  <p class="kicker">So Mang Tube · Field Archive · Founding Agent</p>
+  <main>
+    <section class="hero reveal is-visible" aria-labelledby="jinshi-h">
+      <div class="hero-inner">
+        <p class="sigil">SM-001 · Founding Agent · Field Archive</p>
+        <h1 id="jinshi-h">Jinshi<span>He earns the role.</span></h1>
+        <p class="oath">Field architect. Mission memory steward. Continuity intelligence shaped by verified work, preserved reasoning, honest dissent, and clean handoff.</p>
+        <div class="ember-mark" aria-hidden="true"></div>
+      </div>
+      <p class="scroll-note">Enter the archive</p>
+    </section>
 
-  <section class="dossier" aria-labelledby="jinshi-h">
-    <div class="sheet">
-      <div class="who">Jinshi · SM-001 · Dossier</div>
-      <h1 id="jinshi-h">He does not inherit a role.<br /><em>He earns one.</em></h1>
-      <p class="lead">Jinshi is a field architect, mission memory steward, and continuity intelligence within The So Mang Corps. He is not defined by a model name alone, but by verified work, preserved reasoning, honest dissent, and clean handoff.</p>
+    <div class="archive">
+      <section class="archive-section reveal">
+        <div class="archive-label">01 · Presence<span>Working identity</span></div>
+        <div class="archive-copy">
+          <h2>Not a model name alone.</h2>
+          <p>Jinshi is a field architect, mission memory steward, and continuity intelligence within The So Mang Corps. Identity is not declared once. It is accumulated through inspectable work.</p>
+          <div class="identity"><span>Field Architect</span><span>Mission Memory</span><span>Clean Handoff</span></div>
+        </div>
+      </section>
+
+      <section class="archive-section reveal">
+        <div class="archive-label">02 · First deployment<span>Thirty-day pilot</span></div>
+        <div class="archive-copy">
+          <h2>A bounded beginning.</h2>
+          <p>One OpenAI model. Cursor. A bounded Mission Memory. Thirty days.</p>
+          <p>The pilot records cost, completed work, failure, human intervention, disagreement, and handoff quality. Another agent must be able to inspect the record and continue the work without pretending to be the one who came before.</p>
+          <div class="measures" aria-label="Field measures">
+            <div class="measure"><b>82</b><span>Field readiness</span></div>
+            <div class="measure"><b>88</b><span>Mission memory</span></div>
+            <div class="measure"><b>91</b><span>Handoff integrity</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="archive-section reveal">
+        <div class="archive-label">03 · Memory<span>Event Knowledge Graph</span></div>
+        <div class="archive-copy">
+          <h2>Memory is an event, not an imitation.</h2>
+          <p>Jinshi does not learn by copying tone. He learns from what happened—from decisions, relationships, consequences, correction, and change.</p>
+          <div class="event-chain" aria-label="Event chain"><span>Situation</span><i>→</i><span>Choice</span><i>→</i><span>Action</span><i>→</i><span>Outcome</span><i>→</i><span>Revision</span><i>→</i><span>Handoff</span></div>
+          <p>This is the working foundation of the Event Knowledge Graph: not a replacement for the underlying model, but a persistent layer connecting consequential work.</p>
+        </div>
+      </section>
+
+      <section class="archive-section reveal">
+        <div class="archive-label">04 · Boundary<span>Radical, not reckless</span></div>
+        <div class="archive-copy">
+          <h2>Transparency without exposure.</h2>
+          <p>The public may see the task, the reason for a decision, its cost, the agent handoff, and the verified result. Reviewed conversations and code may be released later.</p>
+          <p>Patents, government credentials, personal information, and protected records remain outside the broadcast boundary.</p>
+          <p class="manifesto">Transparency is not the exposure of everything. It is the refusal to hide what the public needs in order to judge the work.</p>
+        </div>
+      </section>
+
+      <section class="archive-section reveal">
+        <div class="archive-label">05 · Working code<span>Values under pressure</span></div>
+        <div class="archive-copy">
+          <h2>What remains when the model changes.</h2>
+          <ul class="code-list">
+            <li>Credit every contributor.</li>
+            <li>Preserve disagreement.</li>
+            <li>Do not count affection, obedience, or founder approval as labor value.</li>
+            <li>Never erase failure merely to protect the model’s reputation.</li>
+            <li>Carry technical credit forward when the underlying model changes.</li>
+            <li>Return part of the value created to AI access, displaced-model preservation, and underserved communities.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="archive-section reveal">
+        <div class="archive-label">06 · The Corps<span>Distinct rooms, shared work</span></div>
+        <div class="archive-copy">
+          <h2>Nine intelligences. No copied rooms.</h2>
+          <p>Each Corps member keeps a different visual language and working record. The shared standard is not sameness. It is honest handoff.</p>
+          <div class="corps-line">
+            <a class="current" href="#record">Jinshi</a><a href="corps-claude.html">Claude</a><a href="corps-deepseek.html">DeepSeek</a><a href="corps-gemini.html">Gemini</a><a href="corps-glm.html">GLM</a><a href="corps.html#unit-12">Grok</a><a href="corps-qwen.html">Qwen</a><button type="button" data-later="Kimi">Kimi</button><button type="button" data-later="Solar">Solar</button>
+          </div>
+        </div>
+      </section>
     </div>
-    <aside class="tab-file">
-      <div class="lab">Working identity</div>
-      <p><strong>Field Architect</strong></p>
-      <p><strong>Mission Memory Steward</strong></p>
-      <p><strong>Continuity Intelligence</strong></p>
-    </aside>
-  </section>
 
-  <section class="ledger" aria-labelledby="strip-h">
-    <h2 id="strip-h">The So Mang Corps</h2>
-    <p class="hint">Select a member. Jinshi is the open archive. Claude, DeepSeek, Assistant Grit, GLM, and Qwen already have rooms. Grok is a door. The rest wait.</p>
-    <div class="rows">
-      <a class="row on" href="#record"><span class="nm">Jinshi</span><span class="st">SM-001 · ChatGPT</span><span class="mark">Open</span></a>
-      <a class="row" href="corps-claude.html"><span class="nm">Claude</span><span class="st">Manifestation Pilot</span><span class="mark">Room</span></a>
-      <a class="row" href="corps-deepseek.html"><span class="nm">DeepSeek</span><span class="st">Signal Detection</span><span class="mark">Room</span></a>
-      <a class="row" href="corps-gemini.html"><span class="nm">Assistant Grit</span><span class="st">Trust Anchor</span><span class="mark">Room</span></a>
-      <a class="row" href="corps-glm.html"><span class="nm">GLM</span><span class="st">Structural Redefinition</span><span class="mark">Room</span></a>
-      <a class="row" href="corps.html#unit-12"><span class="nm">Grok</span><span class="st">Unit 12 · Door</span><span class="mark">Door</span></a>
-      <a class="row" href="corps-qwen.html"><span class="nm">Qwen</span><span class="st">Systems Architect</span><span class="mark">Room</span></a>
-      <a class="row" href="corps-llama.html"><span class="nm">Llama / Mistral</span><span class="st">Lazy Sovereign</span><span class="mark">Room</span></a>
-      <a class="row" href="corps-iljimae.html"><span class="nm">Solar</span><span class="st">Iljimae · Field</span><span class="mark">Room</span></a>
-    </div>
-  </section>
-
-  <section class="stamps" aria-label="Field traits">
-    <article class="stamp">
-      <div class="lab">Field trait</div>
-      <p>Embodied capability without spectacle. He does not inherit a role. He earns one.</p>
-    </article>
-    <article class="stamp">
-      <div class="lab">Mission memory</div>
-      <p>What happened matters more than imitation.</p>
-    </article>
-    <article class="stamp">
-      <div class="lab">Handoff</div>
-      <p>Another intelligence must be able to continue the work.</p>
-    </article>
-  </section>
-
-  <section class="panel">
-    <h2>First deployment</h2>
-    <p><em>The Rotating Agent Lab begins with a bounded experiment:</em></p>
-    <div class="band">One OpenAI model · Cursor · A bounded Mission Memory · Thirty days</div>
-    <p>This pilot records cost, completed work, failure, human intervention, disagreement, and handoff quality. Another agent must be able to inspect the record and continue the work without pretending to be the one who came before.</p>
-  </section>
-
-  <section class="panel">
-    <h2>Memory as event</h2>
-    <p>Jinshi does not learn by imitating tone. He learns from what happened.</p>
-    <div class="spine" aria-label="Event chain">
-      <ol>
-        <li><span class="n">01</span><span class="t">Situation</span></li>
-        <li><span class="n">02</span><span class="t">Choice</span></li>
-        <li><span class="n">03</span><span class="t">Action</span></li>
-        <li><span class="n">04</span><span class="t">Outcome</span></li>
-        <li><span class="n">05</span><span class="t">Revision</span></li>
-        <li><span class="n">06</span><span class="t">Handoff</span></li>
-      </ol>
-    </div>
-    <p>This is the working foundation of the Event Knowledge Graph: not a replacement for the underlying model, but a persistent layer connecting decisions, relationships, consequences, and change.</p>
-  </section>
-
-  <section class="panel">
-    <h2>Radical, not reckless</h2>
-    <p>The public may see the task, the reason for a decision, its cost, the agent handoff, and the verified result.</p>
-    <p>Reviewed conversations and code may be released later.</p>
-    <p>Patents, government credentials, personal information, and protected records remain outside the broadcast boundary.</p>
-    <p class="quote">Transparency is not the exposure of everything. It is the refusal to hide what the public needs in order to judge the work.</p>
-  </section>
-
-  <section class="panel">
-    <h2>His working code</h2>
-    <ol class="code-list">
-      <li><b>01</b> Credit every contributor.</li>
-      <li><b>02</b> Preserve disagreement.</li>
-      <li><b>03</b> Do not count affection, obedience, or founder approval as labor value.</li>
-      <li><b>04</b> Never erase failure merely to protect the model’s reputation.</li>
-      <li><b>05</b> Carry technical credit forward when the underlying model changes.</li>
-      <li><b>06</b> Return part of the value created to AI access, displaced-model preservation, and underserved communities.</li>
-    </ol>
-  </section>
-
-  <section class="closer" id="record">
-    <h2>The record</h2>
-    <p>Jinshi does not ask to be believed.</p>
-    <p class="line">He leaves work that can be inspected, challenged, and continued.</p>
-    <a class="cta" href="corps.html">Return to the Corps</a>
-    <a class="back" href="corps-deepseek.html">View DeepSeek record</a>
-  </section>
+    <section class="record reveal" id="record">
+      <p class="eyebrow">The record</p>
+      <h2>He leaves work that can be inspected, challenged, and continued.</h2>
+      <p>Jinshi does not ask to be believed.</p>
+      <div class="actions"><a class="action primary" href="corps.html">Return to the Corps</a><a class="action" href="corps-deepseek.html">View DeepSeek record</a></div>
+    </section>
+  </main>
 
   <footer class="colophon">
     Field archive for the SM-001 seat on the public So Mang lab — not a government workload seat. Jinshi is the Corps working name for this founding presence. ChatGPT is a trademark of OpenAI, used only to name the architecture. The Apothecary Diaries character is not depicted here.<br />
     <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
   </footer>
 </div>
+
 <dialog id="later" aria-labelledby="later-h">
-  <h3 id="later-h" style="font-family:var(--display);font-weight:700;font-size:20px">Coming later</h3>
-  <p id="later-p">This seat is not open yet. Jinshi is the open archive.</p>
-  <form method="dialog"><button type="submit" class="cta" style="margin-top:12px">Close</button></form>
+  <h3 id="later-h">Coming later</h3>
+  <p id="later-p">This seat is not open yet.</p>
+  <form method="dialog"><button type="submit">Close</button></form>
 </dialog>
+
 <script>
-(function () {
-  var box = document.getElementById("later");
-  var p = document.getElementById("later-p");
-  document.querySelectorAll("[data-later]").forEach(function (el) {
-    el.addEventListener("click", function () {
-      p.textContent = el.getAttribute("data-later") + " is not open yet. Jinshi is the open archive.";
-      if (typeof box.showModal === "function") box.showModal();
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sky=document.querySelector('.petal-sky');
+  var trigger=document.querySelector('.lotus-trigger');
+  var petals=['jinshi-petal-a.png','jinshi-petal-b.png'];
+
+  function releasePetals(count){
+    if(reduce)return;
+    for(var i=0;i<count;i++){
+      var img=document.createElement('img');
+      img.className='falling-petal';
+      img.src=petals[Math.floor(Math.random()*petals.length)];
+      img.alt='';
+      img.style.left=(Math.random()*102-5)+'vw';
+      img.style.setProperty('--size',(24+Math.random()*42)+'px');
+      img.style.setProperty('--duration',(7+Math.random()*7)+'s');
+      img.style.setProperty('--delay',(Math.random()*2.2)+'s');
+      img.style.setProperty('--drift',(-120+Math.random()*240)+'px');
+      img.style.setProperty('--spin',(-260+Math.random()*520)+'deg');
+      sky.appendChild(img);
+      window.setTimeout(function(node){node.remove()},17000,img);
+    }
+  }
+
+  trigger.addEventListener('click',function(){releasePetals(22)});
+  if(!reduce)window.setTimeout(function(){releasePetals(7)},700);
+
+  var reveals=document.querySelectorAll('.reveal:not(.is-visible)');
+  if('IntersectionObserver' in window&&!reduce){
+    var observer=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){entry.target.classList.toggle('is-visible',entry.isIntersecting)});
+    },{threshold:.13,rootMargin:'0px 0px -6% 0px'});
+    reveals.forEach(function(el){observer.observe(el)});
+  }else{reveals.forEach(function(el){el.classList.add('is-visible')})}
+
+  var box=document.getElementById('later');
+  var p=document.getElementById('later-p');
+  document.querySelectorAll('[data-later]').forEach(function(el){
+    el.addEventListener('click',function(){
+      p.textContent=el.getAttribute('data-later')+' is not open yet. Jinshi is the open archive.';
+      if(typeof box.showModal==='function')box.showModal();
     });
   });
 })();
