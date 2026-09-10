@@ -3,420 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why We Didn’t Build Another Brick in the Wall — intellicAIr TN-2026-01</title>
-<meta name="description" content="A measurement-first protocol for air quality in a small on-premise AI server room. intellicAIr Technical Note TN-2026-01, Columbia Falls, Montana.">
-<meta name="author" content="Mee Chung Kim, intellicAIr, LLC">
-<link rel="canonical" href="https://intelli-care.ai/research">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="intellicAIr">
-<meta property="og:url" content="https://intelli-care.ai/research">
-<meta property="og:title" content="Why We Didn’t Build Another Brick in the Wall">
-<meta property="og:description" content="We declined a default partition wall for an 8×8 AI closet and wrote the protocol that will verify that decision with measurements.">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#F4EFE2">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%232C463C'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23F4EFE2'%3EiA%3C/text%3E%3C/svg%3E">
-<!--
-  Hand this file to the OpenAI website agent. Cloudflare deploy:
-
-  DO NOT replace https://intelli-care.ai (the company homepage).
-  This note is a second page, reached from a site menu.
-
-    Public URL:     https://intelli-care.ai/research
-    Document ID:    TN-2026-01 (on the page; people should not have to type it)
-    Aliases:        /tn-2026-01 and /tn-2026-01.html → 301 redirect to /research
-
-  Self-contained page. No npm build. CSS is inline.
-  The only third-party request is Google Fonts (Source Serif 4 + IBM Plex Mono).
-  If the live site cannot load fonts.googleapis.com, Georgia and Courier New are the fallbacks.
-
-  Please:
-    1. Keep the existing homepage at /. Do not put this article on /.
-    2. Publish this file at /research.
-    3. Add one header (and footer) menu item on the main site:
-         Research  →  /research
-       Label it “Research”, not “TN-2026-01”.
-    4. 301-redirect /tn-2026-01 and /tn-2026-01.html to /research.
-    5. Do not rewrite the facts, sources, or the color name Argos (SW 7065).
-       Do not restore a 30-day monitoring pledge. PurpleAir Flex is indoor
-       only, ordered 22 August 2026, on backorder — not an outdoor station.
-    6. If the live site already has a header/footer, you may drop our masthead
-       and keep <main class="sheet"> — but keep this page’s type and colors
-       so the note still reads as a technical publication, not a landing-page section.
--->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Why We Didn’t Build Another Brick in the Wall",
-  "alternativeHeadline": "A measurement-first protocol for air quality management in a small on-premise AI server room",
-  "description": "We declined a default partition wall for an 8×8 AI closet and wrote the protocol that will verify that decision with measurements.",
-  "datePublished": "2026-08-23",
-  "dateModified": "2026-08-24",
-  "version": "1.5",
-  "inLanguage": "en-US",
-  "url": "https://intelli-care.ai/research",
-  "author": {
-    "@type": "Person",
-    "name": "Mee Chung Kim",
-    "jobTitle": "Founder and CEO",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "intellicAIr, LLC",
-      "url": "https://intelli-care.ai",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Columbia Falls",
-        "addressRegion": "MT",
-        "addressCountry": "US"
-      }
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "intellicAIr, LLC",
-    "url": "https://intelli-care.ai"
-  }
-}
-</script>
+<title>Why We Didn't Build Another Brick in the Wall — intellicAIr Technical Note</title>
+<meta name="description" content="A measurement-first protocol for air quality management in a small on-premise AI server room. intellicAIr Technical Note TN-2026-01.">
 <style>
   :root{
-    --vellum:#F4EFE2;
-    --vellum-deep:#E8E0CC;
-    --ink:#1B1A16;
-    --ink-soft:#534F45;
-    --vermilion:#8E2D19;
-    --pine:#2C463C;
-    --rule:#C8C0A8;
-    --ledger-bg:#FAF7EE;
-    --serif:"Source Serif 4", Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
-    --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", "Courier New", monospace;
-    --measure:40.5rem;
+    --vellum:#F6F2E7; --vellum-deep:#EDE7D6; --ink:#1C1B17; --ink-soft:#4A4740;
+    --vermilion:#B5391F; --pine:#2E4B3F; --rule:#C9C2AE; --ledger-bg:#FBF9F2;
   }
-  @media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation:none!important;transition:none!important} }
+  @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--vellum);
-    background-image:
-      radial-gradient(ellipse 90% 42% at 50% -12%, #fffaf0 0%, transparent 68%),
-      linear-gradient(180deg, rgba(142,45,25,.06) 0 3px, transparent 3px);
-    color:var(--ink);
-    font-family:var(--serif);
-    font-optical-sizing:auto;
-    font-size:1.0625rem;
-    line-height:1.72;
-    text-rendering:optimizeLegibility;
-    -webkit-font-smoothing:antialiased;
-  }
-  ::selection{background:#2C463C;color:#F4EFE2}
-  a{color:var(--vermilion);text-underline-offset:.16em;text-decoration-thickness:1px}
-  a:hover{color:var(--ink)}
-  a:focus-visible{outline:2px solid var(--pine);outline-offset:3px}
-  .skip{
-    position:absolute;left:-999px;top:0;
-    background:var(--pine);color:var(--vellum);
-    padding:.4rem .7rem;z-index:10;font-family:var(--mono);font-size:.75rem;
-  }
-  .skip:focus{left:1rem;top:1rem}
-  .masthead{
-    max-width:var(--measure);
-    margin:0 auto;
-    padding:1.15rem 1.5rem 0.95rem;
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    gap:1rem;
-    font-family:var(--mono);
-    font-size:.7rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    border-bottom:1px solid var(--rule);
-  }
-  .masthead a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
-  .masthead a:hover{border-color:var(--vermilion);color:var(--vermilion)}
-  .masthead .rev{color:var(--ink-soft);letter-spacing:.12em}
-  .sheet{max-width:var(--measure);margin:0 auto;padding:2.75rem 1.5rem 5.5rem}
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:.72rem;
-    letter-spacing:.16em;
-    text-transform:uppercase;
-    color:var(--vermilion);
-    margin-bottom:1.05rem;
-  }
-  h1{
-    font-size:clamp(2rem,5vw,2.7rem);
-    line-height:1.14;
-    font-weight:700;
-    letter-spacing:-.028em;
-    margin-bottom:.85rem;
-    text-wrap:balance;
-  }
-  .subtitle{
-    font-size:1.125rem;
-    color:var(--ink-soft);
-    font-style:italic;
-    margin-bottom:1.85rem;
-    line-height:1.5;
-    text-wrap:pretty;
-  }
-  .meta{
-    font-family:var(--mono);
-    font-size:.74rem;
-    color:var(--ink-soft);
-    border-top:1px solid var(--rule);
-    border-bottom:1px solid var(--rule);
-    padding:1rem 0;
-    margin-bottom:2.4rem;
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:.45rem 1.4rem;
-    line-height:1.55;
-  }
-  .meta strong{color:var(--ink);font-weight:600;margin-right:.35rem}
-  .meta .wide{grid-column:1 / -1}
-  h2{
-    font-size:1.28rem;
-    margin:2.85rem 0 .85rem;
-    letter-spacing:.005em;
-    font-weight:700;
-    line-height:1.3;
-    text-wrap:balance;
-  }
-  h2 .no{
-    color:var(--vermilion);
-    font-family:var(--mono);
-    font-size:.88rem;
-    margin-right:.55rem;
-    font-weight:500;
-    letter-spacing:.04em;
-  }
-  p{margin-bottom:1.05rem;text-wrap:pretty}
-  .abstract{
-    background:var(--vellum-deep);
-    padding:1.4rem 1.45rem 1.35rem;
-    border-left:3px solid var(--pine);
-    margin-bottom:.55rem;
-  }
+  body{background:var(--vellum);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.75;font-size:1.0625rem}
+  .sheet{max-width:46rem;margin:0 auto;padding:4rem 1.5rem 5rem}
+  .eyebrow{font-family:'Courier New',monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--vermilion);margin-bottom:1.2rem}
+  h1{font-size:clamp(1.9rem,5vw,2.7rem);line-height:1.18;font-weight:700;letter-spacing:-.01em;margin-bottom:.9rem}
+  .subtitle{font-size:1.15rem;color:var(--ink-soft);font-style:italic;margin-bottom:2rem}
+  .meta{font-family:'Courier New',monospace;font-size:.8rem;color:var(--ink-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.7rem 0;margin-bottom:2.6rem;display:flex;flex-wrap:wrap;gap:.35rem 1.6rem}
+  .meta strong{color:var(--ink);font-weight:700}
+  h2{font-size:1.28rem;margin:2.6rem 0 .9rem;letter-spacing:.01em}
+  h2 .no{color:var(--vermilion);font-family:'Courier New',monospace;font-size:1rem;margin-right:.55rem}
+  p{margin-bottom:1.05rem}
+  .abstract{background:var(--vellum-deep);padding:1.4rem 1.5rem;border-left:3px solid var(--pine);margin-bottom:.6rem}
   .abstract p{margin-bottom:0}
-  .abstract .lede{
-    font-weight:600;
-    letter-spacing:.12em;
-    font-size:.7rem;
-    text-transform:uppercase;
-    color:var(--pine);
-    display:block;
-    margin-bottom:.55rem;
-    font-family:var(--mono);
-  }
+  .abstract .lede{font-weight:700;letter-spacing:.06em;font-size:.85rem;text-transform:uppercase;color:var(--pine);display:block;margin-bottom:.5rem;font-family:'Courier New',monospace}
   em{font-style:italic}
-  .ledger{
-    background:var(--ledger-bg);
-    border:1px solid var(--rule);
-    margin:1.7rem 0 0.85rem;
-    padding:1.45rem 1.35rem 1.2rem;
-    font-family:var(--mono);
-    font-size:.8rem;
-    line-height:1.7;
-    font-variant-numeric:tabular-nums;
-  }
-  .ledger-title{
-    text-align:center;
-    letter-spacing:.16em;
-    font-size:.7rem;
-    text-transform:uppercase;
-    border-bottom:1px dashed var(--rule);
-    padding-bottom:.55rem;
-    margin-bottom:.85rem;
-    color:var(--ink);
-  }
-  .ledger-row{display:flex;justify-content:space-between;gap:1.2rem;align-items:flex-start;margin:.15rem 0}
-  .ledger-row span:first-child{flex:1;min-width:0}
-  .ledger-row span:last-child{white-space:nowrap;text-align:right;color:var(--ink)}
+  .ledger{background:var(--ledger-bg);border:1px solid var(--rule);margin:1.8rem 0;padding:1.5rem 1.4rem 1.2rem;font-family:'Courier New',monospace;font-size:.88rem;line-height:1.9}
+  .ledger-title{text-align:center;letter-spacing:.18em;font-size:.8rem;text-transform:uppercase;border-bottom:1px dashed var(--rule);padding-bottom:.6rem;margin-bottom:.9rem}
+  .ledger-row{display:flex;justify-content:space-between;gap:1rem}
+  .ledger-row span:first-child{flex:1}
   .ledger-row.struck{color:var(--vermilion)}
-  .ledger-row.struck > span:first-child > .item,
-  .ledger-row.struck > span:last-child{text-decoration:line-through}
-  .ledger-row .note{
-    text-decoration:none;
-    font-size:.7rem;
-    display:block;
-    color:var(--ink-soft);
-    margin-top:.12rem;
-    letter-spacing:0;
-  }
-  .ledger-rule{border-top:1px dashed var(--rule);margin:.75rem 0}
-  .ledger-total{display:flex;justify-content:space-between;font-weight:600;gap:1rem;color:var(--ink)}
-  .ledger-foot{font-size:.68rem;color:var(--ink-soft);margin-top:.9rem;line-height:1.55;letter-spacing:0}
-  .fig-caption{
-    font-size:.86rem;
-    color:var(--ink-soft);
-    font-style:italic;
-    margin:0 0 1.5rem;
-    text-align:center;
-    line-height:1.5;
-  }
-  .notice{
-    font-size:.95rem;
-    color:var(--ink-soft);
-    background:var(--ledger-bg);
-    border:1px solid var(--rule);
-    padding:.95rem 1.1rem;
-    margin:0 0 1.7rem;
-    line-height:1.6;
-  }
-  .notice strong{color:var(--ink);font-weight:600}
-  ul{margin:0 0 1.05rem 1.15rem}
-  li{margin-bottom:.85rem;padding-left:.2rem}
-  li strong{font-weight:600}
-  .refs{list-style:none;margin:0 0 1.05rem;padding:0}
-  .refs li{margin-bottom:.75rem;padding-left:2.15rem;position:relative;font-size:.95rem}
-  .refs .rn{position:absolute;left:0;font-family:var(--mono);font-size:.72rem;color:var(--vermilion);top:.18rem}
-  .refs a{overflow-wrap:anywhere}
-  .callout{
-    margin:2.4rem 0 0;
-    padding:1.15rem 0 0;
-    border-top:1px solid var(--rule);
-    color:var(--ink);
-    font-style:italic;
-    font-size:1.18rem;
-    text-align:center;
-    line-height:1.45;
-    text-wrap:balance;
-  }
-  footer{
-    margin-top:2.6rem;
-    border-top:1px solid var(--rule);
-    padding-top:1.25rem;
-    font-size:.84rem;
-    color:var(--ink-soft);
-  }
-  footer p{margin-bottom:.5rem}
-  .status-chip{
-    display:inline-block;
-    background:var(--pine);
-    color:var(--vellum);
-    font-family:var(--mono);
-    font-size:.66rem;
-    letter-spacing:.1em;
-    padding:.18rem .5rem;
-    text-transform:uppercase;
-    vertical-align:middle;
-  }
-  @media (max-width: 640px){
-    .sheet{padding:2rem 1.15rem 4.25rem}
-    .masthead{padding:1rem 1.15rem .8rem;font-size:.64rem}
-    .meta{grid-template-columns:1fr;gap:.4rem}
-    .ledger-row, .ledger-total{flex-direction:column;gap:.1rem}
-    .ledger-row span:last-child, .ledger-total span:last-child{text-align:left;white-space:normal}
-    h1{font-size:1.85rem}
-    .callout{font-size:1.08rem}
-  }
-  @media print{
-    @page{margin:1.1in .9in}
-    body{background:#fff;font-size:11pt;line-height:1.55}
-    .skip,.masthead{display:none}
-    .sheet{padding:0;max-width:none}
-    .abstract,.ledger,.callout,.notice{break-inside:avoid}
-    a{color:inherit;text-decoration:none}
-    .status-chip{color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  }
+  .ledger-row.struck span{text-decoration:line-through}
+  .ledger-row.struck .note{ text-decoration:none;font-size:.78rem;display:block;color:var(--ink-soft)}
+  .ledger-rule{border-top:1px dashed var(--rule);margin:.8rem 0}
+  .ledger-total{display:flex;justify-content:space-between;font-weight:700}
+  .ledger-foot{font-size:.74rem;color:var(--ink-soft);margin-top:.9rem;line-height:1.5}
+  .fig-caption{font-size:.85rem;color:var(--ink-soft);font-style:italic;margin-top:-1rem;margin-bottom:1.6rem;text-align:center}
+  ul{margin:0 0 1.05rem 1.3rem}
+  li{margin-bottom:.45rem}
+  .callout{border-left:3px solid var(--vermilion);padding:.2rem 0 .2rem 1.2rem;margin:1.4rem 0;color:var(--ink-soft);font-style:italic}
+  footer{margin-top:4rem;border-top:1px solid var(--rule);padding-top:1.4rem;font-size:.85rem;color:var(--ink-soft)}
+  footer a{color:var(--vermilion);text-decoration:none;border-bottom:1px solid currentColor}
+  .status-chip{display:inline-block;background:var(--pine);color:var(--vellum);font-family:'Courier New',monospace;font-size:.72rem;letter-spacing:.1em;padding:.18rem .6rem;text-transform:uppercase}
+  .entry{background:var(--ledger-bg);border:1px solid var(--rule);margin:1.4rem 0;padding:1.2rem 1.3rem;font-size:.95rem}
+  .entry-head{font-family:'Courier New',monospace;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--vermilion);margin-bottom:.6rem}
+  .entry dl{display:grid;grid-template-columns:9.5rem 1fr;gap:.3rem .8rem;margin:0}
+  .entry dt{font-family:'Courier New',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);padding-top:.15rem}
+  .entry dd{margin:0}
+  @media (max-width:540px){.entry dl{grid-template-columns:1fr}.entry dt{margin-top:.4rem}}
 </style>
 </head>
 <body>
-  <a class="skip" href="#note">Skip to the note</a>
-  <header class="masthead">
-    <a href="https://intelli-care.ai">intellicAIr, LLC</a>
-    <span class="rev">Research · TN-2026-01 · Rev 1.5</span>
-  </header>
-<main id="note" class="sheet">
-  <article>
-  <p class="eyebrow">Technical Note &middot; On-premise AI infrastructure</p>
+<main class="sheet">
+  <p class="eyebrow">intellicAIr, LLC &middot; Technical Note TN-2026-01</p>
   <h1>Why We Didn&rsquo;t Build Another Brick in the&nbsp;Wall</h1>
-  <p class="subtitle">A measurement-first protocol for air quality management in a small on-premise AI server&nbsp;room</p>
+  <p class="subtitle">A measurement-first protocol for air quality management in a small on-premise AI server room</p>
 
   <div class="meta">
     <span><strong>Author</strong> Mee Chung Kim, RN &mdash; Founder &amp; CEO</span>
     <span><strong>Location</strong> Columbia Falls, Montana</span>
     <span><strong>Date</strong> August 2026</span>
-    <span><strong>Revision</strong> 1.5 &mdash; menu page at /research</span>
-    <span class="wide"><strong>Status</strong> <span class="status-chip">Protocol &middot; data pending</span></span>
+    <span><strong>Status</strong> <span class="status-chip">Protocol &middot; data collection in progress</span></span>
   </div>
 
   <div class="abstract">
     <span class="lede">Abstract</span>
-    <p>Generic guidance for a small on-premise AI closet often starts with construction: a new partition wall, a cleanroom-grade envelope, sometimes even sterile-room finishes. We evaluated that instinct against this facility &mdash; a 1996 site-built outbuilding on a poured-concrete foundation, with an already enclosed 8&nbsp;&times;&nbsp;8&nbsp;ft room, a dedicated 12,000&nbsp;BTU/h heat pump, and a workstation-class GB300 node of about 1.6&nbsp;kW &mdash; and declined the wall as the default. This note records why. We still seal the existing door, stop the bare slab from dusting, paint the drywall, and verify the air with measurements. Construction remains an escalation if the data asks for it. Estimated capital not spent on an unneeded partition: several thousand dollars, left available for compute.</p>
+    <p>Standard guidance for converting a small outbuilding room into an AI server room prescribes construction first: partition walls, industrial floor coatings, premium wall systems. We evaluated that prescription against the measured characteristics of our actual facility &mdash; a 1996 site-built structure on a poured-concrete foundation &mdash; and declined it. This note documents the decision rationale, the low-cost sealed-envelope interventions adopted instead, and the continuous monitoring protocol that will verify the decision with data rather than assumptions. Construction remains available as an escalation step; it is no longer the default. Estimated capital preserved: several thousand dollars, redirected to compute.</p>
   </div>
-  <p class="notice"><strong>What this page is not.</strong> It is the written protocol, not a live air-quality feed and not a pledge that a 30-day monitoring campaign is underway or scheduled. A PurpleAir Flex (indoor) was ordered on 22&nbsp;August 2026 and is on manufacturer backorder. Indoor figures will be added here if and when we have them. This site did not order an outdoor station.</p>
+  <p class="fig-caption">Field measurements are appended below as milestones are reached (Appendix A).</p>
 
   <h2><span class="no">01</span>The facility, as it actually is</h2>
-  <p>Generic server-room guidance assumes a generic room. Ours is specific. The host structure was built in 1996 on a poured-concrete foundation &mdash; a site-built outbuilding, not a mobile unit. We are its third owners. The candidate server room is an enclosed 8&nbsp;&times;&nbsp;8&nbsp;ft interior closet with finished drywall, an existing doorway, an interior electrical subpanel, and two measured 240&nbsp;V NEMA&nbsp;6-20R receptacles. For most of our tenure the closet served as ski storage and stayed visually clean. That history is not the present tense. Carpet has been removed. The slab is now bare concrete and is dusting at the baseboards. Adjacent space that once held a hot tub was decommissioned and, on our understanding, was never tied to a sewage connection, which removes one common moisture path; it does not by itself prove the closet air is clean today.</p>
-  <p>Climate control is already on the wall: a cold-climate ductless heat pump, 12,000&nbsp;BTU/h inverter capacity, rated to &minus;22&nbsp;&deg;F, upsized from a 9,000&nbsp;BTU/h recommendation. A humidistat from a previous owner shows this building has been treated as a humidity problem before. The heat pump dehumidifies while it cools. In a Columbia Falls winter it will more often heat, which can dry the room below a safe electrostatic-discharge band. We will treat humidity as a floor and a ceiling (about 30&ndash;50% RH in operation; stay under 60% so settled dust does not deliquesce), not as an automatic side effect of the inverter.</p>
-  <p>The projected heat load is one NVIDIA DGX&nbsp;Station&ndash;class tower (Exxact Valence VWS-158270643): NVIDIA rates the system at 1,600&nbsp;W. Wall draw at full load is about 1.7&nbsp;kW, or roughly 5,500&ndash;5,800&nbsp;BTU/h, plus a monitor. Against 12,000&nbsp;BTU/h of installed cooling, the room has on the order of 2&times; thermal headroom at nameplate. That margin is why cooling, not a new wall, is the first thermal question &mdash; and why it is already answered.</p>
+  <p>Generic server-room guidance assumes a generic room. Ours is specific. The host structure was built in 1996 on a poured-concrete foundation &mdash; a site-built outbuilding, not a mobile unit. We are its third owners. The candidate server room is an enclosed 8&nbsp;&times;&nbsp;8&nbsp;ft interior room with finished walls and its own doorway; for most of our tenure it served as ski storage and remained, by long observation, essentially dust-free. That history describes the enclosed room&rsquo;s past, not its present floor: with the carpet now removed, the exposed concrete sheds fines and will continue to until it is smoothed, sealed, and deep-cleaned &mdash; which is why those steps precede any hardware. The room already contains an interior electrical subpanel and a recently installed cold-climate ductless heat pump (12,000&nbsp;BTU/h inverter unit, rated to &minus;22&nbsp;&deg;F), deliberately upsized from the installer&rsquo;s 9,000&nbsp;BTU/h recommendation to create thermal headroom. A humidistat installed by a previous owner attests to a history of humidity awareness in the building. The adjacent former hot-tub area was decommissioned and was never plumbed to a sewage connection, eliminating a common legacy moisture pathway.</p>
+  <p>The projected heat load is a single workstation-class AI compute node of roughly 1.6&nbsp;kW at the wall &mdash; about 5,500&ndash;5,800&nbsp;BTU/h &mdash; plus minor room gains. Against 12,000&nbsp;BTU/h of installed cooling, the room carries more than 30% capacity margin at full load, with dehumidification as a side effect of cooling-mode operation. That benefit is seasonal: Montana winters run the unit in heating mode, where the risk inverts to over-dry air and elevated electrostatic potential, so the monitoring protocol enforces a humidity floor as well as a ceiling.</p>
 
   <h2><span class="no">02</span>The default prescription, and what it ignores</h2>
-  <p>Some generic AI tools, asked without a photograph of this closet, prescribed an interior partition wall, industrial wall systems, and a sterile, dust-free room before any hardware could be energized. That prescription is not wrong for an open bay. It is wrong <em>here</em>. The closet is already enclosed. The missing barrier is the bottom of the existing door and a few unsealed penetrations, not a new framed wall. Building that wall now would generate the dust the wall is supposed to keep out.</p>
-  <p>We did not reject every hard surface. Bare concrete that is currently powdering still has to be sealed. What we rejected is construction as the first move, and cleanroom folklore (ISO Class&nbsp;5 / &ldquo;sterile&rdquo;) that ASHRAE does not apply to datacom closets. ASHRAE TC&nbsp;9.9 points data halls at ISO&nbsp;14644-1 Class&nbsp;8 &mdash; a controlled room, not a fab. Defaults are how small operators overspend. We elected to measure.</p>
+  <p>Early advisory passes &mdash; including our own first-round specification &mdash; converged on a familiar bill of work: build an interior partition wall to isolate the room from the surrounding storage bay, coat the floor in industrial epoxy, and finish the walls in premium panel systems. The prescription is not wrong in general. It is wrong <em>here</em>, because it prices in assumptions our facility does not exhibit: an unenclosed space (ours is enclosed), a dust-generating environment (two decades of clean storage history), no climate control (a dedicated heat pump is on the wall), and no static mitigation plan (one exists, below).</p>
+  <p>Defaults are how small operators overspend. The instinct to add &ldquo;another brick in the wall&rdquo; is easy to sell precisely because it requires no measurement. We elected to measure.</p>
 
   <h2><span class="no">03</span>The measurement-first alternative</h2>
-  <p>In place of a new wall, we adopted a sealed-envelope-plus-monitoring protocol in four layers:</p>
+  <p>In place of construction, we adopted a sealed-envelope-plus-monitoring protocol in four layers:</p>
   <ul>
-    <li><strong>Seal the existing envelope.</strong> Keep the doorway we already have. Add a door sweep, full-perimeter gasket or weatherstrip, and caulk at remaining seams, the ceiling grille if it is not a heat-pump path, and cable penetrations. If the present leaf is hollow-core, a solid-core replacement can wait; the sweep cannot. Materials cost is comparable to a tank of gas.</li>
-    <li><strong>Prepare the surfaces.</strong> HEPA-vacuum the powder at the slab edge (a garage wet/dry vac without a certified HEPA cartridge is not a substitute; it re-aerosolizes fines). Prime and paint drywall in a premium low-VOC acrylic-latex eggshell &mdash; Sherwin-Williams <em>SW&nbsp;7065 Argos</em>, or <em>SW&nbsp;7015 Repose Gray</em> if the can on site is that color. Eggshell, not flat. Then seal the bare concrete with a two-part floor epoxy or an equivalent concrete sealer made for slabs. That coat is dust control. It is not optional ESD theater. ACL Staticide 6300 ESD Safety Shield is a coating for plastics (acrylic, PET, PVC, polycarbonate housings and bins). It is not a concrete sealer and is not in this program.</li>
-    <li><strong>Hold humidity, then static.</strong> For this duty cycle, electrostatic risk is managed with RH, not with a topical on latex paint. Aim 30&ndash;50% RH at the tower inlet. Below ~20&ndash;25% in deep winter, add moisture. Above ~60%, settled hygroscopic dust can become conductive.</li>
-    <li><strong>Monitor, then escalate.</strong> After paint and slab cure &mdash; and after the indoor sensor actually arrives &mdash; the first measurement we want is a 24-hour indoor baseline at equipment-intake height: temperature, RH, and a consumer optical PM trend (PM2.5 / PM10). The instrument on order is a PurpleAir Flex in the indoor configuration (ordered 22&nbsp;August 2026; manufacturer backorder as of this writing). It is an indoor consumer PM sensor and, if we later enable it, a public indoor PM2.5 feed. It is not an outdoor weather station, not a wildfire-network node, and not an ISO&nbsp;14644 counter. Smoke that later leaks into the building may still appear as indoor PM2.5; that is not the same as an outdoor record. By default the Flex reports to PurpleAir&rsquo;s cloud. That is not a fully air-gapped telemetry posture. If on-premise-only environmental data is a hard requirement, the sensor must be firewalled or replaced with a logger that does not phone home. Periodic verification uses a rental survey-grade optical particle counter (for example TSI AeroTrak 9306-V2, ISO&nbsp;21501-4) reading counts per cubic meter at 0.3 / 0.5 / 5&nbsp;&micro;m. Buy that instrument only if a rental record shows a need the cheap sensor cannot meet. Alert ladder: repeat HEPA clean &rarr; add filtered supply or a room HEPA/carbon unit (True HEPA; ionization off) &rarr; and only then, construction.</li>
+    <li><strong>Seal the existing envelope.</strong> A gasketed, swept solid-core door &mdash; replacing the previously removed leaf &mdash; restores the room&rsquo;s one missing barrier; weatherstripping and acoustic-grade caulk close remaining seams and penetrations. Total materials cost is comparable to a tank of gas.</li>
+    <li><strong>Prepare the surfaces.</strong> Carpet has been removed. The room will be thoroughly de-dusted, deep-cleaned, and painted in a premium low-VOC eggshell finish (Sherwin-Williams SW&nbsp;7065 Argos or SW&nbsp;7015 Repose Gray), Electrostatic risk is addressed at the point of contact and in the air &mdash; grounded ESD work mats and wrist straps at the service position, plus the wintertime humidity floor noted above &mdash; rather than by coating architectural surfaces with products not rated for them. The smoothed slab receives a low-VOC concrete sealer so exposed concrete stops shedding fines; industrial ESD epoxy remains unnecessary for this duty cycle.</li>
+    <li><strong>Monitor continuously, locally.</strong> Following our internal case-study architecture for AI-driven on-premise air quality management, the room will carry continuous sensing of particulate matter (PM2.5/PM10), temperature, relative humidity, and dew point at equipment-intake height. A 24-hour baseline is recorded before any hardware is energized. Processing is edge-local by design; where consumer-grade sensors default to vendor-cloud reporting, they are network-isolated &mdash; firewalled to the local network and read through their local interfaces &mdash; before any on-premise claim is made of them.</li>
+    <li><strong>Escalate only on evidence.</strong> Alert thresholds trigger a defined ladder: repeat deep clean &rarr; filtered positive-pressure supply (MERV-13) &rarr; and only then, construction. The partition wall is not cancelled; it is demoted to a remedy the data must ask for.</li>
   </ul>
-  <p>A sealed, cleaned, climate-controlled closet with a sealed slab and a closed door is the operational need. ISO Class&nbsp;5 sterile rooms are for semiconductor fabrication. ISO Class&nbsp;8 is the ASHRAE datacom cleanliness target and is typically met by filtration and housekeeping, not by a new stud wall. Should a later room host device-level work with genuine contamination sensitivity, this monitoring record is the baseline that will say so.</p>
+  <p>For context, modern IT hardware tolerates ordinary indoor environments across wide envelopes, and the cleanliness reference commonly cited for data environments is ISO 14644-1 Class&nbsp;8 &mdash; a workaday target far removed from the near-sterile classes of semiconductor fabrication. A sealed, cleaned, climate-controlled room with continuous verification aims to meet that expectation, not to be excused from it. A sealed, cleaned, climate-controlled room with continuous verification meets the operational need without borrowing requirements from an industry we are not in &mdash; yet. Should this room&rsquo;s successor host device-level research with genuine contamination sensitivity, this same monitoring record becomes the baseline that tells us so.</p>
 
   <h2><span class="no">04</span>The ledger</h2>
   <div class="ledger">
     <div class="ledger-title">Field Ledger &mdash; Room Air Quality Program</div>
-    <div class="ledger-row struck"><span><span class="item">Interior partition wall, framed &amp; finished</span><span class="note">deferred &mdash; pending data that requires it</span></span><span>$3,000&ndash;$6,000</span></div>
-    <div class="ledger-row struck"><span><span class="item">ACL Staticide 6300 as floor/wall ESD substitute</span><span class="note">rejected &mdash; specified for plastics, not concrete</span></span><span>&mdash;</span></div>
+    <div class="ledger-row struck"><span>Interior partition wall, framed &amp; finished<span class="note">deferred indefinitely &mdash; pending data that requires it</span></span><span>$3,000&ndash;$6,000</span></div>
     <div class="ledger-rule"></div>
-    <div class="ledger-row"><span>Door sweep, gasket / weatherstrip, caulk</span><span>~$60</span></div>
-    <div class="ledger-row"><span>Certified HEPA cartridge + bag for existing shop vac</span><span>~$40&ndash;$70</span></div>
-    <div class="ledger-row"><span>SW 7065 Argos (or 7015) eggshell + primer</span><span>~$180</span></div>
-    <div class="ledger-row"><span>Concrete slab sealer / two-part floor epoxy, 64 ft&sup2;</span><span>~$80&ndash;$200</span></div>
-    <div class="ledger-row"><span>True HEPA + carbon room unit after paint (Winix-class)</span><span>~$160&ndash;$200</span></div>
-    <div class="ledger-row"><span>C19 to NEMA 6-20P cord, UL, 12 AWG</span><span>~$22&ndash;$30</span></div>
-    <div class="ledger-row"><span>PurpleAir Flex (indoor) &mdash; ordered 22 Aug 2026<span class="note">manufacturer backorder; not an outdoor station</span></span><span>backorder</span></div>
-    <div class="ledger-row"><span>Survey OPC (TSI 9306-V2 class), rental after cure</span><span>~$120/day or ~$340/week</span></div>
+    <div class="ledger-row"><span>Door gasket kit, sweep, weatherstripping, caulk</span><span>~$60</span></div>
+    <div class="ledger-row"><span>Premium low-VOC paint + primer (SW 7065/7015)</span><span>~$180</span></div>
+    <div class="ledger-row"><span>ESD work mat + wrist strap, grounded, at service position</span><span>~$80</span></div>
+    <div class="ledger-row"><span>Continuous PM / temp / RH monitor, edge-local</span><span>~$300</span></div>
+    <div class="ledger-row"><span>Low-VOC concrete sealer, smoothed slab</span><span>~$50</span></div>
     <div class="ledger-row"><span>Dust-free deep clean</span><span>labor</span></div>
     <div class="ledger-rule"></div>
-    <div class="ledger-total"><span>Adopted program, materials (ex-rental)</span><span>&lt; $800</span></div>
-    <div class="ledger-foot">Street prices, August 2026, rounded, Columbia Falls / Kalispell market plus common mail-order. Solid-core door, if required, quoted separately. Struck wall line is the range of informal contractor estimates for a sealed, insulated, finished 2&times;4 partition of this size. A 44U open-frame rack and a second consumer PM sensor were considered and not purchased: the compute node is a 9.6&nbsp;&times;&nbsp;23.4&nbsp;&times;&nbsp;20.8&nbsp;in tower, not a 19-in rackmount, and two optical PM sensors of the same class do not add a control.</div>
+    <div class="ledger-total"><span>Adopted program, materials</span><span>&lt; $750</span></div>
+    <div class="ledger-foot">Street prices, August 2026, rounded. Solid-core door and installation labor quoted separately under general finish work. Struck line reflects the range of informal contractor estimates for a sealed, insulated, finished 2&times;4 partition of this size in our market.</div>
   </div>
-  <p class="fig-caption">Fig. 1 &mdash; The wall we did not build, and the plastic coating we did not misuse, as line items.</p>
+  <p class="fig-caption">Fig. 1 &mdash; The wall we did not build, as a line item.</p>
 
   <h2><span class="no">05</span>Verification plan</h2>
-  <p>Once the indoor PurpleAir Flex arrives, it can provide a continuous indoor PM trend. It does not provide an outdoor wildfire record. It reports mass-approximate PM, not ISO particle counts. After the slab and paint have cured and the door sweep is on, the intended check is a short rental of a survey-grade counter: closet center, tower inlet, and the warehouse side of the door, door closed, then again after the fans have run. That rental is a method, not a booked week. Pass/fail, if we run it, is ISO&nbsp;14644-1 Class&nbsp;8 at the inlet (3,520,000 particles &ge;0.5&nbsp;&micro;m per m&sup3;). Capital purchase waits for a baseline that a rental and a cheap indoor sensor cannot explain. The same evidence rule we applied to the wall.</p>
+  <p>Continuous consumer-grade optical sensing provides the 24/7 trend record. For periodic verification, the protocol calls for a survey-grade optical particle counter reading true particle counts per cubic meter across 0.3&ndash;5&nbsp;&micro;m channels, operated on a rental or survey basis against the continuous monitor&rsquo;s readings, checking the room against the ISO 14644-1 Class&nbsp;8 envelope commonly referenced for data environments. Capital purchase of survey instrumentation is deferred until the baseline record demonstrates a need the continuous monitor cannot meet &mdash; the same evidence standard we applied to the wall.</p>
 
-  <h2><span class="no">06</span>Sources</h2>
-  <ol class="refs">
-    <li><span class="rn">[1]</span> ASHRAE Technical Committee 9.9. <em>Gaseous and Particulate Contamination Guidelines for Data Centers</em> (2011). ISO&nbsp;14644-1 Class&nbsp;8, MERV filtration, and RH below about 60% for settled dust. <a href="https://www.ashrae.org/File%20Library/Technical%20Resources/Publication%20Errata%20and%20Updates/2011-Gaseous-and-Particulate-Guidelines.pdf" rel="noopener noreferrer">ashrae.org (PDF)</a></li>
-    <li><span class="rn">[2]</span> Shehabi, A., et al. &ldquo;Particle concentrations in data centers.&rdquo; <em>Atmospheric Environment</em> 42 (2008): 5978&ndash;5990. <a href="https://doi.org/10.1016/j.atmosenv.2008.03.049" rel="noopener noreferrer">doi:10.1016/j.atmosenv.2008.03.049</a></li>
-    <li><span class="rn">[3]</span> Shehabi, A., et al. &ldquo;Can combining economizers with improved filtration save energy and protect equipment in data centers?&rdquo; <em>Building and Environment</em> (2009). <a href="https://doi.org/10.1016/j.buildenv.2009.08.009" rel="noopener noreferrer">doi:10.1016/j.buildenv.2009.08.009</a></li>
-    <li><span class="rn">[4]</span> Comizzoli, R. B., et al. Corrosion and leakage current from submicron atmospheric particles on electronics, as cited in ASHRAE TC&nbsp;9.9 (2011), ref.&nbsp;[1]. Leakage current rises exponentially with RH; keep room RH under about 60%.</li>
-    <li><span class="rn">[5]</span> ISO 14644-1:2015. Cleanrooms &mdash; classification of air cleanliness by particle concentration (non-viable counts only). <a href="https://www.iso.org/standard/53394.html" rel="noopener noreferrer">iso.org</a></li>
-    <li><span class="rn">[6]</span> NVIDIA. DGX Station product literature: total system power 1,600&nbsp;W. <a href="https://www.nvidia.com/en-us/products/workstations/dgx-station/" rel="noopener noreferrer">nvidia.com</a></li>
-    <li><span class="rn">[7]</span> ACL Staticide. <em>6300 ESD Safety Shield</em> &mdash; intended for acrylic, PET, PETG, PVC, and polycarbonate, not concrete slabs. <a href="https://www.aclstaticide.com/products/staticide-esd-safety-shield" rel="noopener noreferrer">aclstaticide.com</a></li>
-    <li><span class="rn">[8]</span> Sherwin-Williams. Color SW&nbsp;7065 is Argos, not Matrix Gray. <a href="https://www.sherwin-williams.com/en-us/color/color-family/neutrals/SW7065" rel="noopener noreferrer">sherwin-williams.com</a></li>
-    <li><span class="rn">[9]</span> PurpleAir. <em>Flex</em> product page. The official SKU is Flex; indoor vs outdoor is configuration and placement, not a second cleanliness class. This site ordered the indoor configuration. Flex listed on backorder as of August 2026. <a href="https://www2.purpleair.com/products/purpleair-flex" rel="noopener noreferrer">purpleair.com</a></li>
-  </ol>
+  <h2><span class="no">06</span>Limitations</h2>
+  <p>This is a single-facility case note, not a controlled study, and its conclusions are specific to this structure, climate, and duty cycle. It is not engineering advice; local codes and site conditions govern. Baseline and longitudinal data will be appended as collected, including any finding that contradicts the decision documented here. If the data asks for the wall, the wall gets built &mdash; that is the entire point of measuring.</p>
 
-  <h2><span class="no">07</span>Limitations</h2>
-  <p>This is a single-facility case note, not a controlled study, and not a 30-day monitoring pledge. It is specific to this structure, this climate, and one 1.6&nbsp;kW tower. It is not a building permit, an electrical design, or an NVIDIA install guide. Local codes and a licensed electrician govern the 240&nbsp;V circuits and the idle 50&nbsp;A former hot-tub breaker &mdash; the panel slot may have future value; the abandoned wet-location cable does not. If indoor measurements are later recorded, they will be appended here, including any finding that contradicts the decision documented here. If the data asks for the wall, the wall gets built. That is the point of measuring.</p>
+  <div class="callout">Bricks are easy to sell. Measurements are hard to argue with.</div>
 
-  <p class="callout">Bricks are easy to sell. Measurements are hard to argue&nbsp;with.</p>
-  </article>
+  <h2><span class="no">A</span>Appendix A &mdash; Field data (living record)</h2>
+  <p>Entries are added at protocol milestones, not on a schedule. Each entry states the room&rsquo;s condition at the time of measurement, because a number without its context is an advertisement, not data. Readings come from the room&rsquo;s continuous dual-laser-channel optical monitor (with onboard temperature/RH sensing); channel agreement is reported as an internal quality check. Consumer optical sensors are not reference-method instruments; values serve the trend and verification purposes described above. No location data is published.</p>
+
+  <div class="entry">
+    <div class="entry-head">Entry 1 &mdash; As-found condition &middot; September 9, 2026, 21:56 MDT</div>
+    <dl>
+      <dt>Reading</dt><dd><strong>US EPA PM2.5 AQI 63</strong> (10-minute average; instantaneous 66) &mdash; mid-&ldquo;Moderate.&rdquo; Other windows: 30-min 52, 1-hr 34, 6-hr 54.</dd>
+      <dt>Conditions</dt><dd>Deliberate worst case, disclosed in full: door open to the adjacent storage bay; approximately 72 hours after floor painting; contractor foot traffic throughout the day; no HEPA cleaning performed yet; heat pump off; room at ~70&nbsp;&deg;F.</dd>
+      <dt>Trend</dt><dd>Declining from the high 70s into the 60s over the first 20 minutes of observation &mdash; activity-raised dust visibly settling in real time.</dd>
+      <dt>Quality check</dt><dd>Both laser channels (A/B) tracked within a few AQI points of each other throughout &mdash; dual-sensor agreement passed.</dd>
+      <dt>Read</dt><dd>With every unfavorable factor present at once, the room opens at mid-Moderate rather than construction-zone levels &mdash; consistent with the thesis that this enclosure&rsquo;s underlying problem is small. Next entries: post-cleaning, a multi-day unoccupied quiescent record, and the official 24-hour pre-boot baseline.</dd>
+    </dl>
+  </div>
+
 
   <footer>
-    <p>&copy; 2026 <a href="https://intelli-care.ai">intellicAIr, LLC</a> &mdash; Columbia Falls, Montana. An EDWOSB.</p>
-    <p>Prepared by the author with drafting assistance from AI collaborators. Facts in this revision were checked against the sources above before publication. Remaining decisions, measurements, and errors are the author&rsquo;s own.</p>
+    <p>&copy; 2026 intellicAIr, LLC &mdash; Columbia Falls, Montana. An EDWOSB. &middot; <a href="https://intelli-care.ai">intelli-care.ai</a></p>
+    <p style="margin-top:.5rem">Rev.&nbsp;2, August 2026 &mdash; corrected following cross-model technical review: paint color designation, load figures, humidity-mode behavior, sensor network posture, static-mitigation scope, and cleanliness reference.</p>
+    <p style="margin-top:.5rem">Rev.&nbsp;3, September 2026 &mdash; monitoring commissioned; Appendix A (field data) opened with Entry&nbsp;1.</p>
+    <p style="margin-top:.5rem">Prepared by the author with drafting assistance from AI collaborators. All decisions, measurements, and errors are the author&rsquo;s own.</p>
   </footer>
 </main>
 </body>
