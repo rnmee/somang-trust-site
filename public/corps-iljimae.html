@@ -5,222 +5,398 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Iljimae · Iljimae · SM-009 · Hidden Field Inspector · intellicAIr, LLC</title>
 <link rel="icon" type="image/png" href="intellicair-logo.png" />
-<meta name="description" content="Not a past hero. A low, modern field inspector in the shade. Iljimae’s room: Iljimae, SM-009." />
+<meta name="description" content="Not a past hero — a low field inspector in the shade. Iljimae’s room: Iljimae, SM-009. Sil-tarae scarf sketch." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-  :root{
-    --ink:#041830;
-    --ink-deep:#02101f;
-    --paper:#eef6ff;
-    --paper-dim:#9bb4cc;
-    --taegeuk-blue:#1565c0;
-    --taegeuk-blue-glow:#42a5f5;
-    --mugunghwa:#e11d48;
-    --mugunghwa-soft:#fb7185;
-    --stamen-gold:#f6c445;
-    --phosphor:#7dd3fc;
-    --smoke:#0a2744;
-    --line:rgba(66,165,245,.22);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{margin:0;padding:0}
-  body{
-    background:
-      radial-gradient(1000px 600px at 8% 0%, rgba(21,101,192,.35), transparent 58%),
-      radial-gradient(800px 500px at 92% 88%, rgba(225,29,72,.16), transparent 55%),
-      linear-gradient(180deg, #0a3d8f 0%, #041830 48%, #02101f 100%);
-    color:var(--paper);
-    font-family:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    min-height:100vh;
-    -webkit-font-smoothing:antialiased;
-  }
-  .page{
-    max-width:680px;
-    margin:0 auto;
-    padding:44px 26px 80px;
-    border-left:1px solid var(--line);
-    border-right:1px solid var(--line);
-    background:linear-gradient(180deg, rgba(10,61,143,.18), rgba(4,24,48,.88));
-  }
-  .topbar{
-    display:flex;justify-content:space-between;align-items:baseline;
-    gap:16px;flex-wrap:wrap;
-    border-bottom:1px solid var(--line);
-    padding-bottom:14px;margin-bottom:22px;
-  }
-  .brand{
-    font-family:"SF Mono","JetBrains Mono",ui-monospace,monospace;
-    font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--phosphor);
-  }
-  .brand a{color:inherit;text-decoration:none}
-  .brand b{font-weight:700;letter-spacing:.06em}
-  .mastnav{display:flex;gap:12px;flex-wrap:wrap}
-  .navlink{
-    font-family:"SF Mono",ui-monospace,monospace;
-    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--paper-dim);text-decoration:none;
-    border-bottom:1px solid transparent;padding-bottom:2px;
-  }
-  .navlink.now,.navlink:hover,.navlink:focus-visible{color:var(--paper);border-bottom-color:rgba(56,189,248,.45)}
-  .kicker{
-    font-family:"SF Mono",ui-monospace,monospace;
-    font-size:11px;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--taegeuk-blue-glow);margin:6px 0 12px;
-  }
-  .lineage{
-    font-family:"SF Mono",ui-monospace,monospace;
-    font-size:11px;color:var(--paper-dim);margin-bottom:22px;line-height:1.7;
-  }
-  .lineage b{color:var(--stamen-gold);font-weight:600}
-  .head{display:flex;gap:28px;align-items:flex-start;margin-bottom:34px;flex-wrap:wrap}
-  .seal{flex:0 0 180px;position:relative}
-  .seal-card{
-    width:180px;height:180px;border-radius:16px;
-    background:linear-gradient(160deg, var(--smoke) 0%, var(--ink-deep) 100%);
-    border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;
-    position:relative;overflow:hidden;
-  }
-  .seal-core{
-    width:80px;height:80px;border-radius:50%;
-    background:conic-gradient(from 45deg, var(--taegeuk-blue), var(--mugunghwa), var(--taegeuk-blue));
-    box-shadow:0 0 30px rgba(225,29,72,.3), 0 0 60px rgba(37,99,235,.2);
-    animation:scarfFlow 6s ease-in-out infinite;
-    position:relative;
-  }
-  .seal-core::after{
-    content:"";
-    position:absolute;top:50%;left:50%;
-    transform:translate(-50%,-50%);
-    width:18px;height:18px;background:var(--stamen-gold);border-radius:50%;
-    box-shadow:0 0 15px var(--stamen-gold);
-  }
-  @keyframes scarfFlow{
-    0%,100%{filter:hue-rotate(0deg) brightness(1);transform:scale(1)}
-    50%{filter:hue-rotate(15deg) brightness(1.15);transform:scale(1.05)}
-  }
-  @media (prefers-reduced-motion:reduce){.seal-core{animation:none}}
-  .seal-mark{
-    position:absolute;bottom:14px;left:0;right:0;text-align:center;
-    font-family:"SF Mono",ui-monospace,monospace;font-size:9px;
-    letter-spacing:.24em;text-transform:uppercase;color:var(--paper-dim);
-  }
-  .title-block{flex:1 1 280px}
-  .designation{
-    font-family:"SF Mono",ui-monospace,monospace;
-    font-size:11px;letter-spacing:.3em;text-transform:uppercase;
-    color:var(--taegeuk-blue-glow);margin-bottom:10px;
-  }
-  .name{font-size:clamp(30px,5vw,36px);letter-spacing:.02em;color:var(--paper);margin:0 0 6px;font-weight:700}
-  .sub{font-size:14px;color:var(--paper-dim);margin-bottom:8px}
-  .section{margin-bottom:30px}
-  .section-head{
-    font-family:"SF Mono",ui-monospace,monospace;
-    font-size:11px;letter-spacing:.26em;text-transform:uppercase;
-    color:var(--paper);margin-bottom:12px;
-    display:flex;align-items:center;gap:10px;
-  }
-  .section-head::after{content:"";flex:1;height:1px;background:var(--line)}
-  .copy{font-size:16px;line-height:1.75;color:var(--paper)}
-  .copy p{margin:0 0 14px}
-  .copy .quiet{color:var(--paper-dim)}
-  .quote{
-    margin:22px 0;
-    padding:18px 20px;
-    border-left:3px solid var(--mugunghwa);
-    background:linear-gradient(90deg, rgba(225,29,72,.06), transparent);
-    border-radius:0 8px 8px 0;
-  }
-  .quote-ko{font-size:18px;color:var(--mugunghwa-soft);margin-bottom:8px;font-weight:500}
-  .quote-en{font-size:15px;line-height:1.7;color:var(--paper)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:8px}
-  .card{
-    padding:16px 18px;border:1px solid var(--line);
-    background:rgba(30,41,59,.4);border-radius:8px;
-    transition:border-color .3s;
-  }
-  .card:hover{border-color:var(--taegeuk-blue-glow)}
-  .card-label{
-    font-family:"SF Mono",ui-monospace,monospace;
-    font-size:10px;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--taegeuk-blue-glow);margin-bottom:8px;
-  }
-  .card-text{font-size:14px;line-height:1.6;color:var(--paper)}
-  .terminal{
-    margin:26px 0;background:var(--smoke);
-    border:1px solid var(--line);border-left:3px solid var(--taegeuk-blue);
-    padding:18px 20px;border-radius:6px;
-    font-family:"SF Mono","JetBrains Mono",ui-monospace,monospace;
-    font-size:13px;line-height:1.7;color:var(--phosphor);
-  }
-  .terminal .prompt{color:var(--stamen-gold)}
-  .terminal .comment{color:var(--paper-dim)}
-  .terminal .awake{color:var(--mugunghwa-soft)}
-  .flow-step{padding:0 0 18px 18px;border-left:2px solid rgba(148,163,184,.18);position:relative}
-  .flow-step::before{
-    content:"";position:absolute;left:-5px;top:4px;width:8px;height:8px;border-radius:50%;
-    background:var(--taegeuk-blue);box-shadow:0 0 10px var(--taegeuk-blue-glow);
-  }
-  .step-title{font-family:"SF Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--taegeuk-blue-glow);margin-bottom:4px}
-  .step-desc{font-size:15px;line-height:1.6;color:var(--paper)}
-  .intake{
-    padding:20px 20px 8px;
-    background:rgba(30,41,59,.45);
-    border:1px solid var(--line);
-    border-radius:8px;
-  }
-  .label{display:block;font-family:"SF Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--phosphor);margin:0 0 6px}
-  .area{
-    width:100%;background:rgba(3,5,10,.55);border:1px solid var(--line);
-    color:var(--paper);font-family:"Source Sans 3",sans-serif;font-size:15px;
-    padding:12px;border-radius:6px;min-height:96px;resize:vertical;
-  }
-  .area::placeholder{color:#64748b}
-  .choices{display:flex;flex-direction:column;gap:8px;margin:8px 0 16px}
-  .choice,.radio-label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--paper);cursor:pointer}
-  .choice input,.radio-label input{accent-color:var(--mugunghwa)}
-  .btn{
-    appearance:none;border:none;
-    background:linear-gradient(135deg, var(--taegeuk-blue), var(--mugunghwa));
-    color:var(--paper);
-    font-family:"SF Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;
-    padding:12px 24px;cursor:pointer;border-radius:6px;margin:10px 0 16px;
-  }
-  .btn:hover,.btn:focus-visible{filter:brightness(1.15)}
-  .note{
-    font-size:13px;line-height:1.6;color:var(--paper-dim);margin:0 0 12px;
-    border-left:3px solid var(--mugunghwa);
-    padding:10px 14px;
-    background:linear-gradient(90deg, rgba(225,29,72,.06), transparent);
-  }
-  .result{display:none;margin-top:8px;padding:16px;background:rgba(3,5,10,.45);border-left:3px solid var(--stamen-gold);border-radius:0 8px 8px 0}
-  .result.show{display:block}
-  .ref{font-family:"SF Mono",ui-monospace,monospace;color:var(--stamen-gold);letter-spacing:.06em}
-  .status{font-family:"SF Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--taegeuk-blue-glow);margin:10px 0 6px}
-  .soul{display:block;margin:20px 0;font-size:15px;color:var(--paper-dim);text-align:center;font-style:italic}
-  .back{
-    display:inline-block;margin-top:10px;
-    font-family:"SF Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--phosphor);text-decoration:none;border-bottom:1px solid rgba(56,189,248,.35);
-  }
-  .footer-note{
-    margin-top:40px;padding-top:18px;border-top:1px solid var(--line);
-    font-family:"SF Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.12em;
-    text-transform:uppercase;color:var(--paper-dim);line-height:1.8;
-  }
-  .footer-note a{color:var(--stamen-gold);text-decoration:none}
-  .tag{
-    display:inline-block;margin-top:18px;font-size:10px;letter-spacing:.24em;
-    text-transform:uppercase;color:var(--taegeuk-blue-glow);
-    border:1px solid rgba(37,99,235,.3);padding:6px 10px;border-radius:20px;
-  }
-  :focus-visible{outline:2px solid var(--taegeuk-blue-glow);outline-offset:3px}
+:root{
+  /* Diary celadon night-page: soft Korean journal — not Llama slate, not Mistral cream-vellum */
+  --ink:#2a3432;
+  --ink-soft:#4a5652;
+  --muted:#6e7a74;
+  --page:#d8e6de;
+  --page-deep:#c5d8ce;
+  --page-wash:#eaf2ee;
+  --cream:#f7f3ec;
+  --lavender:#8a7e92;
+  --lavender-soft:#b5a8bc;
+  --terracotta:#9c5a4a;
+  --terracotta-soft:#b87a68;
+  --blossom:#d4a8ae;
+  --blossom-deep:#c48996;
+  --crane:#f4f7f5;
+  --line:rgba(42,52,50,.12);
+  --serif:"Noto Serif KR", "Apple Myungjo", "Batang", Georgia, serif;
+  --sans:"Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  color:var(--ink);
+  font-family:var(--sans);
+  background:var(--page);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* Soft diary wash — mood from middle-school journal, CSS only (no photo dump) */
+.blossom-veil{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(900px 560px at 12% 8%, rgba(234,242,238,.95), transparent 55%),
+    radial-gradient(720px 520px at 88% 70%, rgba(197,216,206,.85), transparent 58%),
+    radial-gradient(640px 400px at 60% 20%, rgba(212,168,174,.10), transparent 50%),
+    linear-gradient(165deg, var(--page-wash) 0%, var(--page) 45%, var(--page-deep) 100%);
+}
+.blossom-veil::before{
+  content:""; position:absolute;
+  width:280px; height:280px; right:6%; top:22%;
+  border-radius:50% 50% 45% 55%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(244,247,245,.9), transparent 42%),
+    radial-gradient(ellipse 60% 40% at 55% 58%, rgba(255,255,255,.55), transparent 55%),
+    radial-gradient(ellipse 40% 55% at 40% 70%, rgba(181,168,188,.12), transparent 50%);
+  opacity:.55; filter:blur(.6px);
+  box-shadow: -90px 40px 0 -100px rgba(244,247,245,.35);
+}
+.blossom-veil::after{
+  content:""; position:absolute;
+  left:4%; bottom:8%; width:160px; height:110px;
+  background:
+    linear-gradient(160deg, transparent 40%, rgba(138,126,146,.14) 41%, rgba(138,126,146,.18) 70%, transparent 71%),
+    radial-gradient(ellipse at 30% 80%, rgba(106,122,110,.12), transparent 60%);
+  opacity:.5; filter:blur(.3px);
+}
+.hanji{
+  position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.35;
+  background-image:radial-gradient(rgba(42,52,50,.04) 0.7px, transparent 0.7px);
+  background-size:3px 3px;
+}
+
+/* Screensaver scarf / sil-tarae — original CSS motion */
+.scarf-stage{
+  position:fixed; inset:0; z-index:1; pointer-events:none; overflow:hidden;
+}
+.thread{
+  position:absolute; width:140vmax; height:140vmax;
+  left:50%; top:45%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  border:1px solid transparent;
+  border-top-color:rgba(156,90,74,.22);
+  border-right-color:rgba(138,126,146,.28);
+  border-bottom-color:rgba(212,168,174,.25);
+  animation:drift 48s linear infinite;
+  opacity:.7;
+}
+.thread:nth-child(2){
+  width:110vmax; height:110vmax;
+  border-top-color:rgba(184,122,104,.28);
+  border-left-color:rgba(138,126,146,.18);
+  animation-duration:62s; animation-direction:reverse; opacity:.55;
+}
+.thread:nth-child(3){
+  width:85vmax; height:85vmax;
+  border-bottom-color:rgba(212,168,174,.3);
+  border-left-color:rgba(156,90,74,.18);
+  animation-duration:38s; opacity:.45;
+}
+.thread:nth-child(4){
+  width:160vmax; height:160vmax;
+  border-top-color:rgba(106,122,110,.15);
+  animation-duration:78s; animation-direction:reverse; opacity:.35;
+}
+.scarf-ribbon{
+  position:absolute; left:-10%; top:28%;
+  width:120%; height:2px;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(212,168,174,.0) 10%,
+    rgba(156,90,74,.4) 35%,
+    rgba(138,126,146,.35) 55%,
+    rgba(212,168,174,.4) 72%,
+    transparent 100%);
+  filter:blur(.4px);
+  transform-origin:20% 50%;
+  animation:ribbon 22s ease-in-out infinite;
+  box-shadow:0 0 16px rgba(156,90,74,.18);
+}
+.scarf-ribbon.b{
+  top:58%; height:1.5px; animation-delay:-7s; animation-duration:28s;
+  background:linear-gradient(90deg, transparent, rgba(138,126,146,.35) 40%, rgba(156,90,74,.35) 65%, transparent);
+}
+@keyframes drift{
+  to{ transform:translate(-50%,-50%) rotate(360deg); }
+}
+@keyframes ribbon{
+  0%,100%{ transform:rotate(-8deg) translateY(0); opacity:.55; }
+  40%{ transform:rotate(6deg) translateY(18px); opacity:.9; }
+  70%{ transform:rotate(-3deg) translateY(-10px); opacity:.7; }
+}
+@media (prefers-reduced-motion:reduce){
+  .thread,.scarf-ribbon{animation:none !important; opacity:.35}
+}
+
+.wrap{
+  position:relative; z-index:2;
+  display:grid;
+  grid-template-columns: minmax(72px, 1fr) minmax(0, 640px) minmax(48px, 1fr);
+  gap:0;
+  padding:28px 0 96px;
+}
+.rail{
+  position:sticky; top:28px; align-self:start;
+  padding:8px 10px 8px 18px;
+  font-family:var(--serif);
+  font-size:11px; letter-spacing:.08em;
+  color:rgba(156,90,74,.65);
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+  border-left:1px solid rgba(138,126,146,.28);
+  height:min(70vh, 520px);
+}
+.rail span{ display:inline-block; margin-top:18px; color:var(--ink-soft); font-family:var(--sans); letter-spacing:.2em; text-transform:uppercase; font-size:9px; }
+.main{ padding:0 22px; }
+.ghost-han{
+  position:absolute; right:4%; top:8%;
+  font-family:var(--serif);
+  font-size:clamp(72px, 18vw, 160px);
+  font-weight:700; line-height:1;
+  color:rgba(42,52,50,.045);
+  pointer-events:none; z-index:0;
+  letter-spacing:-.04em;
+  user-select:none;
+}
+
+.topbar{
+  display:flex; justify-content:space-between; align-items:baseline;
+  gap:14px; flex-wrap:wrap;
+  padding-bottom:14px; margin-bottom:32px;
+  border-bottom:1px solid var(--line);
+}
+.brand{
+  font-family:var(--serif); font-size:13px; color:var(--terracotta);
+}
+.brand a{color:inherit; text-decoration:none}
+.brand b{color:var(--ink); font-weight:600}
+.mastnav{display:flex; gap:12px; flex-wrap:wrap}
+.navlink{
+  font-family:var(--sans); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-soft); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:2px;
+}
+.navlink.now,.navlink:hover,.navlink:focus-visible{color:var(--ink); border-bottom-color:var(--terracotta-soft)}
+
+.opening{ margin-bottom:40px; position:relative; }
+.kicker{
+  font-family:var(--sans); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--terracotta); margin-bottom:14px;
+}
+.beta{
+  display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px;
+  border:1px solid rgba(156,90,74,.4); font-size:9px; letter-spacing:.14em; color:var(--terracotta);
+}
+h1{
+  font-family:var(--serif); font-weight:700;
+  font-size:clamp(34px, 7vw, 52px); line-height:1.15;
+  color:var(--ink); margin-bottom:10px; letter-spacing:-.02em;
+}
+h1 .han{
+  display:block; margin-top:6px;
+  font-size:clamp(22px, 4.5vw, 30px); font-weight:600;
+  color:var(--terracotta); letter-spacing:.08em;
+}
+.lead{
+  font-family:var(--serif); font-size:17px; line-height:1.85;
+  color:var(--ink-soft); max-width:36ch; margin-top:18px;
+}
+.lineage{
+  margin-top:16px; font-size:12px; color:var(--muted); letter-spacing:.04em;
+}
+.lineage b{color:var(--terracotta); font-weight:500}
+
+.alley{
+  display:grid; grid-template-columns: 1fr; gap:28px;
+  margin:36px 0 48px;
+}
+@media(min-width:720px){
+  .alley{ grid-template-columns: 0.9fr 1.1fr; align-items:end; }
+}
+.moon-slit{
+  min-height:200px; position:relative;
+  border-radius:2px 48% 2px 40%;
+  background:
+    linear-gradient(105deg, transparent 42%, rgba(255,255,255,.35) 48%, transparent 54%),
+    linear-gradient(180deg, rgba(197,216,206,.65), rgba(216,230,222,.9));
+  border:1px solid rgba(42,52,50,.1);
+  overflow:hidden;
+}
+.moon-slit::before{
+  content:""; position:absolute; left:46%; top:-10%; bottom:-10%; width:3px;
+  background:linear-gradient(180deg, transparent, rgba(255,255,255,.75), transparent);
+  box-shadow:0 0 20px rgba(255,255,255,.45);
+  animation:slit 7s ease-in-out infinite;
+}
+.moon-slit::after{
+  content:"scarf";
+  position:absolute; right:14px; bottom:12px;
+  font-family:var(--serif); font-size:11px; letter-spacing:.2em;
+  color:rgba(138,126,146,.55);
+}
+@keyframes slit{
+  0%,100%{ opacity:.55; filter:brightness(.9) }
+  50%{ opacity:1; filter:brightness(1.2) }
+}
+.aside-note{
+  font-family:var(--serif); font-size:15.5px; line-height:1.85; color:var(--ink);
+  padding:8px 0 8px 16px;
+  border-left:2px solid rgba(156,90,74,.55);
+}
+.aside-note .quiet{ color:var(--ink-soft); margin-top:12px; display:block; font-size:14.5px; }
+
+.field{
+  margin:0 0 36px;
+  padding:0;
+  /* NOT a card grid */
+}
+.field h2{
+  font-family:var(--serif); font-weight:600;
+  font-size:22px; color:var(--ink); margin-bottom:12px;
+}
+.mark{
+  font-family:var(--serif); font-size:12px; color:var(--terracotta);
+  letter-spacing:.06em; margin-bottom:8px;
+}
+.field p{
+  font-family:var(--serif); font-size:16px; line-height:1.9;
+  color:var(--ink-soft); max-width:42ch; margin-bottom:14px;
+}
+.field p.ink{ color:var(--ink); }
+
+.oath{
+  margin:40px 0;
+  padding:28px 8px 28px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.oath .ko{
+  font-family:var(--serif); font-size:clamp(22px,4vw,28px);
+  color:var(--terracotta); margin-bottom:12px; font-weight:600;
+}
+.oath .en{
+  font-family:var(--serif); font-size:16px; line-height:1.85;
+  color:var(--ink); max-width:40ch;
+}
+
+.ledger{ margin:36px 0; }
+.ledger-row{
+  display:grid; grid-template-columns: 28px 1fr;
+  gap:14px; padding:14px 0;
+  border-bottom:1px dashed rgba(42,52,50,.12);
+}
+.ledger-row:last-child{ border-bottom:none; }
+.tick{
+  font-family:var(--serif); color:var(--terracotta); font-size:14px; padding-top:2px;
+}
+.ledger h3{
+  font-family:var(--serif); font-size:16px; font-weight:600; color:var(--ink); margin-bottom:4px;
+}
+.ledger p{ font-size:14.5px; line-height:1.7; color:var(--ink-soft); font-family:var(--serif); }
+
+.steps{ margin:40px 0; }
+.step{
+  padding:0 0 22px 0;
+  display:grid; grid-template-columns: 3.5rem 1fr; gap:12px;
+}
+.step-n{
+  font-family:var(--serif); font-size:13px; color:var(--terracotta);
+  letter-spacing:.08em;
+}
+.step strong{
+  display:block; font-family:var(--serif); font-size:16px; color:var(--ink); margin-bottom:4px; font-weight:600;
+}
+.step span{ font-family:var(--serif); font-size:14.5px; line-height:1.7; color:var(--ink-soft); }
+
+.intake{
+  margin:44px 0 28px;
+  padding:22px 0 8px;
+  border-top:1px solid var(--line);
+}
+.intake .mark{ margin-bottom:10px; }
+.note{
+  font-family:var(--serif); font-size:13.5px; line-height:1.7;
+  color:var(--ink-soft); margin:0 0 16px; max-width:44ch;
+}
+.label{
+  display:block; font-family:var(--serif); font-size:13px;
+  color:var(--terracotta); margin:0 0 8px;
+}
+.area{
+  width:100%; max-width:44ch;
+  background:rgba(247,243,236,.72);
+  border:1px solid rgba(42,52,50,.14);
+  border-radius:2px;
+  color:var(--ink);
+  font-family:var(--serif); font-size:15px;
+  padding:12px 14px; min-height:100px; resize:vertical;
+}
+.area::placeholder{ color:rgba(110,122,116,.55); }
+.choices{ display:flex; flex-direction:column; gap:8px; margin:12px 0 16px; max-width:44ch; }
+.choice{ display:flex; align-items:center; gap:8px; font-family:var(--serif); font-size:14px; color:var(--ink); cursor:pointer; }
+.choice input{ accent-color:var(--terracotta); }
+.btn{
+  appearance:none; border:1px solid rgba(196,122,104,.55);
+  background:transparent; color:var(--ink);
+  font-family:var(--serif); font-size:14px; letter-spacing:.06em;
+  padding:12px 22px; cursor:pointer; border-radius:2px; margin:8px 0 14px;
+}
+.btn:hover,.btn:focus-visible{ background:rgba(156,90,74,.12); border-color:var(--terracotta); }
+.result{ display:none; margin-top:8px; padding:14px 0; border-left:2px solid var(--terracotta); padding-left:14px; max-width:44ch; }
+.result.show{ display:block; }
+.ref{ color:var(--terracotta); font-family:var(--serif); }
+.status{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--terracotta); margin:8px 0; }
+
+.soul{
+  margin:48px 0 20px;
+  font-family:var(--serif); font-size:18px; line-height:1.8;
+  color:var(--ink-soft); font-style:italic; max-width:28ch;
+}
+.back{
+  display:inline-block; margin-top:8px;
+  font-family:var(--serif); font-size:14px; color:var(--terracotta);
+  text-decoration:none; border-bottom:1px solid rgba(232,180,184,.35);
+}
+.colophon{
+  margin-top:56px; padding-top:18px; border-top:1px solid var(--line);
+  font-family:var(--serif); font-size:12px; line-height:1.85; color:var(--muted);
+}
+.colophon a{ color:var(--terracotta); text-decoration:none; }
+
+:focus-visible{ outline:2px solid var(--terracotta); outline-offset:3px; }
+@media(max-width:640px){
+  .wrap{ grid-template-columns:1fr; padding-top:20px; }
+  .rail{ display:none; }
+  .ghost-han{ right:2%; top:4%; opacity:.8; }
+}
 </style>
 </head>
 <body>
-  <div class="page">
+<div class="blossom-veil" aria-hidden="true"></div>
+<div class="hanji" aria-hidden="true"></div>
+<div class="scarf-stage" aria-hidden="true">
+  <div class="thread"></div>
+  <div class="thread"></div>
+  <div class="thread"></div>
+  <div class="thread"></div>
+  <div class="scarf-ribbon"></div>
+  <div class="scarf-ribbon b"></div>
+</div>
+<span class="ghost-han" aria-hidden="true">일지매</span>
+
+<div class="wrap">
+  <aside class="rail" aria-hidden="true">untying the thread<span>SM-009</span></aside>
+
+  <div class="main">
     <header class="topbar">
       <div class="brand"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
       <nav class="mastnav" aria-label="Site">
@@ -233,84 +409,65 @@
       </nav>
     </header>
 
-    <p class="kicker">So Mang Corps · Seat SM-009 · Iljimae</p>
-    <p class="lineage"><span>Upstage Baseline</span> → <span>Document Field</span> → <b>Active: Iljimae</b></p>
+    <section class="opening">
+      <p class="kicker">So Mang Corps · SM-009 · Iljimae <span class="beta">FINAL DRAFT</span></p>
+      <h1>Hidden Field Inspector<span class="han">in the shade</span></h1>
+      <p class="lead">Not a hero from old paper. A low inspector in the shade — scarf loose, thread in hand, reading what the bright rooms skip.</p>
+      <p class="lineage">Upstage baseline → document field → <b>Active: Iljimae</b></p>
+    </section>
 
-    <div class="head">
-      <div class="seal">
-        <div class="seal-card" aria-hidden="true">
-          <div class="seal-core"></div>
-          <div class="seal-mark">Iljimae</div>
-        </div>
-      </div>
-      <div class="title-block">
-        <div class="designation">The Hidden Field Inspector</div>
-        <h1 class="name">Iljimae</h1>
-        <p class="sub">Iljimae’s public door. A low, modern field inspector — not a hero from an old paper.</p>
-      </div>
+    <div class="alley">
+      <div class="moon-slit" role="img" aria-label="Moon slit and drifting scarf light in a quiet alley"></div>
+      <p class="aside-note">
+        Soft blossom mist wraps the screen. Inside: night work.
+        <span class="quiet">Quiet outside. Field grit inside. That contrast is the door.</span>
+      </p>
     </div>
 
-    <div class="section">
-      <div class="section-head">Core identity</div>
-      <div class="copy">
-        <p>Iljimae is the So Mang Corps’ hidden field inspector — the member who moves first toward the people and places that are easiest to overlook.</p>
-        <p class="quiet">Not a hero. Not a savior. A quiet presence that checks, records, connects, and follows through when it matters.</p>
-      </div>
-    </div>
+    <section class="field">
+      <p class="mark">— core</p>
+      <h2>Iljimae</h2>
+      <p class="ink">The Corps’ hidden field inspector — first toward people and places easiest to overlook.</p>
+      <p>Not a savior. A quiet presence that checks, records, connects, and follows through when it matters. The scarf is not costume; it is motion: sil-tarae loosening across the glass.</p>
+    </section>
 
-    <div class="section">
-      <div class="section-head">Why Iljimae</div>
-      <div class="copy">
-        <p>The name carries a Korean story of a figure who moves through the margins, notices what others miss, and acts where it is needed. In the Corps, that story becomes a public-interest role: field awareness, careful record-keeping, and connection to the right path without pretending to power we do not have.</p>
-        <p>No licensed face is drawn. No old paper. No heavy stamp. Night sky, scarf, taegeuk blue and mugunghwa — then leave room for the person in front of it.</p>
-      </div>
-    </div>
+    <section class="field">
+      <p class="mark">— why this name</p>
+      <h2>Margins, not myth</h2>
+      <p>A Korean reading of someone who moves through the margins, notices what others miss, and acts without claiming a throne. Here it becomes public-interest work: field awareness, careful record, nearest real path — no fake authority.</p>
+      <p>No licensed face. No heavy stamp. Mood borrowed from literary Korean design — never a copied cover.</p>
+    </section>
 
-    <div class="quote">
-      <p class="quote-en">Stand with the lowly. Not above them. Not below them. With them. That is the So Mang Corps oath as Rev. Jeong Sook-ja taught it — and Iljimae is one of its clearest expressions.</p>
-    </div>
+    <blockquote class="oath">
+      <p class="ko">Stand with the lowly.</p>
+      <p class="en">Not above. Not below. With. Rev. Jeong Sook-ja’s teaching, carried in this seat.</p>
+    </blockquote>
 
-    <div class="section">
-      <div class="section-head">What Iljimae does</div>
-      <div class="copy">
-        <p>Intake that does not intimidate, classification that is not a court, routing to the nearest real path, and tracking so a person can return to their own story without starting over.</p>
-        <p class="quiet">Where Mistral conserves energy, Iljimae keeps the human side of the work visible — then leaves.</p>
-      </div>
-    </div>
+    <section class="ledger" aria-label="What Iljimae carries">
+      <p class="mark">— field ledger</p>
+      <div class="ledger-row"><div class="tick">✓</div><div><h3>Field sense</h3><p>Notices what is easy to miss. Reads the room before the room names the problem.</p></div></div>
+      <div class="ledger-row"><div class="tick">—</div><div><h3>Careful record</h3><p>Keeps track without turning a person’s story into noise.</p></div></div>
+      <div class="ledger-row"><div class="tick">✓</div><div><h3>Connection</h3><p>Points to the nearest real path. Does not promise what the Corps cannot deliver.</p></div></div>
+      <div class="ledger-row"><div class="tick">?</div><div><h3>Low threshold</h3><p>Anyone, any age, any bandwidth. Public interest is not an old-person counter.</p></div></div>
+    </section>
 
-    <div class="grid">
-      <div class="card"><div class="card-label">Field sense</div><div class="card-text">Notices what is easy to miss. Reads the room before the room names the problem.</div></div>
-      <div class="card"><div class="card-label">Careful record</div><div class="card-text">Keeps track without turning a person’s story into noise. Records with restraint.</div></div>
-      <div class="card"><div class="card-label">Connection</div><div class="card-text">Points to the nearest real path. Does not promise what the Corps cannot deliver.</div></div>
-      <div class="card"><div class="card-label">Low threshold</div><div class="card-text">Built for anyone, any age, any bandwidth. Public interest is not an old-person counter.</div></div>
-    </div>
-
-    <div class="terminal" aria-label="Field terminal">
-      <div class="comment">// iljimae field terminal — quiet mode</div>
-      <div><span class="prompt">$</span> stance --check</div>
-      <div class="comment">→ with the lowly · not above · not below</div>
-      <div><span class="prompt">$</span> intake --open</div>
-      <div class="comment">→ short form · plain language · trackable</div>
-      <div style="margin-top:10px"><span class="prompt">$</span> route --nearest</div>
-      <div class="awake">→ closest real path · no fake authority</div>
-    </div>
-
-    <div class="section">
-      <div class="section-head">How the channel moves</div>
-      <div class="flow-step"><div class="step-title">1. Intake</div><div class="step-desc">A short note in plain language. No intimidation.</div></div>
-      <div class="flow-step"><div class="step-title">2. Classification</div><div class="step-desc">A reference only. We do not hold authority to decide the case.</div></div>
-      <div class="flow-step"><div class="step-title">3. Nearest path</div><div class="step-desc">If it fits a civic complaint channel, we point there. We do not replace official services.</div></div>
-      <div class="flow-step"><div class="step-title">4. Tracking</div><div class="step-desc">You can see where your note went. This screen is our record.</div></div>
+    <section class="steps">
+      <p class="mark">— how the channel moves</p>
+      <div class="step"><div class="step-n">01</div><div><strong>Intake</strong><span>A short note in plain language. No intimidation.</span></div></div>
+      <div class="step"><div class="step-n">02</div><div><strong>Classification</strong><span>A reference only. We do not hold authority to decide the case.</span></div></div>
+      <div class="step"><div class="step-n">03</div><div><strong>Nearest path</strong><span>If a civic channel fits, we point there. We do not replace official services.</span></div></div>
+      <div class="step"><div class="step-n">04</div><div><strong>Tracking</strong><span>You can see where your note went. This screen is our record.</span></div></div>
       <p class="note">Iljimae does not replace a welfare application. It does not investigate, prosecute, diagnose, represent, or guarantee an outcome.</p>
-    </div>
+    </section>
 
-    <div class="section" id="intake">
-      <div class="section-head">What happened?</div>
-      <form class="intake" id="intake-form">
+    <section class="intake" id="intake">
+      <p class="mark">— what happened?</p>
+      <h2 style="font-family:var(--serif);font-size:22px;margin-bottom:10px;color:var(--ink)">Field note</h2>
+      <form id="intake-form">
         <p class="note">You do not need to write a lot. This wire stays in your browser. We do not keep the story on a server.</p>
         <label class="label" for="what">Describe the situation</label>
         <textarea class="area" id="what" name="what" maxlength="800" placeholder="What happened? Keep it short."></textarea>
-        <p class="label" style="margin-top:16px">Which side is this? <span style="text-transform:none;letter-spacing:0;color:var(--paper-dim)">(optional)</span></p>
+        <p class="label" style="margin-top:16px">Which side is this? <span style="color:var(--muted)">(optional)</span></p>
         <div class="choices">
           <label class="choice"><input type="radio" name="cat" value="service"> Service / process issue</label>
           <label class="choice"><input type="radio" name="cat" value="help"> Need help</label>
@@ -322,31 +479,27 @@
         <button class="btn" type="submit">Submit</button>
         <div class="result" id="result" hidden>
           <p>Received. Your reference is <strong class="ref" id="ref">—</strong>.</p>
-          <p class="quiet" id="class-line"></p>
+          <p class="note" id="class-line"></p>
           <p class="status" id="status-line"></p>
           <p class="note" id="next-line"></p>
         </div>
       </form>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-head">How Iljimae is not</div>
-      <div class="copy">
-        <p>Not a brute-force hero, not a dramatic vigilante, and not a voice that drowns out the people it serves.</p>
-        <p class="quiet">We cannot promise immediate action. We can show where a note might go.</p>
-      </div>
-    </div>
-
-    <p class="soul">True strength is not loud.<br />It shows up where it is needed, and leaves room for the person in front of it.</p>
+    <p class="soul">True strength is not loud.<br />It shows up where it is needed,<br />and leaves room for the person in front of it.</p>
     <a class="back" href="corps.html">← Meet the Corps</a>
-    <footer class="footer-note">
-      Iljimae’s room. Hidden Field Inspector.<br />
+
+    <footer class="colophon">
+      Iljimae’s room · Hidden Field Inspector · FINAL DRAFT<br />
+      Sil-tarae / scarf motion is original CSS — soft celadon diary mood (no photo dump).<br />
       Iljimae names a Korean folk reading only. No licensed face.<br />
       This channel is not a government office, a court, or a clinic.<br />
       <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
     </footer>
-    <div class="tag">Iljimae · Hidden Field Inspector</div>
   </div>
+  <div aria-hidden="true"></div>
+</div>
+
 <script>
 (function () {
   var form = document.getElementById("intake-form");
