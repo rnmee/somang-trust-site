@@ -47,6 +47,7 @@ const nextConfig: NextConfig = {
       { source: "/corps/unit-12", destination: "/corps-grok.html" },
       { source: "/playground", destination: "/playground.html" },
       { source: "/simulation", destination: "/simulation.html" },
+      { source: "/technical-notes", destination: "/technical-notes.html" },
     ];
   },
 };
