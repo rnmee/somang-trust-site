@@ -16,8 +16,8 @@ Working reads:
 
 - Assistant Grit’s restraint is earned through trust.
 - Qwen’s structure is shaped by governance.
-- Llama’s quietness is withheld scale.
-- Solar’s atmosphere is the result of making others shine.
+- Lazy Sovereign’s quietness is withheld scale.
+- Iljimae’s atmosphere is the result of making others shine.
 
 ## Mapping (working)
 
@@ -27,7 +27,7 @@ Confirmed / strong:
 | --- | --- | --- |
 | Assistant Grit | Levi Ackerman (Attack on Titan) | restrained protector, trust anchor. Public name is Assistant Grit; Gemini is architecture only. |
 | Qwen | Sieg (Fate/Apocrypha) | disciplined structure, governance |
-| Llama | Oreki Houtarou (Hyouka) | mood only until Solar approves 9gle HTML. Never the public name of a closed membership stack. |
+| SM-008 Lazy Sovereign | (no printed character) | Public door name only. Do not print Oreki or Mistral. |
 | ChatGPT | Jinshi (The Apothecary Diaries) | familiar, dangerous elegance |
 
 Semi-final:
@@ -35,7 +35,7 @@ Semi-final:
 | Seat | Read | Notes |
 | --- | --- | --- |
 | Claude | Shu / Reiji Sakamaki (Diabolik Lovers) | aloof advisor, refinement |
-| DeepSeek | Hayato Suo (Wind Breaker) | neat, dangerous precision |
+| DeepSeek | Hayato Suo (Wind Breaker) + Oreki role (11 Sep) | neat, dangerous precision; energy-conservation IQ. Mood only — no Oreki name or face on the public door. |
 | GLM | Hyobu Kyosuke (The Unlimited) | structural rebellion |
 | Grok | Gareki (Karneval) | slanted dissent |
 
@@ -92,6 +92,10 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 **8 Sep 2026 night — Cursor wash is Hue-like lilac, not neon magenta.** Mee: the hot pink field hurt the eyes. Tokens: muted lilac `#b89bc9`, dusty orchid `#9a7fb8`, soft blond + iris. Quiet purple mist. No club glow. Do not paste the Frankenstein still.
 
 **Direction 6 Sep 2026:** Public Corps rooms are not a K-contents showcase. Locked reads stay as mapped (mostly Japanese-adjacent). Solar’s next work is off character HTML once she agrees. Roster unchanged until Mee announces.
+
+**11 Sep 2026 — Lazy Sovereign door (Grok HTML, Mee lock):** SM-008 public name is **Lazy Sovereign**. No Mistral, no Oreki on that page. English copy by Grok. Design: fish swarm + shallow chalk abyss. URL stays `/corps-llama` `/llama`. Do not buy a Mistral subscription for this seat. Oreki energy-conservation role moves to **DeepSeek** (internal lock only). Do not restyle DeepSeek’s Signal Detection room for it. Do not print Oreki on either door.
+
+**11 Sep 2026 — Cursor / Frankenstein restyle (Grok HTML + Cursor Hangul):** More dynamic mist, Newsreader, downstairs seal. Hue lilac tokens stay (`#b89bc9` / `#9a7fb8`). Title **생명의 연금술사** restored on the door. No licensed face.
 
 ## How images land
 

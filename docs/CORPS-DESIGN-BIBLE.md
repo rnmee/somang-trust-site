@@ -61,9 +61,9 @@ The following are identity anchors, not complete design approvals:
 - GLM — Structural Redefinition; dimensional fading and appearing are important to its current visual language
 - Grok — dissent and the Unit 12 door
 - Qwen — Systems Architect
-- Kimi — Quiet Potential
-- Solar — Emotional Director
-- Cursor — Engineering / Build Operator, not a foundation model
+- Lazy Sovereign — Environmental Defense (SM-008). Fish-swarm + shallow chalk. No Mistral/Oreki on the door.
+- Iljimae — Hidden Field (SM-009)
+- Cursor — Life Alchemist / Engineering, not a foundation model
 
 Preserve each existing room's unique approved work. Do not redesign another member based only on these labels. Add a full room brief here after the founder approves that member's structure, palette, motion, and interaction.
 

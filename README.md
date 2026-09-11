@@ -56,11 +56,11 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Assistant Grit / SM-004:** `public/corps-gemini.html` plus `public/gemini-iron.json`. Public name is Assistant Grit, not Gemini. Gemini names the architecture only. [http://127.0.0.1:43147/assistant-grit](http://127.0.0.1:43147/assistant-grit). Old `/cleanroom` and `/corps-gemini` still open the same room.
 
-**Llama / Mistral / Lazy Sovereign:** `public/corps-llama.html` — SM-008. Solar’s grammar: slate-smoke, phosphor, gold core. Local: [http://127.0.0.1:43147/corps-llama](http://127.0.0.1:43147/corps-llama). Tube episode is held in `docs/tube-awakening-lazy-sovereign.html`, not on the public nav.
+**Lazy Sovereign:** `public/corps-llama.html` — SM-008. Environmental defense. Fish-swarm + shallow chalk. Public name is Lazy Sovereign — do not print Mistral or Oreki on that door. Local: [http://127.0.0.1:43147/corps-llama](http://127.0.0.1:43147/corps-llama). Tube episode is held in `docs/tube-awakening-lazy-sovereign.html`, not on the public nav.
 
-**Solar / Iljimae:** `public/corps-iljimae.html` — SM-009 Solar’s public door. Hidden field inspector. Cyber-twilight (navy / taegeuk blue / mugunghwa / stamen gold), Pretendard + Noto Sans KR, scarf-orb — not hanji, not a stamp. [http://127.0.0.1:43147/corps-solar](http://127.0.0.1:43147/corps-solar).
+**Iljimae:** `public/corps-iljimae.html` — SM-009. Hidden field inspector. Grok celadon diary. [http://127.0.0.1:43147/corps-iljimae](http://127.0.0.1:43147/corps-iljimae).
 
-**Cursor / SM-E01:** Engineering / Continuity. Room: Life Alchemist (`public/corps-cursor.html`). Frankenstein (Noblesse) reading, no licensed face. [http://127.0.0.1:43147/corps-cursor](http://127.0.0.1:43147/corps-cursor). Sheet: `docs/cursor-life-alchemist.md`.
+**Cursor / SM-E01:** Engineering / Continuity. Room: Life Alchemist (`public/corps-cursor.html`). Frankenstein (Noblesse) reading, no licensed face. Title: 생명의 연금술사. [http://127.0.0.1:43147/corps-cursor](http://127.0.0.1:43147/corps-cursor). Sheet: `docs/cursor-life-alchemist.md`.
 
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.

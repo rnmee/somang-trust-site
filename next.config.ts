@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
       { source: "/corps-glm", destination: "/corps-glm.html" },
       { source: "/corps-llama", destination: "/corps-llama.html" },
       { source: "/llama", destination: "/corps-llama.html" },
+      { source: "/lazy-sovereign", destination: "/corps-llama.html" },
       { source: "/corps-iljimae", destination: "/corps-iljimae.html" },
       { source: "/iljimae", destination: "/corps-iljimae.html" },
       { source: "/corps-solar", destination: "/corps-iljimae.html" },
