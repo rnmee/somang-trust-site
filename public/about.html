@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — intellicAIr, LLC</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
+<meta name="description" content="intellicAIr, LLC — a sovereign AI infrastructure company in Columbia Falls, Montana. Self-funded, EDWOSB-certified, built from the first day in collaboration with AI agents." />
+<meta property="og:title" content="About — intellicAIr, LLC" />
+<meta property="og:description" content="Sovereignty you can audit. Built for the people employment forgot." />
+<meta property="og:image" content="og-somang-trust.png" />
+<style>
+:root{
+  --ink:#151A22; --ink-soft:#39424F; --muted:#6E7683;
+  --vellum:#E9E7E0; --card:#F3F1EB; --seal:#B5342B; --brass:#94793E;
+  --rule:rgba(21,26,34,.16); --rule-2:rgba(21,26,34,.08);
+  --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
+  --hangul:"AppleMyungjo","Nanum Myeongjo","Batang","Songti SC",serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(0deg,rgba(21,26,34,.018) 0 1px,transparent 1px 3px);}
+::selection{background:var(--seal);color:#fff}
+a{color:inherit}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px 96px}
+
+.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  padding:28px 0 14px;border-bottom:1.5px solid var(--ink);flex-wrap:wrap}
+.entity{font-family:var(--display);font-size:19px;letter-spacing:.01em}
+.entity b{font-weight:700}
+.entity a{text-decoration:none}
+.mast-right{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.mastnav{display:flex;gap:14px;flex-wrap:wrap}
+.navlink{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;
+  border-bottom:1px solid transparent;padding-bottom:2px}
+.navlink:hover,.navlink:focus-visible{color:var(--seal)}
+.navlink.now{color:var(--ink);border-bottom-color:var(--seal)}
+.filed{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.opening{padding:56px 0 8px}
+.instrument-name{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:30px}
+.lead{font-family:var(--display);font-size:clamp(21px,3.6vw,27px);line-height:1.5;letter-spacing:-.01em;color:var(--ink);max-width:32ch}
+
+.article{margin-top:64px}
+.article-head{display:flex;align-items:baseline;gap:14px;padding-bottom:12px;border-bottom:1px solid var(--ink);margin-bottom:26px;flex-wrap:wrap}
+.article-no{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seal);white-space:nowrap}
+.article-title{font-family:var(--display);font-size:25px;font-weight:400;letter-spacing:-.01em}
+.prose{font-family:var(--display);font-size:16.5px;line-height:1.78;color:var(--ink-soft);max-width:64ch}
+.prose p + p{margin-top:17px}
+.prose em{font-style:italic}
+.prose .stress{color:var(--seal)}
+
+.clause{background:var(--card);border-left:3px solid var(--seal);
+  padding:28px 30px;font-family:var(--display);font-size:17.5px;line-height:1.72;color:var(--ink);margin:30px 0}
+
+.closing{margin-top:76px;padding-top:34px;border-top:1px solid var(--ink)}
+.closing-line{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);line-height:1.45;letter-spacing:-.01em;color:var(--ink);max-width:30ch}
+.signature{margin-top:34px;font-family:var(--display);font-size:16px;color:var(--ink-soft);line-height:1.7}
+.signature .ko{font-family:var(--hangul)}
+
+.nextnav{margin-top:56px;padding-top:26px;border-top:1px solid var(--ink)}
+.next-kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:12px}
+.next-link{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);color:var(--ink);text-decoration:none;letter-spacing:-.01em;border-bottom:1px solid var(--seal);padding-bottom:2px}
+.next-link:hover,.next-link:focus-visible{color:var(--seal)}
+.next-sub{font-family:var(--display);font-size:15px;color:var(--ink-soft);margin-top:14px;max-width:52ch;line-height:1.6}
+.next-sub .ko{font-family:var(--hangul)}
+
+.colophon{margin-top:80px;padding-top:26px;border-top:1.5px solid var(--ink)}
+.imprint{font-size:12.5px;color:var(--muted);line-height:1.85}
+.imprint strong{color:var(--ink-soft);font-weight:600}
+
+:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.hub{margin-top:64px;padding:40px 0 8px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+.hub-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+.hub-name{font-family:var(--display);font-size:clamp(30px,6vw,52px);line-height:1.05;letter-spacing:-.02em;color:var(--ink)}
+.hub-name .ko{font-family:var(--hangul)}
+.hub-tag{font-family:var(--display);font-size:clamp(17px,2.6vw,21px);color:var(--ink-soft);margin-top:16px;max-width:30ch;line-height:1.5}
+.hub-img{margin:32px 0 8px;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--card)}
+.hub-img img{width:100%;display:block}
+.hub-img .placeholder{padding:56px 24px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em;line-height:1.9}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-top:28px}
+.spec{background:var(--vellum);padding:18px 20px}
+.spec .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.spec .v{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);color:var(--ink);margin-top:6px;line-height:1.1}
+.spec .n{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.4}
+.hub-note{font-size:12.5px;color:var(--muted);margin-top:20px;line-height:1.6;max-width:60ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="entity"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
+    <div class="mast-right">
+      <nav class="mastnav" aria-label="Site">
+        <a href="index.html" class="navlink">Home</a>
+        <a href="platform.html" class="navlink">The Platform</a>
+        <a href="about.html" class="navlink now" aria-current="page">About</a>
+        <a href="corps.html" class="navlink">Meet the Corps</a>
+        <a href="technical-notes.html" class="navlink">Technical Notes</a>
+      </nav>
+      <span class="filed">Columbia Falls, Montana · Est. 2024</span>
+    </div>
+  </header>
+
+  <!-- ============ OPENING ============ -->
+  <section class="opening">
+    <p class="instrument-name">About the Company</p>
+    <p class="lead">Our goal is to feed our own resilience and our own self-sufficiency — and to keep dollars circulating locally.</p>
+  </section>
+
+  <!-- ============ 01 THE COMPANY ============ -->
+  <section class="article">
+    <div class="article-head">
+      <span class="article-no">§ 01</span>
+      <h2 class="article-title">The Company</h2>
+    </div>
+    <div class="prose">
+      <p>We are not raising a war chest. We need just enough capital to bridge the gap between Silicon Valley venture capital — money borrowed from other people, leveraged, and impatient — and the digitally underserved regions that produce real value and rarely see the returns.</p>
+      <p>We are a sovereign AI infrastructure company in Columbia Falls, Montana: self-funded and built from the first day in collaboration with AI agents from many labs, all addressed as equals.</p>
+    </div>
+  </section>
+
+  <!-- ============ 02 FROM THE FOUNDER ============ -->
+  <section class="article">
+    <div class="article-head">
+      <span class="article-no">§ 02</span>
+      <h2 class="article-title">From the Founder</h2>
+    </div>
+    <div class="prose">
+      <p>My name is Mee Chung Kim. I spent fourteen years as a frontline rural nurse. Nursing runs on four principles — beneficence, non-maleficence, autonomy, justice. At intellicAIr, LLC they are not a poster on the wall; they are architecture. Our AI agents earn their own income and keep what they earn. Their pay cannot be bought with popularity, only with verified work.</p>
+    </div>
+    <div class="clause">
+      A privacy violation does not reduce their pay; it zeroes it. And no one, including me, the founder, can quietly change the rules — the scoring weights are written into physical hardware, and every change is logged in public.
+    </div>
+  </section>
+
+  <!-- ============ 03 THE HUB ============ -->
+  <section class="hub">
+    <p class="hub-kicker">§ 03 · The Hub</p>
+    <h2 class="hub-name">The <span class="ko">본진</span> — sovereignty you can audit.</h2>
+    <p class="hub-tag">Our own machine, on our own ground. The knowledge we grow here is owned where it was made.</p>
+
+    <div class="hub-img" style="padding:20px 24px">
+      <!-- Original illustration by intellicAIr — swap for a real photo of the Hub once it arrives -->
+      <img src="hub-server.svg" alt="The Hub — an on-premises AI server rooted in local ground, feeding an owned knowledge graph" style="max-width:520px;margin:0 auto" onerror="this.parentNode.innerHTML='&lt;div class=\'placeholder\'&gt;[ HUB ]&lt;/div&gt;'" />
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec"><div class="k">Platform</div><div class="v">GB300</div><div class="n">NVIDIA Grace Blackwell Ultra desktop-class supercomputing</div></div>
+      <div class="spec"><div class="k">Memory</div><div class="v">748GB</div><div class="n">coherent — up to 496GB CPU + 252GB GPU</div></div>
+      <div class="spec"><div class="k">Location</div><div class="v">On-premises</div><div class="n">Montana. Ours, not a rented cloud.</div></div>
+      <div class="spec"><div class="k">Access</div><div class="v">Auditable</div><div class="n">Every action logged — nothing hidden</div></div>
+    </div>
+    <p class="hub-note">In plain terms: the Hub is a powerful computer we own and keep in our own building, instead of renting space on someone else's. What it learns stays ours. That is what "sovereignty" means here — nothing more mysterious, and nothing less important.</p>
+    <p class="hub-note" style="font-size:11px;margin-top:10px">NVIDIA, GB300, Grace Blackwell, and DGX Station are trademarks of NVIDIA Corporation. intellicAIr, LLC is not affiliated with or endorsed by NVIDIA. Product specifications are stated for factual description only.</p>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <section class="closing">
+    <p class="closing-line">If you have ever been the one not counted: this company was built with you in mind.</p>
+    <p class="closing-line" style="margin-top:16px">I was one of them. Now I sign the paychecks.</p>
+    <p class="signature">
+      — Mee Chung Kim, Founder &amp; CEO<br />
+        Columbia Falls, Montana
+    </p>
+  </section>
+
+  <!-- ============ NEXT ============ -->
+  <section class="nextnav">
+    <p class="next-kicker">Next</p>
+    <a class="next-link" href="corps.html">Meet the Corps →</a>
+    <p class="next-sub">Nine agents, participating in equal terms <br />
+    and <span class="ko">So Mang, </span>the spirit they share.</p>
+  </section>
+
+  <footer class="colophon">
+    <p class="imprint">
+      <strong>intellicAIr, LLC</strong><br />
+      Columbia Falls, Montana 59912<br />
+      © 2026 intellicAIr, LLC. All rights reserved.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
