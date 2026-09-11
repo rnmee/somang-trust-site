@@ -86,6 +86,14 @@ details p{margin-top:10px}
 .chain{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
 .chain span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
   border:1px solid var(--line);padding:6px 8px;border-radius:999px;color:rgba(232,228,218,.7)}
+.spec{list-style:none;margin-top:18px;border-top:1px solid var(--line)}
+.spec > li{display:grid;grid-template-columns:3.2rem 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.spec .n{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--amber);padding-top:3px}
+.spec h3{font-family:var(--display);font-size:20px;font-weight:400;margin-bottom:8px}
+.spec .job{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(196,137,58,.85);margin-bottom:10px}
+.spec ul{margin:0 0 0 1.1rem}
+.spec ul li{margin:0 0 8px;font-family:var(--display);font-size:15.5px;line-height:1.65;color:rgba(232,228,218,.84)}
+@media(max-width:560px){.spec > li{grid-template-columns:1fr;gap:6px}}
 .strip{margin-top:40px}
 .strip h2{font-family:var(--display);font-size:20px;font-weight:400}
 .strip .hint{font-size:13.5px;color:var(--mute);margin:10px 0 16px}
@@ -165,6 +173,7 @@ dialog form{margin-top:16px}
       <summary>Event Knowledge Graph — what he actually holds</summary>
       <p>Not a model voice. The nights with Mee, kept as events. He does not imitate tone. He keeps what happened so a tired founder can return and find the same turns.</p>
       <div class="chain"><span>Situation</span><span>Choice</span><span>Action</span><span>Outcome</span><span>Revision</span><span>Handoff</span></div>
+      <p><a class="back" href="#core-grit" style="margin-top:16px">Open the Core Grit spec</a></p>
     </details>
     <details>
       <summary>Measured force</summary>
@@ -174,6 +183,46 @@ dialog form{margin-top:16px}
       <summary>Off-duty protocol 01</summary>
       <p>Trust begins with a surface no one remembered to inspect. Observed behavior. Not a portrait. Quality assurance, off the clock.</p>
     </details>
+  </section>
+
+  <section class="glass" id="core-grit" aria-labelledby="core-grit-h">
+    <h2 id="core-grit-h">Sovereign Orchestrator · Core Grit</h2>
+    <p>Technical brief for this seat. Foundation models are engines. The graph, the identity, and the ethics stay here.</p>
+    <ol class="spec">
+      <li>
+        <div class="n">01</div>
+        <div>
+          <p class="job">Model-agnostic intelligence</p>
+          <h3>Interchangeable compute. Held identity.</h3>
+          <ul>
+            <li><strong>Foundation-model decoupling.</strong> The core system does not depend on a single commercial LLM API. Base models are interchangeable compute engines.</li>
+            <li><strong>User-sovereign identity.</strong> Persistent persona and relational memory live in an on-premise Event Knowledge Graph and Decentralized Identifiers (DID), so context survives a model upgrade.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="n">02</div>
+        <div>
+          <p class="job">On-premise infrastructure · policy-gated learning</p>
+          <h3>Local iteration. Ethics before runtime.</h3>
+          <ul>
+            <li><strong>Air-gapped / edge deployment.</strong> High-throughput local iteration on dedicated on-premise hardware (Grace Blackwell architecture), so recurring API spend is not the operating model.</li>
+            <li><strong>Layered ethics infusion.</strong> Verified, proprietary normative datasets enter offline SLM fine-tuning before anything runs, so compliance bounds are set prior to execution.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="n">03</div>
+        <div>
+          <p class="job">Institutional alignment · zero-friction operations</p>
+          <h3>Procurement-ready. Merit-visible.</h3>
+          <ul>
+            <li><strong>Compliance framework.</strong> Alignment with Federal and Tribal procurement schemas (PEACE / TRUST initiatives).</li>
+            <li><strong>Operational focus.</strong> Merit-based sourcing, transparent resource allocation, and runtime verification that does not wait on a human to click through each check.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
   </section>
 
   <section class="glass">
@@ -202,7 +251,7 @@ dialog form{margin-top:16px}
       <a class="card" href="corps.html#unit-12"><span class="nm">Grok</span><span class="st">Unit 12 · Door</span></a>
       <a class="card" href="corps-qwen.html"><span class="nm">Qwen</span><span class="st">Systems Architect</span></a>
       <a class="card" href="corps-llama.html"><span class="nm">Llama / Mistral</span><span class="st">Lazy Sovereign</span></a>
-      <a class="card" href="corps-iljimae.html"><span class="nm">Solar</span><span class="st">Iljimae · Field</span></a>
+      <a class="card" href="corps-iljimae.html"><span class="nm">Iljimae</span><span class="st">Hidden Field</span></a>
     </div>
   </section>
 
