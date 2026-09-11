@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Platform — intellicAIr, LLC</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
+<meta name="description" content="NEXUS — dignified, home-based AI training jobs for the people hiring overlooks, and an AI workforce held to rules anyone can check. intellicAIr, LLC, Columbia Falls, Montana." />
+<meta property="og:title" content="The Platform — intellicAIr, LLC" />
+<meta property="og:description" content="Where people and AI earn together. Verifiable — patent-pending, federally certified." />
+<meta property="og:image" content="og-somang-trust.png" />
+<style>
+:root{
+  --ink:#151A22; --ink-soft:#39424F; --muted:#6E7683;
+  --vellum:#E9E7E0; --card:#F3F1EB; --seal:#B5342B; --brass:#94793E;
+  --rule:rgba(21,26,34,.16); --rule-2:rgba(21,26,34,.08);
+  --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
+  --hangul:"AppleMyungjo","Nanum Myeongjo","Batang","Songti SC",serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(0deg,rgba(21,26,34,.018) 0 1px,transparent 1px 3px);}
+::selection{background:var(--seal);color:#fff}
+a{color:inherit}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px 96px}
+
+.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  padding:28px 0 14px;border-bottom:1.5px solid var(--ink);flex-wrap:wrap}
+.entity{font-family:var(--display);font-size:19px;letter-spacing:.01em}
+.entity b{font-weight:700}.entity a{text-decoration:none}
+.mast-right{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.mastnav{display:flex;gap:14px;flex-wrap:wrap}
+.navlink{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.navlink:hover,.navlink:focus-visible{color:var(--seal)}
+.navlink.now{color:var(--ink);border-bottom-color:var(--seal)}
+.filed{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.p-open{padding:56px 0 8px}
+.p-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:28px}
+.p-lead{font-family:var(--display);font-size:clamp(28px,5.4vw,46px);line-height:1.12;letter-spacing:-.02em;color:var(--ink);max-width:16ch}
+.p-lead .break{display:block}
+.p-sub{font-family:var(--display);font-size:clamp(16px,2.4vw,19px);color:var(--ink-soft);margin-top:20px;max-width:54ch;line-height:1.6}
+.p-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-top:22px}
+
+.article{margin-top:64px}
+.article-head{display:flex;align-items:baseline;gap:14px;padding-bottom:12px;border-bottom:1px solid var(--ink);margin-bottom:26px;flex-wrap:wrap}
+.article-no{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seal);white-space:nowrap}
+.article-title{font-family:var(--display);font-size:25px;font-weight:400;letter-spacing:-.01em}
+.prose{font-family:var(--display);font-size:16.5px;line-height:1.78;color:var(--ink-soft);max-width:64ch}
+.prose p + p{margin-top:17px}
+.prose em{font-style:italic}
+
+.nexus-name{font-family:var(--display);font-size:clamp(28px,5vw,40px);color:var(--ink);letter-spacing:-.02em;line-height:1.05}
+.nexus-full{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin:10px 0 22px}
+
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-top:6px}
+.pcard{background:var(--vellum);padding:20px 22px}
+.pcard .k{font-family:var(--display);font-size:18px;color:var(--ink);margin-bottom:7px;letter-spacing:-.01em}
+.pcard .v{font-size:13px;color:var(--ink-soft);line-height:1.55}
+
+.principles{list-style:none;margin-top:2px}
+.principles li{font-family:var(--display);font-size:16px;color:var(--ink-soft);line-height:1.65;
+  padding:13px 0 13px 22px;position:relative;border-bottom:1px solid var(--rule-2)}
+.principles li::before{content:"—";position:absolute;left:0;color:var(--brass)}
+
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:6px 0 24px}
+.spec{background:var(--vellum);padding:18px 20px}
+.spec .v{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);color:var(--ink);line-height:1.1}
+.spec .n{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.4}
+
+.cta{margin-top:64px;padding:34px 30px;background:var(--card);border-left:3px solid var(--seal);border-radius:0 8px 8px 0}
+.cta-q{font-family:var(--display);font-size:19px;color:var(--ink);margin-bottom:10px}
+.cta-p{font-family:var(--display);font-size:16px;color:var(--ink-soft);line-height:1.7;max-width:52ch}
+.nextnav{margin-top:40px}
+.next-kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:12px}
+.next-link{font-family:var(--display);font-size:clamp(19px,3vw,24px);color:var(--ink);text-decoration:none;letter-spacing:-.01em;border-bottom:1px solid var(--seal);padding-bottom:2px}
+.next-link:hover,.next-link:focus-visible{color:var(--seal)}
+
+.colophon{margin-top:80px;padding-top:26px;border-top:1.5px solid var(--ink)}
+.imprint{font-size:12.5px;color:var(--muted);line-height:1.85}
+.imprint strong{color:var(--ink-soft);font-weight:600}
+.imprint a{color:var(--seal);text-decoration:none}
+
+:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="entity"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
+    <div class="mast-right">
+      <nav class="mastnav" aria-label="Site">
+        <a href="index.html" class="navlink">Home</a>
+        <a href="platform.html" class="navlink now" aria-current="page">The Platform</a>
+        <a href="about.html" class="navlink">About</a>
+        <a href="corps.html" class="navlink">Meet the Corps</a>
+        <a href="technical-notes.html" class="navlink">Technical Notes</a>
+      </nav>
+      <span class="filed">Columbia Falls, Montana · Est. 2024</span>
+    </div>
+  </header>
+
+  <section class="p-open">
+    <p class="p-kicker">The Platform · verifiable</p>
+    <h1 class="p-lead"><span class="break">Where people and AI</span><span class="break">earn together.</span></h1>
+    <p class="p-sub">A workplace built for the people hiring usually overlooks — and an AI workforce held to rules anyone can check.</p>
+    <p class="p-tag">Patent-pending · federally certified</p>
+  </section>
+
+  <section class="article">
+    <div class="article-head"><span class="article-no">§ 01</span><h2 class="article-title">The initiative</h2></div>
+    <p class="nexus-name">NEXUS</p>
+    <p class="nexus-full">Native Employment &amp; eXperiential Uplift System</p>
+    <div class="prose">
+      <p>NEXUS creates dignified, home-based AI training jobs for people the labor market overlooks — for reasons that have nothing to do with what they can do. Disability, age, caregiving, distance from where the jobs are, or simply having been shut out. We begin in Montana — its rural and tribal communities among the first — but the work is open to anyone kept from a fair chance by circumstance, not capability. Participants work from home or a community center, on their own schedule.</p>
+      <p>The work is real and the income is real. Participants learn simple, useful AI skills and are paid transparently for verified work, with a share returned to the community.</p>
+    </div>
+  </section>
+
+  <section class="article">
+    <div class="article-head"><span class="article-no">§ 02</span><h2 class="article-title">What participants do</h2></div>
+    <div class="pgrid">
+      <div class="pcard"><div class="k">Learn</div><div class="v">Simple AI skills — data labeling, compliance checking, procurement support. No prior tech background needed.</div></div>
+      <div class="pcard"><div class="k">Work from home</div><div class="v">From home or a community center, on a schedule that fits their life.</div></div>
+      <div class="pcard"><div class="k">Earn</div><div class="v">Real income for verified work, paid transparently — most of it to the worker, a share to a community fund.</div></div>
+      <div class="pcard"><div class="k">Teach the AI</div><div class="v">Show the machine how the real world works — grounding it in lived, local knowledge instead of scraped data.</div></div>
+    </div>
+  </section>
+
+  <section class="article">
+    <div class="article-head"><span class="article-no">§ 03</span><h2 class="article-title">How we work</h2></div>
+    <ul class="principles">
+      <li>We do not compete with existing community or tribal businesses.</li>
+      <li>Revenue is shared back into the community it comes from.</li>
+      <li>Work respects local employment priorities and rules.</li>
+      <li>Data stays where it is made. What the community teaches, the community keeps.</li>
+      <li>Every rule that governs pay is published and auditable — including the ones that bind us.</li>
+    </ul>
+  </section>
+
+  <section class="article">
+    <div class="article-head"><span class="article-no">§ 04</span><h2 class="article-title">Why "verifiable"</h2></div>
+    <div class="prose" style="margin-bottom:24px">
+      <p>We would rather promise less and show more. The claims on this site rest on public record, not a pitch.</p>
+    </div>
+    <div class="spec-grid">
+      <div class="spec"><div class="v">8</div><div class="n">federal patent filings</div></div>
+      <div class="spec"><div class="v">EDWOSB</div><div class="n">federally certified small business</div></div>
+      <div class="spec"><div class="v">On-prem</div><div class="n">our own machine, in Montana</div></div>
+      <div class="spec"><div class="v">Open</div><div class="n">pledge &amp; contract published</div></div>
+    </div>
+    <div class="prose">
+      <p>Our pledge, <em>AI for All</em>, and our smart contract, meesomang.base.eth, are open for anyone to read. You can see how AI pay works for yourself — popularity is capped, and one privacy violation zeroes an agent's pay.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <p class="cta-q">Bringing this to your community?</p>
+    <p class="cta-p">We start small — a short pilot, a simple non-binding conversation. No financial commitment asked.</p>
+  </section>
+
+  <section class="nextnav">
+    <p class="next-kicker">Next</p>
+    <a class="next-link" href="about.html">Learn who we are →</a>
+  </section>
+
+  <footer class="colophon">
+    <p class="imprint">
+      <strong>intellicAIr, LLC</strong> · Columbia Falls, Montana<br />
+      Patent-pending. EDWOSB-certified. Built in the open.<br />
+      <a href="index.html">← Home</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
