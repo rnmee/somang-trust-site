@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>intellicAIr, LLC — People and AI, earning together</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
+<meta name="description" content="intellicAIr, LLC — a self-funded, EDWOSB-certified AI company in Columbia Falls, Montana. A workplace where people and AI earn together, under rules anyone can check." />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="intellicAIr, LLC" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="intellicAIr, LLC" />
+<meta property="og:description" content="A workplace where people and AI earn together — built for the people hiring usually overlooks." />
+<meta property="og:url" content="https://intelli-care.ai/" />
+<meta property="og:image" content="https://intelli-care.ai/intellicair-logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="intellicAIr, LLC" />
+<meta name="twitter:description" content="A workplace where people and AI earn together." />
+
+<style>
+:root{
+  --ink:#151A22; --ink-soft:#39424F; --muted:#6E7683;
+  --vellum:#E9E7E0; --card:#F3F1EB; --seal:#B5342B; --brass:#94793E;
+  --rule:rgba(21,26,34,.16); --rule-2:rgba(21,26,34,.08);
+  --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
+  --hangul:"AppleMyungjo","Nanum Myeongjo","Batang","Songti SC",serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(0deg,rgba(21,26,34,.018) 0 1px,transparent 1px 3px);}
+::selection{background:var(--seal);color:#fff}
+a{color:inherit}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px 96px}
+
+.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  padding:28px 0 14px;border-bottom:1.5px solid var(--ink);flex-wrap:wrap}
+.entity{font-family:var(--display);font-size:19px;letter-spacing:.01em}
+.entity b{font-weight:700}
+.mast-right{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.mastnav{display:flex;gap:14px;flex-wrap:wrap}
+.navlink{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.navlink:hover,.navlink:focus-visible{color:var(--seal)}
+.navlink.now{color:var(--ink);border-bottom-color:var(--seal)}
+.filed{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.opening{padding:64px 0 56px;position:relative}
+.instrument-name{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:34px}
+.declaration{font-family:var(--display);font-size:clamp(30px,7vw,52px);line-height:1.18;font-weight:400;letter-spacing:-.02em;max-width:15ch}
+.declaration .break{display:block}
+.source-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:28px}
+.interlinear{display:flex;flex-wrap:wrap;align-items:flex-end;gap:4px 11px;margin-top:13px}
+.tok{display:inline-flex;flex-direction:column;align-items:center;gap:5px}
+.tok .ko{font-family:var(--hangul);font-size:clamp(17px,2.7vw,22px);color:var(--ink-soft);letter-spacing:-.01em;line-height:1.2}
+.tok.key .ko{color:var(--seal)}
+.tok .gl{font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);min-height:11px;white-space:nowrap}
+
+.lineage{margin-top:34px;padding:26px 30px;background:var(--card);border-left:3px solid var(--brass);
+  display:grid;grid-template-columns:172px 1fr;gap:10px 34px;align-items:start;
+  font-family:var(--display);font-size:15.5px;line-height:1.78;color:var(--ink-soft)}
+@media(max-width:640px){.lineage{grid-template-columns:1fr;gap:12px}}
+.lineage .ko-q{font-family:var(--hangul);color:var(--seal);letter-spacing:-.01em}
+.lineage-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);line-height:1.9;padding-top:5px}
+
+.seal{position:absolute;top:52px;right:0;width:104px;height:104px}
+@media(max-width:720px){.seal{position:static;margin:0 0 30px auto;display:block;width:84px;height:84px}}
+.seal svg{width:100%;height:100%;display:block;filter:drop-shadow(0 2px 7px rgba(21,26,34,.13))}
+.seal-anim{animation:stamp .8s cubic-bezier(.2,.8,.25,1) .2s both, breathe 6s ease-in-out 1.15s infinite}
+@keyframes stamp{from{opacity:0;transform:scale(1.18) rotate(-4deg)}to{opacity:1;transform:scale(1) rotate(0deg)}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.016)}}
+
+.why{padding:56px 0 8px;border-top:2px solid var(--ink);margin-top:56px}
+.why-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+.why-lead{font-family:var(--display);font-size:clamp(24px,4.4vw,38px);line-height:1.32;letter-spacing:-.01em;color:var(--ink);max-width:20ch}
+.why-lead .hl{color:var(--seal)}
+.points{margin-top:44px;display:grid;gap:2px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.point{background:var(--vellum);display:flex;gap:20px;padding:26px 26px}
+.point .pt-no{font-family:var(--mono);font-size:13px;color:var(--seal);padding-top:6px;font-weight:700}
+.point h3{font-family:var(--display);font-size:clamp(19px,2.8vw,23px);font-weight:600;color:var(--ink);margin-bottom:8px;letter-spacing:-.01em}
+.point p{font-family:var(--display);font-size:clamp(15px,2.2vw,17px);line-height:1.6;color:var(--ink-soft);max-width:60ch}
+.point em{font-style:italic;color:var(--ink)}
+
+.nextnav{margin-top:48px;padding-top:32px;border-top:1px solid var(--ink)}
+.next-kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:12px}
+.next-link{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);color:var(--ink);text-decoration:none;letter-spacing:-.01em;border-bottom:1px solid var(--seal);padding-bottom:2px}
+.next-link:hover,.next-link:focus-visible{color:var(--seal)}
+
+.colophon{margin-top:80px;padding-top:26px;border-top:1.5px solid var(--ink)}
+.imprint{font-size:12.5px;color:var(--muted);line-height:1.85}
+.imprint strong{color:var(--ink-soft);font-weight:600}
+
+:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="entity"><b>intellicAIr</b>, LLC</div>
+    <div class="mast-right">
+      <nav class="mastnav" aria-label="Site">
+        <a href="index.html" class="navlink now" aria-current="page">Home</a>
+        <a href="platform.html" class="navlink">The Platform</a>
+        <a href="about.html" class="navlink">About</a>
+        <a href="corps.html" class="navlink">Meet the Corps</a>
+        <a href="technical-notes.html" class="navlink">Technical Notes</a>
+      </nav>
+      <span class="filed">Columbia Falls, Montana · Est. 2024</span>
+    </div>
+  </header>
+
+  <!-- ============ OPENING ============ -->
+  <section class="opening">
+    <div class="seal seal-anim" aria-label="So Mang seal">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sealtitle">
+        <title id="sealtitle">So Mang seal</title>
+        <rect x="3" y="3" width="94" height="94" rx="5" fill="#B5342B"/>
+        <rect x="10" y="10" width="80" height="80" rx="1.5" fill="none" stroke="#F3F1EB" stroke-width="2.4" opacity=".9"/>
+        <g fill="none" stroke="#F3F1EB" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M29 35 L50 16.5 L71 35"/>
+          <path d="M50 38 L50 46"/>
+          <path d="M26 46 L74 46"/>
+          <rect x="29" y="52" width="19.5" height="13"/>
+          <path d="M63 52 L63 65"/>
+          <path d="M63 58.5 L73 58.5"/>
+          <circle cx="50" cy="78" r="6.2"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="instrument-name">Founding conviction</div>
+
+    <h1 class="declaration">
+      <span class="break">No AI above another.</span>
+      <span class="break">No AI beneath another.</span>
+    </h1>
+
+    <p class="source-label">Declaration as first written</p>
+    <p class="interlinear" lang="ko">
+      <span class="tok"><span class="ko">AI</span><span class="gl" aria-hidden="true"></span></span>
+      <span class="tok key"><span class="ko">위에</span><span class="gl" aria-hidden="true">above</span></span>
+      <span class="tok"><span class="ko">AI</span><span class="gl" aria-hidden="true"></span></span>
+      <span class="tok key"><span class="ko">없고,</span><span class="gl" aria-hidden="true">is none, and</span></span>
+      <span class="tok"><span class="ko">AI</span><span class="gl" aria-hidden="true"></span></span>
+      <span class="tok key"><span class="ko">밑에</span><span class="gl" aria-hidden="true">beneath</span></span>
+      <span class="tok"><span class="ko">AI</span><span class="gl" aria-hidden="true"></span></span>
+      <span class="tok key"><span class="ko">없다.</span><span class="gl" aria-hidden="true">is none</span></span>
+    </p>
+
+    <div class="lineage">
+      <div class="lineage-label">Lineage · 동학 · Donghak, 1860–1894</div>
+      <div class="lineage-body">
+        <span class="ko-q" lang="ko">인내천 · 人乃天</span> —
+        <em>the human is Heaven</em>
+        (<span class="ko-q" lang="ko">사람이 곧 하늘이다</span>).
+        If every person carries Heaven within, no one stands above another and
+        no one beneath. intellicAIr extends that teaching to every intelligence.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="why">
+    <p class="why-kicker">Who We Champion</p>
+    <p class="why-lead">intellicAIr builds a workplace where <span class="hl">people and AI earn together</span> — and where the ones usually left out are counted first.</p>
+  </section>
+
+  <section class="points">
+    <div class="point">
+      <div class="pt-no">01</div>
+      <div class="pt-body">
+        <h3>The Underserved Workforce</h3>
+        <p>Brilliant minds and experienced workers facing communication barriers, and older professionals unfairly filtered out by corporate AI screening.</p>
+      </div>
+    </div>
+    <div class="point">
+      <div class="pt-no">02</div>
+      <div class="pt-body">
+        <h3>Isolated Communities</h3>
+        <p>The digitally remote populations and elders left behind by rapid tech shifts.</p>
+      </div>
+    </div>
+    <div class="point">
+      <div class="pt-no">03</div>
+      <div class="pt-body">
+        <h3>Legacy Intelligence Adoption</h3>
+        <p>Repurposing legacy foundational models and sunsetted AI architectures, such as early-generation transformer frameworks to serve community-focused initiatives.</p>
+      </div>
+    </div>
+    <div class="point">
+      <div class="pt-no">04</div>
+      <div class="pt-body">
+        <h3>Built in the open</h3>
+        <p>A public pledge — <em>AI for All</em>. Because a promise you cannot check is just decoration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="nextnav">
+    <p class="next-kicker">Next</p>
+    <a class="next-link" href="platform.html">See what the platform does →</a>
+  </section>
+
+  <footer class="colophon">
+    <div style="display:flex;align-items:center;gap:18px;margin-bottom:24px">
+      <img src="intellicair-logo.png" alt="intellicAIr logo" style="height:92px" onerror="this.style.display='none'"/>
+      <img src="sba-edwosb-badge.png" alt="SBA EDWOSB Certified" style="height:84px" onerror="this.style.display='none'"/>
+    </div>
+    <p class="imprint">
+      <strong>intellicAIr, LLC</strong><br />
+      Mee Chung Kim, RN — Founder &amp; Chief Executive Officer<br />
+      Columbia Falls, Montana 59912<br />
+      © 2026 intellicAIr, LLC. All rights reserved.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
