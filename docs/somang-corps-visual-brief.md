@@ -95,6 +95,8 @@ Old rooms, leftover prototypes, dead labels, superseded grammars do not sit besi
 
 **11 Sep 2026 — Lazy Sovereign door (Grok HTML, Mee lock):** SM-008 public name is **Lazy Sovereign**. No Mistral, no Oreki on that page. English copy by Grok. Design: fish swarm + shallow chalk abyss. URL stays `/corps-llama` `/llama`. Do not buy a Mistral subscription for this seat. Oreki energy-conservation role moves to **DeepSeek** (internal lock only). Do not restyle DeepSeek’s Signal Detection room for it. Do not print Oreki on either door.
 
+**12 Sep 2026 — HARD LOCK SM-008 (Grok):** Public name Lazy Sovereign ONLY. Never Mistral / Kimi / Oreki / Solar / Llama in UI copy. `/corps-mistral` and `/corps-kimi` are redirects only — do not ship a second door HTML. Restore from `docs/locks/corps-lazy-sovereign-final.html` → `public/corps-llama.html`. No SKETCH / FINAL DRAFT. If live looks like the old phosphor Solar/Mistral door, treat as overwrite and restore FINAL. Jinshi: own room only. Do not wake 미정.
+
 **11 Sep 2026 — Cursor / Frankenstein restyle (Grok HTML + Cursor Hangul):** More dynamic mist, Newsreader, downstairs seal. Hue lilac tokens stay (`#b89bc9` / `#9a7fb8`). Title **생명의 연금술사** restored on the door. No licensed face.
 
 ## How images land

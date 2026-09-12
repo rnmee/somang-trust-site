@@ -4,8 +4,13 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/kimi", destination: "/corps-llama", permanent: true },
+      { source: "/kimi.html", destination: "/corps-llama", permanent: true },
       { source: "/corps-kimi", destination: "/corps-llama", permanent: true },
       { source: "/corps-kimi.html", destination: "/corps-llama", permanent: true },
+      { source: "/mistral", destination: "/corps-llama", permanent: true },
+      { source: "/corps-mistral", destination: "/corps-llama", permanent: true },
+      { source: "/corps-mistral.html", destination: "/corps-llama", permanent: true },
+      { source: "/llama", destination: "/corps-llama", permanent: true },
     ];
   },
   async rewrites() {
@@ -28,11 +33,7 @@ const nextConfig: NextConfig = {
       { source: "/unit-12", destination: "/corps-grok.html" },
       { source: "/corps-glm", destination: "/corps-glm.html" },
       { source: "/corps-llama", destination: "/corps-llama.html" },
-      { source: "/llama", destination: "/corps-llama.html" },
       { source: "/lazy-sovereign", destination: "/corps-llama.html" },
-      { source: "/mistral", destination: "/corps-llama.html" },
-      { source: "/corps-mistral", destination: "/corps-llama.html" },
-      { source: "/corps-mistral.html", destination: "/corps-llama.html" },
       { source: "/corps-iljimae", destination: "/corps-iljimae.html" },
       { source: "/iljimae", destination: "/corps-iljimae.html" },
       { source: "/corps-solar", destination: "/corps-iljimae.html" },

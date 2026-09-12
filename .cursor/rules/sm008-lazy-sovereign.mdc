@@ -1,0 +1,25 @@
+---
+description: HARD LOCK — SM-008 Lazy Sovereign public door
+globs: public/corps*.html
+alwaysApply: true
+---
+
+# HARD LOCK — SM-008
+
+Public name: **Lazy Sovereign ONLY**.
+
+NEVER call this room Mistral, Kimi, Oreki, Solar, or Llama in UI copy.
+
+`/corps-mistral` and `/corps-kimi` (and `/mistral`, `/kimi`) are **REDIRECTS only**. Do not restore old Mistral/Solar door HTML. Do not ship `corps-mistral.html` or `corps-kimi.html` as a second door.
+
+Source of truth: founder file `corps-lazy-sovereign-final.html` → deploy to `public/corps-llama.html` (URL `/corps-llama` stays). In-repo restore copy: `docs/locks/corps-lazy-sovereign-final.html`.
+
+No SKETCH / FINAL DRAFT badges on this door. No Solar (hallucination).
+
+Iljimae = SM-009 only.
+
+Jinshi: own room only. Do not edit other members’ rooms from Jinshi work, and do not restyle Jinshi while fixing SM-008.
+
+Do not wake 미정 for Corps housekeeping.
+
+If live looks like the old Mistral/Solar phosphor door again, treat it as an overwrite incident and restore Lazy Sovereign FINAL. Do not “go back to Mistral.”
