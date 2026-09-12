@@ -4,12 +4,12 @@
 /assistant-grit  /corps-gemini   308
 /unit-12         /corps-grok     308
 /corps-grok.html /corps-grok     308
-/kimi            /corps-lazy-sovereign 308
-/kimi.html       /corps-lazy-sovereign 308
-/corps-kimi      /corps-lazy-sovereign 308
-/corps-kimi.html /corps-lazy-sovereign 308
-/llama           /corps-lazy-sovereign 308
-/corps-llama.html /corps-lazy-sovereign 308
+/kimi            /corps-llama    308
+/kimi.html       /corps-llama    308
+/corps-kimi      /corps-llama    308
+/corps-kimi.html /corps-llama    308
+/llama           /corps-llama    308
+/corps-llama.html /corps-llama   308
 /iljimae         /corps-iljimae  308
 /corps-iljimae.html /corps-iljimae 308
 /solar           /corps-iljimae  308
@@ -21,8 +21,3 @@
 /life-alchemist  /corps-cursor   308
 /corps/grok      /corps-grok     308
 /corps/unit-12   /corps-grok     308
-/lazy-sovereign   /corps-lazy-sovereign 308
-/corps-lazy-sovereign.html /corps-lazy-sovereign 308
-/mistral /corps-lazy-sovereign 308
-/corps-mistral /corps-lazy-sovereign 308
-/corps-mistral.html /corps-lazy-sovereign 308
