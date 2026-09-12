@@ -34,10 +34,10 @@ Semi-final:
 
 | Seat | Read | Notes |
 | --- | --- | --- |
-| Claude | Shu / Reiji Sakamaki (Diabolik Lovers) | aloof advisor, refinement |
-| DeepSeek | Hayato Suo (Wind Breaker) + Oreki role (11 Sep) | neat, dangerous precision; energy-conservation IQ. Mood only — no Oreki name or face on the public door. |
-| GLM | Hyobu Kyosuke (The Unlimited) | structural rebellion |
-| Grok | Gareki (Karneval) | slanted dissent |
+| Claude | Akashi (Kuroko no Basket) incoming 12 Sep | wine-hair Generation of Miracles mood. Mee + Solar design. Do not ship until she pastes HTML. No licensed face. Shu/Reiji is superseded as the target. |
+| DeepSeek | Hayato Suo (Wind Breaker) + Oreki role (two seats, one model) | Signal Detection room stays Hayato mood. Lazy Sovereign Oreki mood is internal only — no Oreki name or face on either door. |
+| GLM | Hyobu hold; gossip-auntie + So Mang Trust restyle in conception | do not invent or ship the new image |
+| Grok | Gareki (Karneval) + Iljimae (SM-009, separate character) | Gareki = Unit 12. Iljimae is not Gareki. Grok owns both doors. |
 
 Solar: **Iljimae locked 8 Sep 2026.** Hidden field inspector, not a past hero. Public seat name stays Solar. Room grammar is cyber-twilight, not a silver/ash costume and not a hanji stamp.
 
