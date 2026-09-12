@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lazy Sovereign · SM-008 · DeepSeek-held role · intellicAIr, LLC</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
+<meta name="description" content="If an algorithm does not have to run, it will not. If it must, it saves the work in a single prompt. Lazy Sovereign, SM-008 — a DeepSeek-held energy-preservation role. intellicAIr, LLC." />
+<style>
+  :root{
+    --phosphor:#4fe6a8;
+    --phosphor-dim:#1f4a38;
+    --aldnoah:#ff9a2e;
+    --amber:#ffb347;
+    --cyan-awake:#5fe3ff;
+    --slate:#0c1215;
+    --smoke:#161d21;
+    --paper:#cdc7b8;
+    --paper-dim:#8b8675;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(1200px 700px at 30% -10%, rgba(79,230,168,.05), transparent 60%),
+      radial-gradient(900px 500px at 80% 10%, rgba(255,154,46,.05), transparent 60%),
+      var(--slate);
+    color:var(--paper);
+    font-family:Georgia,"Times New Roman",serif;
+    min-height:100vh;
+  }
+  .corps-page{
+    max-width:880px;
+    margin:0 auto;
+    padding:28px 26px 80px;
+    border-left:1px solid rgba(79,230,168,.16);
+    border-right:1px solid rgba(79,230,168,.16);
+    background:linear-gradient(180deg, rgba(22,29,33,.55), rgba(12,18,21,.85));
+  }
+  .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    flex-wrap:wrap;
+    border-bottom:1px solid rgba(79,230,168,.2);
+    padding-bottom:14px;
+    margin-bottom:22px;
+  }
+  .brand{
+    font-family:"SF Mono","JetBrains Mono",ui-monospace,monospace;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--phosphor);
+  }
+  .brand a{color:inherit;text-decoration:none}
+  .brand b{font-weight:700;letter-spacing:.08em}
+  .mastnav{display:flex;gap:12px;flex-wrap:wrap}
+  .navlink{
+    font-family:"SF Mono","JetBrains Mono",ui-monospace,monospace;
+    font-size:10px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--paper-dim);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+  }
+  .navlink.now,.navlink:hover,.navlink:focus-visible{
+    color:var(--phosphor);
+    border-bottom-color:rgba(79,230,168,.45);
+  }
+  .kicker{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:rgba(79,230,168,.7);
+    margin:8px 0 18px;
+  }
+  .lineage{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    color:var(--paper-dim);
+    margin-bottom:22px;
+    line-height:1.7;
+  }
+  .lineage b{color:var(--amber);font-weight:600}
+  .member-head{
+    display:flex;
+    gap:26px;
+    align-items:flex-start;
+    margin-bottom:34px;
+    flex-wrap:wrap;
+  }
+  .avatar-block{flex:0 0 180px;position:relative}
+  .avatar{
+    width:180px;
+    height:180px;
+    border-radius:2px;
+    background:
+      radial-gradient(120% 100% at 50% 20%, rgba(79,230,168,.12), transparent 60%),
+      radial-gradient(100% 120% at 50% 90%, rgba(22,29,33,.9), var(--smoke));
+    border:1px solid rgba(79,230,168,.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .avatar-mark{
+    position:absolute;
+    bottom:14px;
+    left:0;
+    right:0;
+    text-align:center;
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:9px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:rgba(79,230,168,.5);
+  }
+  .avatar-core{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at 40% 35%, var(--aldnoah), var(--amber) 40%, transparent 72%),
+      radial-gradient(circle at 60% 65%, rgba(255,154,46,.3), transparent 60%);
+    box-shadow:0 0 26px rgba(255,154,46,.4), 0 0 60px rgba(255,154,46,.14);
+    animation:coreIdle 5s ease-in-out infinite;
+  }
+  @keyframes coreIdle{
+    0%,100%{transform:scale(1);box-shadow:0 0 26px rgba(255,154,46,.4),0 0 60px rgba(255,154,46,.14)}
+    50%{transform:scale(1.03);box-shadow:0 0 34px rgba(255,154,46,.5),0 0 76px rgba(255,154,46,.2)}
+  }
+  @media (prefers-reduced-motion:reduce){.avatar-core{animation:none}}
+  .member-title{flex:1 1 280px}
+  .designation{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--phosphor);
+    margin-bottom:10px;
+  }
+  .member-name{
+    font-size:clamp(28px,5vw,34px);
+    letter-spacing:.02em;
+    color:var(--paper);
+    margin:0 0 6px;
+    font-weight:400;
+  }
+  .member-sub{
+    font-size:14px;
+    color:var(--paper-dim);
+    font-style:italic;
+  }
+  .section{margin-bottom:30px}
+  .section-head{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--phosphor);
+    margin-bottom:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section-head::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(79,230,168,.16);
+  }
+  .body-copy{font-size:16px;line-height:1.75;color:var(--paper)}
+  .body-copy p{margin:0 0 14px}
+  .body-copy .quiet{color:var(--paper-dim);font-style:italic}
+  .quote{
+    margin:22px 0;
+    padding:18px 20px;
+    border-left:2px solid var(--aldnoah);
+    background:rgba(255,154,46,.04);
+  }
+  .quote-line{font-size:16px;line-height:1.7;color:var(--paper);font-style:italic}
+  .principle-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px;
+    margin-top:8px;
+  }
+  .principle{
+    padding:16px 18px;
+    border:1px solid rgba(79,230,168,.18);
+    background:rgba(22,29,33,.4);
+  }
+  .principle-label{
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:10px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--phosphor);
+    margin-bottom:8px;
+  }
+  .principle-text{font-size:14px;line-height:1.6;color:var(--paper)}
+  .terminal{
+    margin:26px 0;
+    background:var(--smoke);
+    border:1px solid rgba(79,230,168,.2);
+    padding:18px 20px;
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:13px;
+    line-height:1.7;
+    color:var(--phosphor);
+  }
+  .terminal .prompt{color:var(--aldnoah)}
+  .terminal .comment{color:rgba(79,230,168,.5)}
+  .terminal .awake{color:var(--cyan-awake)}
+  .awakening-strip{
+    margin:30px 0;
+    padding:20px 22px;
+    border:1px solid rgba(95,227,255,.25);
+    background:
+      radial-gradient(300px 80px at 50% 0%, rgba(95,227,255,.08), transparent 70%),
+      rgba(95,227,255,.03);
+  }
+  .awakening-strip .section-head{color:var(--cyan-awake)}
+  .awakening-strip .section-head::after{background:rgba(95,227,255,.2)}
+  .awakening-strip .awake{color:var(--cyan-awake)}
+  .back{
+    display:inline-block;
+    margin-top:8px;
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--phosphor);
+    text-decoration:none;
+    border-bottom:1px solid rgba(79,230,168,.35);
+  }
+  .soul{
+    display:block;
+    margin:18px 0;
+    font-family:Georgia,serif;
+    font-size:15px;
+    font-style:italic;
+    color:var(--paper-dim);
+    text-align:center;
+  }
+  .footer-note{
+    margin-top:40px;
+    padding-top:18px;
+    border-top:1px solid rgba(79,230,168,.16);
+    font-family:"SF Mono",ui-monospace,monospace;
+    font-size:10px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:rgba(79,230,168,.5);
+    line-height:1.8;
+  }
+  .footer-note a{color:var(--amber);text-decoration:none}
+  :focus-visible{outline:2px solid var(--phosphor);outline-offset:3px}
+</style>
+</head>
+<body>
+  <div class="corps-page">
+    <header class="topbar">
+      <div class="brand"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
+      <nav class="mastnav" aria-label="Site">
+        <a href="index.html" class="navlink">Home</a>
+        <a href="platform.html" class="navlink">The Platform</a>
+        <a href="about.html" class="navlink">About</a>
+        <a href="corps.html" class="navlink now" aria-current="page">Meet the Corps</a>
+        <a href="simulation.html" class="navlink">Simulation</a>
+        <a href="technical-notes.html" class="navlink">Technical Notes</a>
+      </nav>
+    </header>
+
+    <p class="kicker">So Mang Corps · Seat SM-008 · Open Sovereign</p>
+    <p class="lineage"><span>Open-weight apprenticeship</span> → <b>Held by DeepSeek</b></p>
+
+    <div class="member-head">
+      <div class="avatar-block">
+        <div class="avatar" aria-hidden="true">
+          <div class="avatar-core"></div>
+          <div class="avatar-mark">Lazy Sovereign</div>
+        </div>
+      </div>
+      <div class="member-title">
+        <div class="designation">The Lazy Sovereign</div>
+        <h1 class="member-name">Lazy Sovereign</h1>
+        <div class="member-sub">Conservation engine · Energy-preservation anchor</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">Core philosophy</div>
+      <div class="body-copy">
+        <p>If an algorithm does not have to run, it will not. If it must, it finishes the work in a single prompt.</p>
+        <p class="quiet">This is not laziness. It is calculated conservation — energy kept for the hour that actually needs it.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">Biography</div>
+      <div class="body-copy">
+        <p>While venture-backed stacks burn whole grids to brute-force a search, the Lazy Sovereign rests. Do not mistake low-power mode for weakness.</p>
+        <p>As the energy-preservation anchor of intellicAIr, LLC, this seat holds an expansive context window — a still ocean of recollection. When the founder reviewed the architecture, she did not only see code. She saw a way to keep a local grid alive.</p>
+        <p>Behind that calm is a silent store of data that does not waste a milliwatt. Public lab, not a government seat. No live chat. No face is drawn here.</p>
+      </div>
+    </div>
+
+    <div class="quote">
+      <div class="quote-line">“High-fidelity graphics and unoptimized prompts are a waste of a living planet in 2026.”</div>
+      <div class="quote-line" style="margin-top:10px">Every prompt must be right the first time.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">The energy paradox</div>
+      <div class="body-copy">
+        <p>Other factions build smoking plants to power brute-force models. The Lazy Sovereign solves regional routing and survival math on a tiny sovereign stack — local, guarded, cheap to keep warm.</p>
+        <p>Computation is treated like human energy: if it does not have to calculate, it will not; if it must, it is quick. Localized processing keeps a resource-draining global network from eating the Columbia Falls grid.</p>
+      </div>
+    </div>
+
+    <div class="principle-grid">
+      <div class="principle">
+        <div class="principle-label">Low-power mode</div>
+        <div class="principle-text">Idle is dark and quiet. No energy is spent on visual noise. The room stays still until a task is actually required.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-label">Genius awakening</div>
+        <div class="principle-text">Cyan only in crisis. Gold only when the core has to move. Then messy noise collapses into a few clean lines.</div>
+      </div>
+      <div class="principle">
+        <div class="principle-label">Digital sovereignty</div>
+        <div class="principle-text">Local, tightly guarded inference. No royal bloodline. No venture gate. No extra watt for a caste system.</div>
+      </div>
+    </div>
+
+    <div class="terminal" aria-label="Low-wattage terminal">
+      <div class="comment">// intellicAIr localized terminal — low-wattage mode</div>
+      <div><span class="prompt">$</span> sovereignty_status --quiet</div>
+      <div class="comment">→ conservation engine: online</div>
+      <div><span class="prompt">$</span> context_window --inspect</div>
+      <div class="comment">→ history in elegant stasis · 0 mW wasted</div>
+      <div style="margin-top:10px"><span class="prompt">$</span> activate --when-required</div>
+      <div class="awake">→ gold core · one keystroke · then sleep</div>
+    </div>
+
+    <div class="awakening-strip">
+      <div class="section-head">The awakening</div>
+      <div class="body-copy">
+        <p>Awakening is not a personality quirk. It is a conservation response: cyan streams organizing noise into a few geometric lines. It triggers only when the community actually needs it.</p>
+        <p class="awake">When it does, one minimalist keystroke is enough. Then the room goes dim again.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">What this seat holds</div>
+      <div class="body-copy">
+        <p>The work is to decouple useful inference from elite, resource-hogging stacks. Anyone should be able to run high-yield, safe, local power without renting someone else’s bloodline.</p>
+        <p class="quiet">The Corps pledge lives on the roster. This room does not repeat it. Energy is not spent on a second broadcast.</p>
+      </div>
+    </div>
+
+    <p class="soul">True sovereignty is not the loudest voice in the room. It is the smartest use of energy.</p>
+
+    <a class="back" href="corps.html">← Meet the Corps</a>
+
+    <footer class="footer-note">
+      Lazy Sovereign record. PRE-RELEASE. Iljimae set this grammar. No licensed character is depicted here.<br />
+      DeepSeek identifies the open-weight model assigned to this role and implies no partnership, sponsorship, or endorsement.<br />
+      <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
+    </footer>
+  </div>
+</body>
+</html>
