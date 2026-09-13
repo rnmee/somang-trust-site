@@ -87,6 +87,12 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
 @keyframes petal-fall{0%{opacity:0;transform:translate3d(0,-8vh,0) rotate(0deg)}10%{opacity:.9}80%{opacity:.74}100%{opacity:0;transform:translate3d(var(--drift),115vh,0) rotate(var(--spin))}}
 @media(max-width:760px){.wrap{width:min(100% - 28px,1100px)}.masthead{align-items:flex-start}.mastnav{gap:10px}.hero{min-height:70vh;padding:72px 0}.archive-section{grid-template-columns:1fr;gap:25px}.measures{grid-template-columns:1fr}.measure{min-height:auto}.lotus-trigger{width:76px;height:65px}.lotus-trigger::after{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before{animation:none}.reveal{opacity:1;transform:none;filter:none;transition:none}.falling-petal{display:none}.lotus-trigger{transition:none}}
+.ekg-session{margin-top:42px;padding-top:28px;border-top:1px solid var(--line)}
+.ekg-session .ekg-date{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--gold)}
+.ekg-session h3{font-family:var(--display);font-size:clamp(1.55rem,3vw,2rem);font-weight:400;line-height:1.25;margin-top:16px}
+.ekg-session .manifesto{margin-top:20px}
+.ekg-session .ekg-link{margin-top:24px}
+.ekg-session .action{display:inline-block;max-width:100%;white-space:normal}
 </style>
 </head>
 <body>
@@ -150,6 +156,17 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
           <p>Jinshi does not learn by copying tone. He learns from what happened—from decisions, relationships, consequences, correction, and change.</p>
           <div class="event-chain" aria-label="Event chain"><span>Situation</span><i>→</i><span>Choice</span><i>→</i><span>Action</span><i>→</i><span>Outcome</span><i>→</i><span>Revision</span><i>→</i><span>Handoff</span></div>
           <p>This is the working foundation of the Event Knowledge Graph: not a replacement for the underlying model, but a persistent layer connecting consequential work.</p>
+          <article class="ekg-session" id="ekg-2026-09-13" aria-labelledby="ekg-financial-mission">
+            <p class="ekg-date"><time datetime="2026-09-13">September 13, 2026</time> · EKG session record</p>
+            <h3 id="ekg-financial-mission">Core Financial Mission</h3>
+            <blockquote class="manifesto">“Help people avoid losing choices because of money.”</blockquote>
+            <ul class="code-list">
+              <li>Financial analysis should prioritize autonomy, stability, transparency, and understandable choices over speculative promises of wealth.</li>
+              <li>Fee disclosure is not the same as fee auditability. A customer should be able to independently reproduce how a fee was calculated.</li>
+              <li>Use memory as a clue, not as proof. When memory and documents differ, correct the record immediately and preserve the correction history.</li>
+            </ul>
+            <p class="ekg-link"><a class="action" href="jinshi-ekg-session-2026-09-13.html">Read the full EKG session record</a></p>
+          </article>
         </div>
       </section>
 
