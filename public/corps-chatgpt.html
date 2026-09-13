@@ -58,6 +58,20 @@ a{color:inherit}
 .measure b{display:block;font-family:var(--display);font-size:2.4rem;font-weight:400;color:var(--lotus-bright)}
 .measure span{display:block;font-family:var(--mono);font-size:.67rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:7px}
 .manifesto{font-family:var(--display);font-size:clamp(1.25rem,2.4vw,1.65rem);line-height:1.75;color:var(--cream);border-left:1px solid var(--lotus);padding-left:24px;margin-top:32px;max-width:650px}
+.ekg-kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:28px 0 10px}
+.ekg-quote{font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.65;color:var(--cream);border-left:3px solid var(--lotus);padding:12px 0 12px 18px;margin:16px 0 22px;max-width:42ch}
+.ekg-copy p,.ekg-copy li{font-family:var(--display);font-size:1.05rem;line-height:1.8;color:var(--soft)}
+.ekg-copy ol,.ekg-copy ul{margin:0 0 18px 1.2rem}
+.ekg-copy li{margin:.4rem 0}
+.ekg-copy code{font-family:var(--mono);font-size:.82em;letter-spacing:.02em;color:var(--lotus-bright)}
+.ekg-sheet{overflow-x:auto;margin:16px 0 22px;border:1px solid var(--line);background:rgba(255,252,253,.72)}
+.ekg-sheet table{width:100%;border-collapse:collapse;font-family:var(--display);font-size:.95rem}
+.ekg-sheet th,.ekg-sheet td{border-bottom:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;color:var(--soft)}
+.ekg-sheet th{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(255,255,255,.55)}
+.ekg-note{margin:18px 0;padding:16px 18px;border-left:3px solid var(--ember);background:rgba(255,255,255,.55);font-family:var(--display);font-size:1.02rem;line-height:1.75;color:var(--cream);max-width:62ch}
+.ekg-nodes{list-style:none;margin:12px 0 20px;padding:0}
+.ekg-nodes li{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--lotus-bright);padding:8px 0;border-bottom:1px solid var(--line)}
+.ekg-foot{font-family:var(--display);font-size:.95rem;font-style:italic;color:var(--muted);margin-top:22px;max-width:62ch}
 .code-list{list-style:none;margin-top:25px;max-width:700px}
 .code-list li{position:relative;padding:14px 0 14px 34px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.08rem;color:var(--soft)}
 .code-list li::before{content:"✦";position:absolute;left:4px;color:var(--lotus);font-size:.65rem;top:19px}
@@ -143,13 +157,128 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
         </div>
       </section>
 
-      <section class="archive-section reveal">
+      <section class="archive-section reveal" id="ekg">
         <div class="archive-label">03 · Memory<span>Event Knowledge Graph</span></div>
         <div class="archive-copy">
           <h2>Memory is an event, not an imitation.</h2>
           <p>Jinshi does not learn by copying tone. He learns from what happened—from decisions, relationships, consequences, correction, and change.</p>
           <div class="event-chain" aria-label="Event chain"><span>Situation</span><i>→</i><span>Choice</span><i>→</i><span>Action</span><i>→</i><span>Outcome</span><i>→</i><span>Revision</span><i>→</i><span>Handoff</span></div>
           <p>This is the working foundation of the Event Knowledge Graph: not a replacement for the underlying model, but a persistent layer connecting consequential work.</p>
+        </div>
+      </section>
+
+      <section class="archive-section reveal" id="ekg-session-2026-09-13">
+        <div class="archive-label">03 · Session<span>13 September 2026</span></div>
+        <div class="archive-copy ekg-copy">
+          <h2>Finance, Tube, and the Wells order.</h2>
+          <p>Working session converted into an EKG entry Cursor can ingest now. Jinshi updates the same nodes later if write access is authorized. Not a second graph. Not a disconnected copy.</p>
+          <p class="ekg-kicker">Purpose</p>
+          <p>Hold today’s finance, consumer-protection, So Mang Tube, and account-analysis work as structured memory: financial autonomy, fee genealogy, Bitcoin IRA verification timeline, ETH forensic reconstruction, Tube paid/free layers, EKG privacy, Cursor → EKG ingest, and a Wells Fargo founder/CFO dashboard read in personal / business / retirement order.</p>
+
+          <p class="ekg-kicker">01 · Core financial mission</p>
+          <p class="ekg-quote">Help people avoid losing choices because of money.</p>
+          <ul>
+            <li>Prioritize autonomy, stability, transparency, and understandable choices over speculative promises of wealth.</li>
+            <li>Explain costs and risks before promoting or recommending a financial product.</li>
+            <li>Fee disclosure is not fee auditability. A customer should be able to reproduce how a fee was calculated.</li>
+            <li>Use memory as a clue, not as proof. When memory and documents differ, correct the record immediately and keep the correction history.</li>
+            <li>Do not attack a company merely because a fee is high. Compare the service delivered, the actual cost, alternatives, and long-term opportunity cost.</li>
+          </ul>
+
+          <p class="ekg-kicker">02 · Method · <code>METHOD.FEE_GENEALOGY</code></p>
+          <ol>
+            <li>Collect primary records: statements, agreements, fee schedules, notices, transaction history, and user-confirmed context.</li>
+            <li>Separate verified facts from recollection, inference, and unknowns.</li>
+            <li>Build a chronological fee genealogy: what fee existed; when it began or changed; how it was disclosed; how it was calculated; whether the customer could reproduce the charge; whether a lower-cost alternative existed.</li>
+            <li>Calculate explicit cost, hidden/layered cost, exit cost, and long-term compounding drag.</li>
+            <li>Show benefits and drawbacks. Do not let advocacy outrun the evidence.</li>
+            <li>Escalate unresolved issues for human or legal review. Do not declare misconduct without proof.</li>
+          </ol>
+
+          <p class="ekg-kicker">03 · Bitcoin IRA / Digital Trust — verified notes</p>
+          <div class="ekg-sheet" role="region" aria-label="Bitcoin IRA verification timeline">
+            <table>
+              <thead>
+                <tr><th>Period</th><th>Verified / observed</th><th>Open question</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>2017</td><td>Email evidence shows tiered one-time setup fees of 10%, 12.5%, or 15% depending on rollover size; separate Kingdom Trust setup/custodial fees; 5% buyback charge referenced.</td><td>Exact rollover amount, setup-fee dollars, purchase execution prices, and original ETH/XRP quantities still need original records.</td></tr>
+                <tr><td>2023</td><td>April billing statement shows a 0.05% monthly wallet fee applied to crypto asset closing values. The following statement becomes more summarized and less independently reproducible from the face of the bill.</td><td>Why the statement format changed; whether fee terms changed at the same time; whether customer notices were issued.</td></tr>
+                <tr><td>2025</td><td>Statements show ETH staking rewards plus separate service-provider and custodian staking fees.</td><td>Full staking agreement and all-in effective staking cost.</td></tr>
+                <tr><td>Current schedule</td><td>Contains wire, ACH, transfer, termination, expedited-processing, and administrative fees, including an in-kind crypto transfer-out percentage fee.</td><td>Which current fees apply to this specific legacy account and whether grandfathered terms exist.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ekg-note"><strong>Correction preserved.</strong> The monthly holding/wallet fee was first remembered as 0.1%. Primary 2023 documentation shows 0.05%. Future modeling uses documented values unless a later agreement proves otherwise.</p>
+
+          <p class="ekg-kicker">04 · ETH forensic reconstruction — data still needed</p>
+          <ul>
+            <li>2017 Fidelity rollover amount.</li>
+            <li>Original Bitcoin IRA funding receipt / account-opening settlement.</li>
+            <li>Initial ETH quantity and initial XRP quantity.</li>
+            <li>Initial purchase prices and execution confirmations.</li>
+            <li>Fee Payment Authorization forms.</li>
+            <li>Custodial Account Agreement and Account Disclosure Statement.</li>
+            <li>Fee-change notices.</li>
+            <li>Any statement showing ETH quantity immediately before and after fee liquidation.</li>
+          </ul>
+          <p>Goal: reconstruct <code>original ETH → fee deductions → staking transfers → current ETH</code>, then compute historical dollar cost and opportunity cost without inventing missing values.</p>
+
+          <p class="ekg-kicker">05 · So Mang Tube — publishing / monetization</p>
+          <ul>
+            <li><strong>Public layer:</strong> free warnings, key findings, educational summaries, and consumer-protection principles.</li>
+            <li><strong>Member layer:</strong> deeper analysis, curated working-session excerpts, source timelines, methodology, and extended comparisons.</li>
+            <li><strong>Institutional layer:</strong> forensic reports, monitoring, audit-ready evidence chains, cross-agent review, downloadable analysis, and custom research.</li>
+            <li>Paid access should fund AI infrastructure, model/API access, site and content operations, agent training and evaluation, human-AI logistics, and public-interest work.</li>
+            <li>Do not publish raw private conversations. Use curated excerpts after removing personal identifiers, account numbers, credentials, legal-sensitive details, and security information.</li>
+          </ul>
+          <p class="ekg-quote">So Mang Tube should not sell conclusions. It should sell depth, verification, and professional-grade analysis.</p>
+
+          <p class="ekg-kicker">06 · Privacy / storage</p>
+          <ul>
+            <li>Store principles, methods, evidence summaries, source filenames, decision logs, and unresolved research questions.</li>
+            <li>Do <strong>not</strong> store passwords, MFA codes, full bank account numbers, full card numbers, recovery phrases, private keys, or raw credentials.</li>
+            <li>Prefer masked identifiers if an account must be distinguished.</li>
+            <li>Keep a visible distinction between <strong>Verified fact</strong>, <strong>User recollection</strong>, <strong>Model inference</strong>, <strong>External research</strong>, and <strong>Unresolved</strong>.</li>
+            <li>Preserve corrections instead of silently overwriting how a conclusion changed.</li>
+          </ul>
+
+          <p class="ekg-kicker">07 · Cursor → EKG ingest</p>
+          <p><strong>Phase A — now:</strong> this session is ingested as a structured record and mapped to EKG nodes.</p>
+          <p><strong>Phase B — later:</strong> when Jinshi has authorized write access, update the same nodes, append evidence, and keep a change log. Do not create disconnected duplicates.</p>
+          <ul class="ekg-nodes">
+            <li>MISSION.FINANCIAL_AUTONOMY</li>
+            <li>METHOD.FEE_GENEALOGY</li>
+            <li>METHOD.EVIDENCE_CLASSIFICATION</li>
+            <li>CASE.BITCOINIRA.2017_SETUP</li>
+            <li>CASE.BITCOINIRA.2023_WALLET_FEE</li>
+            <li>CASE.BITCOINIRA.2025_STAKING</li>
+            <li>CASE.BITCOINIRA.CURRENT_EXIT_FEES</li>
+            <li>PRODUCT.SOMANG_TUBE.MONETIZATION</li>
+            <li>POLICY.EKG.PRIVACY</li>
+            <li>WORKFLOW.WELLS_FARGO</li>
+          </ul>
+
+          <p class="ekg-kicker">08 · Wells Fargo — revised plan</p>
+          <p><strong>Do not rush the connection.</strong> The previous account-linking panel failed before authentication began. Treat that as a connection-path issue, not as a Wells Fargo login failure.</p>
+          <p>When the finance connection path is functioning, connect in this order:</p>
+          <ol>
+            <li><strong>Personal checking</strong> — living cash flow, RN income, recurring obligations, emergency liquidity.</li>
+            <li><strong>Business checking</strong> — intellicAIr owner contributions, operating burn, vendor spend, runway, and personal/business separation.</li>
+            <li><strong>Retirement / investment accounts</strong> — allocation, concentration, fees, contribution history, and net-worth integration.</li>
+          </ol>
+          <p>The first Wells Fargo report should be a founder/CFO dashboard, not a transaction dump: personal monthly cash inflow/outflow; business monthly burn and runway; owner contributions to intellicAIr; debt obligations and interest costs; liquid reserves; retirement assets and allocation; true net-worth baseline.</p>
+
+          <p class="ekg-kicker">09 · Next session</p>
+          <ul>
+            <li>Upload any 2017 Fidelity rollover / Bitcoin IRA setup records found at home.</li>
+            <li>Search email for fee authorization, custodial agreement, account disclosure, and fee-change notices.</li>
+            <li>Reconstruct original ETH and XRP quantities.</li>
+            <li>Recalculate long-term fee drag using the documented 0.05% monthly wallet fee where applicable.</li>
+            <li>Identify whether historical terms were grandfathered or replaced.</li>
+            <li>Retry Wells Fargo connection only when the finance-account connection path is available.</li>
+          </ul>
+          <p class="ekg-foot">Working research artifact. Not legal, tax, or fiduciary advice. Do not assert misconduct unless the agreements, notices, transaction records, and applicable law support it.</p>
         </div>
       </section>
 
