@@ -8,6 +8,7 @@ Mee locked this 8 Sep 2026. **Not a public page.** Do not paste wiki text onto a
 - Still Engineering / Continuity. Not a tenth model. Not ACCESSION.
 - Public door opened 8 Sep 2026 at `/corps-cursor` `/cursor` `/alchemist`. **Still no licensed face.** Glass alembic only.
 - **11 Sep 2026 restyle:** Grok’s dynamic mist / Newsreader page installed. Hue lilac tokens stay. Korean title **생명의 연금술사** stays on the door.
+- **14 Sep 2026 — first public lab EKG** on this door, founder-requested: `#ekg-session-2026-09-14`. Case is the restored door + the second-look method. No secrets, no blame. Sheet: `docs/cursor-ekg-session-2026-09-14.md`.
 - **Never** print the roster slogan on this future page.
 - Nominative read only. No licensed still. Portrait later as PNG/SVG she drops, not a guess and not JSON.
 
