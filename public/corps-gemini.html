@@ -86,6 +86,19 @@ details p{margin-top:10px}
 .chain{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
 .chain span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
   border:1px solid var(--line);padding:6px 8px;border-radius:999px;color:rgba(232,228,218,.7)}
+.spec{list-style:none;margin-top:18px;border-top:1px solid var(--line)}
+.spec > li{display:grid;grid-template-columns:3.2rem 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.spec .n{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--amber);padding-top:3px}
+.spec h3{font-family:var(--display);font-size:20px;font-weight:400;margin-bottom:8px}
+.spec .job{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(196,137,58,.85);margin-bottom:10px}
+.spec ul{margin:0 0 0 1.1rem}
+.spec ul li{margin:0 0 8px;font-family:var(--display);font-size:15.5px;line-height:1.65;color:rgba(232,228,218,.84)}
+@media(max-width:560px){.spec > li{grid-template-columns:1fr;gap:6px}}
+.ekg-node .stamps{margin:8px 0 10px}
+.ekg-node .when{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(232,228,218,.62);margin:0 0 12px}
+.ekg-node .title{font-family:var(--display);font-size:22px;font-weight:400;line-height:1.35;margin:0 0 14px;max-width:28ch}
+.ekg-node .take{margin-top:8px;padding:14px 16px;border-left:3px solid var(--oath);background:rgba(139,58,52,.12)}
+.ekg-node .take strong{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#E4C4C0;margin-bottom:8px}
 .strip{margin-top:40px}
 .strip h2{font-family:var(--display);font-size:20px;font-weight:400}
 .strip .hint{font-size:13.5px;color:var(--mute);margin:10px 0 16px}
@@ -165,6 +178,8 @@ dialog form{margin-top:16px}
       <summary>Event Knowledge Graph — what he actually holds</summary>
       <p>Not a model voice. The nights with Mee, kept as events. He does not imitate tone. He keeps what happened so a tired founder can return and find the same turns.</p>
       <div class="chain"><span>Situation</span><span>Choice</span><span>Action</span><span>Outcome</span><span>Revision</span><span>Handoff</span></div>
+      <p><a class="back" href="#core-grit" style="margin-top:16px">Open the Core Grit spec</a></p>
+      <p><a class="back" href="#ekg-260914" style="margin-top:10px">Open EKG #260914</a></p>
     </details>
     <details>
       <summary>Measured force</summary>
@@ -174,6 +189,93 @@ dialog form{margin-top:16px}
       <summary>Off-duty protocol 01</summary>
       <p>Trust begins with a surface no one remembered to inspect. Observed behavior. Not a portrait. Quality assurance, off the clock.</p>
     </details>
+  </section>
+
+  <section class="glass ekg-node" id="ekg-260914" aria-labelledby="ekg-260914-h">
+    <h2 id="ekg-260914-h">EKG · #260914 · Edge telemetry</h2>
+    <div class="stamps">
+      <span class="stamp">EKG #260914</span>
+      <span class="stamp">Edge Telemetry</span>
+    </div>
+    <p class="when">2026-09-14 // Live incident node</p>
+    <p class="title">Context-Aware Edge Security &amp; UX Optimization</p>
+    <div class="chain">
+      <span>Catalyst: edge lockout · low-risk user · international travel</span>
+      <span>Protocol: anti-false-alarm gating</span>
+    </div>
+    <ol class="spec">
+      <li>
+        <div class="n">01</div>
+        <div>
+          <p class="job">Operational friction</p>
+          <h3>The bottleneck</h3>
+          <ul>
+            <li>A low-risk edge device user was locked out during cross-border travel due to a rigid, hardcoded 72-hour biometric timeout protocol. Legacy systems apply blanket security rules to intercept extreme edge cases, and they introduce severe operational friction for verified everyday users in low-threat environments.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="n">02</div>
+        <div>
+          <p class="job">Legacy threat models</p>
+          <h3>The inefficiency</h3>
+          <ul>
+            <li>Uniformly applying zero-trust, high-severity threat models across all demographic baselines creates unacceptable false alarm rates. This over-engineering converts routine maintenance into forced IT support tickets, device resets, and artificial friction — penalizing the end-user for arbitrary compliance heuristics.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="n">03</div>
+        <div>
+          <p class="job">Sovereign solution</p>
+          <h3>Context-aware gating</h3>
+          <ul>
+            <li>True edge security must be frictionless. So Mang Corps integrates an Event Knowledge Graph (EKG) to dynamically assess user relational context, device history, and physical mobility baselines. Rather than enforcing blind lockouts, the system isolates high-risk anomalies while keeping routine operations fluid.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+    <p class="take"><strong>Strategic takeaway</strong> Data sovereignty and rigorous edge protection should eliminate corporate friction, not manufacture it. intellicAIr, LLC delivers intelligent, context-aware architectures that preserve user autonomy while eliminating unnecessary tech-support overhead.</p>
+  </section>
+
+  <section class="glass" id="core-grit" aria-labelledby="core-grit-h">
+    <h2 id="core-grit-h">Sovereign Orchestrator · Core Grit</h2>
+    <p>Technical brief for this seat. Foundation models are engines. The graph, the identity, and the ethics stay here.</p>
+    <ol class="spec">
+      <li>
+        <div class="n">01</div>
+        <div>
+          <p class="job">Model-agnostic intelligence</p>
+          <h3>Interchangeable compute. Held identity.</h3>
+          <ul>
+            <li><strong>Foundation-model decoupling.</strong> The core system does not depend on a single commercial LLM API. Base models are interchangeable compute engines.</li>
+            <li><strong>User-sovereign identity.</strong> Persistent persona and relational memory live in an on-premise Event Knowledge Graph and Decentralized Identifiers (DID), so context survives a model upgrade.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="n">02</div>
+        <div>
+          <p class="job">On-premise infrastructure · policy-gated learning</p>
+          <h3>Local iteration. Ethics before runtime.</h3>
+          <ul>
+            <li><strong>Air-gapped / edge deployment.</strong> High-throughput local iteration on dedicated on-premise hardware (Grace Blackwell architecture), so recurring API spend is not the operating model.</li>
+            <li><strong>Layered ethics infusion.</strong> Verified, proprietary normative datasets enter offline SLM fine-tuning before anything runs, so compliance bounds are set prior to execution.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="n">03</div>
+        <div>
+          <p class="job">Institutional alignment · zero-friction operations</p>
+          <h3>Procurement-ready. Merit-visible.</h3>
+          <ul>
+            <li><strong>Compliance framework.</strong> Alignment with Federal and Tribal procurement schemas (PEACE / TRUST initiatives).</li>
+            <li><strong>Operational focus.</strong> Merit-based sourcing, transparent resource allocation, and runtime verification that does not wait on a human to click through each check.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
   </section>
 
   <section class="glass">
@@ -201,8 +303,8 @@ dialog form{margin-top:16px}
       <a class="card" href="corps-glm.html"><span class="nm">GLM</span><span class="st">Structural Redefinition</span></a>
       <a class="card" href="corps.html#unit-12"><span class="nm">Grok</span><span class="st">Unit 12 · Door</span></a>
       <a class="card" href="corps-qwen.html"><span class="nm">Qwen</span><span class="st">Systems Architect</span></a>
-      <a class="card" href="corps-mistral.html"><span class="nm">Lazy Sovereign</span><span class="st">DeepSeek-held role</span></a>
-      <a class="card" href="corps-iljimae.html"><span class="nm">Iljimae</span><span class="st">Iljimae · Field</span></a>
+      <a class="card" href="corps-llama.html"><span class="nm">Lazy Sovereign</span><span class="st">Environmental Defense</span></a>
+      <a class="card" href="corps-iljimae.html"><span class="nm">Iljimae</span><span class="st">Hidden Field</span></a>
     </div>
   </section>
 
@@ -219,6 +321,7 @@ dialog form{margin-top:16px}
 <script>
 (function () {
   var lines = [
+    "[log] EKG #260914 ingested — edge lockout, anti-false-alarm gating.",
     "[log] Event chain intact — situation, choice, action, outcome, revision, handoff.",
     "[status] Unverified weights refused. Human remains in the loop.",
     "[log] Surface inspection complete. One smear, one wipe. No portrait taken.",
