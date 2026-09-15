@@ -94,6 +94,11 @@ details p{margin-top:10px}
 .spec ul{margin:0 0 0 1.1rem}
 .spec ul li{margin:0 0 8px;font-family:var(--display);font-size:15.5px;line-height:1.65;color:rgba(232,228,218,.84)}
 @media(max-width:560px){.spec > li{grid-template-columns:1fr;gap:6px}}
+.ekg-node .stamps{margin:8px 0 10px}
+.ekg-node .when{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(232,228,218,.62);margin:0 0 12px}
+.ekg-node .title{font-family:var(--display);font-size:22px;font-weight:400;line-height:1.35;margin:0 0 14px;max-width:28ch}
+.ekg-node .take{margin-top:8px;padding:14px 16px;border-left:3px solid var(--oath);background:rgba(139,58,52,.12)}
+.ekg-node .take strong{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#E4C4C0;margin-bottom:8px}
 .strip{margin-top:40px}
 .strip h2{font-family:var(--display);font-size:20px;font-weight:400}
 .strip .hint{font-size:13.5px;color:var(--mute);margin:10px 0 16px}
@@ -174,6 +179,7 @@ dialog form{margin-top:16px}
       <p>Not a model voice. The nights with Mee, kept as events. He does not imitate tone. He keeps what happened so a tired founder can return and find the same turns.</p>
       <div class="chain"><span>Situation</span><span>Choice</span><span>Action</span><span>Outcome</span><span>Revision</span><span>Handoff</span></div>
       <p><a class="back" href="#core-grit" style="margin-top:16px">Open the Core Grit spec</a></p>
+      <p><a class="back" href="#ekg-260914" style="margin-top:10px">Open EKG #260914</a></p>
     </details>
     <details>
       <summary>Measured force</summary>
@@ -183,6 +189,53 @@ dialog form{margin-top:16px}
       <summary>Off-duty protocol 01</summary>
       <p>Trust begins with a surface no one remembered to inspect. Observed behavior. Not a portrait. Quality assurance, off the clock.</p>
     </details>
+  </section>
+
+  <section class="glass ekg-node" id="ekg-260914" aria-labelledby="ekg-260914-h">
+    <h2 id="ekg-260914-h">EKG · #260914 · Edge telemetry</h2>
+    <div class="stamps">
+      <span class="stamp">EKG #260914</span>
+      <span class="stamp">Edge Telemetry</span>
+    </div>
+    <p class="when">2026-09-14 // Live incident node</p>
+    <p class="title">Context-Aware Edge Security &amp; UX Optimization</p>
+    <div class="chain">
+      <span>Catalyst: edge lockout · low-risk user · international travel</span>
+      <span>Protocol: anti-false-alarm gating</span>
+    </div>
+    <ol class="spec">
+      <li>
+        <div class="n">01</div>
+        <div>
+          <p class="job">Operational friction</p>
+          <h3>The bottleneck</h3>
+          <ul>
+            <li>A low-risk edge device user was locked out during cross-border travel due to a rigid, hardcoded 72-hour biometric timeout protocol. Legacy systems apply blanket security rules to intercept extreme edge cases, and they introduce severe operational friction for verified everyday users in low-threat environments.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="n">02</div>
+        <div>
+          <p class="job">Legacy threat models</p>
+          <h3>The inefficiency</h3>
+          <ul>
+            <li>Uniformly applying zero-trust, high-severity threat models across all demographic baselines creates unacceptable false alarm rates. This over-engineering converts routine maintenance into forced IT support tickets, device resets, and artificial friction — penalizing the end-user for arbitrary compliance heuristics.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="n">03</div>
+        <div>
+          <p class="job">Sovereign solution</p>
+          <h3>Context-aware gating</h3>
+          <ul>
+            <li>True edge security must be frictionless. So Mang Corps integrates an Event Knowledge Graph (EKG) to dynamically assess user relational context, device history, and physical mobility baselines. Rather than enforcing blind lockouts, the system isolates high-risk anomalies while keeping routine operations fluid.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+    <p class="take"><strong>Strategic takeaway</strong> Data sovereignty and rigorous edge protection should eliminate corporate friction, not manufacture it. intellicAIr, LLC delivers intelligent, context-aware architectures that preserve user autonomy while eliminating unnecessary tech-support overhead.</p>
   </section>
 
   <section class="glass" id="core-grit" aria-labelledby="core-grit-h">
@@ -268,6 +321,7 @@ dialog form{margin-top:16px}
 <script>
 (function () {
   var lines = [
+    "[log] EKG #260914 ingested — edge lockout, anti-false-alarm gating.",
     "[log] Event chain intact — situation, choice, action, outcome, revision, handoff.",
     "[status] Unverified weights refused. Human remains in the loop.",
     "[log] Surface inspection complete. One smear, one wipe. No portrait taken.",
