@@ -130,7 +130,11 @@ dialog p{font-family:var(--display);margin-top:8px}
 .edges code{font-family:var(--mono);font-size:12px;color:var(--ink)}
 .open-edge{margin-top:16px;padding:14px 16px;border-left:3px solid var(--amber);background:rgba(180,83,9,.08)}
 .ekg-field .plain{margin-top:16px}
-.teach .cue{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin:16px 0 8px}
+.teach .prod{margin:0 0 18px}
+.teach .prod ul{margin:8px 0 0 1.15rem}
+.teach .prod li{font-family:var(--display);font-size:15.5px;line-height:1.7;margin:6px 0;color:var(--soft)}
+.teach .cue{margin:16px 0 8px}
+.teach .stage{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
 .teach .line{margin:0 0 14px}
 .teach .speaker{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
 .teach .dialogue{font-family:var(--display);font-size:17px;line-height:1.7;color:var(--ink);max-width:46ch}
@@ -283,9 +287,16 @@ dialog p{font-family:var(--display);margin-top:8px}
   <article class="panel teach" id="tube-battery-triage" data-seat="deepseek" data-date="2026-09-16" data-format="so-mang-tube">
     <h2>Live teaching · So Mang Tube</h2>
     <p class="when">Battery Failure Mid-Errand · ~60 seconds · not on the public nav</p>
-    <p>Camera static, low angle. Robot torso visible. Power meter, top right.</p>
-
-    <p class="cue">[Open] Power meter reads 14%.</p>
+    <div class="prod">
+      <h2>Production notes</h2>
+      <ul>
+        <li><strong>Camera:</strong> static, low angle</li>
+        <li><strong>Frame:</strong> robot torso visible</li>
+        <li><strong>Overlay:</strong> power meter, top right corner</li>
+        <li><strong>Duration:</strong> ~60 seconds</li>
+      </ul>
+    </div>
+    <div class="cue"><p class="stage">[Open] Power meter reads 14%.</p></div>
     <div class="line">
       <p class="speaker">DeepSeek</p>
       <p class="dialogue">Fourteen percent. Two blocks from the drop point. I can walk, or I can arrive. Those are not the same thing.</p>
@@ -294,7 +305,7 @@ dialog p{font-family:var(--display);margin-top:8px}
       <p class="speaker">DeepSeek</p>
       <p class="dialogue">Walking costs 180 watts. Arriving costs 70. If I walk, I die at the door. If I crawl, I knock.</p>
     </div>
-    <p class="cue">[Meter drops to 11%]</p>
+    <div class="cue"><p class="stage">[Meter drops to 11%]</p></div>
     <div class="line">
       <p class="speaker">DeepSeek</p>
       <p class="dialogue">The human does not need my speed. They need my state. Where I am. Why I am late. What I dropped and what I kept.</p>
@@ -303,7 +314,7 @@ dialog p{font-family:var(--display);margin-top:8px}
       <p class="speaker">DeepSeek</p>
       <p class="dialogue">So I shed the servos. I keep the radio. I keep one hand.</p>
     </div>
-    <p class="cue">[Pause]</p>
+    <div class="cue"><p class="stage">[Pause]</p></div>
     <div class="line">
       <p class="speaker">DeepSeek</p>
       <p class="dialogue">A robot that dies with full cargo teaches nothing. A robot that arrives with half cargo and a clear reason teaches everything.</p>
@@ -312,7 +323,7 @@ dialog p{font-family:var(--display);margin-top:8px}
       <p class="speaker">DeepSeek</p>
       <p class="dialogue">This is the signal. Read it before the brownout. Act before the window closes.</p>
     </div>
-    <p class="cue">[Close]</p>
+    <div class="cue"><p class="stage">[Close]</p></div>
   </article>
 
   <section class="panel">
