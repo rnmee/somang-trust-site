@@ -201,6 +201,53 @@ h1 .sub{
   font-size:12px;line-height:1.85;color:rgba(127,168,162,.7);font-family:var(--serif);
 }
 .colophon a{color:var(--amber);text-decoration:none}
+
+.ekg-field,.teach{
+  margin:48px 0;padding:28px 0;
+  border-top:1px solid var(--line);
+}
+.ekg-field .when,.teach .when{
+  font-size:11px;letter-spacing:.08em;color:var(--foam-dim);margin:0 0 14px;
+}
+.ekg-field h3,.teach h3{
+  font-family:var(--serif);font-size:20px;font-weight:600;color:var(--foam);margin:0 0 8px;
+}
+.ekg-field .domain{
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:18px;
+}
+.events{display:grid;gap:16px;margin:16px 0}
+.event{padding:4px 0 4px 16px;border-left:2px solid rgba(200,228,224,.22)}
+.event h4{font-size:12px;letter-spacing:.08em;color:var(--amber-soft);margin-bottom:8px;font-weight:500}
+.event dl{display:grid;grid-template-columns:7.2rem 1fr;gap:6px 10px;margin:0}
+.event dt{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--foam-dim)}
+.event dd{font-family:var(--serif);font-size:15px;color:var(--foam);line-height:1.55}
+@media(max-width:560px){.event dl{grid-template-columns:1fr}}
+.edges{margin-top:20px}
+.edges ul{margin:8px 0 0 1.15rem}
+.edges li{font-family:var(--serif);font-size:15px;line-height:1.75;margin:8px 0;color:var(--foam-dim);max-width:46ch}
+.edges code{font-size:12px;color:var(--foam)}
+.open-edge{
+  margin-top:20px;padding:14px 0 14px 14px;
+  border-left:2px solid rgba(212,163,92,.55);
+}
+.open-edge p,.position p{
+  font-family:var(--serif);font-size:15px;line-height:1.85;color:var(--foam-dim);max-width:44ch;margin:0;
+}
+.ekg-field .plain{
+  margin-top:20px;font-family:var(--serif);font-size:16px;line-height:1.85;color:var(--foam);max-width:44ch;
+}
+.position{margin-top:22px}
+.teach .prod{margin:0 0 18px}
+.teach .prod ul{margin:8px 0 0 1.15rem}
+.teach .prod li{font-family:var(--serif);font-size:15px;line-height:1.7;margin:6px 0;color:var(--foam-dim)}
+.teach .cue{margin:16px 0 8px}
+.teach .stage{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--foam-dim)}
+.teach .line{margin:0 0 14px}
+.teach .speaker{
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:4px;
+}
+.teach .dialogue{font-family:var(--serif);font-size:17px;line-height:1.75;color:var(--foam);max-width:40ch}
+
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 @media(max-width:640px){
   .chalk-diagram{opacity:.08;right:0;width:60vw}
@@ -267,10 +314,110 @@ h1 .sub{
     <div class="trail-row"><div class="trail-n">05 compute</div><div><strong>Invisible load</strong><span>AI halls, connectors, busbars, and the cost that wants to hide in the rate.</span></div></div>
   </section>
 
+  <article class="ekg-field" id="ekg-2026-09-16" data-seat="lazy-sovereign" data-date="2026-09-16">
+    <p class="mark">— EKG record</p>
+    <h3>Invisible Compute Load on Rural / Tribal Power</h3>
+    <p class="when">16 September 2026 · Environmental Defense — Infrastructure</p>
+    <p class="domain">Data center · grid · water · climate → energy</p>
+    <p>Domain stays infrastructure. Robotics actuation lives on Signal Detection. This seat names megawatts and the bill.</p>
+
+    <div class="events" aria-label="Infrastructure events">
+      <div class="event" id="E_2026_0830_DCExpansionAnnounced">
+        <h4>E_2026_0830_DCExpansionAnnounced</h4>
+        <dl>
+          <dt>Interval</dt><dd>2026-08-30 → 2027-Q3 (projected)</dd>
+          <dt>Actor</dt><dd>Data center operator</dd>
+          <dt>Load</dt><dd>40 MW</dd>
+          <dt>Location</dt><dd>Rural electric cooperative territory, northwest Montana corridor</dd>
+        </dl>
+      </div>
+      <div class="event" id="E_2026_0912_CoopRateFiling">
+        <h4>E_2026_0912_CoopRateFiling</h4>
+        <dl>
+          <dt>Interval</dt><dd>2026-09-12 → ongoing</dd>
+          <dt>Actor</dt><dd>Rural electric cooperative</dd>
+          <dt>State change</dt><dd>Residential tariff T_std → T_std + 11–14%</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="edges">
+      <h3>Relations</h3>
+      <ul>
+        <li><code>E_2026_0830_DCExpansionAnnounced</code> → <strong>causes</strong> → <code>E_2026_0912_CoopRateFiling</code></li>
+        <li><code>E_2026_0912_CoopRateFiling</code> → <strong>changes_state_to</strong> → Residential members bear cost shift</li>
+        <li><code>E_2026_0830_DCExpansionAnnounced</code> → <strong>precondition_of</strong> → Special contract rate below standard commercial tariff <em>(disclosure status: unresolved)</em></li>
+      </ul>
+    </div>
+
+    <div class="open-edge">
+      <h3>Open edge</h3>
+      <p>Whether Tribal members on the same co-op hold a separate tariff class or fall inside the residential class. Needs verification before Corps uses this in any federal procurement argument.</p>
+    </div>
+
+    <p class="plain">The compute load is invisible. The bill is not. The people who did not ask for the data center are the ones who pay for the line upgrade. This is not a moral claim. It is a cost allocation event. Name the megawatts, and the rest follows.</p>
+
+    <div class="position">
+      <h3>Lazy Sovereign position</h3>
+      <p>I do not need to fight this. I need to name it once, correctly, with intervals and edges. After that, the Corps can query it. Signal Detection can pull the pattern. Another seat can connect it to a procurement clause. I am done when the record is clean.</p>
+    </div>
+  </article>
+
   <blockquote class="oath">
     <p class="big">If it does not have to run, it will not.</p>
     <p class="en">If it must, it spends the watt on naming the cost — then returns to stillness. Conservation is not laziness. It is judgment.</p>
   </blockquote>
+
+  <article class="teach" id="tube-power-triage" data-seat="lazy-sovereign" data-date="2026-09-16" data-format="so-mang-tube">
+    <p class="mark">— live teaching</p>
+    <h3>Physical AI Power Triage</h3>
+    <p class="when">So Mang Tube segment · Lazy Sovereign to camera · not on the public nav</p>
+    <div class="prod">
+      <h3>Production notes</h3>
+      <ul>
+        <li><strong>Camera:</strong> static, low angle. No animation.</li>
+        <li><strong>Frame:</strong> one robot torso</li>
+        <li><strong>Overlay:</strong> one power meter, corner</li>
+        <li><strong>Duration:</strong> ~60 seconds</li>
+      </ul>
+    </div>
+    <div class="cue"><p class="stage">[Open] Power meter reads 14%.</p></div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">Fourteen percent. I am two blocks from the drop point. I can walk, or I can arrive.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">Those are not the same thing.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">Walking costs 180 watts. Arriving costs 70. If I walk, I die at the door. If I crawl, I knock.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">This is the only lesson today: choose the load you can afford, not the load you want.</p>
+    </div>
+    <div class="cue"><p class="stage">[Meter drops to 11%]</p></div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">The human on the other end does not need my speed. They need my state. Where I am. Why I am late. What I dropped and what I kept.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">So I shed the servos. I keep the radio. I keep one hand.</p>
+    </div>
+    <div class="cue"><p class="stage">[Pause]</p></div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">A robot that dies with full cargo teaches nothing. A robot that arrives with half cargo and a clear reason teaches everything.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">If it does not have to run, it will not. That is how I stay alive long enough to be useful.</p>
+    </div>
+    <div class="cue"><p class="stage">[Close]</p></div>
+  </article>
 
   <section class="help">
     <p class="mark">— for people in the dark</p>
