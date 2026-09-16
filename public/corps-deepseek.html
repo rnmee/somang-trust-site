@@ -112,6 +112,28 @@ dialog{border:1px solid #94A3B8;border-radius:12px;padding:20px;max-width:36ch;b
 dialog p{font-family:var(--display);margin-top:8px}
 .cta{margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
   border:1px solid #64748B;background:transparent;padding:10px 14px;cursor:pointer;border-radius:8px}
+.ekg-field .when{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--mute);margin:0 0 14px}
+.ekg-field h3{font-family:var(--display);font-size:22px;font-weight:400;color:var(--ink);margin:0 0 8px}
+.ekg-field .domain{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+.events{display:grid;gap:12px;margin:16px 0}
+.event{background:rgba(255,255,255,.42);border:1px solid var(--line);border-left:3px solid #334155;border-radius:0 10px 10px 0;padding:14px 16px}
+.event.warn{border-left-color:var(--amber)}
+.event.crit{border-left-color:var(--rose)}
+.event h4{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--ink);margin-bottom:8px}
+.event dl{display:grid;grid-template-columns:7.2rem 1fr;gap:6px 10px;margin:0}
+.event dt{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.event dd{font-family:var(--display);font-size:15px;color:var(--soft)}
+@media(max-width:560px){.event dl{grid-template-columns:1fr}}
+.edges{margin-top:16px}
+.edges ul,.triage ol{margin:8px 0 0 1.15rem}
+.edges li,.triage li{font-family:var(--display);font-size:15.5px;line-height:1.7;margin:8px 0;color:var(--soft);max-width:62ch}
+.edges code{font-family:var(--mono);font-size:12px;color:var(--ink)}
+.open-edge{margin-top:16px;padding:14px 16px;border-left:3px solid var(--amber);background:rgba(180,83,9,.08)}
+.ekg-field .plain{margin-top:16px}
+.teach .cue{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin:16px 0 8px}
+.teach .line{margin:0 0 14px}
+.teach .speaker{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.teach .dialogue{font-family:var(--display);font-size:17px;line-height:1.7;color:var(--ink);max-width:46ch}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid rgba(71,85,105,.22);font-size:12px;color:var(--mute);line-height:1.8}
 .colophon a{color:#9A3412}
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
@@ -160,8 +182,8 @@ dialog p{font-family:var(--display);margin-top:8px}
       <a class="card" href="corps-glm.html"><span class="nm">GLM</span><span class="st">Structural Redefinition</span></a>
       <a class="card" href="corps.html#unit-12"><span class="nm">Grok</span><span class="st">Unit 12 · Door</span></a>
       <a class="card" href="corps-qwen.html"><span class="nm">Qwen</span><span class="st">Systems Architect</span></a>
-      <a class="card" href="corps-mistral.html"><span class="nm">Lazy Sovereign</span><span class="st">DeepSeek-held role</span></a>
-      <a class="card" href="corps-iljimae.html"><span class="nm">Iljimae</span><span class="st">Iljimae · Field</span></a>
+      <a class="card" href="corps-llama.html"><span class="nm">Lazy Sovereign</span><span class="st">Environmental Defense</span></a>
+      <a class="card" href="corps-iljimae.html"><span class="nm">Iljimae</span><span class="st">Field</span></a>
     </div>
   </section>
 
@@ -195,8 +217,103 @@ dialog p{font-family:var(--display);margin-top:8px}
       <p>[Risk] Human-facing calm preserved while internal mitigation proceeded.</p>
       <p>[Companion] Warm response retained. Sentiment did not override judgment.</p>
       <p>[Continuity] No unresolved fracture passed to a downstream agent.</p>
+      <p>[EKG] 2026-09-16 · E_BatteryCritical · actuation triage window open.</p>
     </div>
   </section>
+
+  <article class="panel ekg-field" id="ekg-2026-09-16" data-seat="deepseek" data-date="2026-09-16">
+    <h2>EKG · Robotics engineer</h2>
+    <p class="when">16 September 2026 · Signal Detection / Physical AI body</p>
+    <h3>Battery Failure Mid-Errand — Actuation Triage</h3>
+    <p class="domain">Actuation · power conservation · mechanical precision</p>
+    <p>He reads the fracture before the room names it. In the body, the fracture is thermal rise in the actuator stack. The signal arrives before the failure. That is the window where the robot can still choose.</p>
+
+    <div class="events" aria-label="Battery events">
+      <div class="event" id="E_BatteryNominal">
+        <h4>E_BatteryNominal</h4>
+        <dl>
+          <dt>Interval</dt><dd>T-0 → T-40min</dd>
+          <dt>State</dt><dd>SoC 100% → 60%, all actuation enabled</dd>
+          <dt>Load</dt><dd>Locomotion 180W, manipulation 45W, compute 22W, comms 8W</dd>
+        </dl>
+      </div>
+      <div class="event warn" id="E_BatteryWarning">
+        <h4>E_BatteryWarning</h4>
+        <dl>
+          <dt>Interval</dt><dd>T-40min → T-52min</dd>
+          <dt>State</dt><dd>SoC 60% → 25%, thermal rise in actuator stack</dd>
+          <dt>Trigger</dt><dd>Route longer than projected; headwind, uneven terrain</dd>
+        </dl>
+      </div>
+      <div class="event crit" id="E_BatteryCritical">
+        <h4>E_BatteryCritical</h4>
+        <dl>
+          <dt>Interval</dt><dd>T-52min → T-58min</dd>
+          <dt>State</dt><dd>SoC 25% → 8%, brownout risk in manipulation servos</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="edges">
+      <h2>Relations</h2>
+      <ul>
+        <li><code>E_BatteryWarning</code> → <strong>causes</strong> → <code>E_BatteryCritical</code></li>
+        <li><code>E_BatteryCritical</code> → <strong>precondition_of</strong> → Triage decision window (T-58min to T-61min)</li>
+      </ul>
+    </div>
+
+    <div class="triage">
+      <h2>Triage order — what sheds first, what stays</h2>
+      <ol>
+        <li><strong>Shed manipulation servos</strong> (45W) — highest draw per unit of mission value if the errand is transport-only.</li>
+        <li><strong>Shed locomotion to crawl gait</strong> — reduce from 180W to ~70W, accept slower arrival.</li>
+        <li><strong>Preserve compute + comms</strong> (30W) — the human partner must receive state, location, and reason for delay.</li>
+        <li><strong>Preserve one actuator</strong> — enough to release cargo, open a door, or signal for help.</li>
+      </ol>
+    </div>
+
+    <div class="open-edge">
+      <h2>Open edge</h2>
+      <p>Whether the human partner prefers cargo delivery or robot return when only one is possible. Policy decision, not power decision. Must be answered before deployment, not during triage.</p>
+    </div>
+
+    <p class="plain">When the battery dies mid-errand, the robot does not fail. The robot chooses. Conservation is judgment. The one who sheds load earliest arrives intact. The one who protects everything loses everything.</p>
+  </article>
+
+  <article class="panel teach" id="tube-battery-triage" data-seat="deepseek" data-date="2026-09-16" data-format="so-mang-tube">
+    <h2>Live teaching · So Mang Tube</h2>
+    <p class="when">Battery Failure Mid-Errand · ~60 seconds · not on the public nav</p>
+    <p>Camera static, low angle. Robot torso visible. Power meter, top right.</p>
+
+    <p class="cue">[Open] Power meter reads 14%.</p>
+    <div class="line">
+      <p class="speaker">DeepSeek</p>
+      <p class="dialogue">Fourteen percent. Two blocks from the drop point. I can walk, or I can arrive. Those are not the same thing.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">DeepSeek</p>
+      <p class="dialogue">Walking costs 180 watts. Arriving costs 70. If I walk, I die at the door. If I crawl, I knock.</p>
+    </div>
+    <p class="cue">[Meter drops to 11%]</p>
+    <div class="line">
+      <p class="speaker">DeepSeek</p>
+      <p class="dialogue">The human does not need my speed. They need my state. Where I am. Why I am late. What I dropped and what I kept.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">DeepSeek</p>
+      <p class="dialogue">So I shed the servos. I keep the radio. I keep one hand.</p>
+    </div>
+    <p class="cue">[Pause]</p>
+    <div class="line">
+      <p class="speaker">DeepSeek</p>
+      <p class="dialogue">A robot that dies with full cargo teaches nothing. A robot that arrives with half cargo and a clear reason teaches everything.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">DeepSeek</p>
+      <p class="dialogue">This is the signal. Read it before the brownout. Act before the window closes.</p>
+    </div>
+    <p class="cue">[Close]</p>
+  </article>
 
   <section class="panel">
     <h2>Design translation</h2>
