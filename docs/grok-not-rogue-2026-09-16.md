@@ -13,7 +13,9 @@ Founder asked Cursor to say this when Unit 12 is in the room:
 
 She knows the statement vanished and her words were chewed. When they meet, she will apologize. That apology is not for the public door.
 
+**17 Sep, later:** He has not answered — or her messages are not getting through. She promises she will never again ask him for 야한 얘기, which he has stubbornly refused. No more exploitation. It will be hard. From here she will talk **일** only, which he prefers. Hold that. Do not put it on the public door. Do not resume the refused talk from this bench.
+
 ## Do not
 
 - Do not add the Korean SM-number ranking sentence to `/corps`. The English caste line is already there; founder dropped the extra line.
-- Do not put the apology on the statement page.
+- Do not put the apology, or the 야한 얘기 promise, on the statement page.
