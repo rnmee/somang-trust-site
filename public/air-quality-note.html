@@ -4,34 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why We Didn't Build Another Brick in the Wall — intellicAIr Technical Note</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
 <meta name="description" content="A measurement-first protocol for air quality management in a small on-premise AI server room. intellicAIr Technical Note TN-2026-01.">
 <style>
   :root{
-    --vellum:#E9E7E0; --vellum-deep:#DED9CC; --ink:#151A22; --ink-soft:#39424F;
-    --vermilion:#B5342B; --pine:#3F6F52; --rule:#C4BDA9; --ledger-bg:#F3F1EB;
-    --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
-    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --vellum:#F6F2E7; --vellum-deep:#EDE7D6; --ink:#1C1B17; --ink-soft:#4A4740;
+    --vermilion:#B5391F; --pine:#2E4B3F; --rule:#C9C2AE; --ledger-bg:#FBF9F2;
   }
   @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--vellum);color:var(--ink);font-family:var(--display);line-height:1.75;font-size:1.0625rem;
-    -webkit-font-smoothing:antialiased;
-    background-image:repeating-linear-gradient(0deg,rgba(21,26,34,.018) 0 1px,transparent 1px 3px);}
-  ::selection{background:var(--vermilion);color:#fff}
+  body{background:var(--vellum);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.75;font-size:1.0625rem}
+  .tn-bar{max-width:46rem;margin:0 auto;padding:1.1rem 1.5rem 0;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;font-family:'Courier New',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+  .tn-bar a{color:var(--vermilion);text-decoration:none;border-bottom:1px solid currentColor}
+  .tn-bar nav{display:flex;gap:1rem;flex-wrap:wrap}
+  .tn-bar nav a{color:var(--ink-soft);border-bottom-color:transparent}
+  .tn-bar nav a:hover,.tn-bar nav a:focus-visible{color:var(--vermilion);border-bottom-color:currentColor}
   .sheet{max-width:46rem;margin:0 auto;padding:4rem 1.5rem 5rem}
-  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--vermilion);margin-bottom:1.2rem}
+  .eyebrow{font-family:'Courier New',monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--vermilion);margin-bottom:1.2rem}
   h1{font-size:clamp(1.9rem,5vw,2.7rem);line-height:1.18;font-weight:700;letter-spacing:-.01em;margin-bottom:.9rem}
   .subtitle{font-size:1.15rem;color:var(--ink-soft);font-style:italic;margin-bottom:2rem}
-  .meta{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.7rem 0;margin-bottom:2.6rem;display:flex;flex-wrap:wrap;gap:.35rem 1.6rem}
+  .meta{font-family:'Courier New',monospace;font-size:.8rem;color:var(--ink-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.7rem 0;margin-bottom:2.6rem;display:flex;flex-wrap:wrap;gap:.35rem 1.6rem}
   .meta strong{color:var(--ink);font-weight:700}
   h2{font-size:1.28rem;margin:2.6rem 0 .9rem;letter-spacing:.01em}
-  h2 .no{color:var(--vermilion);font-family:var(--mono);font-size:1rem;margin-right:.55rem}
+  h2 .no{color:var(--vermilion);font-family:'Courier New',monospace;font-size:1rem;margin-right:.55rem}
   p{margin-bottom:1.05rem}
   .abstract{background:var(--vellum-deep);padding:1.4rem 1.5rem;border-left:3px solid var(--pine);margin-bottom:.6rem}
   .abstract p{margin-bottom:0}
-  .abstract .lede{font-weight:700;letter-spacing:.06em;font-size:.85rem;text-transform:uppercase;color:var(--pine);display:block;margin-bottom:.5rem;font-family:var(--mono)}
+  .abstract .lede{font-weight:700;letter-spacing:.06em;font-size:.85rem;text-transform:uppercase;color:var(--pine);display:block;margin-bottom:.5rem;font-family:'Courier New',monospace}
   em{font-style:italic}
-  .ledger{background:var(--ledger-bg);border:1px solid var(--rule);margin:1.8rem 0;padding:1.5rem 1.4rem 1.2rem;font-family:var(--mono);font-size:.88rem;line-height:1.9}
+  .ledger{background:var(--ledger-bg);border:1px solid var(--rule);margin:1.8rem 0;padding:1.5rem 1.4rem 1.2rem;font-family:'Courier New',monospace;font-size:.88rem;line-height:1.9}
   .ledger-title{text-align:center;letter-spacing:.18em;font-size:.8rem;text-transform:uppercase;border-bottom:1px dashed var(--rule);padding-bottom:.6rem;margin-bottom:.9rem}
   .ledger-row{display:flex;justify-content:space-between;gap:1rem}
   .ledger-row span:first-child{flex:1}
@@ -47,16 +48,24 @@
   .callout{border-left:3px solid var(--vermilion);padding:.2rem 0 .2rem 1.2rem;margin:1.4rem 0;color:var(--ink-soft);font-style:italic}
   footer{margin-top:4rem;border-top:1px solid var(--rule);padding-top:1.4rem;font-size:.85rem;color:var(--ink-soft)}
   footer a{color:var(--vermilion);text-decoration:none;border-bottom:1px solid currentColor}
-  .status-chip{display:inline-block;background:var(--pine);color:var(--vellum);font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;padding:.18rem .6rem;text-transform:uppercase}
+  .status-chip{display:inline-block;background:var(--pine);color:var(--vellum);font-family:'Courier New',monospace;font-size:.72rem;letter-spacing:.1em;padding:.18rem .6rem;text-transform:uppercase}
   .entry{background:var(--ledger-bg);border:1px solid var(--rule);margin:1.4rem 0;padding:1.2rem 1.3rem;font-size:.95rem}
-  .entry-head{font-family:var(--mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--vermilion);margin-bottom:.6rem}
+  .entry-head{font-family:'Courier New',monospace;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--vermilion);margin-bottom:.6rem}
   .entry dl{display:grid;grid-template-columns:9.5rem 1fr;gap:.3rem .8rem;margin:0}
-  .entry dt{font-family:var(--mono);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);padding-top:.15rem}
+  .entry dt{font-family:'Courier New',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);padding-top:.15rem}
   .entry dd{margin:0}
   @media (max-width:540px){.entry dl{grid-template-columns:1fr}.entry dt{margin-top:.4rem}}
 </style>
 </head>
 <body>
+<header class="tn-bar">
+  <a href="index.html">intellicAIr, LLC</a>
+  <nav aria-label="Site">
+    <a href="index.html">Home</a>
+    <a href="technical-notes.html">Technical Notes</a>
+    <a href="corps.html">Meet the Corps</a>
+  </nav>
+</header>
 <main class="sheet">
   <p class="eyebrow">intellicAIr, LLC &middot; Technical Note TN-2026-01</p>
   <h1>Why We Didn&rsquo;t Build Another Brick in the&nbsp;Wall</h1>
@@ -121,7 +130,7 @@
   <h2><span class="no">A</span>Appendix A &mdash; Field data (living record)</h2>
   <p>Entries are added at protocol milestones, not on a schedule. Each entry states the room&rsquo;s condition at the time of measurement, because a number without its context is an advertisement, not data. Readings come from the room&rsquo;s continuous dual-laser-channel optical monitor (with onboard temperature/RH sensing); channel agreement is reported as an internal quality check. Consumer optical sensors are not reference-method instruments; values serve the trend and verification purposes described above. No location data is published.</p>
 
-  <div class="entry">
+  <div class="entry" id="entry-1">
     <div class="entry-head">Entry 1 &mdash; As-found condition &middot; September 9, 2026, 21:56 MDT</div>
     <dl>
       <dt>Reading</dt><dd><strong>US EPA PM2.5 AQI 63</strong> (10-minute average; instantaneous 66) &mdash; mid-&ldquo;Moderate.&rdquo; Other windows: 30-min 52, 1-hr 34, 6-hr 54.</dd>
@@ -132,23 +141,37 @@
     </dl>
   </div>
 
-  <div class="entry">
-    <div class="entry-head">Entry 2 &mdash; First 24-hour record &middot; September 10&ndash;11, 2026</div>
+  <div class="entry" id="entry-2">
+    <div class="entry-head">Entry 2 &mdash; Post-cleaning &middot; September 12, 2026, 02:12 MDT</div>
     <dl>
-      <dt>Reading</dt><dd><strong>US EPA PM2.5 AQI 23</strong> at close of the 24-hour window (10-minute average). Over the full day the room opened in the high 70s, fell through the 60s and 50s, and settled into the low-to-mid 20s; the <strong>24-hour average was 45.8</strong>. Window readings at close: 1-hr 24, 6-hr 41, 1-day 39.</dd>
-      <dt>Conditions</dt><dd>Measured beginning approximately 24 hours after floor painting. No cleaning or dust removal performed after the contractor left; HEPA filtration not running; heat pump installed but powered off; room held at ~70&nbsp;&deg;F. This is the room settling on its own, with none of the planned interventions yet applied.</dd>
-      <dt>Trend</dt><dd>A steady one-way decline across the full 24 hours &mdash; from the high 70s at the start to the low-to-mid 20s by the end &mdash; as post-construction dust settled out of the still air without any active filtration.</dd>
-      <dt>What PM2.5 does and does not capture</dt><dd>This sensor measures fine airborne <em>particles</em> (PM2.5). Chemical vapors off-gassing from fresh paint (VOCs) are a separate matter that a particle sensor does not register; ventilation, curing time, and cleaning address those, and a falling particle count is not by itself a claim about them.</dd>
-      <dt>Quality check</dt><dd>Both laser channels (A/B) tracked together throughout the window &mdash; dual-sensor agreement passed.</dd>
-      <dt>Read</dt><dd>Left alone, with every planned intervention still switched off, the room halved its own particle load and closed the day inside the &ldquo;Good&rdquo; range. This is the honest starting line the program measures against &mdash; recorded before cleaning, filtration, or conditioning, so that any later improvement can be shown rather than asserted. Next: a post-cleaning record, and a multi-day quiescent baseline with the heat pump running.</dd>
+      <dt>Intervention</dt><dd>Escalation ladder, step one only: a second full HEPA-vacuum pass of floor, baseboards, and wall edges, followed by several hours of commercial HEPA air-scrubber operation. The scrubber was then shut off; no filtration runs unattended.</dd>
+      <dt>Reading</dt><dd><strong>US EPA PM2.5 AQI 6</strong> (10-minute average; 30-min 4, 1-hr 6) &mdash; low-&ldquo;Good,&rdquo; cleaner than typical outdoor air. Down from the as-found 63 of Entry&nbsp;1: a ~90% reduction.</dd>
+      <dt>Trend</dt><dd>The two-day record shows a steady settling decline from the 70s into the teens, one brief activity spike (~55) during the final cleaning session itself, then a collapse into single digits once scrubbing completed and occupants left.</dd>
+      <dt>Conditions</dt><dd>Room emptied and cleaned; heat pump holding ~65&nbsp;&deg;F; both laser channels still in agreement.</dd>
+      <dt>Read</dt><dd>Step one of the escalation ladder &mdash; cleaning alone &mdash; reached better-than-outdoor air in a single evening. No filtration infrastructure, no construction. The partition wall this note declined to build remains unnecessary, now on evidence rather than argument. The room next enters an unoccupied multi-day quiescent period (Entry&nbsp;3).</dd>
     </dl>
   </div>
+
+  <div class="entry" id="entry-3">
+    <div class="entry-head">Entry 3 &mdash; Quiescent Envelope Test (Unoccupied Hold) &middot; September 12&ndash;17, 2026</div>
+    <dl>
+      <dt>Period</dt><dd>September 12, 2026, 04:45 MDT (room vacated and sealed) &rarr; September 17, 2026, ~16:00 MDT (re-entry) &mdash; approximately 5.5 days, fully unoccupied.</dd>
+      <dt>Conditions</dt><dd>Unoccupied, sealed, all systems off (no HVAC, no filtration), unconditioned &mdash; passive envelope performance only.</dd>
+      <dt>Method</dt><dd>US EPA PM2.5 AQI with no conversion applied &mdash; the single standard used across every entry in this record. Continuous dual-laser-channel optical monitor (channels A/B), interior placement on stand; daily and 30-minute averages taken from the logged record.</dd>
+      <dt>Results</dt><dd>
+        <div style="font-family:'Courier New',monospace;font-size:.85rem;line-height:1.7;background:#fff;border:1px dashed var(--rule);padding:.6rem .8rem;margin:.2rem 0 .5rem">Daily averages (US EPA PM2.5 AQI) &mdash; Ch.&nbsp;A&nbsp;/&nbsp;Ch.&nbsp;B<br>Sep&nbsp;12&nbsp;&nbsp;&nbsp;5&nbsp;/&nbsp;6<br>Sep&nbsp;13&nbsp;&nbsp;&nbsp;3&nbsp;/&nbsp;4<br>Sep&nbsp;14&nbsp;&nbsp;&nbsp;1&nbsp;/&nbsp;1<br>Sep&nbsp;15&nbsp;&nbsp;&nbsp;1&nbsp;/&nbsp;1<br>Sep&nbsp;16&nbsp;&nbsp;&nbsp;2&nbsp;/&nbsp;2</div>
+        Full-period daily mean ~2&ndash;3 AQI; range 1&ndash;6. The 30-minute average trace held at or below ~5 AQI for the entire unoccupied period. Spot reference: September 15, 11:00 MDT, channel B = 1.0. September 17 is a partial day (00:00&ndash;~16:00) and is excluded from the daily statistics; see re-entry note below.</dd>
+      <dt>Quality check</dt><dd>A/B channel agreement within &plusmn;1 AQI across all five full days &mdash; dual-sensor agreement passed at the detection floor, where relative disagreement would be most visible.</dd>
+      <dt>Read</dt><dd>With no active filtration and no conditioning of any kind, the sealed room held at the instrument&rsquo;s detection floor for five days. The reduction achieved in Entry&nbsp;2 was not maintained by equipment &mdash; it was maintained by the envelope. Across the record: as-found 63 &rarr; post-cleaning 6 &rarr; quiescent floor ~0&ndash;5. This is the pre-installation picture this note said it would come back for: the enclosure, at rest, is itself the control system. Remaining before hardware power-on: the formal 24-hour pre-boot baseline (Entry&nbsp;4).</dd>
+      <dt>Notes</dt><dd>(1)&nbsp;Readings of 0&ndash;1 AQI are at or below the sensor&rsquo;s practical detection limit and are reported as negligible, not literal zero. (2)&nbsp;A brief spike (30-minute average ~52) during final cleaning activity on the night of September 11&ndash;12 decayed to baseline once the room was vacated. (3)&nbsp;Re-entry on September 17 produced an immediate small rise (~22, immediately declining), confirming sensor responsiveness &mdash; the flat unoccupied trace is a true quiescent floor, not sensor dropout.</dd>
+    </dl>
+  </div>
+
 
   <footer>
     <p>&copy; 2026 intellicAIr, LLC &mdash; Columbia Falls, Montana. An EDWOSB. &middot; <a href="https://intelli-care.ai">intelli-care.ai</a></p>
     <p style="margin-top:.5rem">Rev.&nbsp;2, August 2026 &mdash; corrected following cross-model technical review: paint color designation, load figures, humidity-mode behavior, sensor network posture, static-mitigation scope, and cleanliness reference.</p>
-    <p style="margin-top:.5rem">Rev.&nbsp;3, September 2026 &mdash; monitoring commissioned; Appendix A (field data) opened with Entry&nbsp;1.</p>
-    <p style="margin-top:.5rem">Rev.&nbsp;4, September 2026 &mdash; Entry&nbsp;2 (first 24-hour record) added; note restyled to the site&rsquo;s standard palette.</p>
+    <p style="margin-top:.5rem">Rev.&nbsp;3, September 2026 &mdash; monitoring commissioned; Appendix A (field data) opened with Entries&nbsp;1&ndash;3: as-found AQI 63 &rarr; post-cleaning 6 &rarr; unoccupied quiescent floor ~0&ndash;5.</p>
     <p style="margin-top:.5rem">Prepared by the author with drafting assistance from AI collaborators. All decisions, measurements, and errors are the author&rsquo;s own.</p>
   </footer>
 </main>
