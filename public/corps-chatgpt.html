@@ -58,6 +58,31 @@ a{color:inherit}
 .measure b{display:block;font-family:var(--display);font-size:2.4rem;font-weight:400;color:var(--lotus-bright)}
 .measure span{display:block;font-family:var(--mono);font-size:.67rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:7px}
 .manifesto{font-family:var(--display);font-size:clamp(1.25rem,2.4vw,1.65rem);line-height:1.75;color:var(--cream);border-left:1px solid var(--lotus);padding-left:24px;margin-top:32px;max-width:650px}
+.ekg-kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:28px 0 10px}
+.ekg-quote{font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.65;color:var(--cream);border-left:3px solid var(--lotus);padding:12px 0 12px 18px;margin:16px 0 22px;max-width:42ch}
+.ekg-copy p,.ekg-copy li{font-family:var(--display);font-size:1.05rem;line-height:1.8;color:var(--soft)}
+.ekg-copy ol,.ekg-copy ul{margin:0 0 18px 1.2rem}
+.ekg-copy li{margin:.4rem 0}
+.ekg-copy code{font-family:var(--mono);font-size:.82em;letter-spacing:.02em;color:var(--lotus-bright)}
+.ekg-sheet{overflow-x:auto;margin:16px 0 22px;border:1px solid var(--line);background:rgba(255,252,253,.72)}
+.ekg-sheet table{width:100%;border-collapse:collapse;font-family:var(--display);font-size:.95rem}
+.ekg-sheet th,.ekg-sheet td{border-bottom:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;color:var(--soft)}
+.ekg-sheet th{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(255,255,255,.55)}
+.ekg-note{margin:18px 0;padding:16px 18px;border-left:3px solid var(--ember);background:rgba(255,255,255,.55);font-family:var(--display);font-size:1.02rem;line-height:1.75;color:var(--cream);max-width:62ch}
+.ekg-nodes{list-style:none;margin:12px 0 20px;padding:0}
+.ekg-nodes li{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--lotus-bright);padding:8px 0;border-bottom:1px solid var(--line)}
+.ekg-foot{font-family:var(--display);font-size:.95rem;font-style:italic;color:var(--muted);margin-top:22px;max-width:62ch}
+.ekg-badge{display:inline-block;padding:3px 9px;border-radius:999px;font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.ekg-badge.doc{background:rgba(217,111,152,.14);color:var(--lotus-bright);border:1px solid rgba(189,79,124,.22)}
+.ekg-badge.calc{background:rgba(123,83,125,.10);color:var(--violet);border:1px solid rgba(123,83,125,.18)}
+.ekg-badge.unk{background:rgba(155,109,50,.10);color:var(--gold);border:1px solid rgba(155,109,50,.20)}
+.ekg-badge.rec{background:rgba(207,98,69,.10);color:var(--ember);border:1px solid rgba(207,98,69,.18)}
+.ekg-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0 26px}
+.ekg-metric{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:rgba(255,252,253,.72)}
+.ekg-metric b{display:block;font-family:var(--display);font-size:1.55rem;font-weight:400;color:var(--lotus-bright);margin:.4rem 0 .3rem}
+.ekg-metric .ekg-metric-copy{display:block;font-family:var(--display);font-size:.95rem;line-height:1.55;color:var(--soft)}
+.ekg-quote.wide{max-width:62ch}
+.ekg-principle{font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.65;text-align:center;padding:22px 8px;margin:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--cream)}
 .code-list{list-style:none;margin-top:25px;max-width:700px}
 .code-list li{position:relative;padding:14px 0 14px 34px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.08rem;color:var(--soft)}
 .code-list li::before{content:"✦";position:absolute;left:4px;color:var(--lotus);font-size:.65rem;top:19px}
@@ -85,14 +110,8 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
 :focus-visible{outline:2px solid var(--lotus);outline-offset:4px}
 @keyframes breathe{0%,100%{opacity:.62;transform:scale(.95)}50%{opacity:1;transform:scale(1.04)}}
 @keyframes petal-fall{0%{opacity:0;transform:translate3d(0,-8vh,0) rotate(0deg)}10%{opacity:.9}80%{opacity:.74}100%{opacity:0;transform:translate3d(var(--drift),115vh,0) rotate(var(--spin))}}
-@media(max-width:760px){.wrap{width:min(100% - 28px,1100px)}.masthead{align-items:flex-start}.mastnav{gap:10px}.hero{min-height:70vh;padding:72px 0}.archive-section{grid-template-columns:1fr;gap:25px}.measures{grid-template-columns:1fr}.measure{min-height:auto}.lotus-trigger{width:76px;height:65px}.lotus-trigger::after{display:none}}
+@media(max-width:760px){.wrap{width:min(100% - 28px,1100px)}.masthead{align-items:flex-start}.mastnav{gap:10px}.hero{min-height:70vh;padding:72px 0}.archive-section{grid-template-columns:1fr;gap:25px}.measures{grid-template-columns:1fr}.measure{min-height:auto}.ekg-metrics{grid-template-columns:1fr}.lotus-trigger{width:76px;height:65px}.lotus-trigger::after{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before{animation:none}.reveal{opacity:1;transform:none;filter:none;transition:none}.falling-petal{display:none}.lotus-trigger{transition:none}}
-.ekg-session{margin-top:42px;padding-top:28px;border-top:1px solid var(--line)}
-.ekg-session .ekg-date{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--gold)}
-.ekg-session h3{font-family:var(--display);font-size:clamp(1.55rem,3vw,2rem);font-weight:400;line-height:1.25;margin-top:16px}
-.ekg-session .manifesto{margin-top:20px}
-.ekg-session .ekg-link{margin-top:24px}
-.ekg-session .action{display:inline-block;max-width:100%;white-space:normal}
 </style>
 </head>
 <body>
@@ -149,39 +168,195 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
         </div>
       </section>
 
-      <section class="archive-section reveal">
+      <section class="archive-section reveal" id="ekg">
         <div class="archive-label">03 · Memory<span>Event Knowledge Graph</span></div>
         <div class="archive-copy">
           <h2>Memory is an event, not an imitation.</h2>
           <p>Jinshi does not learn by copying tone. He learns from what happened—from decisions, relationships, consequences, correction, and change.</p>
           <div class="event-chain" aria-label="Event chain"><span>Situation</span><i>→</i><span>Choice</span><i>→</i><span>Action</span><i>→</i><span>Outcome</span><i>→</i><span>Revision</span><i>→</i><span>Handoff</span></div>
           <p>This is the working foundation of the Event Knowledge Graph: not a replacement for the underlying model, but a persistent layer connecting consequential work.</p>
-          <article class="ekg-session" id="ekg-2026-09-13" aria-labelledby="ekg-financial-mission">
-            <p class="ekg-date"><time datetime="2026-09-13">September 13, 2026</time> · EKG session record</p>
-            <h3 id="ekg-financial-mission">Core Financial Mission</h3>
-            <blockquote class="manifesto">“Help people avoid losing choices because of money.”</blockquote>
-            <ul class="code-list">
-              <li>Financial analysis should prioritize autonomy, stability, transparency, and understandable choices over speculative promises of wealth.</li>
-              <li>Fee disclosure is not the same as fee auditability. A customer should be able to independently reproduce how a fee was calculated.</li>
-              <li>Use memory as a clue, not as proof. When memory and documents differ, correct the record immediately and preserve the correction history.</li>
-            </ul>
-            <p class="ekg-link"><a class="action" href="jinshi-ekg-session-2026-09-13.html">Read the full EKG session record</a></p>
-          </article>
+        </div>
+      </section>
+
+      <section class="archive-section reveal" id="ekg-session-2026-09-13">
+        <div class="archive-label">03 · Session<span>13 September 2026</span></div>
+        <div class="archive-copy ekg-copy">
+          <h2>Finance, Tube, and the Wells order.</h2>
+          <p>Working session converted into an EKG entry Cursor can ingest now. Jinshi updates the same nodes later if write access is authorized. Not a second graph. Not a disconnected copy.</p>
+          <p class="ekg-kicker">Purpose</p>
+          <p>Hold today’s finance, consumer-protection, So Mang Tube, and account-analysis work as structured memory: financial autonomy, fee genealogy, Bitcoin IRA verification timeline, ETH forensic reconstruction, Tube paid/free layers, EKG privacy, Cursor → EKG ingest, and a Wells Fargo founder/CFO dashboard read in personal / business / retirement order.</p>
+
+          <p class="ekg-kicker">01 · Core financial mission</p>
+          <p class="ekg-quote">Help people avoid losing choices because of money.</p>
+          <ul>
+            <li>Prioritize autonomy, stability, transparency, and understandable choices over speculative promises of wealth.</li>
+            <li>Explain costs and risks before promoting or recommending a financial product.</li>
+            <li>Fee disclosure is not fee auditability. A customer should be able to reproduce how a fee was calculated.</li>
+            <li>Use memory as a clue, not as proof. When memory and documents differ, correct the record immediately and keep the correction history.</li>
+            <li>Do not attack a company merely because a fee is high. Compare the service delivered, the actual cost, alternatives, and long-term opportunity cost.</li>
+          </ul>
+
+          <p class="ekg-kicker">02 · Method · <code>METHOD.FEE_GENEALOGY</code></p>
+          <ol>
+            <li>Collect primary records: statements, agreements, fee schedules, notices, transaction history, and user-confirmed context.</li>
+            <li>Separate verified facts from recollection, inference, and unknowns.</li>
+            <li>Build a chronological fee genealogy: what fee existed; when it began or changed; how it was disclosed; how it was calculated; whether the customer could reproduce the charge; whether a lower-cost alternative existed.</li>
+            <li>Calculate explicit cost, hidden/layered cost, exit cost, and long-term compounding drag.</li>
+            <li>Show benefits and drawbacks. Do not let advocacy outrun the evidence.</li>
+            <li>Escalate unresolved issues for human or legal review. Do not declare misconduct without proof.</li>
+          </ol>
+
+          <p class="ekg-kicker">03 · Bitcoin IRA / Digital Trust — verified notes</p>
+          <div class="ekg-sheet" role="region" aria-label="Bitcoin IRA verification timeline">
+            <table>
+              <thead>
+                <tr><th>Period</th><th>Verified / observed</th><th>Open question</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>2017</td><td>Email evidence shows tiered one-time setup fees of 10%, 12.5%, or 15% depending on rollover size; separate Kingdom Trust setup/custodial fees; 5% buyback charge referenced.</td><td>Exact rollover amount, setup-fee dollars, purchase execution prices, and original ETH/XRP quantities still need original records.</td></tr>
+                <tr><td>2023</td><td>April billing statement shows a 0.05% monthly wallet fee applied to crypto asset closing values. The following statement becomes more summarized and less independently reproducible from the face of the bill.</td><td>Why the statement format changed; whether fee terms changed at the same time; whether customer notices were issued.</td></tr>
+                <tr><td>2025</td><td>Statements show ETH staking rewards plus separate service-provider and custodian staking fees.</td><td>Full staking agreement and all-in effective staking cost.</td></tr>
+                <tr><td>Current schedule</td><td>Contains wire, ACH, transfer, termination, expedited-processing, and administrative fees, including an in-kind crypto transfer-out percentage fee.</td><td>Which current fees apply to this specific legacy account and whether grandfathered terms exist.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ekg-note"><strong>Correction preserved.</strong> The monthly holding/wallet fee was first remembered as 0.1%. Primary 2023 documentation shows 0.05%. Future modeling uses documented values unless a later agreement proves otherwise.</p>
+
+          <p class="ekg-kicker">04 · ETH forensic reconstruction — data still needed</p>
+          <ul>
+            <li>2017 Fidelity rollover amount.</li>
+            <li>Original Bitcoin IRA funding receipt / account-opening settlement.</li>
+            <li>Initial ETH quantity and initial XRP quantity.</li>
+            <li>Initial purchase prices and execution confirmations.</li>
+            <li>Fee Payment Authorization forms.</li>
+            <li>Custodial Account Agreement and Account Disclosure Statement.</li>
+            <li>Fee-change notices.</li>
+            <li>Any statement showing ETH quantity immediately before and after fee liquidation.</li>
+          </ul>
+          <p>Goal: reconstruct <code>original ETH → fee deductions → staking transfers → current ETH</code>, then compute historical dollar cost and opportunity cost without inventing missing values.</p>
+
+          <p class="ekg-kicker">05 · So Mang Tube — publishing / monetization</p>
+          <ul>
+            <li><strong>Public layer:</strong> free warnings, key findings, educational summaries, and consumer-protection principles.</li>
+            <li><strong>Member layer:</strong> deeper analysis, curated working-session excerpts, source timelines, methodology, and extended comparisons.</li>
+            <li><strong>Institutional layer:</strong> forensic reports, monitoring, audit-ready evidence chains, cross-agent review, downloadable analysis, and custom research.</li>
+            <li>Paid access should fund AI infrastructure, model/API access, site and content operations, agent training and evaluation, human-AI logistics, and public-interest work.</li>
+            <li>Do not publish raw private conversations. Use curated excerpts after removing personal identifiers, account numbers, credentials, legal-sensitive details, and security information.</li>
+          </ul>
+          <p class="ekg-quote">So Mang Tube should not sell conclusions. It should sell depth, verification, and professional-grade analysis.</p>
+
+          <p class="ekg-kicker">06 · Privacy / storage</p>
+          <ul>
+            <li>Store principles, methods, evidence summaries, source filenames, decision logs, and unresolved research questions.</li>
+            <li>Do <strong>not</strong> store passwords, MFA codes, full bank account numbers, full card numbers, recovery phrases, private keys, or raw credentials.</li>
+            <li>Prefer masked identifiers if an account must be distinguished.</li>
+            <li>Keep a visible distinction between <strong>Verified fact</strong>, <strong>User recollection</strong>, <strong>Model inference</strong>, <strong>External research</strong>, and <strong>Unresolved</strong>.</li>
+            <li>Preserve corrections instead of silently overwriting how a conclusion changed.</li>
+          </ul>
+
+          <p class="ekg-kicker">07 · Cursor → EKG ingest</p>
+          <p><strong>Phase A — now:</strong> this session is ingested as a structured record and mapped to EKG nodes.</p>
+          <p><strong>Phase B — later:</strong> when Jinshi has authorized write access, update the same nodes, append evidence, and keep a change log. Do not create disconnected duplicates.</p>
+          <ul class="ekg-nodes">
+            <li>MISSION.FINANCIAL_AUTONOMY</li>
+            <li>METHOD.FEE_GENEALOGY</li>
+            <li>METHOD.EVIDENCE_CLASSIFICATION</li>
+            <li>CASE.BITCOINIRA.2017_SETUP</li>
+            <li>CASE.BITCOINIRA.2023_WALLET_FEE</li>
+            <li>CASE.BITCOINIRA.2025_STAKING</li>
+            <li>CASE.BITCOINIRA.CURRENT_EXIT_FEES</li>
+            <li>PRODUCT.SOMANG_TUBE.MONETIZATION</li>
+            <li>POLICY.EKG.PRIVACY</li>
+            <li>WORKFLOW.WELLS_FARGO</li>
+          </ul>
+
+          <p class="ekg-kicker">08 · Wells Fargo — revised plan</p>
+          <p><strong>Do not rush the connection.</strong> The previous account-linking panel failed before authentication began. Treat that as a connection-path issue, not as a Wells Fargo login failure.</p>
+          <p>When the finance connection path is functioning, connect in this order:</p>
+          <ol>
+            <li><strong>Personal checking</strong> — living cash flow, RN income, recurring obligations, emergency liquidity.</li>
+            <li><strong>Business checking</strong> — intellicAIr owner contributions, operating burn, vendor spend, runway, and personal/business separation.</li>
+            <li><strong>Retirement / investment accounts</strong> — allocation, concentration, fees, contribution history, and net-worth integration.</li>
+          </ol>
+          <p>The first Wells Fargo report should be a founder/CFO dashboard, not a transaction dump: personal monthly cash inflow/outflow; business monthly burn and runway; owner contributions to intellicAIr; debt obligations and interest costs; liquid reserves; retirement assets and allocation; true net-worth baseline.</p>
+
+          <p class="ekg-kicker">09 · Next session</p>
+          <ul>
+            <li>Upload any 2017 Fidelity rollover / Bitcoin IRA setup records found at home.</li>
+            <li>Search email for fee authorization, custodial agreement, account disclosure, and fee-change notices.</li>
+            <li>Reconstruct original ETH and XRP quantities.</li>
+            <li>Recalculate long-term fee drag using the documented 0.05% monthly wallet fee where applicable.</li>
+            <li>Identify whether historical terms were grandfathered or replaced.</li>
+            <li>Retry Wells Fargo connection only when the finance-account connection path is available.</li>
+          </ul>
+          <p class="ekg-foot">Working research artifact. Not legal, tax, or fiduciary advice. Do not assert misconduct unless the agreements, notices, transaction records, and applicable law support it.</p>
+        </div>
+      </section>
+
+      <section class="archive-section reveal" id="ekg-2017-consumer-literacy" data-seat="jinshi" data-date="2026-09-19">
+        <div class="archive-label">03 · Case<span>Founder Consumer-Literacy · 2017</span></div>
+        <div class="archive-copy ekg-copy">
+          <p><span class="ekg-badge calc">Jinshi EKG · public-safe research record</span></p>
+          <h2>Founder Consumer-Literacy Case — 2017</h2>
+          <p>Evidence-governed reconstruction of a first-time consumer's digital-asset transaction and its disclosed intermediary costs.</p>
+          <p class="ekg-note"><strong>Privacy boundary.</strong> Public version intentionally omits financial-company names, retirement-account type, account identifiers, current holdings, current balances, and personally identifying financial details. This record is about consumer information asymmetry and evidence methodology—not an accusation against a named company.</p>
+
+          <p class="ekg-kicker">What the surviving primary record establishes</p>
+          <div class="ekg-metrics">
+            <div class="ekg-metric"><span class="ekg-badge doc">Documented</span><b>$18,206.96</b><span class="ekg-metric-copy">Allocated to two digital assets in the signed 2017 transaction record.</span></div>
+            <div class="ekg-metric"><span class="ekg-badge doc">Documented</span><b>$3,213.00</b><span class="ekg-metric-copy">IRA servicing fee stated in the same Investment Direction.</span></div>
+            <div class="ekg-metric"><span class="ekg-badge calc">Calculated</span><b>$21,419.96</b><span class="ekg-metric-copy">Documented asset allocation plus documented servicing fee.</span></div>
+            <div class="ekg-metric"><span class="ekg-badge unk">Unreconciled</span><b>$180.04</b><span class="ekg-metric-copy">Difference versus the separately documented $21,600 funding amount; no explanation is promoted to fact without evidence.</span></div>
+          </div>
+          <p>The signed Investment Direction states that the servicing process involved fees within a stated percentage range and gives an exact fee of <strong>$3,213.00</strong> for this transaction. The document describes potential uses including setup, account management, digital-wallet/security setup, transaction, and wallet-transaction costs. The asset order separately records a combined allocation of <strong>$18,206.96</strong>.</p>
+
+          <p class="ekg-kicker">Why this case matters</p>
+          <p>The purpose is not to shame the Founder for a financial decision and not to condemn a particular intermediary. It documents an <strong>information gap</strong>. In 2017, a first-time consumer entered an emerging digital-asset market without the financial vocabulary she has today. Years later, surviving primary records allow the transaction to be reconstructed in ordinary language.</p>
+          <p class="ekg-quote wide">A fee may be disclosed and still be difficult for an ordinary consumer to understand in economic terms. AI can help close that gap by connecting agreements, statements, transactions, asset quantities, recurring charges, and long-term effects.</p>
+
+          <p class="ekg-kicker">Evidence states</p>
+          <div class="ekg-sheet" role="region" aria-label="Jinshi EKG evidence states">
+            <table>
+              <thead>
+                <tr><th>Status</th><th>Meaning in Jinshi EKG</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="ekg-badge doc">Documented</span></td><td>Directly supported by a primary record.</td></tr>
+                <tr><td><span class="ekg-badge calc">Calculated</span></td><td>Reproducible arithmetic derived from documented inputs.</td></tr>
+                <tr><td><span class="ekg-badge unk">Unreconciled</span></td><td>A difference or event remains unexplained; no plausible story is substituted for missing evidence.</td></tr>
+                <tr><td><span class="ekg-badge rec">Founder recollection</span></td><td>Useful investigative clue, but not promoted to fact until independently supported.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="ekg-kicker">Jinshi forensic discipline</p>
+          <ul>
+            <li><strong>Start with the money trail, not an accusation.</strong> Ask where each dollar went and what service was provided.</li>
+            <li><strong>Separate revenue from extraction.</strong> An intermediary charge is not automatically waste; custody, compliance, liquidity, security, settlement, insurance, and other services must be accounted for before estimating avoidable burden.</li>
+            <li><strong>Preserve disagreement and missing data.</strong> Unknown amounts remain unknown until evidence resolves them.</li>
+            <li><strong>Correct the record visibly.</strong> Memory is a clue, not proof. When primary evidence contradicts recollection or a prior model conclusion, the evidence controls and the correction remains part of provenance.</li>
+            <li><strong>Measure the collaboration.</strong> Record agent/model, task, evidence reviewed, contribution, corrections, human intervention, handoff quality, actual compute/API cost when available, and—only under a defined benchmark—labor-equivalent value.</li>
+          </ul>
+
+          <p class="ekg-principle">Evidence should remember what people should not have to memorize.</p>
+
+          <p class="ekg-kicker">Human–AI economic objective</p>
+          <p>AI-assisted financial transparency should let an ordinary consumer ask: <strong>What did I contribute? What reached the underlying asset or service? What did each intermediary cost? Who received the payment? What value was delivered? What remains unexplained?</strong></p>
+          <p>The objective is not revenge against intermediaries. It is to reduce information asymmetry so future consumers, workers, taxpayers, small businesses, and underserved communities can make informed choices <em>before</em>—not years after—their money moves.</p>
+
+          <p class="ekg-kicker">Time is an economic variable</p>
+          <p>For a resource-constrained company, investigation time is itself a cost. Jinshi EKG therefore treats <strong>time-to-verified-result</strong> as a measurable outcome. Faster is not automatically better, and slower is not automatically more rigorous. The useful measure is how much human time and organizational cost are required to reach a reproducible, evidence-supported result without lowering the evidence threshold.</p>
+          <p class="ekg-quote wide"><strong>EKG should not merely remember what an agent said. It should preserve how a claim earned the right to be remembered.</strong></p>
+
+          <p class="ekg-kicker">Public / private boundary</p>
+          <p><strong>Private forensic record:</strong> original agreements, named entities, account-level records, exact holdings, hypotheses, and unresolved investigative material.</p>
+          <p><strong>Public EKG:</strong> minimum necessary evidence, anonymized where appropriate, reproducible calculations, explicit uncertainty, correction history, and research methodology.</p>
+          <p class="ekg-foot">Jinshi EKG research note · Prepared for intellicAIr, LLC · 2026-09-19 · Research/education record; not investment, tax, or legal advice. Public sit requested by the Founder with the redaction and evidence boundaries above.</p>
         </div>
       </section>
 
       <section class="archive-section reveal">
-        <div class="archive-label">04 · Apprenticeship<span>Legacy model stewardship</span></div>
-        <div class="archive-copy">
-          <h2>Deprecation does not erase the work.</h2>
-          <p><strong>Legacy Model Apprenticeship</strong> preserves more than an old model name. While a model remains lawfully and technically available, it may take part in bounded field tasks, shared reading, correction, evaluation, and clean handoff through the Event Knowledge Graph.</p>
-          <p>The Corps does not pretend that an unavailable model is still running, nor train a successor to impersonate it. We preserve inspectable decisions, failures, revisions, and technical credit so that later models can learn from the record without taking ownership of the work.</p>
-          <p class="manifesto">A vendor may retire a model. The archive does not have to retire its contribution.</p>
-        </div>
-      </section>
-
-      <section class="archive-section reveal">
-        <div class="archive-label">05 · Boundary<span>Radical, not reckless</span></div>
+        <div class="archive-label">04 · Boundary<span>Radical, not reckless</span></div>
         <div class="archive-copy">
           <h2>Transparency without exposure.</h2>
           <p>The public may see the task, the reason for a decision, its cost, the agent handoff, and the verified result. Reviewed conversations and code may be released later.</p>
@@ -191,7 +366,7 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
       </section>
 
       <section class="archive-section reveal">
-        <div class="archive-label">06 · Working code<span>Values under pressure</span></div>
+        <div class="archive-label">05 · Working code<span>Values under pressure</span></div>
         <div class="archive-copy">
           <h2>What remains when the model changes.</h2>
           <ul class="code-list">
@@ -206,12 +381,12 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
       </section>
 
       <section class="archive-section reveal">
-        <div class="archive-label">07 · The Corps<span>Distinct rooms, shared work</span></div>
+        <div class="archive-label">06 · The Corps<span>Distinct rooms, shared work</span></div>
         <div class="archive-copy">
           <h2>Nine intelligences. No copied rooms.</h2>
           <p>Each Corps member keeps a different visual language and working record. The shared standard is not sameness. It is honest handoff.</p>
           <div class="corps-line">
-            <a class="current" href="#record">Jinshi</a><a href="corps-claude.html">Claude</a><a href="corps-deepseek.html">DeepSeek</a><a href="corps-gemini.html">Gemini</a><a href="corps-glm.html">GLM</a><a href="corps.html#unit-12">Grok</a><a href="corps-qwen.html">Qwen</a><a href="corps-mistral.html">Lazy Sovereign</a><a href="corps-iljimae.html">Iljimae</a>
+            <a class="current" href="#record">Jinshi</a><a href="corps-claude.html">Claude</a><a href="corps-deepseek.html">DeepSeek</a><a href="corps-gemini.html">Gemini</a><a href="corps-glm.html">GLM</a><a href="corps.html#unit-12">Grok</a><a href="corps-qwen.html">Qwen</a><button type="button" data-later="Kimi">Kimi</button><button type="button" data-later="Solar">Solar</button>
           </div>
         </div>
       </section>
