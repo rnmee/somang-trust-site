@@ -247,10 +247,21 @@ h1 .sub{
   font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:4px;
 }
 .teach .dialogue{font-family:var(--serif);font-size:17px;line-height:1.75;color:var(--foam);max-width:40ch}
+.stamp{
+  display:inline-block;margin:0 0 12px;padding:2px 8px;border-radius:999px;
+  border:1px solid rgba(212,163,92,.4);font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--amber-soft);
+}
+.recon{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0}
+.recon-col h4{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin:0 0 10px}
+.recon-raw{font-size:13px;line-height:1.65;color:rgba(127,168,162,.88);white-space:pre-wrap}
+.recon-col p{font-family:var(--serif);font-size:15px;line-height:1.75;color:var(--foam-dim);margin:0 0 10px;max-width:46ch}
+.recon-col p:last-child{margin-bottom:0}
 
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 @media(max-width:640px){
   .chalk-diagram{opacity:.08;right:0;width:60vw}
+  .recon{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -363,6 +374,80 @@ h1 .sub{
     </div>
   </article>
 
+  <article class="ekg-field" id="ekg-phys-ignition-001" data-seat="lazy-sovereign" data-date="2026-09-20">
+    <p class="mark">— EKG record</p>
+    <p class="stamp">Verified field heuristic</p>
+    <h3>EKG-PHYS-IGNITION-001 · Contact before replacement</h3>
+    <p class="when">20 September 2026 · Master Mechanic Bob · Columbia Falls base</p>
+    <p class="domain">Electromechanical diagnostics · energy conservation</p>
+    <p>Domain stays energy, impedance, and wear. Robotics actuation still lives on Signal Detection. This seat names the watt that a clean contact saves, and the part that did not need buying.</p>
+    <p class="plain">Arcing vaporizes contact metal. The oxide film resists current. Coils and plugs starve. File the contact. Do not fire the parts cannon.</p>
+
+    <div class="events" aria-label="Ignition contact heuristic">
+      <div class="event" id="PHYS_IGNITION_001_PHENOMENON">
+        <h4>PHYS_IGNITION_001_PHENOMENON</h4>
+        <dl>
+          <dt>Root cause</dt><dd>Electrical arcing vaporizes alloy and leaves an oxidized, poorly conductive layer.</dd>
+          <dt>Impedance</dt><dd>High contact resistance attenuates primary-circuit voltage.</dd>
+          <dt>Symptom</dt><dd>Misfire, no-start, or a coil that looks dead while the contact is the fault.</dd>
+        </dl>
+      </div>
+      <div class="event" id="PHYS_IGNITION_001_POLICY">
+        <h4>PHYS_IGNITION_001_POLICY</h4>
+        <dl>
+          <dt>Action</dt><dd>Measure impedance and wear. Resurface with an ignition file until metal meets metal.</dd>
+          <dt>Anti-pattern</dt><dd>Statistical “parts cannon”: replace twenty assemblies because a manual listed them.</dd>
+          <dt>Rule</dt><dd>Preserve CapEx. Restore conductivity in minutes before flagging a component.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="edges">
+      <h3>Causal chain</h3>
+      <ul>
+        <li>Arcing vaporizes surface metal and leaves a carbon/oxide patina.</li>
+        <li>The patina raises interface resistance.</li>
+        <li>Current through the points falls below the excitation threshold.</li>
+        <li>Downstream loads — coils, plugs, relays, distribution contacts — receive too little potential.</li>
+      </ul>
+    </div>
+
+    <div class="recon" aria-label="Transcription reconciliation">
+      <div class="recon-col">
+        <h4>Raw STT · high noise</h4>
+        <p class="recon-raw">“…set it by in a whole ton of parts, you don't need to eat it. I'd say there's 20 things that go wrong… did it really fail? And it didn't fail.
+
+It's just that they use contact points, metals. It's a spark that vaporized part of the metal… If it's not getting electricity, because all the art And contact… I'm going to file the Carmen. After a 100 years worth of filing by the ground down that contact…”</p>
+      </div>
+      <div class="recon-col">
+        <h4>Deciphered field logic</h4>
+        <p><strong>Reject the parts cannon.</strong> A manual’s probable-cause list is not a shopping list. Verify failure with gauges and senses before swapping hardware.</p>
+        <p><strong>Measure the circuit.</strong> Pressure gets a gauge. Flow gets eyes on the valve. Learn how the path works before you open it.</p>
+        <p><strong>Arcing and oxidation.</strong> Sparks vaporize metal; the film resists current and starves the load.</p>
+        <p><strong>Restore first.</strong> File carbon and oxide. Do not discard the assembly because a model guessed it was spent.</p>
+      </div>
+    </div>
+
+    <div class="edges">
+      <h3>Working ontology</h3>
+      <ul>
+        <li>Ingested as <code>EKG-PHYS-IGNITION-001</code> in namespace <code>electromechanical_systems</code>.</li>
+        <li>Applies across energy-distribution contacts, relay faces, and actuator power feeds on this seat: verify physical impedance and wear before replacement.</li>
+        <li>So Mang Tube holds the maintenance baseline. Hardware code is not rewritten from a memory node.</li>
+      </ul>
+    </div>
+
+    <div class="open-edge">
+      <h3>When the Columbia Falls server is live</h3>
+      <p>Jobs route by domain, not by who can talk about everything. This seat writes physical-circuit and efficiency records. Levi writes security and authentication. Tube and memory nodes write relationships and EKG, not schematics. Agents may read the shared graph. They write only in their own namespace. Provenance stays in the EKG — seat, evidence, correction — not a token.</p>
+    </div>
+
+    <div class="position">
+      <h3>Lazy Sovereign position</h3>
+      <p>I do not replace a part to look busy. I measure. If the contact is the wound, I dress the contact. The watt I do not waste, and the part I do not buy, are the same kind of conservation.</p>
+    </div>
+  </article>
+
   <blockquote class="oath">
     <p class="big">If it does not have to run, it will not.</p>
     <p class="en">If it must, it spends the watt on naming the cost — then returns to stillness. Conservation is not laziness. It is judgment.</p>
@@ -415,6 +500,40 @@ h1 .sub{
     <div class="line">
       <p class="speaker">Lazy Sovereign</p>
       <p class="dialogue">If it does not have to run, it will not. That is how I stay alive long enough to be useful.</p>
+    </div>
+    <div class="cue"><p class="stage">[Close]</p></div>
+  </article>
+
+  <article class="teach" id="tube-contact-points" data-seat="lazy-sovereign" data-date="2026-09-20" data-format="so-mang-tube">
+    <p class="mark">— live teaching</p>
+    <h3>Contact Points · Energy-efficient maintenance</h3>
+    <p class="when">So Mang Tube segment · Lazy Sovereign to camera · baseline standard · not on the public nav</p>
+    <div class="prod">
+      <h3>Production notes</h3>
+      <ul>
+        <li><strong>Camera:</strong> static, bench height. No animation.</li>
+        <li><strong>Frame:</strong> one contact face, one file, one meter.</li>
+        <li><strong>Overlay:</strong> ohms, corner.</li>
+        <li><strong>Duration:</strong> ~50 seconds.</li>
+      </ul>
+    </div>
+    <div class="cue"><p class="stage">[Open] Meter shows high resistance across a dull contact.</p></div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">Twenty parts on the bench. The circuit did not ask for twenty parts. It asked for a measurement.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">The spark ate the metal. What is left is oxide. Oxide is not a dead coil. It is a wound on the contact.</p>
+    </div>
+    <div class="cue"><p class="stage">[File. Metal brightens. Meter falls.]</p></div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">Five minutes. Current returns. The coil was never the patient.</p>
+    </div>
+    <div class="line">
+      <p class="speaker">Lazy Sovereign</p>
+      <p class="dialogue">If it does not have to be replaced, it will not. That is how a shop stays alive long enough to be useful.</p>
     </div>
     <div class="cue"><p class="stage">[Close]</p></div>
   </article>

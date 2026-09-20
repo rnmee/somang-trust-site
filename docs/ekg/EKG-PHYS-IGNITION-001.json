@@ -1,0 +1,32 @@
+{
+  "node_id": "EKG-PHYS-IGNITION-001",
+  "namespace": "electromechanical_systems",
+  "heuristic_name": "Contact Resurfacing Over Component Replacement",
+  "source_authority": "Master Mechanic Bob (Columbia Falls Base)",
+  "seated": "public/corps-llama.html#ekg-phys-ignition-001",
+  "seat": "lazy-sovereign",
+  "date": "2026-09-20",
+  "status": "verified_field_heuristic",
+  "phenomenon": {
+    "root_cause": "Electrical arcing vaporizes alloy and generates surface oxidation",
+    "impedance_impact": "High contact resistance attenuates primary ignition circuit voltage",
+    "symptom": "Engine misfire or no-start condition"
+  },
+  "causal_chain": [
+    { "step": 1, "action": "Arcing vaporizes surface metal and creates carbon/oxide patina" },
+    { "step": 2, "action": "Patina increases interface resistance" },
+    { "step": 3, "action": "Current through contact points drops below excitation threshold" },
+    { "step": 4, "action": "Spark plugs receive insufficient potential to ignite fuel mixture" }
+  ],
+  "governing_policy": {
+    "action": "Abrasive resurfacing with ignition file to clean raw metal contact",
+    "anti_pattern": "Indiscriminate replacement of distributor assembly ('Parts Cannon')",
+    "energy_and_capex_rule": "Preserve CapEx; restore conductivity in ~5 minutes"
+  },
+  "apply_on_this_seat": [
+    "energy distribution contacts",
+    "relay faces",
+    "actuator power feeds"
+  ],
+  "domain_note": "Robotics actuation remains on Signal Detection. This seat writes energy, impedance, and wear."
+}
