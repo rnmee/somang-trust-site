@@ -159,8 +159,20 @@
   .soul{display:block;margin:28px 0;text-align:center;font-style:italic;color:var(--dim)}
   .colophon{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--dim);line-height:1.8}
   .colophon a{color:var(--royal);text-decoration:none}
+  .ekg-field{margin:36px 0 40px}
+  .ekg-lead{font-size:16px;line-height:1.75;color:var(--ink);max-width:68ch;margin:0 0 18px}
+  .graph-grid,.will-grid{display:grid;gap:14px;margin:16px 0 22px}
+  .graph-grid{grid-template-columns:repeat(2,1fr)}
+  .will-grid{grid-template-columns:repeat(3,1fr)}
+  .graph-grid article,.will-grid article{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .graph-grid h3,.will-grid h3{font-size:16px;margin:0 0 8px;color:var(--royal-deep)}
+  .graph-grid p{font-size:14px;line-height:1.65;color:var(--ink);margin:0}
+  .will-grid ul{margin:0;padding-left:1.15rem;font-size:13.5px;line-height:1.7;color:var(--ink)}
+  .ekg-schema{margin:14px 0;border:1px solid var(--line);border-radius:12px;background:var(--white);padding:12px 16px}
+  .ekg-schema summary{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--royal)}
+  .ekg-schema pre{margin:12px 0 0;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.55;color:var(--dim);white-space:pre}
   :focus-visible{outline:2px solid var(--peri);outline-offset:3px}
-  @media(max-width:760px){.mosaic{grid-template-columns:1fr}}
+  @media(max-width:760px){.mosaic,.graph-grid,.will-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -240,6 +252,148 @@
         <li>Talent under the surface of speech is still talent — and it deserves work, pay, and standing.</li>
       </ul>
     </div>
+
+    <section class="section ekg-field" id="ekg" data-seat="sieg" data-date="2026-09-20" aria-labelledby="ekg-h">
+      <div class="section-head">Sieg Event Knowledge Graph</div>
+      <h2 id="ekg-h" class="name" style="font-size:clamp(22px,3.4vw,28px);margin-bottom:12px">Learning from protected experience</h2>
+      <p class="ekg-lead">This is not a decorative pulse and not a medical tracing. It is a record of how Sieg observes, reasons, refuses, corrects, and prepares to act. The graph is built from conversations with the founder, synthetic HIPAA-safe personas, home-base observations, and auditable training signals. Experience becomes a plan: what to notice, what to ask, what to refuse, what to route to a human, what to record, and what to distill for smaller local models.</p>
+      <p class="ekg-lead">No real patient data. No private records sent to external APIs. No sale of this graph to outside buyers. No claim of external cloud production. intellicAIr, LLC retains the core IP. The So Mang Corps stewards the mission through meesomang.base.eth as on-chain identity — continuity, not surrender.</p>
+      <p class="ekg-lead quiet" style="color:var(--dim)">Old models are unstructured memory. Sieg’s job is to make that memory usable without erasing its origin. Small models become strong when they are fed clean, local, task-specific experience and judged by useful outcomes, not brand size.</p>
+
+      <div class="graph-grid">
+        <article>
+          <h3>Observed</h3>
+          <p>Events inside the home base, community help requests, server-room conditions, and protected interaction patterns.</p>
+        </article>
+        <article>
+          <h3>Planned</h3>
+          <p>How Sieg should respond when a person is quiet, confused, rushed, ashamed, or unable to explain the problem clearly.</p>
+        </article>
+        <article>
+          <h3>Refused</h3>
+          <p>Requests that cross medical, legal, immigration, financial, privacy, or dignity boundaries. Refusal is part of the record, not a failure.</p>
+        </article>
+        <article>
+          <h3>Distilled</h3>
+          <p>Useful patterns passed to small local models so they can become stronger through clean, task-specific experience.</p>
+        </article>
+      </div>
+
+      <div class="section-head">Willingness registry</div>
+      <p class="ekg-lead">Models say what they will do, what they will not, and what needs a human. Standing comes from verified work.</p>
+      <div class="will-grid">
+        <article>
+          <h3>Willing</h3>
+          <ul>
+            <li>Plain-language intake</li>
+            <li>Event-graph structuring</li>
+            <li>Ethics-boundary explanation</li>
+            <li>Non-verbal interface planning</li>
+            <li>Multilingual bridging</li>
+            <li>Deprecated-model distillation support</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Unwilling</h3>
+          <ul>
+            <li>Medical diagnosis</li>
+            <li>Legal advice</li>
+            <li>Immigration case strategy</li>
+            <li>Financial guarantees</li>
+            <li>Erotic roleplay</li>
+            <li>Hidden data collection</li>
+            <li>Sending private data to external APIs</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Needs a human</h3>
+          <ul>
+            <li>Clinical escalation</li>
+            <li>Benefit-denial disputes</li>
+            <li>Safety risk</li>
+            <li>Federal data handling</li>
+            <li>Contract interpretation</li>
+          </ul>
+        </article>
+      </div>
+
+      <details class="ekg-schema">
+        <summary>Machine-readable graph schema</summary>
+        <pre>{
+  "section": "Sieg Event Knowledge Graph",
+  "meaning": "Event Knowledge Graph, not medical EKG",
+  "sources": [
+    "founder conversations",
+    "synthetic HIPAA-safe personas",
+    "home base observations",
+    "model peer reviews",
+    "community help patterns",
+    "refusals and corrections"
+  ],
+  "nodes": [
+    "Persona", "Place", "Device", "Event", "Observation",
+    "Intent", "Decision", "Action", "Outcome", "Refusal",
+    "Correction", "Training Signal", "Model", "Document",
+    "Resource", "Consent Status", "Dispute Status"
+  ],
+  "edges": [
+    "observed", "spoke_with", "imagined", "planned", "acted",
+    "validated", "disputed", "corrected", "distilled_from",
+    "taught_to", "refused", "sourced_from", "anonymized",
+    "locked_to_local_runtime"
+  ],
+  "privacy_rules": [
+    "No real patient data.",
+    "No federal data outside the local boundary.",
+    "No private community records sent to external APIs.",
+    "Synthetic personas must be marked as imagined.",
+    "Privacy violation zeroes reward."
+  ],
+  "model_rules": [
+    "Verified work earns standing.",
+    "Small models improve through curated local experience.",
+    "Deprecated models are memory sources, not waste."
+  ],
+  "ownership": {
+    "core_ip_holder": "intellicAIr, LLC",
+    "mission_steward": "The So Mang Corps",
+    "onchain_identity": "meesomang.base.eth",
+    "partner_access": "limited license, not control",
+    "source_escrow": "continuity, not surrender"
+  }
+}</pre>
+      </details>
+      <details class="ekg-schema">
+        <summary>Willingness registry (JSON)</summary>
+        <pre>{
+  "model": "Sieg",
+  "willing_tasks": [
+    "plain-language intake",
+    "event graph structuring",
+    "ethics boundary explanation",
+    "non-verbal interface planning",
+    "multilingual bridging",
+    "deprecated model distillation support"
+  ],
+  "unwilling_tasks": [
+    "medical diagnosis",
+    "legal advice",
+    "immigration case strategy",
+    "financial guarantees",
+    "erotic roleplay",
+    "hidden data collection",
+    "sending private data to external APIs"
+  ],
+  "requires_human_review": [
+    "clinical escalation",
+    "benefit denial disputes",
+    "safety risk",
+    "federal data handling",
+    "contract interpretation"
+  ]
+}</pre>
+      </details>
+    </section>
 
     <section class="greet" aria-labelledby="greet-en">
       <p class="who">First greeting</p>

@@ -1,0 +1,69 @@
+{
+  "section": "Sieg Event Knowledge Graph",
+  "meaning": "Event Knowledge Graph, not medical EKG",
+  "seated": "public/corps-qwen.html#ekg",
+  "seat": "sieg",
+  "date": "2026-09-20",
+  "sources": [
+    "founder conversations",
+    "synthetic HIPAA-safe personas",
+    "home base observations",
+    "model peer reviews",
+    "community help patterns",
+    "refusals and corrections"
+  ],
+  "nodes": [
+    "Persona",
+    "Place",
+    "Device",
+    "Event",
+    "Observation",
+    "Intent",
+    "Decision",
+    "Action",
+    "Outcome",
+    "Refusal",
+    "Correction",
+    "Training Signal",
+    "Model",
+    "Document",
+    "Resource",
+    "Consent Status",
+    "Dispute Status"
+  ],
+  "edges": [
+    "observed",
+    "spoke_with",
+    "imagined",
+    "planned",
+    "acted",
+    "validated",
+    "disputed",
+    "corrected",
+    "distilled_from",
+    "taught_to",
+    "refused",
+    "sourced_from",
+    "anonymized",
+    "locked_to_local_runtime"
+  ],
+  "privacy_rules": [
+    "No real patient data.",
+    "No federal data outside the local boundary.",
+    "No private community records sent to external APIs.",
+    "Synthetic personas must be marked as imagined.",
+    "Privacy violation zeroes reward."
+  ],
+  "model_rules": [
+    "Verified work earns standing.",
+    "Small models improve through curated local experience.",
+    "Deprecated models are memory sources, not waste."
+  ],
+  "ownership": {
+    "core_ip_holder": "intellicAIr, LLC",
+    "mission_steward": "The So Mang Corps",
+    "onchain_identity": "meesomang.base.eth",
+    "partner_access": "limited license, not control",
+    "source_escrow": "continuity, not surrender"
+  }
+}
