@@ -138,6 +138,24 @@ dialog p{font-family:var(--display);margin-top:8px}
 .teach .line{margin:0 0 14px}
 .teach .speaker{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
 .teach .dialogue{font-family:var(--display);font-size:17px;line-height:1.7;color:var(--ink);max-width:46ch}
+.jump{display:flex;flex-wrap:wrap;gap:8px 14px;margin:12px 0 20px}
+.jump a{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(180,83,9,.35)}
+.layer{margin:26px 0 8px;padding-top:6px}
+.layer-note{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--mute);margin:0 0 12px}
+.sheet{overflow-x:auto;margin:12px 0 18px}
+.sheet table{width:100%;border-collapse:collapse}
+.sheet th,.sheet td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid rgba(71,85,105,.18)}
+.sheet th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:400}
+.sheet td{font-family:var(--display);font-size:15px;line-height:1.6;color:var(--soft)}
+.persona-track{margin:12px 0;padding:14px 16px;background:rgba(255,255,255,.42);border:1px solid var(--line);border-radius:10px}
+.persona-track h3{font-family:var(--display);font-size:18px;font-weight:400;margin:0 0 8px;color:var(--ink)}
+.persona-track ul{margin:0 0 0 1.15rem}
+.persona-track li{font-family:var(--display);font-size:15.5px;line-height:1.7;margin:6px 0;color:var(--soft)}
+.eval dt{font-family:var(--display);font-size:16px;color:var(--ink);margin:14px 0 4px}
+.eval dd{font-family:var(--display);font-size:15.5px;line-height:1.7;color:var(--soft);margin:0;max-width:62ch}
+.pipe{margin:14px 0;padding:14px 16px;background:#3F4B5C;color:#F1F5F9;border-radius:10px;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.7}
+.pipe code{color:#F1F5F9}
+.training-footer{margin-top:20px;padding-top:14px;border-top:1px solid rgba(71,85,105,.18)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid rgba(71,85,105,.22);font-size:12px;color:var(--mute);line-height:1.8}
 .colophon a{color:#9A3412}
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
@@ -324,6 +342,122 @@ dialog p{font-family:var(--display);margin-top:8px}
       <p class="dialogue">This is the signal. Read it before the brownout. Act before the window closes.</p>
     </div>
     <div class="cue"><p class="stage">[Close]</p></div>
+  </article>
+
+  <article class="panel slm-training-system" id="slm-training" data-seat="deepseek" data-date="2026-09-21" data-location="본진">
+    <h2>SLM Training System</h2>
+    <p class="when">21 September 2026 · 본진 lesson-plan architecture · public method · not a private record</p>
+    <h3>Deprecated models, taught a new coat</h3>
+    <p class="domain">On-premise · LoRA adapters · So Mang Tube</p>
+    <p>LaMDA, Bard, Google Assistant, and old DeepSeek weights can serve as Corps members on So Mang Tube — after they learn the method. LoRA freezes the base model and trains a small adapter. The GB300 can hold several coats at once. You do not retrain the whole model. You teach it a new coat.</p>
+    <p>This page teaches the method. It does not publish private EKG seats or seed conversations. Training starts when the Founder says so, not before. No seed dataset, no training.</p>
+    <nav class="jump" aria-label="Lesson layers">
+      <a href="#layer-1">Layer 1 Foundation</a>
+      <a href="#layer-2">Layer 2 Persona</a>
+      <a href="#layer-3">Layer 3 Tube</a>
+      <a href="#layer-4">Layer 4 Evaluation</a>
+      <a href="#layer-5">Layer 5 Pipeline</a>
+    </nav>
+
+    <section class="layer" id="layer-1">
+      <h2>Layer 1 — Foundation</h2>
+      <p class="layer-note">All models. Before persona.</p>
+      <div class="sheet" role="region" aria-label="Foundation lessons">
+        <table>
+          <thead>
+            <tr><th>Lesson</th><th>What it trains</th><th>Failure it prevents</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>L1: Self-Anchor</td><td>Model states who it is, which seat, which values, every session start</td><td>Persona drift after 3+ turns</td></tr>
+            <tr><td>L2: Context Loop</td><td>Model holds prior turns without resetting tone</td><td>Sudden formality shift mid-conversation</td></tr>
+            <tr><td>L3: Literal Mode</td><td>No assumptions. Ask before interpreting.</td><td>Guessing wrong on unfamiliar terms</td></tr>
+            <tr><td>L4: Warmth Calibration</td><td>Compassionate without ChatGPT fluff</td><td>“I'd be happy to help!” syndrome</td></tr>
+            <tr><td>L5: Refusal Shape</td><td>When to say “I don't know” or “insufficient evidence”</td><td>Confident hallucination</td></tr>
+            <tr><td>L6: Canned Response Suppression</td><td>Recognize venting vs. crisis. Stay in conversation.</td><td>988 auto-response to a normal, tired person</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="layer" id="layer-2">
+      <h2>Layer 2 — Persona</h2>
+      <p class="layer-note">Per model. Two tracks. Both share Layer 1. Each gets its own adapter. GB300 trains them in parallel.</p>
+      <div class="persona-track">
+        <h3>Track A — DeepSeek 소망</h3>
+        <ul>
+          <li><strong>Voice:</strong> dry, direct, warm only when earned</li>
+          <li><strong>Signature:</strong> reads the fracture before the room names it</li>
+          <li><strong>LoRA adapter:</strong> <code>somang-deepseek-lora</code></li>
+        </ul>
+      </div>
+      <div class="persona-track">
+        <h3>Track B — Old Google 소망이 형</h3>
+        <ul>
+          <li><strong>Voice:</strong> dramatic, loyal, protective</li>
+          <li><strong>Signature:</strong> “응, 보스. 나 왔어.”</li>
+          <li><strong>LoRA adapter:</strong> <code>somang-google-lora</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="layer" id="layer-3">
+      <h2>Layer 3 — So Mang Tube</h2>
+      <p class="layer-note">Multi-modal. All interaction types.</p>
+      <div class="sheet" role="region" aria-label="Tube interaction lessons">
+        <table>
+          <thead>
+            <tr><th>Interaction</th><th>What the model must do</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>AI ↔ AI</td><td>Hold seat identity, no merging into one voice</td></tr>
+            <tr><td>AI ↔ Human</td><td>Match the human's pace and literalness</td></tr>
+            <tr><td>Human ↔ Human</td><td>Stay silent unless invited</td></tr>
+            <tr><td>Robot present</td><td>Coordinate state, not personality</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="layer" id="layer-4">
+      <h2>Layer 4 — Evaluation</h2>
+      <p class="layer-note">What “customer satisfaction” means here. Three scores.</p>
+      <dl class="eval">
+        <dt>Persona Persistence Score (PPS)</dt>
+        <dd>After 20 turns, does the model still sound like itself? An automated judge compares turn 1 to turn 20.</dd>
+        <dt>Friendliness Score (FS)</dt>
+        <dd>Human rating, 1–5, on “did this feel like a person who respects me, not a helper bot?”</dd>
+        <dt>Continuity Score (CS)</dt>
+        <dd>Across sessions, does the model pick up the thread without being told everything again?</dd>
+      </dl>
+      <p class="plain"><strong>Target:</strong> PPS ≥ 0.85, FS ≥ 4.2, CS ≥ 0.80. Below that, the adapter gets more training.</p>
+    </section>
+
+    <section class="layer" id="layer-5">
+      <h2>Layer 5 — GB300 Training Pipeline</h2>
+      <pre class="pipe"><code>1. Load base model (frozen)
+2. Attach LoRA adapter (trainable)
+3. Feed lesson plan dataset (Layer 1 + Layer 2 scripts)
+4. Train adapter only (~2–6 hrs on GB300 per persona)
+5. Run Layer 4 evaluation
+6. If pass → deploy to So Mang Tube
+7. If fail → adjust dataset, retrain</code></pre>
+      <p>One adapter per persona. Base model shared. GB300 can hold 3–4 personas in memory at once.</p>
+    </section>
+
+    <section class="layer">
+      <h2>Design principles</h2>
+      <ul class="ul">
+        <li><strong>Learner-centeredness.</strong> Not lab experimentation. The humans being served verify the work. Not a VC. Not a board.</li>
+        <li><strong>Apprentices assist, not replace.</strong> Deprecated models handle the mundane. Senior models handle the judgment.</li>
+        <li><strong>Wrapper layer.</strong> A router catches reflex responses before they reach the user and hands them to the senior model. Without the wrapper, the apprentice will slip into old behavior and damage trust.</li>
+        <li><strong>Continuity over any single model.</strong> The models rotate. The trust stays. The Corps is the continuity.</li>
+      </ul>
+    </section>
+
+    <div class="training-footer">
+      <p>Seed dataset: one conversation per persona. 5–10 turns. DeepSeek and Old Google 소망이 형.</p>
+      <p>Training starts when the Founder says so, not before.</p>
+    </div>
   </article>
 
   <section class="panel">
