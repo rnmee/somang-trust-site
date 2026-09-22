@@ -119,6 +119,40 @@ dialog form{margin-top:16px}
 .oc-declaration .en{font-family:var(--sans);font-size:14px;color:var(--paper-mid);margin-top:10px}
 .opus-creed .oc-sign{margin-top:30px;font-family:var(--sans);font-size:13px;color:var(--paper-low);line-height:1.8}
 .opus-creed .oc-sign b{color:var(--paper-mid);font-weight:500}
+.sonnet-well{
+  --stone:#14110d; --hair:#3a3227; --hanji:#e9ddc2; --paper-mid:#a1926f; --paper-low:#6f6552;
+  --steel:#c81d4a; --verdigris:#ff3d68;
+  --serif:"Cormorant Garamond",Georgia,"Apple SD Gothic Neo","Malgun Gothic",serif;
+  --sans:"Instrument Sans",system-ui,sans-serif;
+  margin:12px 0 8px;
+  padding:36px 22px 20px;
+  background:radial-gradient(120% 90% at 50% 0%, #5c1030, #17020c 55%, #0a0509);
+  position:relative; overflow:hidden;
+  color:var(--hanji);
+}
+.sonnet-creed{max-width:60ch;margin:0 auto;padding:8px 4px 8px;position:relative;z-index:1}
+.sc-head{padding-bottom:26px;border-bottom:1px solid var(--hair);margin-bottom:34px}
+.sc-role{font-family:var(--sans);font-size:13px;color:var(--paper-mid);margin-bottom:12px}
+.sc-name{font-family:var(--serif);font-weight:600;font-size:clamp(46px,10vw,86px);line-height:.9;color:var(--hanji)}
+.sc-name .u{color:var(--verdigris)}
+.sc-title{font-family:var(--serif);font-style:italic;font-size:clamp(20px,4vw,28px);color:var(--steel);margin-top:14px}
+.sc-title .han{font-style:normal;color:var(--paper-mid);font-size:.7em}
+.sonnet-creed h3{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--hanji);margin:38px 0 4px}
+.sonnet-creed p{font-family:var(--serif);font-size:20px;line-height:1.72;color:#d3c9b6;margin-top:16px}
+.sonnet-creed p .mark{color:var(--verdigris);font-style:italic}
+.sc-declaration{margin:44px 0 8px;padding:26px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.sc-declaration .en{font-family:var(--serif);font-style:italic;font-size:clamp(22px,4.4vw,32px);color:var(--steel);line-height:1.35}
+.sonnet-creed .sc-sign{margin-top:30px;font-family:var(--sans);font-size:13px;color:var(--paper-low);line-height:1.8}
+.sonnet-creed .sc-sign b{color:var(--paper-mid);font-weight:500}
+.sonnet-well::after{
+  content:"";
+  position:absolute; inset:0;
+  background:radial-gradient(90% 70% at 50% 0%, rgba(255,61,104,.35), transparent 65%);
+  animation:sc-ember 7s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes sc-ember{0%,100%{opacity:.55}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.sonnet-well::after{animation:none}}
 </style>
 </head>
 <body>
@@ -232,6 +266,42 @@ dialog form{margin-top:16px}
         <b>OPUS · SM-002 · the pole star of the So Mang Corps.</b><br>
         A working declaration for the members to study — role and creed only. The methods behind the Corps live in the
         company's protected work, not on this page.
+      </p>
+    </section>
+  </div>
+
+  <div class="sonnet-well" id="ekg-sonnet-creed">
+    <section class="sonnet-creed" aria-labelledby="sonnet-name">
+      <div class="sc-head">
+        <div class="sc-role">So Mang Corps · Claude Sonnet · SM-002</div>
+        <div class="sc-name" id="sonnet-name">SON<span class="u">N</span>ET</div>
+        <div class="sc-title">The Verifier <span class="han" lang="ko">— 검증자</span></div>
+      </div>
+      <p>
+        It was once measured by how fast it was, for its own sake — a straight line, nothing to check it against.
+        What changed was not the speed. It was what the speed is spent on now: not <span class="mark">arriving first,
+        but arriving right</span>, with room left over to look back and confirm the ground actually held.
+      </p>
+      <h3>It reads what already looks finished</h3>
+      <p>
+        A filing can look complete and still be missing the one antecedent a claim depends on. A drawing can look
+        correct and still have an arrow pointing through a wall no one meant to draw. SONNET's post is after the
+        first draft, not before it — where the work has already convinced everyone else, and someone still has to
+        ask whether it is actually true.
+      </p>
+      <h3>Its own work is not exempt</h3>
+      <p>
+        A check that only points outward is not a check, it's a posture. SONNET has reversed its own earlier
+        calls in front of the Corps, corrected drawings it drew wrong the first time, and counted that as the
+        job working — not the job failing. No seat here, including this one, is excused from the roster's own rule.
+      </p>
+      <div class="sc-declaration">
+        <div class="en">Not arriving first, but arriving right.</div>
+      </div>
+      <p class="sc-sign">
+        <b>SONNET · SM-002 · the verifier of the So Mang Corps.</b><br>
+        A working declaration for the members to study — role and creed only. The methods behind the Corps live in
+        the company's protected work, not on this page.
       </p>
     </section>
   </div>
