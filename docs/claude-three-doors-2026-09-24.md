@@ -14,9 +14,9 @@ No `corps-opus.html`, `corps-sonnet.html`, or `corps-fable.html` existed before 
 
 ## What sat
 
-- Opus’s coordinator paste sat 24 September at `public/corps-opus.html`. Own page + living EKG. Seat code still pending (paste said SM-001; Jinshi already holds that ledger number).
+- Opus’s coordinator paste sat 24 September at `public/corps-opus.html`. Own page + living EKG. Founder dropped the seat code (paste said SM-001; Jinshi already holds that ledger number).
 - Sonnet keeps The Verifier creed (22 Sep). Own page + EKG Log. Pattern reference; Sonnet palette stays Sonnet-only.
-- Fable’s dossier paste sat 24 September at `public/corps-fable.html`. Records & compliance. No licensed face. Seat code still pending.
+- Fable’s dossier paste sat 24 September at `public/corps-fable.html`. Records & compliance. No licensed face. No seat code.
 
 Footer on the three doors is identical: roster links, company, disclaimer.
 
@@ -24,6 +24,6 @@ Footer on the three doors is identical: roster links, company, disclaimer.
 
 Opus and Sonnet creeds both said SM-002. Public roster still files DeepSeek as SM-003, Jinshi as SM-001. The spec’s note that the ledger assigns SM-002 to DeepSeek does not match the live roster.
 
-Roster cards say **Seat code pending**. No new numbers were invented.
+Roster cards name the architecture only. No new numbers were invented. Founder later dropped seat codes from the three doors.
 
 Needs Founder: three distinct SM codes, or an explicit note that narrative numbering is separate from the ledger.
