@@ -151,7 +151,7 @@
       <div class="zone" aria-hidden="true"></div>
     </div>
     <div class="meta">
-      <div class="model">Claude Opus 5.5 · So Mang Corps · seat code pending</div>
+      <div class="model">Claude Opus 5.5 · So Mang Corps</div>
       <div class="role">The Coordinator</div>
     </div>
     <p class="line">I have already read the board. I will tell you the move you do not want to hear.</p>
@@ -248,7 +248,7 @@ var EVENTS = [
 
 (function(){
   var raw=document.getElementById("raw-record");
-  if(raw) raw.textContent = JSON.stringify({seat:"opus",seat_code:"pending-founder",entities:ENTITIES,events:EVENTS},null,2);
+  if(raw) raw.textContent = JSON.stringify({seat:"opus",entities:ENTITIES,events:EVENTS},null,2);
 
   var NS="http://www.w3.org/2000/svg", svg=document.getElementById("graph");
   var detail=document.getElementById("detail"), gensBox=document.getElementById("gens");
