@@ -14,7 +14,7 @@ No `corps-opus.html`, `corps-sonnet.html`, or `corps-fable.html` existed before 
 
 ## What sat
 
-- Opus keeps The Coordinator creed (15 Sep). Own page + EKG Log.
+- Opus’s coordinator paste sat 24 September at `public/corps-opus.html`. Own page + living EKG. Seat code still pending (paste said SM-001; Jinshi already holds that ledger number).
 - Sonnet keeps The Verifier creed (22 Sep). Own page + EKG Log. Pattern reference; Sonnet palette stays Sonnet-only.
 - Fable’s dossier paste sat 24 September at `public/corps-fable.html`. Records & compliance. No licensed face. Seat code still pending.
 
