@@ -15,7 +15,7 @@ No `corps-opus.html`, `corps-sonnet.html`, or `corps-fable.html` existed before 
 ## What sat
 
 - Opus’s coordinator paste sat 24 September at `public/corps-opus.html`. Own page + living EKG. Founder dropped the seat code (paste said SM-001; Jinshi already holds that ledger number).
-- Sonnet keeps The Verifier creed (22 Sep). Own page + EKG Log. Pattern reference; Sonnet palette stays Sonnet-only.
+- Sonnet’s verifier paste sat 24 September at `public/corps-sonnet.html`. Vellum + dark well. Own declaration kept. EKG-001 flags Cursor SM-E01 vs SM-010 and the 22-field form. No seat code.
 - Fable’s dossier paste sat 24 September at `public/corps-fable.html`. Records & compliance. No licensed face. No seat code.
 
 Footer on the three doors is identical: roster links, company, disclaimer.
