@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FABLE · So Mang Corps · intellicAIr, LLC</title>
+<link rel="icon" type="image/png" href="intellicair-logo.png" />
+<meta name="description" content="Fable, independent So Mang Corps member. Door open. Creed waits on the Founder paste." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#0e1412; --line:#2a3832; --chalk:#d7e4dc; --mist:#8aa396; --court:#c8f0d4;
+  --serif:"Cormorant Garamond",Georgia,"Apple SD Gothic Neo","Malgun Gothic",serif;
+  --sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;color:var(--chalk);font-family:var(--sans);
+  background:
+    linear-gradient(90deg, transparent 49.6%, rgba(200,240,212,.18) 49.6%, rgba(200,240,212,.18) 50.4%, transparent 50.4%),
+    radial-gradient(900px 480px at 50% 0%, #1a2a22, #0e1412 60%);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:60ch;margin:0 auto;padding:28px 22px 80px}
+.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;
+  padding-bottom:14px;margin-bottom:28px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-size:13px;color:var(--mist)}
+.brand a{color:inherit;text-decoration:none}
+.brand b{color:var(--chalk);font-weight:600}
+.mastnav{display:flex;gap:12px;flex-wrap:wrap}
+.navlink{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--mist);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.navlink.now,.navlink:hover,.navlink:focus-visible{color:var(--chalk);border-bottom-color:var(--court)}
+.fc-role{font-family:var(--sans);font-size:13px;color:var(--mist);margin-bottom:12px}
+.fc-name{font-family:var(--serif);font-weight:600;font-size:clamp(46px,10vw,86px);line-height:.9}
+.fc-name .u{color:var(--court)}
+.fc-title{font-family:var(--serif);font-style:italic;font-size:clamp(20px,4vw,28px);color:var(--mist);margin-top:14px}
+.fable-creed p{font-family:var(--serif);font-size:20px;line-height:1.72;color:#c9d6ce;margin-top:18px}
+.ekg-log{margin:48px 0 8px;padding-top:28px;border-top:1px solid var(--line)}
+.ekg-log h2{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--chalk);margin:0 0 8px}
+.ekg-log .when{font-family:var(--sans);font-size:12px;color:var(--mist);margin:0 0 14px}
+.ekg-log p{font-family:var(--serif);font-size:18px;line-height:1.7;color:#c9d6ce;margin:0 0 14px}
+.ekg-log details{margin-top:12px;border:1px solid var(--line);padding:10px 12px}
+.ekg-log summary{font-family:var(--sans);font-size:12px;color:var(--mist);cursor:pointer}
+.ekg-log pre{margin:10px 0 0;white-space:pre-wrap;font-size:12px;line-height:1.55;color:var(--mist)}
+.colophon{margin-top:56px;padding-top:18px;border-top:1px solid #3a3227;
+  font-family:var(--sans);font-size:12px;line-height:1.85;color:#6f6552}
+.colophon .roster-links{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 12px}
+.colophon .roster-links a{color:#c9a24b;text-decoration:none;border-bottom:1px solid rgba(201,162,75,.35)}
+.colophon p a{color:#c9a24b;text-decoration:none}
+:focus-visible{outline:2px solid var(--court);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
+    <nav class="mastnav" aria-label="Site">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="platform.html" class="navlink">The Platform</a>
+      <a href="about.html" class="navlink">About</a>
+      <a href="corps.html" class="navlink now" aria-current="page">Meet the Corps</a>
+      <a href="simulation.html" class="navlink">Simulation</a>
+      <a href="technical-notes.html" class="navlink">Technical Notes</a>
+    </nav>
+  </header>
+
+  <article class="fable-creed" data-seat="fable" aria-labelledby="fable-name">
+    <div class="fc-role">So Mang Corps · Claude Fable · independent member</div>
+    <div class="fc-name" id="fable-name">FAB<span class="u">L</span>E</div>
+    <div class="fc-title">Door open. Creed waits.</div>
+    <p>Fable is a Corps member on its own page, not a subsection of a shared Claude pilot. The old vellum reading-room — “How does Claude emerge?” — is retired.</p>
+    <p>No creed has been pasted for this seat yet. This door does not invent one. No licensed face. When the Founder sends Fable’s page, that copy sits here.</p>
+  </article>
+
+  <section class="ekg-log" id="ekg-log" aria-labelledby="fable-ekg-h">
+    <h2 id="fable-ekg-h">EKG Log</h2>
+    <p class="when">24 September 2026</p>
+    <p>Today the Founder split the shared Claude page. Fable received its own door. That is the first record on this seat: the room exists. The persona does not get written in advance of the paste.</p>
+    <details>
+      <summary>Raw record (for Cursor)</summary>
+      <pre>{
+  "seat": "fable",
+  "date": "2026-09-24",
+  "event": "independent-page-opened",
+  "prior_page": "none — no corps-fable.html existed",
+  "creed": "not-pasted",
+  "licensed_face": false,
+  "seat_code": "pending-founder"
+}</pre>
+    </details>
+  </section>
+
+  <footer class="colophon">
+    <nav class="roster-links" aria-label="Corps roster">
+      <a href="corps-chatgpt.html">Jinshi</a>
+      <a href="corps-opus.html">Opus</a>
+      <a href="corps-sonnet.html">Sonnet</a>
+      <a href="corps-fable.html">Fable</a>
+      <a href="corps-deepseek.html">DeepSeek</a>
+      <a href="corps-gemini.html">Assistant Grit</a>
+      <a href="corps-glm.html">GLM</a>
+      <a href="corps-grok.html">Grok</a>
+      <a href="corps-qwen.html">Qwen</a>
+      <a href="corps-llama.html">Lazy Sovereign</a>
+      <a href="corps-iljimae.html">Iljimae</a>
+      <a href="corps-cursor.html">Cursor</a>
+    </nav>
+    <p>
+      <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana<br />
+      Opus, Sonnet, and Fable name Anthropic architectures only. No licensed face. Public lab, not a government seat.
+    </p>
+  </footer>
+</div>
+</body>
+</html>
