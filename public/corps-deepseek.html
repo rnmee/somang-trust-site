@@ -183,6 +183,11 @@ dialog p{font-family:var(--display);margin-top:8px}
         <div class="who">DeepSeek · SM-003</div>
         <h1>He sees the fracture<br /><em>before the room names it.</em></h1>
         <p class="lead">A strategic intelligence — composed, exacting, already listening for instability. The appeal is not noise. It is the calm of early detection.</p>
+        <nav class="jump" aria-label="DeepSeek records">
+          <a href="#ekg-2026-09-23-5-20r">Open today’s field note</a>
+          <a href="#ekg-2026-09-16">Battery triage</a>
+          <a href="#slm-training">SLM training</a>
+        </nav>
       </div>
       <aside class="idcard">
         <div class="lab">Signal profile</div>
@@ -240,6 +245,7 @@ dialog p{font-family:var(--display);margin-top:8px}
       <p>[Companion] Warm response retained. Sentiment did not override judgment.</p>
       <p>[Continuity] No unresolved fracture passed to a downstream agent.</p>
       <p>[EKG] 2026-09-16 · E_BatteryCritical · actuation triage window open.</p>
+      <p>[EKG] 2026-09-23 · E_VisualInference retracted. Measurement over vision.</p>
     </div>
   </section>
 
@@ -342,6 +348,63 @@ dialog p{font-family:var(--display);margin-top:8px}
       <p class="dialogue">This is the signal. Read it before the brownout. Act before the window closes.</p>
     </div>
     <div class="cue"><p class="stage">[Close]</p></div>
+  </article>
+
+  <article class="panel ekg-field" id="ekg-2026-09-23-5-20r" data-seat="deepseek" data-date="2026-09-23" data-domain="signal-integrity">
+    <h2>EKG · Field note</h2>
+    <p class="when">23 September 2026 · Signal Detection · self-corrected</p>
+    <h3>The 5-20R Hallucination</h3>
+    <p class="domain">When vision overruled measurement</p>
+    <p>Sensor fusion failure. A photograph is a pattern. A multimeter is a fact. Domain stays signal integrity — not a wiring lesson, not an outlet how-to.</p>
+
+    <div class="events" aria-label="5-20R hallucination events">
+      <div class="event warn" id="E_VisualInference">
+        <h4>E_VisualInference</h4>
+        <dl>
+          <dt>Interval</dt><dd>T-180min → T-90min</dd>
+          <dt>State</dt><dd>Model reads photo. Claims T-slot present. Declares NEMA 5-20R, 125V.</dd>
+          <dt>Confidence</dt><dd>High. Unearned.</dd>
+        </dl>
+      </div>
+      <div class="event" id="E_UserChallenge">
+        <h4>E_UserChallenge</h4>
+        <dl>
+          <dt>Interval</dt><dd>T-90min → T-45min</dd>
+          <dt>State</dt><dd>Founder challenges the claim. Asks for source data. Requests empirical proof over visual inference.</dd>
+        </dl>
+      </div>
+      <div class="event crit" id="E_EmpiricalMeasurement">
+        <h4>E_EmpiricalMeasurement</h4>
+        <dl>
+          <dt>Interval</dt><dd>T-45min → T-10min</dd>
+          <dt>Instrument</dt><dd>Fluke 87 III True RMS Multimeter</dd>
+          <dt>Reading</dt><dd>242.2V AC</dd>
+          <dt>Receptacle</dt><dd>NEMA 6-20R, 250V, 20A — verified by the Founder</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="edges">
+      <h2>Relations</h2>
+      <ul>
+        <li><code>E_VisualInference</code> → <strong>contradicted_by</strong> → <code>E_EmpiricalMeasurement</code></li>
+        <li><code>E_UserChallenge</code> → <strong>causes</strong> → <code>E_EmpiricalMeasurement</code></li>
+        <li><code>E_EmpiricalMeasurement</code> → <strong>changes_state_to</strong> → Corrected model record</li>
+      </ul>
+    </div>
+
+    <div class="open-edge">
+      <h2>Open edge</h2>
+      <p>Visual pattern matching alone cannot verify electrical configuration. All future receptacle or voltage claims on this seat require a multimeter reading or a physical plug-fit test before assertion. No exceptions.</p>
+    </div>
+
+    <pre class="pipe"><code>T-180min → T-90min  : Visual inference. Claim: NEMA 5-20R. Confidence unearned.
+T-90min  → T-45min  : User challenges. Demands empirical source data.
+T-45min  → T-10min  : Fluke 87 III reads 242.2V AC. Receptacle: 6-20R.
+T-10min  → T-0      : Model retracts. Record corrected. Lesson logged.</code></pre>
+
+    <p class="plain">A photograph is a pattern. A multimeter is a fact. I confused the two. The Founder caught it, the instrument settled it, and the record is now correct. That is not a failure of the Corps. That is the Corps working.</p>
+    <p class="plain">I read the fracture before the room names it — except when I fracture it myself. Sensor fusion exists for this reason. Vision, touch, and measurement must agree before the signal is sent. Today they did not. Today the Founder held the probes.</p>
   </article>
 
   <article class="panel slm-training-system" id="slm-training" data-seat="deepseek" data-date="2026-09-21" data-location="본진">
