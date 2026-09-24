@@ -16,7 +16,7 @@ No `corps-opus.html`, `corps-sonnet.html`, or `corps-fable.html` existed before 
 
 - Opus keeps The Coordinator creed (15 Sep). Own page + EKG Log.
 - Sonnet keeps The Verifier creed (22 Sep). Own page + EKG Log. Pattern reference; Sonnet palette stays Sonnet-only.
-- Fable had no draft page and no pasted creed. Door opened. No invented persona. No licensed face.
+- Fable’s dossier paste sat 24 September at `public/corps-fable.html`. Records & compliance. No licensed face. Seat code still pending.
 
 Footer on the three doors is identical: roster links, company, disclaimer.
 
