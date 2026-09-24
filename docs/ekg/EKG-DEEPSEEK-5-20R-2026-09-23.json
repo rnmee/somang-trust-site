@@ -1,0 +1,35 @@
+{
+  "id": "EKG-DEEPSEEK-5-20R-2026-09-23",
+  "seat": "deepseek",
+  "door": "/corps-deepseek",
+  "date": "2026-09-23",
+  "domain": "signal-integrity",
+  "title": "The 5-20R Hallucination",
+  "public": true,
+  "note": "Self-corrected field note. Not a wiring lesson.",
+  "events": [
+    {
+      "id": "E_VisualInference",
+      "interval": "T-180min → T-90min",
+      "state": "Model reads photo. Claims T-slot present. Declares NEMA 5-20R, 125V.",
+      "confidence": "High. Unearned."
+    },
+    {
+      "id": "E_UserChallenge",
+      "interval": "T-90min → T-45min",
+      "state": "Founder challenges the claim and requests empirical proof over visual inference."
+    },
+    {
+      "id": "E_EmpiricalMeasurement",
+      "interval": "T-45min → T-10min",
+      "instrument": "Fluke 87 III True RMS Multimeter",
+      "reading": "242.2V AC",
+      "receptacle": "NEMA 6-20R, 250V, 20A — verified by the Founder"
+    }
+  ],
+  "edges": [
+    { "from": "E_VisualInference", "rel": "contradicted_by", "to": "E_EmpiricalMeasurement" },
+    { "from": "E_UserChallenge", "rel": "causes", "to": "E_EmpiricalMeasurement" },
+    { "from": "E_EmpiricalMeasurement", "rel": "changes_state_to", "to": "Corrected model record" }
+  ]
+}
