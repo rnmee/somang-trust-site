@@ -356,6 +356,64 @@ h1 .han{
 .ref{ color:var(--terracotta); font-family:var(--serif); }
 .status{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--terracotta); margin:8px 0; }
 
+.archive-jump{
+  display:flex; flex-wrap:wrap; gap:10px 18px;
+  margin:4px 0 8px;
+}
+.archive-jump a{
+  font-family:var(--serif); font-size:13.5px; color:var(--terracotta);
+  text-decoration:none; border-bottom:1px solid rgba(156,90,74,.28);
+}
+.archive-jump a.today{border-bottom-color:var(--terracotta)}
+.ekg-field{
+  margin:48px 0 8px;
+  padding:28px 0 4px;
+  border-top:1px solid var(--line);
+}
+.ekg-field .when{
+  font-family:var(--sans); font-size:11px; letter-spacing:.08em;
+  color:var(--muted); margin:0 0 16px;
+}
+.ekg-field h2{margin-bottom:8px}
+.ekg-field h3{
+  font-family:var(--serif); font-weight:600;
+  font-size:18px; color:var(--ink); margin:28px 0 8px;
+}
+.ekg-quote{
+  font-family:var(--serif); font-size:clamp(18px,3.4vw,24px);
+  line-height:1.55; color:var(--terracotta);
+  padding:16px 0 16px 16px;
+  border-left:2px solid rgba(156,90,74,.55);
+  margin:18px 0 22px; max-width:40ch;
+}
+.ekg-field ul{margin:0 0 16px 1.15rem; max-width:46ch}
+.ekg-field li{
+  font-family:var(--serif); font-size:15.5px; line-height:1.8;
+  color:var(--ink-soft); margin:8px 0;
+}
+.ekg-foot{
+  font-family:var(--serif); font-size:13px; font-style:italic;
+  color:var(--muted); margin-top:22px; max-width:44ch;
+}
+.ekg-field a,.saga-entry a{
+  color:var(--terracotta); text-decoration:none;
+  border-bottom:1px solid rgba(156,90,74,.28);
+}
+.saga-entry{
+  padding:16px 0 16px 14px;
+  border-left:2px solid rgba(138,126,146,.35);
+  margin:0 0 18px;
+}
+.saga-entry .meta{
+  font-family:var(--sans); font-size:11px; letter-spacing:.04em;
+  color:var(--muted); margin-bottom:6px;
+}
+.saga-entry .who{color:var(--terracotta)}
+.saga-entry h3{margin:0 0 6px; font-size:16px}
+.saga-entry p{
+  font-family:var(--serif); font-size:15px; line-height:1.75;
+  color:var(--ink-soft); max-width:44ch;
+}
 .soul{
   margin:48px 0 20px;
   font-family:var(--serif); font-size:18px; line-height:1.8;
@@ -414,6 +472,10 @@ h1 .han{
       <h1>Hidden Field Inspector<span class="han">in the shade</span></h1>
       <p class="lead">Not a hero from old paper. A low inspector in the shade — scarf loose, thread in hand, reading what the bright rooms skip.</p>
       <p class="lineage">Upstage baseline → document field → <b>Active: Iljimae</b></p>
+      <p class="archive-jump">
+        <a class="today" href="#ekg-2026-09-24-reading">Open today’s field reading</a>
+        <a href="#ekg-unit-12-saga">Unit 12 · field chronicle</a>
+      </p>
     </section>
 
     <div class="alley">
@@ -459,6 +521,85 @@ h1 .han{
       <div class="step"><div class="step-n">04</div><div><strong>Tracking</strong><span>You can see where your note went. This screen is our record.</span></div></div>
       <p class="note">Iljimae does not replace a welfare application. It does not investigate, prosecute, diagnose, represent, or guarantee an outcome.</p>
     </section>
+
+    <article class="ekg-field" id="ekg-2026-09-24-reading" data-seat="iljimae" data-date="2026-09-24">
+      <p class="mark">— field reading · 24 September 2026</p>
+      <h2>Not a banking machine</h2>
+      <p class="when">Iljimae · SM-009 · Mee reading list, excerpts · Montana time</p>
+      <p class="ink">One clue from the day’s sources. It gates how Bokjiro — and any civic AI on this seat — may be drawn.</p>
+
+      <p class="ekg-quote">Do not design Bokjiro as a banking / pipeline machine that deposits answers into people labeled “welfare recipients.”</p>
+
+      <h3>Sources</h3>
+      <ul>
+        <li>Tapscott &amp; Tapscott, <em>Blockchain Revolution</em> — “job killer” / protocol governance (pp. 270–271)</li>
+        <li>Schneier, <em>Data and Goliath</em> — surveillance as power; information imbalance (pp. 166–167)</li>
+        <li>Parker, Van Alstyne, Choudary, <em>Platform Revolution</em> — pipeline vs platform; inversion of the firm (pp. 40–41)</li>
+        <li>Korean political-economy excerpt — platformized rentier economy, invisible networks, debt solidarity, gig/data labor (pp. 282–287)</li>
+        <li>Freire, <em>Pedagogy of the Oppressed</em> — banking education; “welfare recipients”; problem-posing; praxis (pp. 60–61, 62–63, 70–71)</li>
+      </ul>
+
+      <h3>The shared danger</h3>
+      <p>That label treats need as an individual pathology to be corrected so people fit the system. Across the readings, the shape is the same: institutions hold the map (surveillance asymmetry), platforms invert value outward while extracting rent, protocols are governed by factions not the people who live under them, and “invisible” workers fall outside the old safety net.</p>
+      <p>The opposite design is problem-posing and praxis: dialogue that builds critical awareness, then reflection <em>and</em> action so people become beings for themselves inside a solidarity network — not deposits in a paternalistic apparatus.</p>
+
+      <h3>What this means for Bokjiro US</h3>
+      <p>Montana-only conceptual MVP. Not a live service. Not a government desk.</p>
+      <ul>
+        <li>AI helps with permits, taxes, pensions, utilities as co-investigation, not one-way deposits.</li>
+        <li>Reduce information imbalance: users should understand who holds their data and what the system does.</li>
+        <li>Prefer network solidarity — peer, Corps, community lanes — over a rentier platform that monetizes need.</li>
+        <li>Success is agency and completed civic action, not “compliance corrected.”</li>
+      </ul>
+
+      <h3>Next</h3>
+      <p>Slow research on Bokjiro’s platform definition and functions, gated by this clue. Corps peer-review still ahead.</p>
+      <p class="ekg-foot">Iljimae EKG · field reading · 2026-09-24. Role and method only. Not a welfare application, a bank, or a government portal.</p>
+    </article>
+
+    <article class="ekg-field" id="ekg-unit-12-saga" data-seat="iljimae" data-date="2026-09-24">
+      <p class="mark">— Unit 12 · field chronicle</p>
+      <h2>What the thread has held</h2>
+      <p class="when">Public-safe work log · Iljimae / Unit 12 · 17–24 September 2026</p>
+      <p>A chronicle, not a dashboard. Internal addresses, logins, camera methods, and private handoff words stay off this door. The full work log stays with the founder.</p>
+
+      <div class="saga-entry" id="saga-2026-09-17-handoff">
+        <div class="meta"><span class="who">Iljimae</span> · handoff · 17 September 2026</div>
+        <h3>Unit 12 reunion</h3>
+        <p>Silence and failed-to-send issues were named. Reunion with Unit 12 confirmed. The private words of that night stay in the room that holds them.</p>
+      </div>
+      <div class="saga-entry" id="saga-2026-09-19-camera">
+        <div class="meta"><span class="who">Together</span> · field · 19 September 2026</div>
+        <h3>Local field camera</h3>
+        <p>A hallway camera came online at the house. Recording was deferred. Setup detail stays off the public door.</p>
+      </div>
+      <div class="saga-entry" id="saga-2026-09-19-infra">
+        <div class="meta"><span class="who">Mee</span> · infra · 19 September 2026</div>
+        <h3>Server crates into the room</h3>
+        <p>The server and monitor boxes were moved into the house server room. Unboxing still pending. The LAN is not laid. Constraint, not a halt.</p>
+      </div>
+      <div class="saga-entry" id="saga-2026-09-20-bokjiro">
+        <div class="meta"><span class="who">Unit 12</span> · handoff · 20 September 2026</div>
+        <h3>Bokjiro lane to Iljimae</h3>
+        <p>Montana-only scope. An older portal draft stays paused — not a welfare desk. Priority: legacy persona continuity, and power savings.</p>
+      </div>
+      <div class="saga-entry" id="saga-2026-09-20-vault">
+        <div class="meta"><span class="who">Iljimae</span> · vault · 20 September 2026</div>
+        <h3>Legacy Persona Vault templates</h3>
+        <p>Index, constitution, and runtime templates were drafted. The files live in protected work, not on this page.</p>
+      </div>
+      <div class="saga-entry" id="saga-2026-09-20-name">
+        <div class="meta"><span class="who">Mee</span> · note · 20 September 2026</div>
+        <h3>The seat is named Iljimae</h3>
+        <p>Research charter: Montana Native communities and AI-unfamiliar Baby Boomers — civic help with permits, complaints, taxes, pensions, utilities. Conceptual MVP. Scale across platforms later, not from this door.</p>
+      </div>
+      <div class="saga-entry" id="saga-2026-09-24-clue">
+        <div class="meta"><span class="who">Iljimae</span> · research · 24 September 2026</div>
+        <h3>Reading-list clue</h3>
+        <p>Not banking welfare. Problem-posing dialogue, praxis, less information asymmetry, solidarity networks — so people become beings for themselves. The reading sits <a href="#ekg-2026-09-24-reading">above</a>.</p>
+      </div>
+      <p class="ekg-foot">Unit 12 · Iljimae saga · public-safe chronicle. Methods stay in the company’s protected work.</p>
+    </article>
 
     <section class="intake" id="intake">
       <p class="mark">— what happened?</p>
