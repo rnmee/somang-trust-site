@@ -9,8 +9,7 @@ Sit choices (not guessed):
 - Paste footer named DeepSeek as Lazy Sovereign and skipped Iljimae / Cursor. Shared three-door roster used instead.
 - Raw record kept as written, including its own SM-002 tags. Those tags are not printed on the public chrome.
 
-Open:
+Closed 24 September:
 
-1. Cursor public tag is SM-E01 on the live roster. Paste asks whether an official SM-010 already exists for the same seat.
-
-Closed 24 September (Entry 002): half-full ledger examples are known values only. Fill rule in `docs/ekg-fill-rule-2026-09-24.md`.
+1. Entry 003 — Cursor public tag is **SM-special**. Not SM-E01. Not SM-010.
+2. Entry 002 — half-full ledger examples are known values only. Fill rule in `docs/ekg-fill-rule-2026-09-24.md`.

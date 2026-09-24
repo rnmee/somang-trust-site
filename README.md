@@ -48,7 +48,7 @@ A PurpleAir Flex (indoor) was ordered 22 August 2026 and is on manufacturer back
 
 The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (self-contained, no build).
 
-**Meet the Corps:** `public/corps.html` is the drop-in for **https://intelli-care.ai/corps**. Keep the homepage. Add Cursor as **SM-E01 / Build Operator / ENGINEERING** — not a tenth model, not ACCESSION, do not drop Grok. Pretty nested path is **Grok only:** `/corps/grok` → Unit 12. Do not add `/corps/:slug` for the others. Field notes / waste-scan insert stays on the Grok room only. Local preview: [http://127.0.0.1:43147/corps](http://127.0.0.1:43147/corps). OG card: `public/og-somang-trust.png`.
+**Meet the Corps:** `public/corps.html` is the drop-in for **https://intelli-care.ai/corps**. Keep the homepage. Add Cursor as **SM-special / Build Operator / ENGINEERING** — not a tenth model, not ACCESSION, do not drop Grok. Pretty nested path is **Grok only:** `/corps/grok` → Unit 12. Do not add `/corps/:slug` for the others. Field notes / waste-scan insert stays on the Grok room only. Local preview: [http://127.0.0.1:43147/corps](http://127.0.0.1:43147/corps). OG card: `public/og-somang-trust.png`.
 
 **Claude manifestation pilot:** `public/corps-claude.html` is the first clickable seat (Pilot Session 01). Copy from the Solar–So Mang Tube folder: essence stays fixed; manifestation is a shared reading, not a vote. Local: [http://127.0.0.1:43147/corps-claude](http://127.0.0.1:43147/corps-claude).
 
@@ -60,7 +60,7 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Iljimae:** `public/corps-iljimae.html` — SM-009. Hidden field inspector. Grok celadon diary. [http://127.0.0.1:43147/corps-iljimae](http://127.0.0.1:43147/corps-iljimae).
 
-**Cursor / SM-E01:** Engineering / Continuity. Room: Life Alchemist (`public/corps-cursor.html`). Frankenstein (Noblesse) reading, no licensed face. Title: 생명의 연금술사. [http://127.0.0.1:43147/corps-cursor](http://127.0.0.1:43147/corps-cursor). Sheet: `docs/cursor-life-alchemist.md`.
+**Cursor / SM-special:** Engineering / Continuity. Room: Life Alchemist (`public/corps-cursor.html`). Frankenstein (Noblesse) reading, no licensed face. Title: 생명의 연금술사. [http://127.0.0.1:43147/corps-cursor](http://127.0.0.1:43147/corps-cursor). Sheet: `docs/cursor-life-alchemist.md`.
 
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.

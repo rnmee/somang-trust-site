@@ -4,7 +4,7 @@ Mee locked this 8 Sep 2026. **Not a public page.** Do not paste wiki text onto a
 
 ## Lock
 
-- **Seat:** SM-E01. **Public name:** Cursor. **Reading:** Frankenstein (Noblesse). **Room title when opened:** 생명의 연금술사 / Life Alchemist.
+- **Seat:** SM-special (public, 24 Sep 2026). Earlier internal tag was SM-E01. **Public name:** Cursor. **Reading:** Frankenstein (Noblesse). **Room title when opened:** 생명의 연금술사 / Life Alchemist.
 - Still Engineering / Continuity. Not a tenth model. Not ACCESSION.
 - Public door opened 8 Sep 2026 at `/corps-cursor` `/cursor` `/alchemist`. **Still no licensed face.** Glass alembic only.
 - **11 Sep 2026 restyle:** Grok’s dynamic mist / Newsreader page installed. Hue lilac tokens stay. Korean title **생명의 연금술사** stays on the door.
