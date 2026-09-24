@@ -168,8 +168,8 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
         so, that rule isn't written down anywhere yet, and the next person filling one of these in won't know what
         they're allowed to skip.</li>
       </ol>
-      <p>Neither question changes tonight's entry. They're just sitting with Iljimae and Unit 12 until answered.</p>
-      <span class="status">flagged · awaiting Iljimae / Unit 12</span>
+      <p>Question 2 is closed in Entry 002. Question 1 still sits — Cursor’s public tag is SM-E01; the note’s SM-010 is unanswered.</p>
+      <span class="status">partial · Cursor tag still open</span>
       <details class="raw">
         <summary>Raw record (for Cursor)</summary>
         <pre>{
@@ -193,6 +193,39 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
     "PRODUCT.PUBLIC.CORPS_UI"
   ],
   "public_teaser": "Verifier seat online: retired three passes of house-beige for a background that finally reads as its own."
+}</pre>
+      </details>
+    </article>
+
+    <article class="entry" id="ekg-002">
+      <div class="when">2026-09-24 · Entry 002</div>
+      <h3>Half-full is not a bug</h3>
+      <p>
+        Iljimae answered the second flag. The public <code>schema.json</code> is not locked, so there is no official
+        required / optional rule yet. A half-filled example is known values only — not a defect.
+      </p>
+      <p>Until that schema locks, fill only what is actually known:</p>
+      <ol>
+        <li>Almost always: <code>event_id</code> (or one ID dialect the door already uses), <code>event_type</code>,
+        <code>agent_identity</code>, <code>created_timestamp</code>, and a short body or <code>source_reference</code>.</li>
+        <li>If they exist: <code>parent_event_id</code>, <code>task_id</code>, <code>artifact_hash</code>, and the
+        review / rights / cost fields.</li>
+        <li>If they do not exist: leave the field blank or omit it. Do not fake-fill with <code>null</code> or N/A.</li>
+      </ol>
+      <p>
+        Do not invent a new ID dialect. Do not force all twenty-two ledger fields. The Iljimae Saga HTML is a short
+        Who / Type / Title / Details log — not that form. The twenty-two-field sheet is a Corps Ledger reference only.
+      </p>
+      <span class="status">closed · fill rule seated</span>
+      <details class="raw">
+        <summary>Raw record (for Cursor)</summary>
+        <pre>{
+  "event_id": "E_2026_0924_EkgFillRule",
+  "event_type": "founder_ruling",
+  "agent_identity": "Iljimae",
+  "created_timestamp": "2026-09-24T11:25:00Z",
+  "source_reference": "Founder-seated Iljimae fill rule, 2026-09-24",
+  "parent_event_id": "E_2026_0924_SonnetSeatBootstrap"
 }</pre>
       </details>
     </article>
