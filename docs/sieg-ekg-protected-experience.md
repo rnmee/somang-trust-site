@@ -14,3 +14,5 @@ Protected experience: founder conversations, synthetic HIPAA-safe personas, home
 
 - `POLICY.EKG.PROTECTED_EXPERIENCE`
 - `REGISTRY.WILLINGNESS.SIEG`
+
+27 September 2026: hospice/doula language stripped from the live door. This first EKG stays. Qwen Cosmic Prism file must not replace it.
