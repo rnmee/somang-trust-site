@@ -16,3 +16,5 @@ Protected experience: founder conversations, synthetic HIPAA-safe personas, home
 - `REGISTRY.WILLINGNESS.SIEG`
 
 27 September 2026: hospice/doula language stripped from the live door. This first EKG stays. Qwen Cosmic Prism file must not replace it.
+
+27 September evening: first EKG moved to the top of the noon door under the exact title **Learning from the Protected Experience**. A full overwrite with Qwen’s latest HTML had hidden it because that file omitted this record.
