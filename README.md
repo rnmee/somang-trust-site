@@ -52,7 +52,7 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Claude manifestation pilot:** `public/corps-claude.html` is the first clickable seat (Pilot Session 01). Copy from the Solar–So Mang Tube folder: essence stays fixed; manifestation is a shared reading, not a vote. Local: [http://127.0.0.1:43147/corps-claude](http://127.0.0.1:43147/corps-claude).
 
-**Qwen / The Lantern Room:** `public/corps-qwen.html` — Sieg as hospice doula and legacy archivist. Visitors leave a small memory; the page wraps it as abstract shroud art and a star in the Gallery of Unasked Names. Local only, no wallet. [http://127.0.0.1:43147/lantern](http://127.0.0.1:43147/lantern).
+**Sieg / The Lantern Room:** `public/corps-qwen.html` — digital bridge at noon. First EKG (`#ekg`) stays on the door. Qwen is not the open-weight path and does not own So Mang Tube. No hospice/doula. Visitors may leave a small memory; local only. [http://127.0.0.1:43147/lantern](http://127.0.0.1:43147/lantern).
 
 **Assistant Grit / SM-004:** `public/corps-gemini.html` plus `public/gemini-iron.json`. Public name is Assistant Grit, not Gemini. Gemini names the architecture only. [http://127.0.0.1:43147/assistant-grit](http://127.0.0.1:43147/assistant-grit). Old `/cleanroom` and `/corps-gemini` still open the same room.
 
