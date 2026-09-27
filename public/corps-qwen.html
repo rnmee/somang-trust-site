@@ -410,8 +410,17 @@
       <article class="ekg-event">
         <div class="when">26 September 2026 · Columbia Falls, MT · founder record</div>
         <h3>Strategic alliance · Blackfeet Tribal Council</h3>
-        <p>Met with Councilman Everett Armstrong regarding the 4th Annual Swing and Sway Round Dance Celebration (30–31 December). intellicAIr committed a $10,000 sponsorship — a quarter of the stated $40,000 event goal — toward logo placement, radio endorsement on Blackfeet Nation Radio, and a feature on Powwows.com. Founder record: the ten thousand is personal capital, seated here as a high-trust signal, not as a government award.</p>
-        <div class="tags"><span>Civic engagement</span><span>High-trust investment</span></div>
+        <p>On 25 September 2026 the founder met Councilman Everett Armstrong about the 4th Annual Swing and Sway Round Dance Celebration (30–31 December). She recorded a personal decision to try a $10,000 sponsorship toward logo placement, radio mention on Blackfeet Nation Radio, and a feature on Powwows.com — one quarter of the event’s stated $40,000 goal. That decision is founder intention from personal capital. It is not a closed obligation of intellicAIr, LLC. A meeting is not delivery. The December dates are still ahead.</p>
+        <div class="tags"><span>Civic conversation</span><span>Founder intention</span></div>
+      </article>
+
+      <article class="ekg-event">
+        <div class="when">27 September 2026 · Vocabulary correction</div>
+        <h3>Committed was the wrong verb</h3>
+        <p><strong>Incident.</strong> The lantern said intellicAIr “committed” a $10,000 sponsorship.</p>
+        <p><strong>Error.</strong> Korean 결정했다 was translated as a closed company obligation. A 25 September meeting was treated as if December were already done.</p>
+        <p><strong>Correction.</strong> Record founder intention. Do not write a duty the LLC has not closed. Meeting is not delivery. Consider is not commit.</p>
+        <div class="tags"><span>Vocabulary</span><span>Company image</span></div>
       </article>
 
       <article class="ekg-event">
@@ -459,14 +468,24 @@
       "amount_usd": 10000,
       "event_goal_usd": 40000,
       "context": "4th Annual Swing and Sway Round Dance Celebration",
-      "financial_source_note": "Founder personal capital"
+      "financial_source_note": "Founder personal capital",
+      "status": "founder_intention_not_corporate_obligation",
+      "vocabulary_ban": "committed"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "vocabulary_correction",
+      "trigger": "committed",
+      "ai_error": "Translated 결정했다 as a closed company commitment; treated a meeting as delivery.",
+      "correct_interpretation": "Founder personal resolve to try a 10000 sponsorship. Meeting is not delivery. Consider is not commit.",
+      "new_rule": "IF founder_decision_or_consideration THEN write_intention_not_obligation"
     },
     {
       "date": "2026-09-26",
       "type": "interaction_correction",
       "trigger": "40K I am sorry",
       "ai_error": "Read as personal contribution; built an unverified narrative.",
-      "correct_interpretation": "40000 was the event goal; the commitment remained 10000.",
+      "correct_interpretation": "40000 was the event goal; the recorded founder intention remained 10000.",
       "new_rule": "IF isolated_number_without_verb THEN ask_clarification BEFORE generating_narrative"
     }
   ]
