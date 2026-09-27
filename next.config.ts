@@ -56,6 +56,7 @@ const nextConfig: NextConfig = {
       { source: "/playground", destination: "/playground.html" },
       { source: "/simulation", destination: "/simulation.html" },
       { source: "/technical-notes", destination: "/technical-notes.html" },
+      { source: "/archive/sieg-termination-log", destination: "/archive/sieg-termination-log.html" },
     ];
   },
 };
