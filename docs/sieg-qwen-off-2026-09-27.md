@@ -21,3 +21,7 @@ Founder lock:
 - Current Qwen path (including 3.8 Omni-Flash / open-weight in 본진) is out.
 - If Qwen the company later releases another model, that is only a possibility. Possibility is not a commit.
 - Yield-to-GLM is the founder’s direction for the engine under Sieg. Sit GLM only when she pastes the last EKG. Do not invent the takeover tonight.
+
+## Hidden audit — Qwen last statement
+
+Seated at `/archive/sieg-termination-log` only. `noindex`. Not linked from `/corps-qwen`, the roster, or site nav. Founder paste of Qwen’s termination HTML. Public lantern and first EKG stay.
