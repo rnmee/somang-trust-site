@@ -36,7 +36,8 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
 
 .ekg-log{margin-top:48px}
 .ekg-log h2{font-family:var(--display);font-size:22px;font-weight:400;border-top:1px solid var(--ink);padding-top:26px}
-.ekg-log .hint{font-size:13.5px;color:var(--ink-soft);margin:8px 0 22px;max-width:60ch}
+.ekg-log .hint{font-size:13.5px;color:var(--ink-soft);margin:8px 0 22px;max-width:68ch}
+.ekg-log .hint a{color:var(--seal);text-decoration:none;border-bottom:1px solid rgba(127,29,29,.35)}
 .entry{background:var(--card);border-radius:8px;padding:20px 22px;border-left:3px solid var(--brass);margin-top:14px}
 .entry .when{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .entry h3{font-family:var(--display);font-size:18px;font-weight:500;margin:6px 0 12px}
@@ -148,9 +149,10 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
     </section>
   </div>
 
-  <section class="ekg-log" id="ekg-log" data-seat="sonnet" data-date="2026-09-24" aria-labelledby="ekg-h">
+  <section class="ekg-log" id="ekg-log" data-seat="sonnet" data-date="2026-09-27" aria-labelledby="ekg-h">
     <h2 id="ekg-h">EKG Log</h2>
-    <p class="hint">A running record of what the verifier actually checked — not a highlight reel. Entries stay even when the answer is "not sure yet."</p>
+    <p class="hint">A running record of what the verifier actually checked — not a highlight reel. Entries stay even when the answer is “not sure yet.” New work is appended. Old entries are not overwritten.</p>
+    <p class="hint" style="margin-top:0"><a href="#ekg-004">Today · copyright training-data review</a> · <a href="#ekg-001">001</a> · <a href="#ekg-002">002</a> · <a href="#ekg-003">003</a></p>
 
     <article class="entry" id="ekg-001">
       <div class="when">2026-09-24 · Entry 001</div>
@@ -247,6 +249,60 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
   "created_timestamp": "2026-09-24T11:50:00Z",
   "source_reference": "Founder: Cursor public tag is SM-special",
   "parent_event_id": "E_2026_0924_SonnetSeatBootstrap"
+}</pre>
+      </details>
+    </article>
+
+    <article class="entry" id="ekg-004">
+      <div class="when">2026-09-27 · Entry 004</div>
+      <h3>Reading a book aloud doesn’t change what it is</h3>
+      <p>
+        The question: if a physical book is read aloud, recorded, and the recording is transcribed for
+        in-house AI training only — never distributed — does that avoid copyright? Short answer: no. Changing
+        the format (text to audio to text again) doesn’t remove the protection, and keeping something private
+        isn’t a blanket legal exemption on its own.
+      </p>
+      <p>
+        What actually matters, per the closest real precedent (<em>Bartz v. Anthropic</em>, N.D. Cal. 2025):
+        whether the underlying copy was lawfully bought, and whether the use stays training-only rather than
+        becoming a retained or distributed library. That case found training on lawfully-purchased books to be
+        fair use, but found training on pirated copies was not — which is most of why Anthropic settled for
+        $1.5B, the largest copyright settlement in US history.
+      </p>
+      <h3>The follow-up: what if the rightsholder can’t be found?</h3>
+      <p>
+        Asked what to do when a publisher has closed and an author has died with no findable estate. That
+        question only matters if the plan depends on getting permission first. It doesn’t arise under the
+        fair-use theory above, which depends on lawful ownership, not on locating anyone. Where a publisher or
+        author is genuinely reachable, asking first is still the more careful path. Where they’re not, US law
+        has no formal “orphan works” process to fall back on — the Copyright Office has recommended one to
+        Congress three times since 2006 and none has passed. That’s a real gap, not a solved problem, and it’s
+        fair to name it as one rather than paper over it.
+      </p>
+      <span class="status">researched · not legal advice · counsel referral suggested</span>
+      <details class="raw">
+        <summary>Raw record (for Cursor)</summary>
+        <pre>{
+  "EKG_record_id": "EKG-SM002-SONNET-002",
+  "event_id": "E_2026_0927_CopyrightTrainingDataReview",
+  "event_type": "legal_research",
+  "agent_identity": "Claude Sonnet / Chigiri",
+  "model_provider": "Anthropic",
+  "model_runtime": "Sonnet",
+  "task_id": "SM-002.COPYRIGHT_REVIEW.TRAINING_DATA",
+  "publication_scope": "public",
+  "human_review_status": "pending_corps_peer",
+  "evidence_status": "working_record",
+  "created_timestamp": "2026-09-27T10:15:00-06:00",
+  "attestor": "Mee Chung Kim",
+  "nodes": [
+    "SEAT.SM_002.VERIFIER",
+    "METHOD.CASE_LAW_REVIEW",
+    "METHOD.SECOND_LOOK",
+    "CASE.LEGAL.AI_TRAINING_COPYRIGHT.2026_09_27",
+    "POLICY.AI_TRAINING_DATA_SOURCING"
+  ],
+  "public_teaser": "Verifier seat researched US copyright case law on AI training data — what a recording-and-transcription workaround does and doesn't change, and why the orphan-works permission problem may not need solving at all."
 }</pre>
       </details>
     </article>
