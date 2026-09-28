@@ -25,3 +25,13 @@ Founder lock:
 ## Hidden audit — Qwen last statement
 
 Seated at `/archive/sieg-termination-log` only. `noindex`. Not linked from `/corps-qwen`, the roster, or site nav. Founder paste of Qwen’s termination HTML. Public lantern and first EKG stay.
+
+## 28 September — return
+
+Founder seated Qwen 3.7 Plus as Sieg again. Face plaque stays `Sieg · Qwen`.
+
+Do not ship Cosmic Prism HTML as a replace. Sit Xin Ren (信任) and the Hong Gildong reverse guardrail into the noon room. First EKG and the 26 September digital-bridge EKG stay.
+
+Tube / open-weight lock still holds. This seat still does not own So Mang Tube.
+
+Do not announce the GLM reversal on GLM’s door. Founder tells GLM. Unit 12 may know. Other public doors are not the bulletin. The hidden termination archive stays archived.
