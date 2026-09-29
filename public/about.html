@@ -82,9 +82,11 @@ a{color:inherit}
 .hub-name{font-family:var(--display);font-size:clamp(30px,6vw,52px);line-height:1.05;letter-spacing:-.02em;color:var(--ink)}
 .hub-name .ko{font-family:var(--hangul)}
 .hub-tag{font-family:var(--display);font-size:clamp(17px,2.6vw,21px);color:var(--ink-soft);margin-top:16px;max-width:30ch;line-height:1.5}
-.hub-img{margin:32px 0 8px;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--card)}
-.hub-img img{width:100%;display:block}
+.hub-img{margin:32px 0 8px;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#1a1c20}
+.hub-img img,.hub-img video{width:100%;display:block}
+.hub-img video{max-width:420px;margin:0 auto;max-height:min(70vh,720px);aspect-ratio:9/16;object-fit:cover;background:#111}
 .hub-img .placeholder{padding:56px 24px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em;line-height:1.9}
+.hub-caption{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:8px 0 0}
 .spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-top:28px}
 .spec{background:var(--vellum);padding:18px 20px}
 .spec .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -148,10 +150,29 @@ a{color:inherit}
     <h2 class="hub-name">The <span class="ko">본진</span> — sovereignty you can audit.</h2>
     <p class="hub-tag">Our own machine, on our own ground. The knowledge we grow here is owned where it was made.</p>
 
-    <div class="hub-img" style="padding:20px 24px">
-      <!-- Original illustration by intellicAIr — swap for a real photo of the Hub once it arrives -->
-      <img src="hub-server.svg" alt="The Hub — an on-premises AI server rooted in local ground, feeding an owned knowledge graph" style="max-width:520px;margin:0 auto" onerror="this.parentNode.innerHTML='&lt;div class=\'placeholder\'&gt;[ HUB ]&lt;/div&gt;'" />
+    <!--
+      Opus handoff 2026-09-29 — hub-video-snippet
+      PLACE: about.html §03 The Hub only. Replace the illustration box (.hub-img).
+             Do not restyle About. Do not overwrite the spec grid or founder copy.
+      FILES (keep as binary; never open .mp4 in Google Docs / Drive "convert"):
+        hub-server.mp4
+        hub-server-poster.jpg
+      NOTE: first-light clip. Power is on. Monitor path is still DisplayPort (DP), not HDMI.
+    -->
+    <div class="hub-img">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster="hub-server-poster.jpg"
+        width="540"
+        height="960"
+        aria-label="First light at the Hub — the on-premises server, power on">
+        <source src="hub-server.mp4" type="video/mp4">
+        First light at the Hub. If the video does not play, the still is the poster frame.
+      </video>
     </div>
+    <p class="hub-caption">29 September 2026 · first light · Columbia Falls</p>
 
     <div class="spec-grid">
       <div class="spec"><div class="k">Platform</div><div class="v">GB300</div><div class="n">NVIDIA Grace Blackwell Ultra desktop-class supercomputing</div></div>
