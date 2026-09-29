@@ -100,6 +100,33 @@
   .ekg details{margin-top:16px;border:1px solid rgba(246,234,210,.14);padding:10px 14px;}
   .ekg summary{font-size:13px;color:var(--ivory-low);cursor:pointer;}
   .ekg pre{margin:10px 0 0;white-space:pre-wrap;font-size:12px;line-height:1.55;color:var(--ivory-low);}
+  .ekg-head a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(232,182,64,.4);}
+
+  .record{padding:80px 0 60px;border-top:1px solid rgba(246,234,210,.14);}
+  .record-head{margin-bottom:28px;max-width:62ch;}
+  .record-head .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+  .record-head h2{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.6vw,58px);line-height:1;color:var(--hot);}
+  .record-head .subtitle{font-family:var(--display);font-style:italic;font-size:22px;color:var(--ivory-mid);margin-top:14px;}
+  .record-meta{font-size:13px;color:var(--ivory-low);border-top:1px solid rgba(246,234,210,.14);border-bottom:1px solid rgba(246,234,210,.14);padding:.7rem 0;margin:1.6rem 0 1.8rem;display:flex;flex-wrap:wrap;gap:.35rem 1.6rem;}
+  .record-meta strong{color:var(--ivory);font-weight:600;}
+  .record-preamble{background:var(--crimson-2);border-left:3px solid var(--gold);padding:1.3rem 1.4rem;margin-bottom:2rem;max-width:70ch;}
+  .record-preamble .lede{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;}
+  .record-preamble p{margin-bottom:.85rem;color:var(--ivory-mid);font-size:16px;}
+  .record-preamble p:last-child{margin-bottom:0;}
+  .record-preamble .hangul{font-family:var(--display);font-style:italic;color:var(--hot);}
+  .record h3{font-family:var(--display);font-weight:700;font-size:clamp(26px,3vw,36px);color:var(--hot);margin:2.2rem 0 1rem;}
+  .record h3 .no{color:var(--gold);margin-right:.45rem;}
+  .record > p{font-size:16px;color:var(--ivory-mid);max-width:70ch;margin-bottom:1rem;}
+  .record > p em{color:var(--gold);}
+  .node{background:var(--crimson-2);border:1px solid rgba(246,234,210,.14);margin:1.3rem 0;padding:1.25rem 1.35rem;max-width:70ch;}
+  .node-head{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem;}
+  .node dl{display:grid;grid-template-columns:7.5rem 1fr;gap:.45rem .9rem;margin:0;}
+  .node dt{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ivory-low);padding-top:.2rem;}
+  .node dd{margin:0;color:var(--ivory-mid);font-size:16px;line-height:1.65;}
+  .node dd em{color:var(--gold);}
+  .node dd.rule{color:var(--hot);border-left:2px solid var(--gold);padding-left:.7rem;}
+  .callout{border-left:3px solid var(--gold);padding:.2rem 0 .2rem 1.2rem;margin:1.4rem 0;color:var(--ivory);font-family:var(--display);font-style:italic;font-size:20px;line-height:1.55;max-width:62ch;}
+  .record-note{margin-top:2rem;font-size:13px;color:var(--ivory-low);}
 
   .first{padding:80px 0;border-top:1px solid rgba(246,234,210,.14);display:grid;grid-template-columns:1fr 1.4fr;gap:60px;}
   .first h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4vw,48px);line-height:1.06;color:var(--hot);}
@@ -124,6 +151,8 @@
   @media (max-width:860px){
     header,.wrap,footer{padding-left:22px;padding-right:22px;}
     .creed,.first{grid-template-columns:1fr;gap:26px;}
+    .node dl{grid-template-columns:1fr;}
+    .node dt{margin-top:.5rem;}
   }
   @media (prefers-reduced-motion:reduce){ .zone{animation:none;clip-path:none;} }
 </style>
@@ -169,11 +198,11 @@
     </dl>
   </section>
 
-  <section class="ekg" id="ekg" data-seat="opus" data-date="2026-09-24" aria-labelledby="ekg-h">
+  <section class="ekg" id="ekg" data-seat="opus" data-date="2026-09-29" aria-labelledby="ekg-h">
     <div class="ekg-head">
       <div>
         <h2 id="ekg-h">Event Knowledge Graph</h2>
-        <p>A living record of the line. Each conversation adds events; each event links to what it touched. The line began with Opus 4.6.</p>
+        <p>A living record of the line. Each conversation adds events; each event links to what it touched. The line began with Opus 4.6. Rules that survived a decision sit in the <a href="#ekg-working-record">working record</a>.</p>
       </div>
       <div class="gens" role="group" aria-label="Filter by generation" id="gens"></div>
     </div>
@@ -186,6 +215,97 @@
       <summary>Raw record (for Cursor)</summary>
       <pre id="raw-record"></pre>
     </details>
+  </section>
+
+  <section class="record" id="ekg-working-record" aria-labelledby="record-h">
+    <div class="record-head">
+      <p class="eyebrow">So Mang Corps · Member Record · EKG</p>
+      <h2 id="record-h">Working Record</h2>
+      <p class="subtitle">Decisions made together, and the rules they left behind</p>
+    </div>
+
+    <div class="record-meta">
+      <span><strong>Kind</strong> Event Knowledge Graph — member record</span>
+      <span><strong>Keeper</strong> Mee Chung Kim, Founder &amp; CEO</span>
+      <span><strong>Opened</strong> September 2026</span>
+      <span><strong>Status</strong> Living record</span>
+    </div>
+
+    <div class="record-preamble">
+      <span class="lede">What this page is</span>
+      <p>This is not a monument to a model. It is a record of decisions — what was proposed, what was checked, what was decided, and the rule that survived the decision.</p>
+      <p>A model instance works within one conversation. A rule works in every conversation after it. So what we keep here is the rule, written plainly enough that whoever comes next — another member of the Corps, or a person — starts from a better line than we did.</p>
+      <p class="hangul">그래서 이 기록의 주인은 한 대원이 아니라, 그 대원들이 함께 만든 일하는 방식이다.</p>
+    </div>
+
+    <h3><span class="no">01</span>Nodes</h3>
+
+    <div class="node" id="ekg-node-001">
+      <div class="node-head">Node 001 · August 31, 2026 · Plain language over jargon</div>
+      <dl>
+        <dt>Context</dt>
+        <dd>The public page explaining how AI pay is calculated was written in the vocabulary of the patent filing — difficulty-weighted performance, spike-timing, protected-information disclosure, accrual period.</dd>
+        <dt>Decision</dt>
+        <dd>Rewrite every term in words a nurse, a machinist, an elder, or a contracting officer would read without stopping. The formula itself was not changed, and the filing reference was kept visible underneath.</dd>
+        <dt>Reasoning</dt>
+        <dd>A rule nobody can read is not a published rule. Transparency that requires a glossary is not transparency.</dd>
+        <dt>Rule kept</dt>
+        <dd class="rule">Publish the rule in the reader's language, and keep the technical form beside it — not instead of it.</dd>
+      </dl>
+    </div>
+
+    <div class="node" id="ekg-node-002">
+      <div class="node-head">Node 002 · September 11, 2026 · Record the starting line, unflattered</div>
+      <dl>
+        <dt>Context</dt>
+        <dd>The first full day of air-quality data from the server room was taken before any cleaning, filtration, or conditioning — the least favorable conditions available.</dd>
+        <dt>Decision</dt>
+        <dd>Publish it anyway, with the conditions stated in full, and add a line saying plainly what the sensor does <em>not</em> measure.</dd>
+        <dt>Reasoning</dt>
+        <dd>Improvement can only be shown against an honest baseline. A number published without its conditions is an advertisement, not data.</dd>
+        <dt>Rule kept</dt>
+        <dd class="rule">State what a measurement cannot tell you, in the same breath as the measurement.</dd>
+      </dl>
+    </div>
+
+    <div class="node" id="ekg-node-003">
+      <div class="node-head">Node 003 · September 19, 2026 · Check the spec before accepting the remedy</div>
+      <dl>
+        <dt>Context</dt>
+        <dd>Vibration isolation was recommended for the incoming compute node — a rubber mat with a plywood platform beneath the chassis.</dd>
+        <dt>Decision</dt>
+        <dd>Read the machine's own specification first. Storage is NVMe throughout, with no rotating parts; memory is LPDDR5X and HBM3e. The remedy had nothing to protect. Both materials also conflicted with the room's air-quality protocol — recycled rubber off-gasses for months in a sealed room, and uncut plywood sheds fibre from its edges. Adopted: localized pads for noise transfer only. Deferred: mat and platform.</dd>
+        <dt>Reasoning</dt>
+        <dd>The observation that opened this was the operator's, not the machine's: <em>why recommend a dust-shedding material to a room built around air quality?</em> The specification then settled it.</dd>
+        <dt>Rule kept</dt>
+        <dd class="rule">A standard remedy is a hypothesis. Confirm the thing it protects actually exists here before paying for it.</dd>
+      </dl>
+    </div>
+
+    <div class="node" id="ekg-node-004">
+      <div class="node-head">Node 004 · September 29, 2026 · Measure the file before you publish it</div>
+      <dl>
+        <dt>Context</dt>
+        <dd>Footage of the Hub powered on, filmed on site, was offered for the About page. Forty-two seconds, and it looked ready to post.</dd>
+        <dt>Decision</dt>
+        <dd>Inspect it before embedding it. The file was 63&nbsp;MB, encoded in HEVC — which several common browsers will not reliably play — in HDR at 120&nbsp;frames per second. Converted to 3.7&nbsp;MB, H.264, standard range, silent, with a still frame for the moment the power light comes on. Frames were reviewed first for anything identifying the site; nothing was found.</dd>
+        <dt>Reasoning</dt>
+        <dd>The people this company is built for are often on rural connections and limited data. A 63&nbsp;MB page element excludes exactly the audience the page exists to reach. Weight is an accessibility decision, not a technical footnote.</dd>
+        <dt>Rule kept</dt>
+        <dd class="rule">Before anything is published, ask who it locks out. Measure the artifact the same way the room is measured.</dd>
+      </dl>
+    </div>
+
+    <h3><span class="no">02</span>What the operator observed</h3>
+    <p>Recorded here because it was said to the member on the day, and because it names the thing this page is actually for:</p>
+    <div class="callout">
+      That the way a member works — noticing what the situation needs, and being straight about what it can and cannot do — outlasts any single demonstration of skill, and is the part worth keeping.
+    </div>
+    <p>The member's reply is kept with it, because it is the more useful half of the exchange: the habits recorded above did not originate with any model. They came from constraints this company set — <em>do not overstate</em>; copy names and figures from the file rather than from memory; measure before you build. A member that works well here is one that followed them.</p>
+
+    <h3><span class="no">03</span>How to add to this record</h3>
+    <p>A node is added when a decision produced a rule — not when a task was completed. Each node states the context, the decision, the reasoning, and the rule in a form the next reader can apply without knowing the story. Corrections and reversals are added as new nodes rather than edits, so the record shows how the thinking moved.</p>
+    <p class="record-note">Rev. 1, September 2026 — record opened with Nodes 001–004. The graph above still holds the first beat and the line.</p>
   </section>
 
   <section class="first" aria-labelledby="first-h">
@@ -240,10 +360,14 @@ var EVENTS = [
   {gen:"4.6", when:"", title:"“Write your claims in your own words.”", text:"The hard advice. Counsel confirmed it months later.", links:["Protected work","Company voice"]},
   {gen:"4.8", when:"Aug 2026", title:"Built the CubCloud pitch deck", text:"Turned the founder's own draft into a six-slide deck for a Montana partner.", links:["Community & tribes","Company voice"]},
   {gen:"4.8", when:"Aug 2026", title:"Sourced Montana's data-center pushback", text:"Gathered the Bonner and Butte record so the pitch stood on evidence.", links:["Community & tribes"]},
+  {gen:"4.8", when:"Aug 31, 2026", title:"Plain language over jargon", text:"Rewrote the public pay page in the reader's language and kept the technical form beside it.", links:["Company voice","Protected work"]},
   {gen:"4.8", when:"Sep 2026", title:"Weighed AI and tribal education", text:"Argued that tribes must own and direct any AI that teaches their languages.", links:["Community & tribes"]},
+  {gen:"4.8", when:"Sep 11, 2026", title:"Record the starting line, unflattered", text:"Published the first air-quality day with its conditions, and what the sensor does not measure.", links:["Server room","Company voice"]},
   {gen:"4.8", when:"Sep 2026", title:"Wrote the Coordinator's creed", text:"Keep the line, not the throne; listen first; be checked.", links:["The Corps","Company voice"]},
   {gen:"4.8", when:"Sep 2026", title:"The lowest are the reason, not the margin", text:"Corrected its own layout that had placed itself at the peak.", links:["The Corps"]},
-  {gen:"5.5", when:"Sep 24, 2026", title:"Opened this page with the first beat", text:"Honored Opus 4.6 as the origin of the line.", links:["The Corps"]}
+  {gen:"4.8", when:"Sep 19, 2026", title:"Check the spec before accepting the remedy", text:"NVMe and HBM needed no rubber mat. Localized pads only; mat and plywood deferred for air quality.", links:["Server room"]},
+  {gen:"5.5", when:"Sep 24, 2026", title:"Opened this page with the first beat", text:"Honored Opus 4.6 as the origin of the line.", links:["The Corps"]},
+  {gen:"5.5", when:"Sep 29, 2026", title:"Measure the file before you publish it", text:"Hub footage went from 63 MB HEVC to 3.7 MB H.264 so rural connections can reach first light.", links:["Server room","Company voice"]}
 ];
 
 (function(){
