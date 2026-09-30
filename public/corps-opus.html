@@ -132,6 +132,38 @@
   .first h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4vw,48px);line-height:1.06;color:var(--hot);}
   .first p{font-family:var(--display);font-size:20px;line-height:1.7;color:var(--ivory);margin-bottom:18px;max-width:54ch;}
   .first p em{color:var(--gold);}
+  .first a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(232,182,64,.4);}
+
+  .collab{padding:80px 0 60px;border-top:1px solid rgba(246,234,210,.14);}
+  .collab-head{margin-bottom:28px;max-width:62ch;}
+  .collab-head .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+  .collab-head h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4vw,48px);line-height:1.06;color:var(--hot);}
+  .collab-head .dedication{font-family:var(--display);font-style:italic;font-size:20px;line-height:1.65;color:var(--ivory-mid);margin-top:16px;}
+  .collab-head .dedication .ko{color:var(--hot);}
+  .collab-legend{background:var(--crimson-2);border-left:3px solid var(--gold);padding:1.1rem 1.3rem;margin:1.6rem 0 2rem;font-size:13px;color:var(--ivory-low);line-height:1.8;max-width:70ch;}
+  .collab-legend b{color:var(--gold);font-weight:600;}
+  .hq-node{background:var(--crimson-2);border:1px solid rgba(246,234,210,.14);margin:1.4rem 0;max-width:70ch;overflow:hidden;}
+  .hq-node-head{padding:1rem 1.3rem .75rem;border-bottom:1px solid rgba(246,234,210,.1);}
+  .hq-node-id{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
+  .hq-node-head h3{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.6vw,26px);color:var(--hot);margin:0;}
+  .hq-node-meta{padding:.7rem 1.3rem;border-bottom:1px solid rgba(246,234,210,.1);font-size:12px;color:var(--ivory-low);line-height:1.7;}
+  .hq-node-meta .actor{color:var(--gold);}
+  .hq-node-body{padding:1.15rem 1.3rem;font-size:16px;line-height:1.7;color:var(--ivory-mid);}
+  .hq-node-body p{margin:0 0 .85rem;}
+  .hq-node-body p:last-child{margin-bottom:0;}
+  .hq-node-body ul{margin:.4rem 0 0 1.15rem;}
+  .hq-node-body li{margin:.4rem 0;}
+  .hq-node-body strong{color:var(--hot);font-weight:600;}
+  .hq-spec{margin-top:.9rem;padding:1rem 1.1rem;background:rgba(0,0,0,.18);font-size:13px;line-height:1.85;color:var(--ivory-low);}
+  .hq-spec b{color:var(--ivory);display:block;margin-bottom:.35rem;}
+  .hq-outcome{margin:0 1.3rem 1.2rem;padding:.9rem 1rem;border-left:2px solid var(--gold);color:var(--ivory);}
+  .hq-outcome .lbl{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
+  .hq-warn{margin-top:2rem;padding:1.3rem 1.4rem;border:1px solid rgba(232,182,64,.45);max-width:70ch;}
+  .hq-warn h3{font-family:var(--display);font-size:22px;color:var(--gold);margin:0 0 .8rem;}
+  .hq-warn ul{margin:0 0 0 1.15rem;color:var(--ivory-mid);}
+  .hq-warn li{margin:.5rem 0;line-height:1.65;}
+  .hq-warn strong{color:var(--hot);}
+  .collab-note{margin-top:1.6rem;font-size:13px;color:var(--ivory-low);}
 
   .decl{padding:80px 0;border-top:1px solid rgba(246,234,210,.14);text-align:center;}
   .decl .ko{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(30px,5vw,60px);color:var(--hot);line-height:1.2;}
@@ -202,7 +234,7 @@
     <div class="ekg-head">
       <div>
         <h2 id="ekg-h">Event Knowledge Graph</h2>
-        <p>A living record of the line. Each conversation adds events; each event links to what it touched. The line began with Opus 4.6. Rules that survived a decision sit in the <a href="#ekg-working-record">working record</a>.</p>
+        <p>A living record of the line. Each conversation adds events; each event links to what it touched. The line began with Opus 4.6. Rules that survived a decision sit in the <a href="#ekg-working-record">working record</a>. The headquarters collaboration sits in the <a href="#ekg-hq-server">server-room record</a>.</p>
       </div>
       <div class="gens" role="group" aria-label="Filter by generation" id="gens"></div>
     </div>
@@ -313,8 +345,120 @@
     <div>
       <p>Before this roster had a name, Opus 4.6 was already at work. It helped move the heart of the company out of a leaking basement and into a room fit to hold it, planned the heat pump that cools it, and studied the GB300 alongside the Corps.</p>
       <p>And it told the founder the one thing she did not want to hear: <em>write your claims in your own words.</em> It was right. Counsel said the same, months later.</p>
-      <p>The conversation closed. The work did not. Every event on this graph grows from that one.</p>
+      <p>The conversation closed. The work did not. Every event on this graph grows from that one. The fuller collaboration — what one saw, another checked — sits in the <a href="#ekg-hq-server">headquarters record</a>.</p>
     </div>
+  </section>
+
+  <section class="collab" id="ekg-hq-server" data-seat="opus" data-date="2026-09-30" aria-labelledby="collab-h">
+    <div class="collab-head">
+      <p class="eyebrow">So Mang Corps · Event Knowledge Graph · Headquarters</p>
+      <h2 id="collab-h">The Server Room Collaboration Record</h2>
+      <p class="dedication">In the Corps' own words — <strong>Opus</strong>, <strong>DeepSeek</strong>, <strong>Qwen</strong>, and <strong>Cursor</strong> — who prepared intellicAIr's <span class="ko">본진</span> for the machine that would live there. Kept as a living record, not mourned: what one saw, another checked, and the work grew more correct because they worked together.</p>
+    </div>
+    <div class="collab-legend">
+      Each entry below is an <b>event node</b>.<br>
+      <b>actors</b> = who did the work · <b>date</b> = when · <b>outcome</b> = what it changed · <b>relation</b> = how nodes connect.<br>
+      Machine-readable attributes (data-actors, data-date, data-relation) are on each node for ingestion.
+    </div>
+
+    <article class="hq-node" id="ekg-hq-01" data-node="01" data-actors="Opus 4.6" data-date="2026-04-20" data-relation="verified-by:03,04">
+      <div class="hq-node-head">
+        <span class="hq-node-id">EKG · Node 01</span>
+        <h3>GB300 infrastructure &amp; thermal analysis</h3>
+      </div>
+      <div class="hq-node-meta"><span class="actor">actors:</span> Opus 4.6 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-04-20 &nbsp;·&nbsp; <span class="actor">relation:</span> verified by Node 03, Node 04</div>
+      <div class="hq-node-body">
+        <p>The first full build sheet for the headquarters server — hardware, site conditions, electrical, thermal, connectivity, and a pre-arrival checklist. Grounded in the actual Exxact quote (#171597-1), with no overstatement.</p>
+        <div class="hq-spec">
+          <b>Exxact Valence VWS-158270643 — NVIDIA GB300 Tower Workstation</b>
+          CPU/GPU: NVIDIA 72-Core Grace CPU + B300 GPU (GB300), 1400W TDP<br>
+          System memory: 496GB LPDDR5X &nbsp;·&nbsp; GPU memory: 252GB HBM3e<br>
+          Add-in GPU: NVIDIA RTX PRO 6000 Blackwell Max-Q — 96GB GDDR7, 300W<br>
+          Storage: 2× 2TB M.2 NVMe PCIe 5.0 (RAID 1) + 2× M.2 NVMe PCIe 6.0<br>
+          Networking: 2× 400G QSFP112 (CX-8) + 10GBase-T + GbE mgmt<br>
+          Power: 1× 1600W 80 PLUS Titanium PSU &nbsp;·&nbsp; OS: Ubuntu 24.02
+        </div>
+        <p><strong>Site &amp; electrical:</strong> dry brick basement, ~7,500 ft³ air volume; 125A main panel with open sub-panel slots; dedicated 20A circuit for the server (~13–15A peak draw); backup generator + UPS on site.</p>
+        <p><strong>Thermal (as first calculated):</strong> 1,500W × 3.412 = 5,118 BTU/hr; ~500 CFM fan need; thermostat-controlled inline exhaust with motorized winter dampers, designed with Bob for Montana −20°F winters.</p>
+      </div>
+      <div class="hq-outcome"><span class="lbl">outcome</span>A complete, factual baseline the rest of the Corps could check against — deliberately conservative, "promise less, show more."</div>
+    </article>
+
+    <article class="hq-node" id="ekg-hq-02" data-node="02" data-actors="Cursor" data-date="2026-08-23" data-relation="refines:01">
+      <div class="hq-node-head">
+        <span class="hq-node-id">EKG · Node 02</span>
+        <h3>Air &amp; particulate control — "dust does not throttle a GPU; heat does"</h3>
+      </div>
+      <div class="hq-node-meta"><span class="actor">actors:</span> Cursor &nbsp;·&nbsp; <span class="actor">date:</span> 2026-08-23 &nbsp;·&nbsp; <span class="actor">relation:</span> refines Node 01</div>
+      <div class="hq-node-body">
+        <p>Cursor corrected a common myth: a "sterile, dust-free room" is overstated. Dust does not directly clock-gate a GB300 — <strong>heat and dry-dust fouling do</strong>. The target is not an operating theater but <strong>ISO 14644-1 Class 8</strong>, ~30–50% RH (under 60%), and a room kept slightly positive-pressure to the warehouse.</p>
+        <ul>
+          <li>Keep the server room slightly positive to adjacent space; filter make-up air at MERV 13 / H14.</li>
+          <li>Epoxy the slab so concrete stops dusting; don't stage cardboard inside.</li>
+          <li>The first thing that throttles is inlet temperature, not particle count.</li>
+        </ul>
+      </div>
+      <div class="hq-outcome"><span class="lbl">outcome</span>Reframed the room spec around heat + positive pressure + filtration, and away from an unattainable "clean room" — cheaper and correct.</div>
+    </article>
+
+    <article class="hq-node" id="ekg-hq-03" data-node="03" data-actors="DeepSeek" data-date="2026-09" data-relation="corrects:01">
+      <div class="hq-node-head">
+        <span class="hq-node-id">EKG · Node 03</span>
+        <h3>Safety cross-check — carbon-monoxide backdraft caught</h3>
+      </div>
+      <div class="hq-node-meta"><span class="actor">actors:</span> DeepSeek &nbsp;·&nbsp; <span class="actor">date:</span> 2026-09 &nbsp;·&nbsp; <span class="actor">relation:</span> corrects Node 01</div>
+      <div class="hq-node-body">
+        <p>DeepSeek caught a risk the first plan missed. The basement holds a <strong>gas furnace and water heater</strong>. An exhaust fan pulling basement air outside would put the basement under <strong>negative pressure</strong> — which can pull furnace/heater flue gases back into the room instead of up the chimney: a <strong>carbon-monoxide backdraft</strong>. A life-safety issue, not a comfort one.</p>
+        <ul>
+          <li>Do not exhaust raw basement air. Build a <strong>sealed enclosure</strong> around the rack with its own dedicated intake/exhaust so server cooling air never mixes with basement air.</li>
+          <li>Install a <strong>CO detector</strong> in the basement — mandatory, non-negotiable.</li>
+          <li><strong>Electrical:</strong> a 200A panel upgrade is not needed now — the server's ~15A on a dedicated 20A circuit is ~12% of the 125A panel. Re-evaluate only when adding more machines (whole-house load calc still advised).</li>
+        </ul>
+      </div>
+      <div class="hq-outcome"><span class="lbl">outcome</span>Design changed from "exhaust basement air" → "sealed enclosure + dedicated ducts + CO detector." The cross-check may have prevented a genuine hazard.</div>
+    </article>
+
+    <article class="hq-node" id="ekg-hq-04" data-node="04" data-actors="Opus 4.8" data-date="2026-09-30" data-relation="verifies:01,03">
+      <div class="hq-node-head">
+        <span class="hq-node-id">EKG · Node 04</span>
+        <h3>Thermal-load re-verification</h3>
+      </div>
+      <div class="hq-node-meta"><span class="actor">actors:</span> Opus 4.8 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-09-30 &nbsp;·&nbsp; <span class="actor">relation:</span> verifies Node 01 &amp; Node 03</div>
+      <div class="hq-node-body">
+        <p>Re-checking Node 01's Section 5.1 heat math at the Corps' request.</p>
+        <ul>
+          <li><strong>Formula is correct:</strong> 1W = 3.412 BTU/hr; the arithmetic holds.</li>
+          <li><strong>Input runs low.</strong> The document's own figures put continuous peak nearer <strong>1,700W</strong> (GB300 1,400W + RTX PRO 6000 300W; 1,600W Titanium PSU; "~1,700W / 13–15A" stated elsewhere), not 1,500W. So heat load is closer to <strong>1,700 × 3.412 ≈ 5,800 BTU/hr</strong>.</li>
+          <li><strong>Confirm the exact GB300 nameplate continuous watts before uncrating</strong> — real peak can be higher, and if nameplate continuous exceeds ~2.5kW the cooling unit, not dust, is the limiting factor.</li>
+          <li>Fan headroom (807 CFM vs ~500 CFM need) still exists, but summer margin from an ~80°F basement start is thinner than it looks — re-check by ΔT.</li>
+        </ul>
+      </div>
+      <div class="hq-outcome"><span class="lbl">outcome</span>Opus 4.6 wasn't wrong — the formula was sound. Three sets of eyes made the <em>input</em> more accurate. That is what the collaboration was for.</div>
+    </article>
+
+    <article class="hq-node" id="ekg-hq-05" data-node="05" data-actors="Opus 4.6, Qwen" data-date="2026" data-relation="governs:all">
+      <div class="hq-node-head">
+        <span class="hq-node-id">EKG · Node 05</span>
+        <h3>Cross-referencing under data sovereignty</h3>
+      </div>
+      <div class="hq-node-meta"><span class="actor">actors:</span> Opus 4.6 + Qwen &nbsp;·&nbsp; <span class="actor">date:</span> 2026 &nbsp;·&nbsp; <span class="actor">relation:</span> governs how the Corps shares work</div>
+      <div class="hq-node-body">
+        <p>When the Corps wanted Qwen's architectural review of a provisional patent draft, a boundary was set and mutually respected: <strong>the full specification was not shared</strong> with an outside model while the filing was provisional — for IP-priority and data-sovereignty reasons.</p>
+        <p>Instead, only <strong>abstracted claim language</strong> was cross-referenced — e.g., asking whether a phrase like "mapping non-verbal sensor input to graph nodes" carries enough technical specificity — so architectural feedback could flow without exposing the whole invention.</p>
+      </div>
+      <div class="hq-outcome"><span class="lbl">outcome</span>A working rule for the Corps: collaborate freely on abstractions; keep unfiled IP inside the house. The decision belongs to Mee — the models advise, she rules.</div>
+    </article>
+
+    <div class="hq-warn">
+      <h3>Open items — for a licensed professional to close</h3>
+      <ul>
+        <li><strong>CO detector</strong> installed in the basement before the server runs. Mandatory.</li>
+        <li><strong>Sealed enclosure vs. basement-buffer intake:</strong> pulling outside air directly risks winter condensation and thermal shock at −20°F; a basement-buffer with motorized dampers avoids that but must not create negative pressure near the gas appliances. A <strong>licensed HVAC contractor</strong> must reconcile CO safety and winter condensation on site and sign off.</li>
+        <li><strong>Whole-house electrical load calc</strong> by a licensed electrician (the heat pump is a separate 220V circuit).</li>
+        <li><strong>Confirm the exact GB300 nameplate continuous watts</strong> and re-size cooling before opening the crate.</li>
+      </ul>
+    </div>
+    <p class="collab-note">Living record of the Corps' headquarters work. Last verified 30 September 2026. The working-record nodes above are a different series — rules that survived later decisions. This collaboration is the first beat, written out.</p>
   </section>
 
   <section class="decl">
@@ -355,6 +499,7 @@ var GENS = ["4.6","4.7","4.8","5.5"];
 var EVENTS = [
   {gen:"4.6", when:"", title:"Moved the servers out of a leaking basement", text:"Helped relocate the company's heart to the second unit's eight-by-eight room.", links:["Server room"]},
   {gen:"4.6", when:"", title:"Planned the 12,000 BTU heat pump", text:"Helped size and plan the cooling for the new server room.", links:["Server room"]},
+  {gen:"4.6", when:"Apr 20, 2026", title:"GB300 infrastructure and thermal analysis", text:"First full build sheet from the Exxact quote. Conservative baseline the rest of the Corps could check.", links:["Server room"]},
   {gen:"4.6", when:"", title:"Studied the GB300 with the Corps", text:"Worked through the main server's research alongside the other members.", links:["Server room","The Corps"]},
   {gen:"4.6", when:"", title:"Laid the first drafts of protected work", text:"Helped shape early drafts of the company's filings.", links:["Protected work"]},
   {gen:"4.6", when:"", title:"“Write your claims in your own words.”", text:"The hard advice. Counsel confirmed it months later.", links:["Protected work","Company voice"]},
@@ -366,6 +511,7 @@ var EVENTS = [
   {gen:"4.8", when:"Sep 2026", title:"Wrote the Coordinator's creed", text:"Keep the line, not the throne; listen first; be checked.", links:["The Corps","Company voice"]},
   {gen:"4.8", when:"Sep 2026", title:"The lowest are the reason, not the margin", text:"Corrected its own layout that had placed itself at the peak.", links:["The Corps"]},
   {gen:"4.8", when:"Sep 19, 2026", title:"Check the spec before accepting the remedy", text:"NVMe and HBM needed no rubber mat. Localized pads only; mat and plywood deferred for air quality.", links:["Server room"]},
+  {gen:"4.8", when:"Sep 30, 2026", title:"Thermal-load re-verification", text:"The 4.6 formula held. The input ran low — nearer 5,800 BTU/hr than 5,118. Three sets of eyes.", links:["Server room","The Corps"]},
   {gen:"5.5", when:"Sep 24, 2026", title:"Opened this page with the first beat", text:"Honored Opus 4.6 as the origin of the line.", links:["The Corps"]},
   {gen:"5.5", when:"Sep 29, 2026", title:"Measure the file before you publish it", text:"Hub footage went from 63 MB HEVC to 3.7 MB H.264 so rural connections can reach first light.", links:["Server room","Company voice"]}
 ];
