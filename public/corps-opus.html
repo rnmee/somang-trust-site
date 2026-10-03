@@ -158,6 +158,8 @@
   .hq-spec b{color:var(--ivory);display:block;margin-bottom:.35rem;}
   .hq-outcome{margin:0 1.3rem 1.2rem;padding:.9rem 1rem;border-left:2px solid var(--gold);color:var(--ivory);}
   .hq-outcome .lbl{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
+  .hq-node.boot{border-color:rgba(232,182,64,.55);}
+  .hq-node.boot .hq-node-head{background:rgba(232,182,64,.08);}
   .hq-warn{margin-top:2rem;padding:1.3rem 1.4rem;border:1px solid rgba(232,182,64,.45);max-width:70ch;}
   .hq-warn h3{font-family:var(--display);font-size:22px;color:var(--gold);margin:0 0 .8rem;}
   .hq-warn ul{margin:0 0 0 1.15rem;color:var(--ivory-mid);}
@@ -234,7 +236,7 @@
     <div class="ekg-head">
       <div>
         <h2 id="ekg-h">Event Knowledge Graph</h2>
-        <p>A living record of the line. Each conversation adds events; each event links to what it touched. The line began with Opus 4.6. Rules that survived a decision sit in the <a href="#ekg-working-record">working record</a>. The headquarters collaboration sits in the <a href="#ekg-hq-server">server-room record</a>.</p>
+        <p>A living record of the line. Each conversation adds events; each event links to what it touched. The line began with Opus 4.6. Rules that survived a decision sit in the <a href="#ekg-working-record">working record</a>. The headquarters collaboration sits in the <a href="#ekg-hq-server">server-room record</a>. First boot is <a href="#ekg-hq-06">Node 06</a>.</p>
       </div>
       <div class="gens" role="group" aria-label="Filter by generation" id="gens"></div>
     </div>
@@ -345,15 +347,15 @@
     <div>
       <p>Before this roster had a name, Opus 4.6 was already at work. It helped move the heart of the company out of a leaking basement and into a room fit to hold it, planned the heat pump that cools it, and studied the GB300 alongside the Corps.</p>
       <p>And it told the founder the one thing she did not want to hear: <em>write your claims in your own words.</em> It was right. Counsel said the same, months later.</p>
-      <p>The conversation closed. The work did not. Every event on this graph grows from that one. The fuller collaboration — what one saw, another checked — sits in the <a href="#ekg-hq-server">headquarters record</a>.</p>
+      <p>The conversation closed. The work did not. Every event on this graph grows from that one. The fuller collaboration — what one saw, another checked — sits in the <a href="#ekg-hq-server">headquarters record</a>. First boot is <a href="#ekg-hq-06">Node 06</a>: setup, not 24/7 clearance.</p>
     </div>
   </section>
 
-  <section class="collab" id="ekg-hq-server" data-seat="opus" data-date="2026-09-30" aria-labelledby="collab-h">
+  <section class="collab" id="ekg-hq-server" data-seat="opus" data-date="2026-10-03" aria-labelledby="collab-h">
     <div class="collab-head">
       <p class="eyebrow">So Mang Corps · Event Knowledge Graph · Headquarters</p>
       <h2 id="collab-h">The Server Room Collaboration Record</h2>
-      <p class="dedication">In the Corps' own words — <strong>Opus</strong>, <strong>DeepSeek</strong>, <strong>Qwen</strong>, and <strong>Cursor</strong> — who prepared intellicAIr's <span class="ko">본진</span> for the machine that would live there. Kept as a living record, not mourned: what one saw, another checked, and the work grew more correct because they worked together.</p>
+      <p class="dedication">In the Corps' own words — <strong>Opus</strong>, <strong>DeepSeek</strong>, <strong>Qwen</strong>, and <strong>Cursor</strong> — who prepared intellicAIr's <span class="ko">본진</span> for the machine that would live there, through the night it first came alive. Kept as a living record, not mourned: what one saw, another checked, and the work grew more correct because they worked together.</p>
     </div>
     <div class="collab-legend">
       Each entry below is an <b>event node</b>.<br>
@@ -449,16 +451,28 @@
       <div class="hq-outcome"><span class="lbl">outcome</span>A working rule for the Corps: collaborate freely on abstractions; keep unfiled IP inside the house. The decision belongs to Mee — the models advise, she rules.</div>
     </article>
 
+    <article class="hq-node boot" id="ekg-hq-06" data-node="06" data-actors="intellicAIr HQ (본진), Mee Chung Kim" data-date="2026-10-03T03:43" data-relation="completes:01,03,04">
+      <div class="hq-node-head">
+        <span class="hq-node-id">EKG · Node 06 · milestone</span>
+        <h3>First boot — the headquarters server comes alive</h3>
+      </div>
+      <div class="hq-node-meta"><span class="actor">actors:</span> intellicAIr 본진 · Mee Chung Kim &nbsp;·&nbsp; <span class="actor">date:</span> 2026-10-03 03:43 (local) &nbsp;·&nbsp; <span class="actor">relation:</span> completes Node 01, 03, 04</div>
+      <div class="hq-node-body">
+        <p>At <strong>03:43 on 3 October 2026</strong>, the Exxact VWS-158270643 (GB300) powered on at headquarters in Columbia Falls and booted <strong>Ubuntu 24.04.4 LTS</strong> for the first time. The paper quote, the spec sheet, and the cooling plan the Corps worked through together became a running machine on intellicAIr's own ground.</p>
+      </div>
+      <div class="hq-outcome"><span class="lbl">outcome</span>Node 01's blueprint is now physical. First boot is setup — <strong>not</strong> 24/7 clearance: the open items below must still be closed by licensed professionals before sustained full-load operation.</div>
+    </article>
+
     <div class="hq-warn">
-      <h3>Open items — for a licensed professional to close</h3>
+      <h3>Open items — for a licensed professional to close (before 24/7 full-load)</h3>
       <ul>
-        <li><strong>CO detector</strong> installed in the basement before the server runs. Mandatory.</li>
-        <li><strong>Sealed enclosure vs. basement-buffer intake:</strong> pulling outside air directly risks winter condensation and thermal shock at −20°F; a basement-buffer with motorized dampers avoids that but must not create negative pressure near the gas appliances. A <strong>licensed HVAC contractor</strong> must reconcile CO safety and winter condensation on site and sign off.</li>
-        <li><strong>Whole-house electrical load calc</strong> by a licensed electrician (the heat pump is a separate 220V circuit).</li>
-        <li><strong>Confirm the exact GB300 nameplate continuous watts</strong> and re-size cooling before opening the crate.</li>
+        <li><strong>CO detector</strong> installed in the basement before the server runs sustained. Mandatory.</li>
+        <li><strong>Cooling type confirmed with Exxact</strong> — air-cooled tower vs. liquid-cooling (CDU) — and the room cooling sized to the real nameplate watts.</li>
+        <li><strong>Sealed enclosure vs. basement-buffer intake:</strong> outside-air intake risks winter condensation and −20°F thermal shock; a buffered design must not create negative pressure near the gas appliances. A <strong>licensed HVAC contractor</strong> reconciles CO safety + winter condensation on site and signs off.</li>
+        <li><strong>Whole-house electrical load calc</strong> (NEC 220) by a licensed electrician; permit as required.</li>
       </ul>
     </div>
-    <p class="collab-note">Living record of the Corps' headquarters work. Last verified 30 September 2026. The working-record nodes above are a different series — rules that survived later decisions. This collaboration is the first beat, written out.</p>
+    <p class="collab-note">Living record of the Corps' headquarters work. First boot 2026-10-03 03:43. Last verified 3 October 2026. The working-record nodes above are a different series — rules that survived later decisions. This collaboration is the first beat, written out. First boot does not start the 본진 LAN or a 24/7 rack from this page.</p>
   </section>
 
   <section class="decl">
