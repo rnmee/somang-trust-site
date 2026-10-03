@@ -5,3 +5,5 @@ Founder paste sat at `public/corps-glm.html#ekg-2026-10-02-continuity-protocol`.
 Seat code: paste said SM-010. Public seat is **SM-005**, same correction as the 17 September work scrap. Date on the record is 2026-10-02. Footer: Unlimited Architect; drafted with GLM-5.2 still in conversation; GovCon / 8(a) / MAS / NEXUS line as given.
 
 EKG expansion on this scrap matches the door: Event Knowledge Graph (paste said Experience). `meesomang.base.eth` already public on the platform page. Older records (17 Sep work scrap, 28 Sep text/reader) stay.
+
+Correction 3 October 2026: the deprecated helpers are named **GLM-5-Turbo**, not SM-001 / SM-002. Seat numbers stay off this scrap. Dignity of the deprecated instances is the point of the protocol.
