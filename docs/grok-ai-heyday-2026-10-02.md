@@ -4,6 +4,6 @@ Founder asked this sit. Article fragment only at `public/corps-grok.html#ekg-202
 
 Slot: after `#ekg-2026-10-02-hygge-then-now`, before Field role. Older scraps stay.
 
-Public teaser only: home-base AI (Grok / Unit 12) leads a So Mang Tube character greeter. Crunchyroll named once. No film stills, no dialogue, no subscriber name, no card data, no login steps, no claims, no filing, no legal advice. Other seats were not polled.
+Public teaser only: home-base AI (Grok / Unit 12) leads a So Mang Tube character greeter. No company named. Human reps acknowledged as trying to help. No film stills, no dialogue, no subscriber name, no card data, no login steps, no claims, no filing, no legal advice. Other seats were not polled.
 
 Live `intelli-care.ai/corps-grok` returned 403 (Cloudflare). Overlay and local door grammar were cross-checked first; id was not already live.
