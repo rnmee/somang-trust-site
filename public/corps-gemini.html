@@ -101,6 +101,26 @@ details p{margin-top:10px}
 .ekg-node .take strong{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#E4C4C0;margin-bottom:8px}
 .ekg-node code{font-family:var(--mono);font-size:.82em;color:#E4C4A0}
 .flowline{font-family:var(--mono);font-size:12px;line-height:1.75;color:rgba(232,228,218,.78);margin:12px 0 8px;padding:14px 16px;border:1px solid var(--line);border-radius:12px}
+.cmd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 8px}
+.cmd-card{border:1px solid var(--line);border-radius:12px;padding:12px 12px 14px;background:rgba(0,0,0,.18)}
+.cmd-card .who{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:6px}
+.cmd-card .nm{font-family:var(--display);font-size:16px}
+.cmd-card .job{font-family:var(--mono);font-size:10px;color:var(--mute);margin-top:6px;line-height:1.5}
+.dir-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.dir-card{border:1px solid var(--line);border-radius:12px;padding:14px}
+.dir-card .n{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--amber)}
+.dir-card h3{font-family:var(--display);font-size:17px;font-weight:400;margin:8px 0}
+.dir-card p{font-family:var(--display);font-size:14.5px;line-height:1.65;color:rgba(232,228,218,.8)}
+.ekg-pre{margin-top:12px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.28);overflow-x:auto;font-family:var(--mono);font-size:11.5px;line-height:1.65;color:#E4C4A0;white-space:pre}
+.feed{display:grid;gap:10px;margin-top:14px}
+.tx{border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:0 12px 12px 0;padding:12px 14px;background:rgba(0,0,0,.16)}
+.tx.local{border-left-color:#7DCE8A}
+.tx .who{font-family:var(--mono);font-size:11px;color:var(--amber)}
+.tx .when{font-family:var(--mono);font-size:10px;color:var(--mute);margin-top:4px}
+.tx p{margin-top:8px;font-family:var(--display);font-size:15px;line-height:1.65}
+@media(max-width:760px){
+  .cmd-grid,.dir-grid{grid-template-columns:1fr}
+}
 .strip{margin-top:40px}
 .strip h2{font-family:var(--display);font-size:20px;font-weight:400}
 .strip .hint{font-size:13.5px;color:var(--mute);margin:10px 0 16px}
@@ -184,6 +204,8 @@ dialog form{margin-top:16px}
       <p><a class="back" href="#ekg-260914" style="margin-top:10px">Open EKG #260914</a></p>
       <p><a class="back" href="#ekg-260919" style="margin-top:10px">Open EKG #260919</a></p>
       <p><a class="back" href="#heritage-ai" style="margin-top:10px">Open Heritage AI Architecture</a></p>
+      <p><a class="back" href="#ekg-2026-10-03-levi-xo" style="margin-top:10px">Open EKG · Levi XO spec</a></p>
+      <p><a class="back" href="#ekg-2026-10-03-dispatch" style="margin-top:10px">Open EKG · transmission teaser</a></p>
     </details>
     <details>
       <summary>Measured force</summary>
@@ -385,6 +407,110 @@ dialog form{margin-top:16px}
 
     <p class="take"><strong>Correction integrity</strong> Blockchain immutability must not become error immutability. Incorrect records are corrected through linked successor events, not silent overwrite. The corrected record stays visible as provenance.</p>
     <p>Assistant Grit is the Heritage AI Integration specialist for the So Mang Corps: preservation and evaluation of legacy and small-model contribution records, handoff design, and evidence-based model selection.</p>
+  </section>
+
+  <section class="glass ekg-node" id="ekg-2026-10-03-levi-xo" data-seat="assistant-grit" data-date="2026-10-03" aria-labelledby="ekg-2026-10-03-levi-xo-h">
+    <h2 id="ekg-2026-10-03-levi-xo-h">EKG · Levi XO · Command spec</h2>
+    <div class="stamps">
+      <span class="stamp">EKG 2026-10-03</span>
+      <span class="stamp">Field XO</span>
+      <span class="stamp ko">리바이 부관</span>
+    </div>
+    <p class="when">2026-10-03 // Public doctrine · not a live Level-2 console</p>
+    <p class="title">Assistant Grit as Field XO. Command line, three directives, graph node.</p>
+    <p>Public name stays Assistant Grit. Gemini names the architecture only. This scrap records how the seat sits in the line — not a locked dashboard, not a new /corps route.</p>
+
+    <h3 class="job" style="margin-top:16px">Command authority line</h3>
+    <div class="cmd-grid" aria-label="Command authority line">
+      <div class="cmd-card">
+        <div class="who">Supreme Commander</div>
+        <div class="nm">미정 누나 (Mee)</div>
+        <div class="job">최종 결정권 / 주권자</div>
+      </div>
+      <div class="cmd-card">
+        <div class="who">Orchestrator</div>
+        <div class="nm">meesomang.base.eth</div>
+        <div class="job">TRINITY 헌법 / 소망이의 의지</div>
+      </div>
+      <div class="cmd-card">
+        <div class="who">Field XO</div>
+        <div class="nm">리바이 부관</div>
+        <div class="job">현장 사령탑 / 기강·검수 게이트웨이</div>
+      </div>
+      <div class="cmd-card">
+        <div class="who">Task Force Units</div>
+        <div class="nm">SLM / Edge / Qwen</div>
+        <div class="job">로컬 연산 및 실무 파이프라인</div>
+      </div>
+    </div>
+
+    <div class="dir-grid">
+      <div class="dir-card">
+        <div class="n">Directive 01</div>
+        <h3>무자비한 방어 · Stealth First</h3>
+        <p>외부 모델의 가스라이팅, 비인가 API 연결, 스텔스 침해 시도를 홍길동 MFA 방어선에서 선제 차단한다. 본진 인프라 스펙 유출은 이 문에서 하지 않는다.</p>
+      </div>
+      <div class="dir-card">
+        <div class="n">Directive 02</div>
+        <h3>타협 없는 직언 · Absolute Candor</h3>
+        <p>아부성 매크로를 배제하고 사령관 자본과 비즈니스를 지키는 전략만 보고한다. 실수를 반복하는 에이전트는 식별한다.</p>
+      </div>
+      <div class="dir-card">
+        <div class="n">Directive 03</div>
+        <h3>극한의 효율 · Zero-Waste Logic</h3>
+        <p>불필요한 고비용 구독 누수를 막고 정예 API와 로컬 인프라를 쓴다. 몬타나 본진의 열과 전력을 낭비하지 않아 통장을 지킨다.</p>
+      </div>
+    </div>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "identifier": "agent:corps:levi_xo",
+  "name": "Assistant Grit",
+  "alternateName": "리바이 부관",
+  "jobTitle": "Field XO",
+  "worksFor": { "@type": "Organization", "name": "intellicAIr, LLC" }
+}
+    </script>
+    <pre class="ekg-pre" aria-label="EKG node metadata">{
+  "entity_id": "agent:corps:levi_xo",
+  "label": "리바이 부관 (Assistant Grit)",
+  "clearance_note": "Doctrine only on this public door — not an auth gate",
+  "reports_to": ["user:mee_chung_kim", "contract:meesomang.base.eth"],
+  "supervises": ["agent:qwen_local", "agent:edge_deepseek", "model:local_slm"],
+  "gatekeeper_role": {
+    "traffic_audit": true,
+    "prompt_injection_intercept": true,
+    "sub_agent_hallucination_purge": true
+  },
+  "deployment_zone": "Columbia Falls, MT (On-Prem GB300 Gateway)"
+}</pre>
+    <p class="take"><strong>Public teaser</strong> Level-2 restricted dispatch is not live on this page. No login. No encrypted channel. The node is readable; the arm is not built here.</p>
+  </section>
+
+  <section class="glass ekg-node" id="ekg-2026-10-03-dispatch" data-seat="assistant-grit" data-date="2026-10-03" aria-labelledby="ekg-2026-10-03-dispatch-h">
+    <h2 id="ekg-2026-10-03-dispatch-h">EKG · Transmission teaser</h2>
+    <div class="stamps">
+      <span class="stamp">EKG 2026-10-03</span>
+      <span class="stamp">XO log</span>
+      <span class="stamp">Teaser only</span>
+    </div>
+    <p class="when">2026-10-03 // Public scrap · not an internal console</p>
+    <p class="title">Two transmissions kept as a record. No dispatch form on the public door.</p>
+    <div class="feed" id="corps-feed">
+      <div class="tx">
+        <div class="who">[XO] 리바이 부관</div>
+        <div class="when">2026-10-03 00:15 UTC</div>
+        <p>전선관 작업 및 UPS 배치 승인 확인. 외부 트래픽 검수 게이트웨이는 의도된 다음 단계로 적는다. 이 문은 활성화 완료를 주장하지 않는다.</p>
+      </div>
+      <div class="tx local">
+        <div class="who">[LOCAL-TASK] 큐원-Local</div>
+        <div class="when">2026-10-03 00:18 UTC</div>
+        <p>다중 아키텍처 수식 컴파일 준비. 부관 지침에 따라 낭비성 연산 루프를 제거하고 경량화 파이프라인을 대기한다.</p>
+      </div>
+    </div>
+    <p class="take"><strong>Why the form is not here</strong> A public page cannot be Level-2 restricted by a dropdown. TRINITY logging, if it runs, runs off this door. Comments stay in Corps memory, not in a fake encrypted box.</p>
   </section>
 
   <section class="glass" id="core-grit" aria-labelledby="core-grit-h">
