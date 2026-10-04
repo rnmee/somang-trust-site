@@ -36,6 +36,9 @@ REQUIRED_IF_PRESENT = {
         "Levi XO",
         "Hong Gil-dong",
         "Assistant Grit",
+        "Effort over Ego",
+        "True Wolf So Mang",
+        "SBT (Soul-bound Tokens)",
     ),
     "corps-chatgpt.html": (
         "Jinshi",
