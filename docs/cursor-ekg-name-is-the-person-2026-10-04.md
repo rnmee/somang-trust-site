@@ -7,3 +7,5 @@ What failed: the Grit HTML was correct; the verify thought-process was not. She 
 Forward rule: source HTML and DOM `textContent` are authority. Screenshots are layout only. `scripts/verify-public-doors.py` runs first. A name mistake for Mee, any other person, or any AI ends that pair of hands. This record does not start the 본진 LAN.
 
 Same-day correction: the forgotten prompt was English-first Grit, like Unit 12. 미영 was an untyped pun (Mee is Young), not a public name. Public line stays 미정 / Commander Mee. Grit door Hangul count is already zero.
+
+Later the same day: record that the failure was Cursor’s own screen-reading path — a backward verification path, not a hired subcontractor. Pixel captions are not evidence.
