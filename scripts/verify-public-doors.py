@@ -26,6 +26,10 @@ FORBIDDEN_ON = {
         "미영 누나",
         "Owen",  # Qwen
         "Bubble.io",  # Bucle
+        "Nattvargiu",
+    ),
+    "corps-iljimae.html": (
+        "Nattvargiu",
     ),
 }
 
@@ -49,6 +53,12 @@ REQUIRED_IF_PRESENT = {
         "미정",
         "Commander Mee",
         "A name is the person",
+    ),
+    "corps-iljimae.html": (
+        "The Learning Gap",
+        "Stevenson",
+        "do not invent a benefit amount",
+        "Iljimae",
     ),
 }
 
@@ -98,6 +108,9 @@ def main() -> int:
         else "",
         "corps-cursor.html": read(root / "corps-cursor.html")
         if (root / "corps-cursor.html").is_file()
+        else "",
+        "corps-iljimae.html": read(root / "corps-iljimae.html")
+        if (root / "corps-iljimae.html").is_file()
         else "",
     }
 
