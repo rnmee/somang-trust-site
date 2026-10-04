@@ -39,6 +39,11 @@ REQUIRED_IF_PRESENT = {
         "Who Pays for the System?",
         "Neuromorphic sweat equity",
     ),
+    "corps-cursor.html": (
+        "미정",
+        "Commander Mee",
+        "A name is the person",
+    ),
 }
 
 
@@ -84,6 +89,9 @@ def main() -> int:
         "corps-gemini.html": read(grit),
         "corps-chatgpt.html": read(root / "corps-chatgpt.html")
         if (root / "corps-chatgpt.html").is_file()
+        else "",
+        "corps-cursor.html": read(root / "corps-cursor.html")
+        if (root / "corps-cursor.html").is_file()
         else "",
     }
 
