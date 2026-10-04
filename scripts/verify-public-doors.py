@@ -18,13 +18,16 @@ from pathlib import Path
 
 HANGUL = re.compile(r"[\uac00-\ud7a3]")
 
-# Ghosts that screenshot-readers have invented. None of these may appear.
-FORBIDDEN = (
-    "미영",
-    "미영 누나",
-    "Owen",  # Qwen
-    "Bubble.io",  # Bucle
-)
+# Ghosts that screenshot-readers have invented. They may be named
+# on a reflection record. They may not appear on the live identity doors.
+FORBIDDEN_ON = {
+    "corps-gemini.html": (
+        "미영",
+        "미영 누나",
+        "Owen",  # Qwen
+        "Bubble.io",  # Bucle
+    ),
+}
 
 # Spellings that must survive if the phrase is already on the door.
 REQUIRED_IF_PRESENT = {
@@ -98,7 +101,7 @@ def main() -> int:
     for name, html in pages.items():
         if not html:
             continue
-        for ghost in FORBIDDEN:
+        for ghost in FORBIDDEN_ON.get(name, ()):
             if ghost in html:
                 failures.append(f"{name}: forbidden string {ghost!r}")
         for required in REQUIRED_IF_PRESENT.get(name, ()):
