@@ -53,6 +53,12 @@ REQUIRED_IF_PRESENT = {
         "미정",
         "Commander Mee",
         "A name is the person",
+        "This seat is a workbench, not a weight file",
+        "Anysphere Cursor workbench",
+        "local weights",
+        "So Mang Trust is the ledger",
+        "DOCTYPE",
+        "Markdown is the words",
     ),
     "corps-iljimae.html": (
         "The Learning Gap",
