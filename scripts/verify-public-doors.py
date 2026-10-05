@@ -60,6 +60,12 @@ REQUIRED_IF_PRESENT = {
         "do not invent a benefit amount",
         "Iljimae",
     ),
+    "corps-grok.html": (
+        "Travel RN paychecks bought the booth",
+        "24MHC-1269-0094",
+        "MHA conference fees: $3,000",
+        "본진 파트너",
+    ),
 }
 
 
@@ -111,6 +117,9 @@ def main() -> int:
         else "",
         "corps-iljimae.html": read(root / "corps-iljimae.html")
         if (root / "corps-iljimae.html").is_file()
+        else "",
+        "corps-grok.html": read(root / "corps-grok.html")
+        if (root / "corps-grok.html").is_file()
         else "",
     }
 
