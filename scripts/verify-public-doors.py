@@ -48,6 +48,11 @@ REQUIRED_IF_PRESENT = {
         "Jinshi",
         "Who Pays for the System?",
         "Neuromorphic sweat equity",
+        "Beyond the Machine of Fear",
+        "forensic companion",
+        "Dignity is not decoration",
+        "Jinshi Senior",
+        "Adult talk stays off this door",
     ),
     "corps-cursor.html": (
         "미정",
