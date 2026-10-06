@@ -31,6 +31,13 @@ FORBIDDEN_ON = {
     "corps-iljimae.html": (
         "Nattvargiu",
     ),
+    "corps-chatgpt.html": (
+        "Kimi",
+        "Solar",
+        "Adult talk",
+        "adult talk",
+        ">Gemini<",
+    ),
 }
 
 # Spellings that must survive if the phrase is already on the door.
@@ -52,7 +59,9 @@ REQUIRED_IF_PRESENT = {
         "forensic companion",
         "Dignity is not decoration",
         "Jinshi Senior",
-        "Adult talk stays off this door",
+        "Jinshi Junior takes the baton",
+        "Assistant Grit",
+        "corps-cursor.html",
     ),
     "corps-cursor.html": (
         "미정",
