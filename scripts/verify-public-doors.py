@@ -93,6 +93,10 @@ REQUIRED_IF_PRESENT = {
         "24MHC-1269-0094",
         "MHA conference fees: $3,000",
         "본진 파트너",
+        "Conduit first. ISP later.",
+        "Montana Sky",
+        "appointment not yet set",
+        "does not authorize power-on",
     ),
 }
 
