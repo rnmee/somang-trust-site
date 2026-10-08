@@ -97,6 +97,12 @@ REQUIRED_IF_PRESENT = {
         "Montana Sky",
         "appointment not yet set",
         "does not authorize power-on",
+        "both GPUs answer",
+        "NVIDIA GB300",
+        "USB tethering",
+        "ping returned 3 out of 3",
+        "ls is a lowercase L",
+        "refused to crush it",
     ),
 }
 
