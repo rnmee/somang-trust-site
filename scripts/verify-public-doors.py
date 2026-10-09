@@ -50,6 +50,10 @@ REQUIRED_IF_PRESENT = {
         "Effort over Ego",
         "True Wolf So Mang",
         "SBT (Soul-bound Tokens)",
+        "Bokjiro in the shadow",
+        "Masked encryption trap",
+        "Anonymous auditor",
+        "Do not invent a benefit amount",
     ),
     "corps-chatgpt.html": (
         "Jinshi",
