@@ -87,6 +87,11 @@ REQUIRED_IF_PRESENT = {
         "Stevenson",
         "do not invent a benefit amount",
         "Iljimae",
+        "The skeleton is not ready for a crisis file",
+        "review only, no code changes",
+        "No authentication on verifier endpoints",
+        "run it only on localhost",
+        "Assistant Grit",
     ),
     "corps-grok.html": (
         "Travel RN paychecks bought the booth",
