@@ -7,8 +7,12 @@ English body. Symbolic Korean kept: **본진 파트너**. Title translated from 
 ## Public
 
 - Two 2024 conferences, not one: MHA Billings fees **$3,000** ($2,200 + $800); hotel **$330.92** separate; Frontier TSSBS booth **$475**.
-- FAMR / Dawn WOSB/WBE **$1,995** — not MHA.
+- **$1,995** paid to a certification service that did not deliver. Mee walked away. Local APEX Accelerator: this help is free. She filed WOSB/EDWOSB herself, AI agents drafting beside her. intellicAIr is now EDWOSB/WOSB certified, earned by hand. Not MHA spend.
 - Empty-pocket exhibitor. Founded 29 January 2024.
+
+## Correction · 8 October 2026
+
+Do not name the paid service or its agent. Do not say the $1,995 bought the certification. Do not use scam wording.
 
 ## Not on the public door
 

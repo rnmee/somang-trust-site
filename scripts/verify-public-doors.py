@@ -31,6 +31,12 @@ FORBIDDEN_ON = {
     "corps-iljimae.html": (
         "Nattvargiu",
     ),
+    "corps-grok.html": (
+        "FAMR",
+        "Dawn",
+        "Federal Award",
+        "scam",
+    ),
     "corps-chatgpt.html": (
         "Kimi",
         "Solar",
@@ -102,6 +108,9 @@ REQUIRED_IF_PRESENT = {
         "24MHC-1269-0094",
         "MHA conference fees: $3,000",
         "본진 파트너",
+        "earned by hand",
+        "APEX Accelerator",
+        "EDWOSB",
         "Conduit first. ISP later.",
         "Montana Sky",
         "appointment not yet set",
