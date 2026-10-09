@@ -80,6 +80,10 @@ REQUIRED_IF_PRESENT = {
         "Advance, Don’t Reset",
         "과시",
         "AI 위에 AI 없고",
+        "Who Gets to Be an Investment?",
+        "뉴진시 / New Jinshi",
+        "does not conclude that Indian researchers",
+        "Headwaters Tech Hub",
     ),
     "corps-cursor.html": (
         "미정",
