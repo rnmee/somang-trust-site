@@ -103,6 +103,11 @@ REQUIRED_IF_PRESENT = {
         "ping returned 3 out of 3",
         "ls is a lowercase L",
         "refused to crush it",
+        "An AI clause lands Oct 19",
+        "Not legal advice",
+        "Montana not listed",
+        "Claims 101 Pt8",
+        "PilieroMazza",
     ),
 }
 
