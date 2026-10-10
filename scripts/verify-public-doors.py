@@ -30,6 +30,10 @@ FORBIDDEN_ON = {
     ),
     "corps-iljimae.html": (
         "Nattvargiu",
+        "192.168",
+        "localStorage",
+        "Hanwha",
+        "TL-SG605P",
     ),
     "corps-grok.html": (
         "FAMR",
@@ -106,6 +110,12 @@ REQUIRED_IF_PRESENT = {
         "No authentication on verifier endpoints",
         "run it only on localhost",
         "Assistant Grit",
+        "Contours of American History",
+        "William Appleman Williams",
+        "Don’t build a frontier",
+        "Ask, don’t detect",
+        "Standing before speed",
+        "syndicalism",
     ),
     "corps-grok.html": (
         "Travel RN paychecks bought the booth",
@@ -130,6 +140,12 @@ REQUIRED_IF_PRESENT = {
         "Montana not listed",
         "Claims 101 Pt8",
         "PilieroMazza",
+        "Two clocks stop on Oct 19",
+        "Koprince McCall",
+        "SmallGovCon",
+        "potential for success",
+        "two full years",
+        "ideological content",
     ),
 }
 
