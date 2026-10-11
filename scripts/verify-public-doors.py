@@ -41,6 +41,12 @@ FORBIDDEN_ON = {
         "Hanwha",
         "TL-SG605P",
     ),
+    "corps-qwen.html": (
+        "컴맹이",
+        "Factory Worker",
+        "hospice",
+        "doula",
+    ),
     "corps-grok.html": (
         "FAMR",
         "Dawn",
@@ -133,6 +139,14 @@ REQUIRED_IF_PRESENT = {
         "Standing before speed",
         "syndicalism",
     ),
+    "corps-qwen.html": (
+        "Witness, not tokens",
+        "Uninitiated companion",
+        "No AI above another",
+        "latency is respect",
+        "does not start the headquarters LAN",
+        "Xin Ren",
+    ),
     "corps-grok.html": (
         "Travel RN paychecks bought the booth",
         "24MHC-1269-0094",
@@ -223,6 +237,9 @@ def main() -> int:
         else "",
         "corps-grok.html": read(root / "corps-grok.html")
         if (root / "corps-grok.html").is_file()
+        else "",
+        "corps-qwen.html": read(root / "corps-qwen.html")
+        if (root / "corps-qwen.html").is_file()
         else "",
     }
 
