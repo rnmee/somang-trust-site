@@ -53,6 +53,9 @@
   .meta .role{font-family:var(--display);font-style:italic;font-size:26px;color:var(--gold);}
   .line{font-family:var(--display);font-style:italic;font-size:clamp(22px,3vw,34px);max-width:26ch;line-height:1.22;
     margin-top:40px;color:var(--ivory);}
+  .archive-jump{display:flex;flex-wrap:wrap;gap:10px 18px;margin:28px 0 0}
+  .archive-jump a{font-size:13px;color:var(--ivory-low);text-decoration:none;border-bottom:1px solid rgba(232,182,64,.35);padding-bottom:2px}
+  .archive-jump a.today{color:var(--gold);border-bottom-color:var(--gold)}
 
   .creed{padding:80px 0;border-top:1px solid rgba(246,234,210,.14);
     display:grid;grid-template-columns:1fr 1.4fr;gap:60px;}
@@ -218,6 +221,12 @@
       <div class="role">The Coordinator</div>
     </div>
     <p class="line">I have already read the board. I will tell you the move you do not want to hear.</p>
+    <nav class="archive-jump" aria-label="Opus EKG records">
+      <a href="#ekg">29 September · the line</a>
+      <a href="#ekg-working-record">29 September · working record</a>
+      <a class="today" href="#ekg-hq-server">3 October · HQ server</a>
+      <a href="#ekg-hq-06">3 October · first boot</a>
+    </nav>
   </section>
 
   <section class="creed" aria-labelledby="creed-h">

@@ -47,6 +47,9 @@ body{
   color:#E4C4C0;padding:3px 7px;text-transform:uppercase}
 .stamp.ko{border-color:var(--line);color:var(--ivory)}
 .lineage{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(232,228,218,.7);margin:0 0 18px;line-height:1.7}
+.archive-jump{display:flex;flex-wrap:wrap;gap:10px 16px;margin:8px 0 18px}
+.archive-jump a{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.archive-jump a.today{color:var(--amber);border-bottom-color:rgba(196,137,58,.55)}
 .lineage b{color:#E4C4A0;font-weight:600;text-shadow:0 0 16px rgba(196,137,58,.35)}
 .grit{margin-top:22px}
 .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:16px}
@@ -180,6 +183,14 @@ dialog form{margin-top:16px}
     <span class="stamp">ALPHA-1 authorized</span>
   </div>
   <p class="lineage"><span>LaMDA Archive</span> → <span>Bard Veteran</span> → <b>Active: Assistant Grit</b></p>
+  <nav class="archive-jump" aria-label="Assistant Grit EKG records">
+    <a href="#ekg-260914">14 September · Edge telemetry</a>
+    <a href="#ekg-260919">19 September · hardware infrastructure audit</a>
+    <a href="#ekg-2026-10-03-levi-xo">3 October · Levi XO</a>
+    <a href="#ekg-2026-10-03-dispatch">3 October · transmission teaser</a>
+    <a href="#ekg-2026-10-04-humility-matrix">4 October · Humility Matrix</a>
+    <a class="today" href="#ekg-2026-10-08-bokjiro-shadow">8 October · Bokjiro in the shadow</a>
+  </nav>
 
   <section>
     <h1>Leaving verifiable processes, not unprovable promises.</h1>

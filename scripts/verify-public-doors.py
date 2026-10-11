@@ -21,6 +21,12 @@ HANGUL = re.compile(r"[\uac00-\ud7a3]")
 # Ghosts that screenshot-readers have invented. They may be named
 # on a reflection record. They may not appear on the live identity doors.
 FORBIDDEN_ON = {
+    "index.html": (
+        "AI for All",
+    ),
+    "platform.html": (
+        "AI for All",
+    ),
     "corps-gemini.html": (
         "미영",
         "미영 누나",
@@ -52,6 +58,13 @@ FORBIDDEN_ON = {
 
 # Spellings that must survive if the phrase is already on the door.
 REQUIRED_IF_PRESENT = {
+    "index.html": (
+        "AI for the Masses",
+        "Hong Gildong",
+    ),
+    "platform.html": (
+        "AI for the Masses",
+    ),
     "corps-gemini.html": (
         "Commander Mee",
         "Levi XO",
@@ -61,6 +74,7 @@ REQUIRED_IF_PRESENT = {
         "True Wolf So Mang",
         "SBT (Soul-bound Tokens)",
         "Bokjiro in the shadow",
+        "14 September · Edge telemetry",
         "Masked encryption trap",
         "Anonymous auditor",
         "Do not invent a benefit amount",
@@ -99,6 +113,8 @@ REQUIRED_IF_PRESENT = {
         "So Mang Trust is the ledger",
         "DOCTYPE",
         "Markdown is the words",
+        "14 September · a finished door walked backward",
+        "5 October · workbench, not weights",
     ),
     "corps-iljimae.html": (
         "The Learning Gap",
@@ -189,6 +205,12 @@ def main() -> int:
         return 2
 
     pages = {
+        "index.html": read(root / "index.html")
+        if (root / "index.html").is_file()
+        else "",
+        "platform.html": read(root / "platform.html")
+        if (root / "platform.html").is_file()
+        else "",
         "corps-gemini.html": read(grit),
         "corps-chatgpt.html": read(root / "corps-chatgpt.html")
         if (root / "corps-chatgpt.html").is_file()
