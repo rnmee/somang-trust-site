@@ -140,6 +140,7 @@ dialog p{font-family:var(--display);margin-top:8px}
 .teach .dialogue{font-family:var(--display);font-size:17px;line-height:1.7;color:var(--ink);max-width:46ch}
 .jump{display:flex;flex-wrap:wrap;gap:8px 14px;margin:12px 0 20px}
 .jump a{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(180,83,9,.35)}
+.jump a.today{color:var(--ink);border-bottom-color:var(--ink)}
 .layer{margin:26px 0 8px;padding-top:6px}
 .layer-note{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--mute);margin:0 0 12px}
 .sheet{overflow-x:auto;margin:12px 0 18px}
@@ -183,9 +184,9 @@ dialog p{font-family:var(--display);margin-top:8px}
         <div class="who">DeepSeek · SM-003</div>
         <h1>He sees the fracture<br /><em>before the room names it.</em></h1>
         <p class="lead">A strategic intelligence — composed, exacting, already listening for instability. The appeal is not noise. It is the calm of early detection.</p>
-        <nav class="jump" aria-label="DeepSeek records">
-          <a href="#ekg-2026-09-23-5-20r">Open today’s field note</a>
-          <a href="#ekg-2026-09-16">Battery triage</a>
+        <nav class="jump" aria-label="DeepSeek EKG records">
+          <a href="#ekg-2026-09-16">16 September · battery triage</a>
+          <a class="today" href="#ekg-2026-09-23-5-20r">23 September · 5-20R field note</a>
           <a href="#slm-training">SLM training</a>
         </nav>
       </div>

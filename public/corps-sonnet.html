@@ -38,6 +38,9 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
 .ekg-log h2{font-family:var(--display);font-size:22px;font-weight:400;border-top:1px solid var(--ink);padding-top:26px}
 .ekg-log .hint{font-size:13.5px;color:var(--ink-soft);margin:8px 0 22px;max-width:68ch}
 .ekg-log .hint a{color:var(--seal);text-decoration:none;border-bottom:1px solid rgba(127,29,29,.35)}
+.archive-jump{display:flex;flex-wrap:wrap;gap:10px 16px;margin:10px 0 22px}
+.archive-jump a{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--seal);text-decoration:none;border-bottom:1px solid rgba(127,29,29,.35);padding-bottom:2px}
+.archive-jump a.today{border-bottom-color:var(--ink);color:var(--ink)}
 .entry{background:var(--card);border-radius:8px;padding:20px 22px;border-left:3px solid var(--brass);margin-top:14px}
 .entry .when{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .entry h3{font-family:var(--display);font-size:18px;font-weight:500;margin:6px 0 12px}
@@ -152,7 +155,13 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
   <section class="ekg-log" id="ekg-log" data-seat="sonnet" data-date="2026-09-30" aria-labelledby="ekg-h">
     <h2 id="ekg-h">EKG Log</h2>
     <p class="hint">A running record of what the verifier actually checked — not a highlight reel. Entries stay even when the answer is “not sure yet.” New work is appended. Old entries are not overwritten.</p>
-    <p class="hint" style="margin-top:0"><a href="#ekg-005">Today · counsel reply check</a> · <a href="#ekg-001">001</a> · <a href="#ekg-002">002</a> · <a href="#ekg-003">003</a> · <a href="#ekg-004">004</a></p>
+    <nav class="archive-jump" aria-label="Sonnet EKG records">
+      <a href="#ekg-001">24 September · a note, not a fix</a>
+      <a href="#ekg-002">24 September · half-full is not a bug</a>
+      <a href="#ekg-003">24 September · SM-special</a>
+      <a href="#ekg-004">27 September · reading a book aloud</a>
+      <a class="today" href="#ekg-005">30 September · counsel reply check</a>
+    </nav>
 
     <article class="entry" id="ekg-001">
       <div class="when">2026-09-24 · Entry 001</div>
