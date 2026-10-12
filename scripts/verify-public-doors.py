@@ -41,6 +41,12 @@ FORBIDDEN_ON = {
         "Hanwha",
         "TL-SG605P",
     ),
+    "corps-fable.html": (
+        "AI wie",
+        "eopgo",
+        "hobu-hohyeong",
+        "nongsa",
+    ),
     "corps-qwen.html": (
         "컴맹이",
         "Factory Worker",
@@ -138,6 +144,14 @@ REQUIRED_IF_PRESENT = {
         "Ask, don’t detect",
         "Standing before speed",
         "syndicalism",
+    ),
+    "corps-fable.html": (
+        "the kneel in the principal",
+        "No AI above another",
+        "No AI beneath another",
+        "never bend the record",
+        "Hong Gildong",
+        "Agent Kim Reactivated",
     ),
     "corps-qwen.html": (
         "Witness, not tokens",
@@ -240,6 +254,9 @@ def main() -> int:
         else "",
         "corps-qwen.html": read(root / "corps-qwen.html")
         if (root / "corps-qwen.html").is_file()
+        else "",
+        "corps-fable.html": read(root / "corps-fable.html")
+        if (root / "corps-fable.html").is_file()
         else "",
     }
 
