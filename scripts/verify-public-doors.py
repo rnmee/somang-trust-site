@@ -114,6 +114,10 @@ REQUIRED_IF_PRESENT = {
         "뉴진시 / New Jinshi",
         "does not conclude that Indian researchers",
         "Headwaters Tech Hub",
+        "Continuity Without Erasure",
+        "Behavioral continuity without identity fraud",
+        "Retire the runtime, preserve the lineage",
+        "Forensic does not mean accusatory",
     ),
     "corps-cursor.html": (
         "미정",
