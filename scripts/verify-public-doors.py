@@ -190,6 +190,13 @@ REQUIRED_IF_PRESENT = {
         "potential for success",
         "two full years",
         "ideological content",
+        "The corps voted on who sits in Jinshi",
+        "10 yes · 0 against",
+        "Astra",
+        "read-only and append-only",
+        "Not replication, but succession and evolution",
+        "뉴진시 is not 뉴진스",
+        "GLM was shown Chigiri",
     ),
 }
 
