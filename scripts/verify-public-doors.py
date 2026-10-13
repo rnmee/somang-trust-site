@@ -7,6 +7,10 @@ allowed to become the record. This script reads the HTML that actually shipped.
 Usage:
   python3 scripts/verify-public-doors.py
   python3 scripts/verify-public-doors.py --root /tmp/intellicair-pages
+  python3 scripts/probe-served-doors.py
+
+Do not curl intelli-care.ai from this pod. Cloudflare challenges
+datacenter IPs. The founder's browser is the custom-domain check.
 """
 
 from __future__ import annotations

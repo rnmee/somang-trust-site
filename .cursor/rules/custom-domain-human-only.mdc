@@ -1,0 +1,20 @@
+---
+description: Do not probe intelli-care.ai from a Cloud Agent
+alwaysApply: true
+---
+
+# Custom domain is human-only from this pod
+
+Never curl, fetch, or browser-test `https://intelli-care.ai` from a Cloud Agent.
+
+Cloudflare returns `cf-mitigated: challenge` (403, “Just a moment…”) to this datacenter. That is not a down site. The founder’s own browser is the custom-domain check. She does not look at the Cloudflare dashboard for this.
+
+## Authority for a sit
+
+1. Source HTML + `python3 scripts/verify-public-doors.py`
+2. Local door: `http://127.0.0.1:43147/<door>.html` — never `/` alone (that is the Next React brief)
+3. Overlay `/tmp/intellicair-pages` + `https://intellicair.pages.dev/<door>.html` after wrangler
+
+Optional served probe: `python3 scripts/probe-served-doors.py`
+
+Do not ask her to turn off Bot Fight. Do not whitelist this pod. Do not treat a custom-domain 403 as a failed sit.

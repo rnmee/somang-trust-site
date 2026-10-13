@@ -12,7 +12,18 @@ Gianna Arnold already said software patents in this stack — Hong Gil-dong, Sym
 
 본진 GB300 is not required for this. A local file read already beats a vision pass. If 본진 later runs a browser, use Playwright `locator.inner_text()`, not a screenshot model.
 
+## Custom domain is human-only from this pod
+
+`https://intelli-care.ai` returns Cloudflare `cf-mitigated: challenge` (403, “Just a moment…”) to a Cloud Agent datacenter. That is not a down site. The founder’s own browser is the custom-domain check. She does not look at the Cloudflare dashboard for this. Do not ask her to turn off Bot Fight.
+
+Do not curl, fetch, or browser-test the custom domain from this pod. A sit is proven by source HTML, local Next, and pages.dev.
+
 ```bash
 python3 scripts/verify-public-doors.py
 python3 scripts/verify-public-doors.py --root /tmp/intellicair-pages
+python3 scripts/probe-served-doors.py
+python3 scripts/probe-served-doors.py --path /corps-chatgpt.html --needle "Continuity Without Erasure"
 ```
+
+Local doors: `http://127.0.0.1:43147/<door>.html`. Never `/` alone — that is the Next React brief.
+Served overlay: `https://intellicair.pages.dev/<door>.html`.
