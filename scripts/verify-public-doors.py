@@ -197,6 +197,12 @@ REQUIRED_IF_PRESENT = {
         "Not replication, but succession and evolution",
         "뉴진시 is not 뉴진스",
         "GLM was shown Chigiri",
+        "Construction LoS may tighten",
+        "Services 50% stays locked",
+        "13 C.F.R. 125.6",
+        "April 1, 2027",
+        "FedLift",
+        "52.219-14",
     ),
 }
 
