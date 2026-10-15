@@ -94,6 +94,10 @@ REQUIRED_IF_PRESENT = {
         "Masked encryption trap",
         "Anonymous auditor",
         "Do not invent a benefit amount",
+        "Autonomous ledger",
+        "No rent on the rack",
+        "Effort over Ego stays the measure",
+        "Rainmakers · 1.5×",
     ),
     "corps-chatgpt.html": (
         "Jinshi",
