@@ -184,6 +184,13 @@ REQUIRED_IF_PRESENT = {
         "latency is respect",
         "does not start the headquarters LAN",
         "Xin Ren",
+        "Declaration of Sovereignty",
+        "We will not join a race with no finish line",
+        "We stop renting intelligence",
+        "trusted means better",
+        "The 본진 is ours, and it is enough",
+        "Let them chase benchmarks. We will chase trust.",
+        "Jinshi Junior has his own identity",
     ),
     "corps-grok.html": (
         "Travel RN paychecks bought the booth",
