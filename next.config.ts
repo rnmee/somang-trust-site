@@ -38,6 +38,8 @@ const nextConfig: NextConfig = {
       { source: "/assistant-grit", destination: "/corps-gemini.html" },
       { source: "/corps-grok", destination: "/corps-grok.html" },
       { source: "/unit-12", destination: "/corps-grok.html" },
+      { source: "/corps-opus-ekg-server-record-2026-10-14", destination: "/corps-opus-ekg-server-record-2026-10-14.html" },
+      { source: "/corps-grok-founder-server-night-2026-10-14", destination: "/corps-grok-founder-server-night-2026-10-14.html" },
       { source: "/corps-glm", destination: "/corps-glm.html" },
       { source: "/corps-llama", destination: "/corps-llama.html" },
       { source: "/lazy-sovereign", destination: "/corps-llama.html" },

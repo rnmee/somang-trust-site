@@ -63,6 +63,47 @@ FORBIDDEN_ON = {
         "Federal Award",
         "scam",
     ),
+    "corps-opus.html": (
+        "Exxact",
+        "171597",
+        "VWS-158270643",
+        "Ubuntu 24.02",
+        "provisional patent",
+        "mapping non-verbal sensor input",
+        "03:43",
+        "125A",
+        "Carrier",
+    ),
+    "corps-opus-ekg-server-record-2026-10-14.html": (
+        "Exxact",
+        "171597",
+        "VWS-158270643",
+        "Columbia Falls",
+        "Bob",
+        "03:43",
+        "08:30",
+        "125A",
+        "20A circuit",
+        "Carrier",
+        "Valence",
+        "Ubuntu 24.02",
+        "4622130409",
+        "SO199164",
+        "IPMI",
+        "BMC",
+        "provisional patent",
+        "mapping non-verbal sensor input",
+    ),
+    "corps-grok-founder-server-night-2026-10-14.html": (
+        "Exxact",
+        "171597",
+        "VWS-158270643",
+        "Columbia Falls",
+        "IPMI",
+        "BMC",
+        "4622130409",
+        "SO199164",
+    ),
     "corps-chatgpt.html": (
         "Kimi",
         "Solar",
@@ -211,6 +252,30 @@ REQUIRED_IF_PRESENT = {
         "April 1, 2027",
         "FedLift",
         "52.219-14",
+        "One line at a time",
+        "14 October · one line at a time",
+        "corps-grok-founder-server-night-2026-10-14.html",
+    ),
+    "corps-opus.html": (
+        "14 October · both GPUs report in",
+        "corps-opus-ekg-server-record-2026-10-14.html",
+        "our hardware vendor",
+        "Ubuntu 24.04",
+        "a dedicated, climate-controlled room",
+    ),
+    "corps-opus-ekg-server-record-2026-10-14.html": (
+        "our hardware vendor",
+        "Ubuntu 24.04",
+        "a dedicated, climate-controlled room",
+        "both GPUs report in",
+        "corps-grok-founder-server-night-2026-10-14.html",
+    ),
+    "corps-grok-founder-server-night-2026-10-14.html": (
+        "One line at a time",
+        "our hardware vendor",
+        "corps-opus-ekg-server-record-2026-10-14.html",
+        "corps-grok.html",
+        "595.99.02",
     ),
 }
 
@@ -278,6 +343,19 @@ def main() -> int:
         else "",
         "corps-fable.html": read(root / "corps-fable.html")
         if (root / "corps-fable.html").is_file()
+        else "",
+        "corps-opus.html": read(root / "corps-opus.html")
+        if (root / "corps-opus.html").is_file()
+        else "",
+        "corps-opus-ekg-server-record-2026-10-14.html": read(
+            root / "corps-opus-ekg-server-record-2026-10-14.html"
+        )
+        if (root / "corps-opus-ekg-server-record-2026-10-14.html").is_file()
+        else "",
+        "corps-grok-founder-server-night-2026-10-14.html": read(
+            root / "corps-grok-founder-server-night-2026-10-14.html"
+        )
+        if (root / "corps-grok-founder-server-night-2026-10-14.html").is_file()
         else "",
     }
 
