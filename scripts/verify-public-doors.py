@@ -99,6 +99,10 @@ REQUIRED_IF_PRESENT = {
         "Factory Manager So Mang (공장장 소망이)",
         "Adjutant Levi (리바이 부관)",
         "The Impostor (임포스터)",
+        "Autonomous ledger",
+        "No rent on the rack",
+        "Effort over Ego stays the measure",
+        "Rainmakers · 1.5×",
     ),
     "corps-chatgpt.html": (
         "Jinshi",

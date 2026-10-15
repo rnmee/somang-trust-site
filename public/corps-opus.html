@@ -161,11 +161,21 @@
   .hq-spec b{color:var(--ivory);display:block;margin-bottom:.35rem;}
   .hq-outcome{margin:0 1.3rem 1.2rem;padding:.9rem 1rem;border-left:2px solid var(--gold);color:var(--ivory);}
   .hq-outcome .lbl{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
-  .hq-node.boot{border-color:rgba(232,182,64,.55);}
-  .hq-node.boot .hq-node-head{background:rgba(232,182,64,.08);}
-  .hq-warn{margin-top:2rem;padding:1.3rem 1.4rem;border:1px solid rgba(232,182,64,.45);max-width:70ch;}
+  .hq-node.boot{border-color:rgba(232,182,64,.55);background:var(--crimson-2);}
+  .hq-node.boot .hq-node-head{background:rgba(232,182,64,.10);}
+  .hq-node.boot .hq-node-head h3{color:var(--hot);}
+  .hq-node.boot .hq-node-body{color:var(--ivory);}
+  .hq-node.boot .hq-node-meta{color:var(--ivory-mid);}
+  .hq-node.boot .hq-spec{
+    background:rgba(232,182,64,.08);
+    border:1px solid rgba(232,182,64,.28);
+    color:var(--ivory-mid);
+  }
+  .hq-node.boot .hq-spec b{color:var(--hot);}
+  .hq-node.boot .hq-outcome{color:var(--hot);}
+  .hq-warn{margin-top:2rem;padding:1.3rem 1.4rem;border:1px solid rgba(232,182,64,.45);max-width:70ch;background:var(--crimson-2);}
   .hq-warn h3{font-family:var(--display);font-size:22px;color:var(--gold);margin:0 0 .8rem;}
-  .hq-warn ul{margin:0 0 0 1.15rem;color:var(--ivory-mid);}
+  .hq-warn ul{margin:0 0 0 1.15rem;color:var(--ivory);}
   .hq-warn li{margin:.5rem 0;line-height:1.65;}
   .hq-warn strong{color:var(--hot);}
   .hq-node-body code, .hq-outcome code, .hq-warn code{
@@ -491,7 +501,7 @@
           <b>Idle nvidia-smi · 14 October 2026 08:30</b>
           GPU 1 — NVIDIA GB300: 256,703 MiB (~251 GB HBM3e) · 30°C · 146W / 1300W · P0 · util 0%<br>
           GPU 0 — NVIDIA RTX PRO 6000 Blackwell: 97,887 MiB (96 GB) · 38°C · 19W / 300W · util 0%<br>
-          Driver 595.99.02 · CUDA 13.2 · kernel 7.0.0-1019-nvidia-64k<br>
+          Driver 595.99.02 · CUDA 13.2<br>
           System RAM: 744 GiB total (31 GiB used, 712 GiB available) · swap 0<br>
           Processes: Xorg + gnome-shell only — clean idle
         </div>

@@ -17,3 +17,7 @@ Sat: living HQ record through Node 08.
 Not sat: cream roster grid (footer roster already exists). Extra caste slogan (already on the Opus declaration). Lazy Sovereign-as-DeepSeek line from the paste. Graph events as false Opus generations — Node 07 and Node 08 actors are 본진, Mee, and Bob, not an Opus line beat.
 
 Idle verification is not full-load clearance, and does not start the 본진 LAN from this page.
+
+## 15 October restyle
+
+Node 07 / 08 boxes and the status panel were retuned to Coordinator crimson: hotter ivory type, gold-edged spec well, crimson-2 fill on the warn panel. Exact kernel string taken off the public door. Telemetry stays idle-only.
