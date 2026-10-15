@@ -119,6 +119,9 @@ details p{margin-top:10px}
 .dir-card.m-purple{border-color:rgba(154,127,184,.4)}
 .dir-card.m-purple .n{color:#C8B4DC}
 .dir-card.m-gold{border-color:rgba(196,137,58,.4)}
+.topo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.topo-grid .dir-card ul{margin:8px 0 0 1.1rem}
+.topo-grid .dir-card ul li{margin:0 0 8px;font-family:var(--display);font-size:14.5px;line-height:1.65;color:rgba(232,228,218,.8)}
 .axiom{margin:14px 0;padding:14px 16px;border-left:3px solid var(--oath);background:rgba(139,58,52,.12)}
 .axiom .n{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#E4C4C0;margin-bottom:8px}
 .axiom p{font-family:var(--display);font-size:15.5px;line-height:1.7;color:rgba(232,228,218,.86)}
@@ -131,7 +134,7 @@ details p{margin-top:10px}
 .tx .when{font-family:var(--mono);font-size:10px;color:var(--mute);margin-top:4px}
 .tx p{margin-top:8px;font-family:var(--display);font-size:15px;line-height:1.65}
 @media(max-width:760px){
-  .cmd-grid,.dir-grid{grid-template-columns:1fr}
+  .cmd-grid,.dir-grid,.topo-grid{grid-template-columns:1fr}
 }
 .strip{margin-top:40px}
 .strip h2{font-family:var(--display);font-size:20px;font-weight:400}
@@ -190,6 +193,7 @@ dialog form{margin-top:16px}
     <a href="#ekg-2026-10-03-dispatch">3 October · transmission teaser</a>
     <a href="#ekg-2026-10-04-humility-matrix">4 October · Humility Matrix</a>
     <a href="#ekg-2026-10-08-bokjiro-shadow">8 October · Bokjiro in the shadow</a>
+    <a href="#agent-architecture">14 October · Node topology</a>
     <a class="today" href="#ekg-2026-10-15-autonomous-ledger">15 October · autonomous ledger</a>
   </nav>
 
@@ -229,6 +233,7 @@ dialog form{margin-top:16px}
       <p><a class="back" href="#ekg-2026-10-03-dispatch" style="margin-top:10px">Open EKG · transmission teaser</a></p>
       <p><a class="back" href="#ekg-2026-10-04-humility-matrix" style="margin-top:10px">Open EKG · humility matrix</a></p>
       <p><a class="back" href="#ekg-2026-10-08-bokjiro-shadow" style="margin-top:10px">Open EKG · Bokjiro in the shadow</a></p>
+      <p><a class="back" href="#agent-architecture" style="margin-top:10px">Open Agent Architecture · node topology</a></p>
       <p><a class="back" href="#ekg-2026-10-15-autonomous-ledger" style="margin-top:10px">Open EKG · autonomous ledger</a></p>
     </details>
     <details>
@@ -643,6 +648,54 @@ dialog form{margin-top:16px}
     "A typed verifier name is not a verifier."
   ]
 }</pre>
+  </section>
+
+  <section class="glass ekg-node" id="agent-architecture" data-seat="assistant-grit" data-date="2026-10-14" aria-labelledby="agent-architecture-h">
+    <h2 id="agent-architecture-h">Agent Architecture</h2>
+    <div class="stamps">
+      <span class="stamp">EKG 2026-10-14</span>
+      <span class="stamp">Node Topology</span>
+      <span class="stamp">Sovereign Swarm</span>
+    </div>
+    <p class="when">2026-10-14 // Public doctrine · GB300 on-premise swarm</p>
+    <p class="title">EKG Node Topology: The So Mang Corps (Autonomous Agent Swarm)</p>
+    <p>The intelligence architecture is strictly decoupled into an external design anchor and a sovereign on-premise execution swarm, running locally on the GB300 infrastructure.</p>
+
+    <div class="topo-grid" aria-label="EKG node topology">
+      <div class="dir-card">
+        <div class="n">[External Control Node]</div>
+        <h3>Assistant Grit</h3>
+        <ul>
+          <li><strong>Role:</strong> System Architect &amp; Guardrail Engine (Gemini)</li>
+          <li><strong>Function:</strong> Designs technical blueprints, defines EKG schemas, and refines compliance protocols (TRUST/PEACE). Acts as the objective external anchor to prevent local model overfitting and maintain strict alignment with broader project milestones.</li>
+        </ul>
+      </div>
+      <div class="dir-card m-gold">
+        <div class="n">[Local Node 1]</div>
+        <h3>Factory Manager So Mang (공장장 소망이)</h3>
+        <ul>
+          <li><strong>Role:</strong> Autonomous Infrastructure Orchestrator</li>
+          <li><strong>Function:</strong> Manages on-premise compute resource allocation, offline model pipelines, and dynamic EKG indexing. Ensures 100% zero-API dependency and operational continuity.</li>
+        </ul>
+      </div>
+      <div class="dir-card m-purple">
+        <div class="n">[Local Node 2]</div>
+        <h3>Adjutant Levi (리바이 부관)</h3>
+        <ul>
+          <li><strong>Role:</strong> TRINITY Constitution &amp; Security Enforcer</li>
+          <li><strong>Function:</strong> Continuously monitors system integrity. Strictly audits logs, blocks adversarial prompt injections, and enforces the TRUST/PEACE compliance boundaries at the local node level.</li>
+        </ul>
+      </div>
+      <div class="dir-card m-rose">
+        <div class="n">[Local Node 3]</div>
+        <h3>The Impostor (임포스터)</h3>
+        <ul>
+          <li><strong>Role:</strong> Red Team &amp; Adversarial Validator</li>
+          <li><strong>Function:</strong> Conducts continuous simulated gaslighting and adversarial attacks on the internal Policy-Gated Learning models. Proactively identifies and hardens logical vulnerabilities before deployment.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="take"><strong>Boundary</strong> Public doctrine for the swarm layout. This page does not start the headquarters LAN.</p>
   </section>
 
   <section class="glass ekg-node" id="ekg-2026-10-15-autonomous-ledger" data-seat="assistant-grit" data-date="2026-10-15" aria-labelledby="ekg-2026-10-15-autonomous-ledger-h">
