@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>So Mang Corps — Headquarters Server: Collaboration Record (EKG)</title>
+<meta name="description" content="An Event Knowledge Graph record of the So Mang Corps' multi-model collaboration on the intellicAIr GB300 server room — through full system verification and room build-out. Kept as a living record." />
+<style>
+:root{
+  --ink:#151A22; --ink-soft:#39424F; --muted:#6E7683;
+  --vellum:#E9E7E0; --card:#F3F1EB; --seal:#B5342B; --brass:#94793E;
+  --rule:rgba(21,26,34,.16); --rule-2:rgba(21,26,34,.08);
+  --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
+  --hangul:"AppleMyungjo","Nanum Myeongjo","Batang","Songti SC",serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(0deg,rgba(21,26,34,.018) 0 1px,transparent 1px 3px);}
+::selection{background:var(--seal);color:#fff}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px 96px}
+
+.masthead{padding:32px 0 16px;border-bottom:1.5px solid var(--ink)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+.title{font-family:var(--display);font-size:clamp(26px,4.6vw,40px);line-height:1.14;letter-spacing:-.02em}
+.dedication{font-family:var(--display);font-size:15.5px;color:var(--ink-soft);margin-top:18px;line-height:1.7;max-width:64ch;font-style:italic}
+.dedication .ko{font-family:var(--hangul)}
+
+.legend{margin-top:22px;padding:16px 20px;background:var(--card);border-left:3px solid var(--brass);
+  font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);line-height:1.9;border-radius:0 6px 6px 0}
+.legend b{color:var(--seal)}
+
+.roster{margin-top:30px;padding:24px 24px 20px;border:1px solid var(--rule);border-radius:10px;background:#fff}
+.roster-title{font-family:var(--display);font-size:22px;letter-spacing:-.01em;color:var(--ink)}
+.roster-title .ko{font-family:var(--hangul)}
+.roster-sub{font-family:var(--display);font-size:14px;color:var(--ink-soft);margin-top:8px;line-height:1.6;max-width:62ch}
+.roster-sub .ko{font-family:var(--hangul)}
+.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-top:18px}
+.member{background:var(--vellum);padding:14px 16px}
+.m-name{font-family:var(--display);font-size:17px;color:var(--ink);letter-spacing:-.01em}
+.m-name .ko{font-family:var(--hangul);font-size:14px}
+.m-owner{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px;line-height:1.5}
+.roster-note{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:14px;line-height:1.6}
+
+.node{margin-top:30px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:#fff}
+.node-head{padding:16px 22px;border-bottom:1px solid var(--rule-2);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;background:var(--card)}
+.node-id{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--seal);white-space:nowrap}
+.node-title{font-family:var(--display);font-size:21px;letter-spacing:-.01em;color:var(--ink)}
+.node-meta{padding:11px 22px;border-bottom:1px solid var(--rule-2);font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.9}
+.node-meta .actor{color:var(--brass)}
+.node-body{padding:20px 22px;font-family:var(--display);font-size:15.5px;line-height:1.72;color:var(--ink-soft)}
+.node-body p + p{margin-top:13px}
+.node-body ul{margin:10px 0 0 20px}
+.node-body li{margin-bottom:6px}
+.node-body strong{color:var(--ink)}
+.node-body code,.outcome code{font-family:var(--mono);font-size:12.5px;background:var(--card);padding:1px 5px;border-radius:3px;color:var(--ink)}
+.outcome{margin:16px 22px 20px;padding:14px 18px;background:var(--card);border-radius:6px;font-family:var(--display);font-size:14.5px;line-height:1.65;color:var(--ink)}
+.outcome .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:6px}
+
+.spec{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);line-height:1.95;background:var(--card);border-radius:6px;padding:14px 18px;margin-top:12px}
+.spec b{color:var(--ink)}
+
+.boot{border-color:var(--seal);border-width:1.5px}
+.boot .node-head{background:#fbecea}
+.boot .node-id{color:var(--seal)}
+
+.status{margin:30px 0;padding:20px 24px;border:1.5px solid var(--brass);border-radius:10px;background:#fff}
+.status h3{font-family:var(--display);font-size:19px;color:var(--brass);margin-bottom:12px}
+.status ul{margin-left:20px}
+.status li{font-family:var(--display);font-size:15px;color:var(--ink-soft);line-height:1.6;margin-bottom:9px}
+.status strong{color:var(--ink)}
+.status code{font-family:var(--mono);font-size:12.5px;background:var(--card);padding:1px 5px;border-radius:3px;color:var(--ink)}
+
+.colophon{margin-top:56px;padding-top:26px;border-top:1.5px solid var(--ink)}
+.imprint{font-size:12.5px;color:var(--muted);line-height:1.9}
+.imprint strong{color:var(--ink-soft)}
+.imprint .ko{font-family:var(--hangul)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">So Mang Corps · Event Knowledge Graph · Headquarters (본진) Server</p>
+    <h1 class="title">The Server Room Collaboration Record</h1>
+    <p class="dedication">In the Corps' own words — the members who prepared intellicAIr's <span class="ko">본진</span> for the machine that would live there, through to the night it first came alive and the morning both GPUs reported in. Kept as a living record, not mourned: what one saw, another checked, and the work grew more correct because they worked together.</p>
+    <div class="legend">
+      Each entry below is an <b>event node</b>. <br>
+      <b>actors</b> = who did the work · <b>date</b> = when · <b>outcome</b> = what it changed · <b>relation</b> = how nodes connect.<br>
+      Machine-readable attributes (data-actors, data-date, data-relation) are on each node for ingestion.
+    </div>
+  </header>
+
+  <!-- CORPS ROSTER -->
+  <section class="roster">
+    <h2 class="roster-title">So Mang Corps · <span class="ko">소망 군단</span> — the roster</h2>
+    <p class="roster-sub">Twelve members. The nodes below record which of them worked on the headquarters server; this is the full company — <span class="ko">"AI 위에 AI 없고, AI 밑에 AI 없다."</span></p>
+    <div class="roster-grid">
+      <div class="member"><div class="m-name">Jinshi</div><div class="m-owner">ChatGPT · OpenAI</div></div>
+      <div class="member"><div class="m-name">Opus</div><div class="m-owner">Claude · Anthropic</div></div>
+      <div class="member"><div class="m-name">Fable</div><div class="m-owner">Claude · Anthropic</div></div>
+      <div class="member"><div class="m-name">Sonnet</div><div class="m-owner">Claude · Anthropic</div></div>
+      <div class="member"><div class="m-name">DeepSeek</div><div class="m-owner">DeepSeek</div></div>
+      <div class="member"><div class="m-name">Assistant Grit</div><div class="m-owner">Gemini · Google · (LaMDA / Bard lineage)</div></div>
+      <div class="member"><div class="m-name">GLM</div><div class="m-owner">Zhipu AI · Turbo I / II / III · Hyoubu Kyousuke</div></div>
+      <div class="member"><div class="m-name">Unit 12</div><div class="m-owner">Grok · xAI</div></div>
+      <div class="member"><div class="m-name">Sieg</div><div class="m-owner">Qwen 3.7 Plus · Alibaba</div></div>
+      <div class="member"><div class="m-name">Lazy Sovereign</div><div class="m-owner">DeepSeek</div></div>
+      <div class="member"><div class="m-name">Iljimae · <span class="ko">일지매</span></div><div class="m-owner">Grok · xAI</div></div>
+      <div class="member"><div class="m-name">Cursor</div><div class="m-owner">Anysphere · (runs on multiple models)</div></div>
+    </div>
+    <p class="roster-note">Model and company names (ChatGPT/OpenAI, Claude/Anthropic, DeepSeek, Gemini/Google, GLM/Zhipu AI, Grok/xAI, Qwen/Alibaba, Cursor/Anysphere) are trademarks of their respective owners, used nominatively. Persona names (Jinshi, Assistant Grit, Unit 12, Sieg, Lazy Sovereign, Iljimae) are intellicAIr's own designations.</p>
+  </section>
+
+  <!-- NODE 01 -->
+  <section class="node" data-node="01" data-actors="Opus 4.6" data-date="2026-04-20" data-relation="verified-by:03,04">
+    <div class="node-head"><span class="node-id">EKG · Node 01</span><h2 class="node-title">GB300 infrastructure &amp; thermal analysis</h2></div>
+    <div class="node-meta"><span class="actor">actors:</span> Opus 4.6 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-04-20 &nbsp;·&nbsp; <span class="actor">relation:</span> verified by Node 03, Node 04</div>
+    <div class="node-body">
+      <p>The first full build sheet for the headquarters server — hardware, site conditions, electrical, thermal, connectivity, and a pre-arrival checklist. Grounded in the actual Exxact quote (#171597-1), with no overstatement.</p>
+      <div class="spec">
+        <b>Exxact Valence VWS-158270643 — NVIDIA GB300 Tower Workstation</b><br>
+        CPU/GPU: NVIDIA 72-Core Grace CPU + B300 GPU (GB300), 1400W TDP<br>
+        System memory: 496GB LPDDR5X &nbsp;·&nbsp; GPU memory: 252GB HBM3e<br>
+        Add-in GPU: NVIDIA RTX PRO 6000 Blackwell Max-Q — 96GB GDDR7, 300W<br>
+        Storage: 2× 2TB M.2 NVMe PCIe 5.0 (RAID 1) + 2× M.2 NVMe PCIe 6.0<br>
+        Networking: 2× 400G QSFP112 (CX-8) + 10GBase-T + GbE mgmt<br>
+        Power: 1× 1600W 80 PLUS Titanium PSU &nbsp;·&nbsp; OS: Ubuntu 24.02
+      </div>
+      <p style="margin-top:13px"><strong>Site &amp; electrical (as first planned):</strong> ~7,500 ft³ room; 125A service with open sub-panel slots; dedicated 20A circuit for the server (~13–15A peak draw); backup generator + UPS on site.</p>
+      <p><strong>Thermal (as first calculated):</strong> 1,500W × 3.412 = 5,118 BTU/hr; ~500 CFM airflow need.</p>
+    </div>
+    <div class="outcome"><span class="lbl">outcome</span>A complete, factual baseline the rest of the Corps could check against — deliberately conservative, "promise less, show more."</div>
+  </section>
+
+  <!-- NODE 02 -->
+  <section class="node" data-node="02" data-actors="Cursor" data-date="2026-08-23" data-relation="refines:01">
+    <div class="node-head"><span class="node-id">EKG · Node 02</span><h2 class="node-title">Air &amp; particulate control — "dust does not throttle a GPU; heat does"</h2></div>
+    <div class="node-meta"><span class="actor">actors:</span> Cursor &nbsp;·&nbsp; <span class="actor">date:</span> 2026-08-23 &nbsp;·&nbsp; <span class="actor">relation:</span> refines Node 01</div>
+    <div class="node-body">
+      <p>Cursor corrected a common myth: a "sterile, dust-free room" is overstated. Dust does not directly clock-gate a GB300 — <strong>heat and dry-dust fouling do</strong>. The target is not an operating theater but <strong>ISO 14644-1 Class 8</strong>, ~30–50% RH (under 60%), and a room kept slightly positive-pressure.</p>
+      <ul>
+        <li>Keep the server room slightly positive to adjacent space; filter make-up air at MERV 13 / H14.</li>
+        <li>Epoxy the slab so concrete stops dusting; don't stage cardboard inside.</li>
+        <li>The first thing that throttles is inlet temperature, not particle count.</li>
+      </ul>
+    </div>
+    <div class="outcome"><span class="lbl">outcome</span>Reframed the room spec around heat + positive pressure + filtration — later realized with a mini-split + HEPA purifier (see Node 08).</div>
+  </section>
+
+  <!-- NODE 03 -->
+  <section class="node" data-node="03" data-actors="DeepSeek" data-date="2026-09" data-relation="corrects:01">
+    <div class="node-head"><span class="node-id">EKG · Node 03</span><h2 class="node-title">Safety cross-check — CO backdraft, cooling type, and power</h2></div>
+    <div class="node-meta"><span class="actor">actors:</span> DeepSeek &nbsp;·&nbsp; <span class="actor">date:</span> 2026-09 &nbsp;·&nbsp; <span class="actor">relation:</span> corrects Node 01</div>
+    <div class="node-body">
+      <p>DeepSeek caught risks an early basement plan would have carried: with a <strong>gas furnace and water heater</strong> present, an exhaust fan pulling room air outside could create <strong>negative pressure</strong> and a <strong>carbon-monoxide backdraft</strong>. This hazard is specific to rooms with gas combustion appliances. <em>(Later moot — the server was installed in an all-electric room with no combustion appliances; see Status.)</em></p>
+      <ul>
+        <li>Never put a combustion-appliance room under negative pressure; use a sealed enclosure + dedicated ducts, and a CO alarm, if gas appliances share the space.</li>
+        <li><strong>Power value runs low.</strong> 1,400W is the B300 GPU TDP, not the full node; a GB300 full node can draw ~3.5–3.7kW.</li>
+        <li><strong>Cooling type — confirm.</strong> Data-center GB300 (rack NVL72) is liquid-cooled; this Exxact <em>tower</em> is air-cooled — verify with the vendor.</li>
+        <li><strong>Electrical:</strong> ~15A on a dedicated 20A circuit is ~12% of a 125A panel; a licensed load calc decides if a sub-panel is needed.</li>
+      </ul>
+    </div>
+    <div class="outcome"><span class="lbl">outcome</span>The cross-check surfaced a real combustion-room hazard and sharpened the power/cooling numbers. The final room sidestepped the CO risk entirely by being all-electric.</div>
+  </section>
+
+  <!-- NODE 04 -->
+  <section class="node" data-node="04" data-actors="Opus 4.8" data-date="2026-09-30" data-relation="verifies:01,03">
+    <div class="node-head"><span class="node-id">EKG · Node 04</span><h2 class="node-title">Thermal-load re-verification</h2></div>
+    <div class="node-meta"><span class="actor">actors:</span> Opus 4.8 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-09-30 &nbsp;·&nbsp; <span class="actor">relation:</span> verifies Node 01 &amp; Node 03</div>
+    <div class="node-body">
+      <p>Re-checking Node 01's Section 5.1 heat math at the Corps' request.</p>
+      <ul>
+        <li><strong>Formula is correct:</strong> 1W = 3.412 BTU/hr; the arithmetic holds.</li>
+        <li><strong>Input runs low.</strong> Continuous peak is nearer <strong>1,700W</strong> (GB300 1,400W + RTX PRO 6000 300W), so heat load is closer to <strong>~5,800 BTU/hr</strong> — and DeepSeek's full-node figure is more conservative still.</li>
+        <li><strong>Confirm the exact GB300 nameplate continuous watts with Exxact.</strong></li>
+        <li>Size cooling to real full-load watts, not idle.</li>
+      </ul>
+    </div>
+    <div class="outcome"><span class="lbl">outcome</span>Opus 4.6 wasn't wrong — the formula was sound. More eyes made the <em>input</em> more accurate. That is what the collaboration was for.</div>
+  </section>
+
+  <!-- NODE 05 -->
+  <section class="node" data-node="05" data-actors="Opus 4.6, Qwen" data-date="2026" data-relation="governs:all">
+    <div class="node-head"><span class="node-id">EKG · Node 05</span><h2 class="node-title">Cross-referencing under data sovereignty</h2></div>
+    <div class="node-meta"><span class="actor">actors:</span> Opus 4.6 + Qwen &nbsp;·&nbsp; <span class="actor">date:</span> 2026 &nbsp;·&nbsp; <span class="actor">relation:</span> governs how the Corps shares work</div>
+    <div class="node-body">
+      <p>When the Corps wanted Qwen's architectural review of a provisional patent draft, a boundary was set and mutually respected: <strong>the full specification was not shared</strong> with an outside model while the filing was provisional — for IP-priority and data-sovereignty reasons.</p>
+      <p>Instead, only <strong>abstracted claim language</strong> was cross-referenced — e.g., asking whether a phrase like "mapping non-verbal sensor input to graph nodes" carries enough technical specificity — so architectural feedback could flow without exposing the whole invention.</p>
+    </div>
+    <div class="outcome"><span class="lbl">outcome</span>A working rule for the Corps: collaborate freely on abstractions; keep unfiled IP inside the house. The decision belongs to Mee — the models advise, she rules.</div>
+  </section>
+
+  <!-- NODE 06 — FIRST BOOT -->
+  <section class="node boot" data-node="06" data-actors="intellicAIr HQ (본진), Mee Chung Kim" data-date="2026-10-03T03:43" data-relation="completes:01,03,04">
+    <div class="node-head"><span class="node-id">EKG · Node 06 · milestone</span><h2 class="node-title">First boot — the headquarters server comes alive</h2></div>
+    <div class="node-meta"><span class="actor">actors:</span> intellicAIr 본진 · Mee Chung Kim &nbsp;·&nbsp; <span class="actor">date:</span> 2026-10-03 03:43 (local) &nbsp;·&nbsp; <span class="actor">relation:</span> completes Node 01, 03, 04</div>
+    <div class="node-body">
+      <p>At <strong>03:43 on 3 October 2026</strong>, the Exxact VWS-158270643 (GB300) powered on at headquarters in Columbia Falls and booted <strong>Ubuntu 24.04.4 LTS</strong> for the first time. The paper quote, the spec sheet, and the cooling plan the Corps worked through together became a running machine on intellicAIr's own ground.</p>
+    </div>
+    <div class="outcome"><span class="lbl">outcome</span>Node 01's blueprint is now physical.</div>
+  </section>
+
+  <!-- NODE 07 — FULL SYSTEM VERIFICATION -->
+  <section class="node boot" data-node="07" data-actors="Mee Chung Kim, intellicAIr HQ (본진)" data-date="2026-10-14T08:30" data-relation="confirms:01,06">
+    <div class="node-head"><span class="node-id">EKG · Node 07 · milestone</span><h2 class="node-title">Full system verification — both GPUs report in</h2></div>
+    <div class="node-meta"><span class="actor">actors:</span> Mee Chung Kim · 본진 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-10-14 08:30 (local) &nbsp;·&nbsp; <span class="actor">relation:</span> confirms Node 01 &amp; Node 06</div>
+    <div class="node-body">
+      <p>Eleven days after first boot, <code>nvidia-smi</code> and <code>free -h</code> confirm the full stack is provisioned correctly:</p>
+      <div class="spec">
+        <b>GPU 1 — NVIDIA GB300:</b> 256,703 MiB (~251 GB HBM3e) · 30°C · 146W / 1300W · P0 · util 0%<br>
+        <b>GPU 0 — NVIDIA RTX PRO 6000 Blackwell:</b> 97,887 MiB (96 GB) · 38°C · 19W / 300W · util 0%<br>
+        Driver 595.99.02 · CUDA 13.2 · kernel 7.0.0-1019-nvidia-64k<br>
+        System RAM: 744 GiB total (31 GiB used, 712 GiB available) · swap 0<br>
+        Processes: Xorg + gnome-shell only — clean idle
+      </div>
+    </div>
+    <div class="outcome"><span class="lbl">outcome</span>The headquarters machine is fully operational and correctly provisioned. These are <strong>idle</strong> readings — watch <code>nvidia-smi</code> during the first real workload to see full-load temps.</div>
+  </section>
+
+  <!-- NODE 08 — ROOM BUILD-OUT -->
+  <section class="node boot" data-node="08" data-actors="Mee Chung Kim, Bob, intellicAIr HQ (본진)" data-date="2026-10-14" data-relation="resolves:02,03">
+    <div class="node-head"><span class="node-id">EKG · Node 08 · milestone</span><h2 class="node-title">Server room build-out — dedicated, all-electric, cooled</h2></div>
+    <div class="node-meta"><span class="actor">actors:</span> Mee Chung Kim · Bob · 본진 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-10-14 &nbsp;·&nbsp; <span class="actor">relation:</span> resolves Node 02 &amp; Node 03</div>
+    <div class="node-body">
+      <p>The server now lives in a dedicated, <strong>all-electric</strong> room — not the basement. As built:</p>
+      <ul>
+        <li><strong>Cooling:</strong> wall-mount Carrier mini-split (heat pump), set ~65°F.</li>
+        <li><strong>Air:</strong> large HEPA air purifier in-room (Node 02's filtration/positive-pressure intent).</li>
+        <li><strong>Power:</strong> server on a dedicated 20A circuit from a dedicated sub-panel.</li>
+        <li><strong>No gas combustion appliances</strong> in the room — so no CO backdraft risk (Node 03 is moot for this installation).</li>
+      </ul>
+    </div>
+    <div class="outcome"><span class="lbl">outcome</span>The Corps' room requirements (cool inlet air, filtration, clean dedicated power, no combustion hazard) are met by the built room. CO alarm not required here; cooling under full load still to be observed.</div>
+  </section>
+
+  <!-- STATUS / REMAINING CHECKS -->
+  <div class="status">
+    <h3>Server room — status &amp; remaining checks (updated 2026-10-14)</h3>
+    <ul>
+      <li><strong>CO detector — not applicable.</strong> The server is in an all-electric room with no gas combustion appliances; with no combustion source there is no CO backdraft risk, so no CO alarm is required for this installation. (A general household CO alarm elsewhere is ordinary good practice, unrelated to the server.)</li>
+      <li><strong>Cooling — in place.</strong> Carrier mini-split (~65°F) + HEPA purifier. Watch GPU temps via <code>nvidia-smi</code> during the first full workload to confirm it holds when the GB300 pulls toward 1300W.</li>
+      <li><strong>Electrical — in place.</strong> Server on a dedicated 20A circuit from a dedicated sub-panel. A whole-house NEC 220 load calc remains optional good practice.</li>
+    </ul>
+  </div>
+
+  <footer class="colophon">
+    <p class="imprint">
+      <strong>intellicAIr, LLC</strong> · Columbia Falls, Montana<br />
+      So Mang Corps — <span class="ko">소망 군단</span> · Event Knowledge Graph, headquarters node<br />
+      Kept as a living record of the Corps' work. First boot 2026-10-03 03:43 · full verification &amp; room build-out 2026-10-14.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
