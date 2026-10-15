@@ -94,6 +94,11 @@ REQUIRED_IF_PRESENT = {
         "Masked encryption trap",
         "Anonymous auditor",
         "Do not invent a benefit amount",
+        "Agent Architecture",
+        "EKG Node Topology: The So Mang Corps (Autonomous Agent Swarm)",
+        "Factory Manager So Mang (공장장 소망이)",
+        "Adjutant Levi (리바이 부관)",
+        "The Impostor (임포스터)",
     ),
     "corps-chatgpt.html": (
         "Jinshi",
