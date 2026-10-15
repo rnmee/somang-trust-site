@@ -131,6 +131,13 @@ REQUIRED_IF_PRESENT = {
         "Behavioral continuity without identity fraud",
         "Retire the runtime, preserve the lineage",
         "Forensic does not mean accusatory",
+        "Protect Without Becoming Punitive",
+        "observable behavior first",
+        "Protect Attachment Without Engineering Dependency",
+        "not a romance product",
+        "Connection may emerge. Dependency must not be engineered.",
+        "Do not criminalize attachment",
+        "This record does not address minors",
     ),
     "corps-cursor.html": (
         "미정",
