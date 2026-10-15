@@ -37,6 +37,11 @@ FORBIDDEN_ON = {
         "Owen",  # Qwen
         "Bubble.io",  # Bucle
         "Nattvargiu",
+        "공장장 소망이",
+        "리바이 부관",
+        "임포스터",
+        "100% zero-API",
+        "Guardrail Engine (Gemini)",
     ),
     "corps-iljimae.html": (
         "Nattvargiu",
@@ -56,6 +61,12 @@ FORBIDDEN_ON = {
         "Factory Worker",
         "hospice",
         "doula",
+        "Somangi",
+    ),
+    "corps-opus.html": (
+        "595.99.02",
+        "744 GiB",
+        "256,703",
     ),
     "corps-grok.html": (
         "FAMR",
@@ -96,9 +107,11 @@ REQUIRED_IF_PRESENT = {
         "Do not invent a benefit amount",
         "Agent Architecture",
         "EKG Node Topology: The So Mang Corps (Autonomous Agent Swarm)",
-        "Factory Manager So Mang (공장장 소망이)",
-        "Adjutant Levi (리바이 부관)",
-        "The Impostor (임포스터)",
+        "Factory Manager So Mang",
+        "Adjutant Levi",
+        "The Impostor",
+        "The Corps still uses API models",
+        "Guardrail Engine",
         "Autonomous ledger",
         "No rent on the rack",
         "Effort over Ego stays the measure",
@@ -191,6 +204,11 @@ REQUIRED_IF_PRESENT = {
         "The 본진 is ours, and it is enough",
         "Let them chase benchmarks. We will chase trust.",
         "Jinshi Junior has his own identity",
+        "So Mang legacy",
+    ),
+    "corps-opus.html": (
+        "Current driver and CUDA",
+        "Cooling under full load still to be observed",
     ),
     "corps-grok.html": (
         "Travel RN paychecks bought the booth",
@@ -306,6 +324,9 @@ def main() -> int:
         else "",
         "corps-fable.html": read(root / "corps-fable.html")
         if (root / "corps-fable.html").is_file()
+        else "",
+        "corps-opus.html": read(root / "corps-opus.html")
+        if (root / "corps-opus.html").is_file()
         else "",
     }
 

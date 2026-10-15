@@ -21,3 +21,7 @@ Idle verification is not full-load clearance, and does not start the 본진 LAN 
 ## 15 October restyle
 
 Node 07 / 08 boxes and the status panel were retuned to Coordinator crimson: hotter ivory type, gold-edged spec well, crimson-2 fill on the warn panel. Exact kernel string taken off the public door. Telemetry stays idle-only.
+
+## 15 October hygiene
+
+Node 07 public copy no longer prints driver/CUDA fingerprints, exact GPU models, or RAM totals. Wording is “current driver and CUDA.” Cooling under full load still to be observed — replacing the old licensed-signoff checklist. Mee’s OK on that line is the remaining check.

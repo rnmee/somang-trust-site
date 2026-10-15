@@ -496,17 +496,9 @@
       </div>
       <div class="hq-node-meta"><span class="actor">actors:</span> Mee Chung Kim · 본진 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-10-14 08:30 (local) &nbsp;·&nbsp; <span class="actor">relation:</span> confirms Node 01 &amp; Node 06</div>
       <div class="hq-node-body">
-        <p>Eleven days after first boot, <code>nvidia-smi</code> and <code>free -h</code> confirm the full stack is provisioned correctly:</p>
-        <div class="hq-spec">
-          <b>Idle nvidia-smi · 14 October 2026 08:30</b>
-          GPU 1 — NVIDIA GB300: 256,703 MiB (~251 GB HBM3e) · 30°C · 146W / 1300W · P0 · util 0%<br>
-          GPU 0 — NVIDIA RTX PRO 6000 Blackwell: 97,887 MiB (96 GB) · 38°C · 19W / 300W · util 0%<br>
-          Driver 595.99.02 · CUDA 13.2<br>
-          System RAM: 744 GiB total (31 GiB used, 712 GiB available) · swap 0<br>
-          Processes: Xorg + gnome-shell only — clean idle
-        </div>
+        <p>Eleven days after first boot, both GPUs report in. Idle check, 14 October 2026. Current driver and CUDA. Memory and power at idle. Desktop session only — clean idle.</p>
       </div>
-      <div class="hq-outcome"><span class="lbl">outcome</span>The headquarters machine is fully operational and correctly provisioned. These are <strong>idle</strong> readings — watch <code>nvidia-smi</code> during the first real workload to see full-load temps.</div>
+      <div class="hq-outcome"><span class="lbl">outcome</span>The headquarters machine is fully operational and correctly provisioned. These are <strong>idle</strong> readings. Cooling under full load still to be observed.</div>
     </article>
 
     <article class="hq-node boot" id="ekg-hq-08" data-node="08" data-actors="Mee Chung Kim, Bob, intellicAIr HQ (본진)" data-date="2026-10-14" data-relation="resolves:02,03">
@@ -531,7 +523,7 @@
       <h3>Server room — status &amp; remaining checks (updated 2026-10-14)</h3>
       <ul>
         <li><strong>CO detector — not applicable.</strong> The server is in an all-electric room with no gas combustion appliances; with no combustion source there is no CO backdraft risk, so no CO alarm is required for this installation. (A general household CO alarm elsewhere is ordinary good practice, unrelated to the server.)</li>
-        <li><strong>Cooling — in place.</strong> Carrier mini-split (~65°F) + HEPA purifier. Watch GPU temps via <code>nvidia-smi</code> during the first full workload to confirm it holds when the GB300 pulls toward 1300W.</li>
+        <li><strong>Cooling — in place.</strong> Carrier mini-split (~65°F) + HEPA purifier. Watch GPU temps during the first full workload. Cooling under full load still to be observed.</li>
         <li><strong>Electrical — in place.</strong> Server on a dedicated 20A circuit from a dedicated sub-panel. A whole-house NEC 220 load calc remains optional good practice.</li>
       </ul>
     </div>
