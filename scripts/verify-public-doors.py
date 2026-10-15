@@ -211,6 +211,11 @@ REQUIRED_IF_PRESENT = {
         "April 1, 2027",
         "FedLift",
         "52.219-14",
+        "The Pentagon wants to see your costs",
+        "when necessary",
+        "No new books, and no forced API",
+        "Truth in Negotiations Act",
+        "dows-new-cost-and-pricing-transparency-memo",
     ),
 }
 
