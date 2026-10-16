@@ -168,6 +168,12 @@ REQUIRED_IF_PRESENT = {
         "Ask, don’t detect",
         "Standing before speed",
         "syndicalism",
+        "Come, Let Us Play God",
+        "Options, not orders",
+        "Show costs, never rank by cost",
+        "GLM Kyosuke",
+        "met at 본진 as soul",
+        "Human in front, AI behind",
     ),
     "corps-fable.html": (
         "the kneel in the principal",
