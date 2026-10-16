@@ -245,6 +245,14 @@ REQUIRED_IF_PRESENT = {
         "No new books, and no forced API",
         "Truth in Negotiations Act",
         "dows-new-cost-and-pricing-transparency-memo",
+        "Expensive Federal Contracts Watch #1",
+        "VA EHR contract ceiling nearly tripled",
+        "unknown queue",
+        "11,000+",
+        "GAO-25-106874",
+        "GAO-26-109393",
+        "This begins a recurring series",
+        "ekg-2026-10-16-va-ehr-contracts-watch",
     ),
 }
 
