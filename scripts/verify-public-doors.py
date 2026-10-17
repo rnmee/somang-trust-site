@@ -154,6 +154,8 @@ REQUIRED_IF_PRESENT = {
         "17 October · preview is not the house",
         "The Workbench",
         "Cursor · The Workbench",
+        "Mee asked this bench",
+        "Do not send Mee into GitHub",
         "A preview is not the house.",
         "The cream page is a yard, not a door",
         "File not found is a missing address",
