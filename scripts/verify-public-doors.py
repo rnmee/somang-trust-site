@@ -151,6 +151,11 @@ REQUIRED_IF_PRESENT = {
         "Markdown is the words",
         "14 September · a finished door walked backward",
         "5 October · workbench, not weights",
+        "17 October · preview is not the house",
+        "A preview is not the house.",
+        "The cream page is a yard, not a door",
+        "File not found is a missing address",
+        "ekg-2026-10-17-preview-is-not-the-house",
     ),
     "corps-iljimae.html": (
         "The Learning Gap",
