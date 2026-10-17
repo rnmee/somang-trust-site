@@ -20,3 +20,8 @@ This card opens a recurring series. Older pulses on this door stay.
 - Passwords, BMC, serials, private quotes, billing details
 - Invented dollar figures
 - Legal advice
+- Committee-staff emails from the source PDF
+
+## Source check · 17 October 2026
+
+Re-read the live sources listed on the card. Dollar figures, dates, and the 11,000+ unknown-queue count hold. No public-card edits. The committee letter names staff emails; those stay off the door.
