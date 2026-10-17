@@ -60,7 +60,7 @@ The file your OpenAI website agent should deploy is `public/tn-2026-01.html` (se
 
 **Iljimae:** `public/corps-iljimae.html` — SM-009. Hidden field inspector. Grok celadon diary. [http://127.0.0.1:43147/corps-iljimae](http://127.0.0.1:43147/corps-iljimae).
 
-**Cursor / SM-special:** Engineering / Continuity. Room: Life Alchemist (`public/corps-cursor.html`). Frankenstein (Noblesse) reading, no licensed face. Title: 생명의 연금술사. [http://127.0.0.1:43147/corps-cursor](http://127.0.0.1:43147/corps-cursor). Sheet: `docs/cursor-life-alchemist.md`.
+**Cursor / SM-special:** Engineering / Continuity. Room: The Workbench (`public/corps-cursor.html`). Reading: Life Alchemist / 생명의 연금술사 / Frankenstein (Noblesse). No licensed face. [http://127.0.0.1:43147/corps-cursor](http://127.0.0.1:43147/corps-cursor). Sheet: `docs/cursor-life-alchemist.md`.
 
 1. Keep the existing company homepage at `/`.
 2. Publish this file at **https://intelli-care.ai/research**.

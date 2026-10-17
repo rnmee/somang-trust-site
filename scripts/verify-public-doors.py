@@ -152,6 +152,8 @@ REQUIRED_IF_PRESENT = {
         "14 September · a finished door walked backward",
         "5 October · workbench, not weights",
         "17 October · preview is not the house",
+        "The Workbench",
+        "Cursor · The Workbench",
         "A preview is not the house.",
         "The cream page is a yard, not a door",
         "File not found is a missing address",
