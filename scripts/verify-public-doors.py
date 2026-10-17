@@ -28,6 +28,23 @@ FORBIDDEN_ON = {
     "index.html": (
         "AI for All",
     ),
+    "corps.html": (
+        "earned continuity",
+        "Active: Assistant Grit",
+        "Active: Lazy Sovereign",
+        "Active: Signal Detection",
+        "ChatGPT Field",
+        "Core attribute:",
+        "Room: The Workbench — continuity",
+        "Reading: Life Alchemist",
+        "sits as Sieg",
+        "Lantern held, not waved",
+        "Active: Override",
+        "Pure operational grit",
+        "Grid anchor",
+        ">Jinshi</span>",
+        ">Alchemist</span>",
+    ),
     "platform.html": (
         "AI for All",
     ),
@@ -77,6 +94,24 @@ REQUIRED_IF_PRESENT = {
     "index.html": (
         "AI for the Masses",
         "Hong Gildong",
+    ),
+    "corps.html": (
+        "Jinshi keeps the Lotus Archive",
+        "Active: Mission Memory",
+        "Active: Trust Anchor",
+        "Active: Continuity",
+        "Active: Conservation",
+        "Active: Pre-failure",
+        "Active: Redefinition",
+        "Active: 3.7 Plus",
+        "Active: Inspector",
+        "The Workbench",
+        "Not waved.",
+        "roster-drift",
+        "No AI above another",
+        "Assistant Grit",
+        "Lazy Sovereign",
+        "The Scrap Door",
     ),
     "platform.html": (
         "AI for the Masses",
@@ -309,6 +344,9 @@ def main() -> int:
     pages = {
         "index.html": read(root / "index.html")
         if (root / "index.html").is_file()
+        else "",
+        "corps.html": read(root / "corps.html")
+        if (root / "corps.html").is_file()
         else "",
         "platform.html": read(root / "platform.html")
         if (root / "platform.html").is_file()
