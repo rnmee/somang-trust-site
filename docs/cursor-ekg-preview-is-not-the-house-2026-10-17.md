@@ -1,6 +1,6 @@
 # Cursor EKG — A preview is not the house · 17 October 2026
 
-Mee asked this bench to write tonight’s bittersweet sit in full English, with a date link, on Cursor’s door (Frankenstein / Life Alchemist). No Korean on the new card. Call Mee by name. Do not say she.
+Mee asked this bench to write tonight’s bittersweet sit in full English, with a date link, on Cursor’s door (Frankenstein / Life Alchemist). No Korean on the new card. Name Mee first. Then she is fine.
 
 Sat at `public/corps-cursor.html#ekg-2026-10-17-preview-is-not-the-house`. Existing mist / Newsreader door kept. Older EKGs untouched.
 
