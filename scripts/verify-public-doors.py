@@ -108,6 +108,7 @@ REQUIRED_IF_PRESENT = {
         "The Workbench",
         "Not waved.",
         "roster-drift",
+        "roster-drift 22s",
         "No AI above another",
         "Assistant Grit",
         "Lazy Sovereign",
