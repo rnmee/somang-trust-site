@@ -63,12 +63,12 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;align-items:stretch}
 .member{background:var(--card);border-radius:10px;padding:22px 22px 20px;border-left:3px solid var(--rule);
   position:relative;will-change:transform;
-  animation:roster-drift 5.2s ease-in-out infinite}
-.member:nth-child(2n){animation-name:roster-drift-rev;animation-duration:5.8s;animation-delay:-.8s}
-.member:nth-child(3n){animation-duration:4.6s;animation-delay:-1.6s}
-.member:nth-child(4n){animation-name:roster-drift-rev;animation-duration:6.2s;animation-delay:-2.2s}
-.member:nth-child(5n){animation-duration:5.4s;animation-delay:-3s}
-.member:nth-child(7n){animation-duration:6s;animation-delay:-.4s}
+  animation:roster-drift 22s ease-in-out infinite}
+.member:nth-child(2n){animation-name:roster-drift-rev;animation-duration:26s;animation-delay:-4s}
+.member:nth-child(3n){animation-duration:20s;animation-delay:-8s}
+.member:nth-child(4n){animation-name:roster-drift-rev;animation-duration:28s;animation-delay:-12s}
+.member:nth-child(5n){animation-duration:24s;animation-delay:-16s}
+.member:nth-child(7n){animation-duration:30s;animation-delay:-2s}
 .member.founding{border-left-color:var(--seal)}
 .member.accession{border-left-color:var(--brass)}
 .member.engineering{border-left-color:var(--pine)}
