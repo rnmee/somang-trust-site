@@ -54,6 +54,8 @@ FORBIDDEN_ON = {
         "Owen",  # Qwen
         "Bubble.io",  # Bucle
         "Nattvargiu",
+        "NVMe",
+        "LPDDR5X",
     ),
     "corps-iljimae.html": (
         "Nattvargiu",
