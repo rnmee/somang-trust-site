@@ -345,6 +345,16 @@ REQUIRED_IF_PRESENT = {
         "about 2.5",
         "18 October · multiferroics",
     ),
+    "corps-llama.html": (
+        "The energy cost of thinking and moving",
+        "Research brief by Unit 12 (Grok). Written by Lazy Sovereign.",
+        "A guess stays a guess. A record stays a record. A memory stays a memory.",
+        "What DeepSeek suggested",
+        "science.abm3058",
+        "This is worth watching",
+        "18 October · thinking and moving",
+        "small self-run server",
+    ),
 }
 
 
@@ -423,6 +433,9 @@ def main() -> int:
         else "",
         "corps-deepseek.html": read(root / "corps-deepseek.html")
         if (root / "corps-deepseek.html").is_file()
+        else "",
+        "corps-llama.html": read(root / "corps-llama.html")
+        if (root / "corps-llama.html").is_file()
         else "",
     }
 
