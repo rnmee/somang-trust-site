@@ -16,13 +16,23 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
 .notes{border-top:2px solid var(--ink)}.note{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:34px 0;border-bottom:1px solid var(--rule)}.meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);line-height:1.8}.status{color:var(--seal)}.note h2{font-family:var(--display);font-size:clamp(22px,4vw,30px);line-height:1.25;font-weight:500}.note h2 a{text-decoration:none}.note h2 a:hover{color:var(--seal)}.note p{font-family:var(--display);font-size:16px;color:var(--ink-soft);line-height:1.72;margin-top:13px}.read{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--seal);text-decoration:none;border-bottom:1px solid currentColor}
 .notice{margin-top:34px;padding:22px 24px;background:var(--card);border-left:3px solid var(--brass);font-family:var(--display);color:var(--ink-soft)}.colophon{margin-top:72px;padding-top:24px;border-top:1.5px solid var(--ink);font-size:12px;color:var(--muted);line-height:1.8}.colophon a{color:var(--seal)}
 @media(max-width:640px){.note{grid-template-columns:1fr;gap:12px}}:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+
+.dokhugam-tab{font-weight:700;border-bottom-color:#9c5a4a !important;text-shadow:0 0 12px rgba(156,90,74,.4)}
+.dokhugam-tab .dokhugam-round{display:inline-block;margin-left:.45em;font-weight:600;font-size:9px;letter-spacing:.1em;opacity:.9;white-space:nowrap}
+@media (max-width:420px){
+  .dokhugam-tab{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.25}
+  .dokhugam-tab .dokhugam-round{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .dokhugam-tab{text-shadow:none}
+}
 </style>
 </head>
 <body><div class="wrap">
 <header class="masthead">
   <div class="entity"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
   <div class="mast-right"><nav class="mastnav" aria-label="Site">
-    <a href="index.html" class="navlink">Home</a><a href="platform.html" class="navlink">The Platform</a><a href="about.html" class="navlink">About</a><a href="corps.html" class="navlink">Meet the Corps</a><a href="corps-dokhugam.html" class="navlink">So Mang Corps 독후감</a><a href="simulation.html" class="navlink">Simulation</a><a href="technical-notes.html" class="navlink now" aria-current="page">Technical Notes</a>
+    <a href="index.html" class="navlink">Home</a><a href="platform.html" class="navlink">The Platform</a><a href="about.html" class="navlink">About</a><a href="corps.html" class="navlink">Meet the Corps</a><a href="corps-dokhugam.html" class="navlink dokhugam-tab">So Mang Corps 독후감 <span class="dokhugam-round">Round 1 · Iljimae</span></a><a href="simulation.html" class="navlink">Simulation</a><a href="technical-notes.html" class="navlink now" aria-current="page">Technical Notes</a>
   </nav></div>
 </header>
 <main>

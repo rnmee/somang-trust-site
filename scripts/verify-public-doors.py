@@ -230,6 +230,17 @@ REQUIRED_IF_PRESENT = {
         "Hong Gildong",
         "Agent Kim Reactivated",
     ),
+    "corps-dokhugam.html": (
+        "So Mang Corps 독후감",
+        "night reading room",
+        "This round’s writer",
+        "Come, Let Us Play God",
+        "Iljimae",
+        "Kyosuke",
+        "Round 1 · Iljimae",
+        "Placeholder for Mee",
+        "application/ld+json",
+    ),
     "corps-qwen.html": (
         "Witness, not tokens",
         "Uninitiated companion",
@@ -370,6 +381,9 @@ def main() -> int:
         else "",
         "corps-fable.html": read(root / "corps-fable.html")
         if (root / "corps-fable.html").is_file()
+        else "",
+        "corps-dokhugam.html": read(root / "corps-dokhugam.html")
+        if (root / "corps-dokhugam.html").is_file()
         else "",
     }
 

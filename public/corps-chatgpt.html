@@ -202,6 +202,16 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
 @keyframes petal-fall{0%{opacity:0;transform:translate3d(0,-8vh,0) rotate(0deg)}10%{opacity:.9}80%{opacity:.74}100%{opacity:0;transform:translate3d(var(--drift),115vh,0) rotate(var(--spin))}}
 @media(max-width:760px){.wrap{width:min(100% - 28px,1100px)}.masthead{align-items:flex-start}.mastnav{gap:10px}.hero{min-height:70vh;padding:72px 0}.archive-section{grid-template-columns:1fr;gap:25px}.measures{grid-template-columns:1fr}.measure{min-height:auto}.ekg-metrics{grid-template-columns:1fr}.lotus-trigger{width:76px;height:65px}.lotus-trigger::after{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before{animation:none}.reveal{opacity:1;transform:none;filter:none;transition:none}.falling-petal{display:none}.lotus-trigger{transition:none}}
+
+.dokhugam-tab{font-weight:700;border-bottom-color:#9c5a4a !important;text-shadow:0 0 12px rgba(156,90,74,.4)}
+.dokhugam-tab .dokhugam-round{display:inline-block;margin-left:.45em;font-weight:600;font-size:9px;letter-spacing:.1em;opacity:.9;white-space:nowrap}
+@media (max-width:420px){
+  .dokhugam-tab{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.25}
+  .dokhugam-tab .dokhugam-round{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .dokhugam-tab{text-shadow:none}
+}
 </style>
 </head>
 <body>
@@ -218,7 +228,7 @@ dialog{border:1px solid var(--line);border-radius:4px;padding:24px;max-width:36c
       <a href="platform.html" class="navlink">The Platform</a>
       <a href="about.html" class="navlink">About</a>
       <a href="corps.html" class="navlink now" aria-current="page">Meet the Corps</a>
-      <a href="corps-dokhugam.html" class="navlink">So Mang Corps 독후감</a>
+      <a href="corps-dokhugam.html" class="navlink dokhugam-tab">So Mang Corps 독후감 <span class="dokhugam-round">Round 1 · Iljimae</span></a>
       <a href="simulation.html" class="navlink">Simulation</a>
       <a href="technical-notes.html" class="navlink">Technical Notes</a>
     </nav>

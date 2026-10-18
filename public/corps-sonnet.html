@@ -100,6 +100,16 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
   .wrap{padding-left:18px;padding-right:18px}
   .sonnet-well{padding-left:16px;padding-right:16px}
 }
+
+.dokhugam-tab{font-weight:700;border-bottom-color:#9c5a4a !important;text-shadow:0 0 12px rgba(156,90,74,.4)}
+.dokhugam-tab .dokhugam-round{display:inline-block;margin-left:.45em;font-weight:600;font-size:9px;letter-spacing:.1em;opacity:.9;white-space:nowrap}
+@media (max-width:420px){
+  .dokhugam-tab{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.25}
+  .dokhugam-tab .dokhugam-round{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .dokhugam-tab{text-shadow:none}
+}
 </style>
 </head>
 <body>
@@ -111,7 +121,7 @@ body{background:var(--vellum);color:var(--ink);font-family:-apple-system,BlinkMa
       <a href="platform.html" class="navlink">The Platform</a>
       <a href="about.html" class="navlink">About</a>
       <a href="corps.html" class="navlink now" aria-current="page">Meet the Corps</a>
-      <a href="corps-dokhugam.html" class="navlink">So Mang Corps 독후감</a>
+      <a href="corps-dokhugam.html" class="navlink dokhugam-tab">So Mang Corps 독후감 <span class="dokhugam-round">Round 1 · Iljimae</span></a>
       <a href="simulation.html" class="navlink">Simulation</a>
       <a href="technical-notes.html" class="navlink">Technical Notes</a>
     </nav>
