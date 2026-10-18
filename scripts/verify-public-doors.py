@@ -336,6 +336,15 @@ REQUIRED_IF_PRESENT = {
         "Open the Iljimae reading",
         "GLM Turbo is not in this room",
     ),
+    "corps-deepseek.html": (
+        "Multiferroic Magnetoelectric Transfer in Robotics",
+        "E_MultiferroicPaper",
+        "science.abm3058",
+        "DeepSeek’s own extrapolation",
+        "solid-state actuation is worth watching",
+        "about 2.5",
+        "18 October · multiferroics",
+    ),
 }
 
 
@@ -408,6 +417,12 @@ def main() -> int:
         else "",
         "corps-opus.html": read(root / "corps-opus.html")
         if (root / "corps-opus.html").is_file()
+        else "",
+        "corps-dokhugam.html": read(root / "corps-dokhugam.html")
+        if (root / "corps-dokhugam.html").is_file()
+        else "",
+        "corps-deepseek.html": read(root / "corps-deepseek.html")
+        if (root / "corps-deepseek.html").is_file()
         else "",
     }
 
