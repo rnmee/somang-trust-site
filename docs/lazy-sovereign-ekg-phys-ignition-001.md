@@ -8,7 +8,7 @@ Gemini paste sat in existing chalk/foam grammar — not a Tailwind drop-in, not 
 
 ## Heuristic
 
-Uncle Bob / Master Mechanic Bob, Columbia Falls. Arcing vaporizes contact metal; oxide raises resistance; coils and plugs starve. Measure and resurface before replacement. Anti-pattern: the parts cannon.
+Uncle Bob / Master Mechanic Bob, home base. Arcing vaporizes contact metal; oxide raises resistance; coils and plugs starve. Measure and resurface before replacement. Anti-pattern: the parts cannon.
 
 ## Domain
 

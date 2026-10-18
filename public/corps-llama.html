@@ -397,7 +397,7 @@ h1 .sub{
     <p class="mark">— EKG record</p>
     <p class="stamp">Verified field heuristic</p>
     <h3>EKG-PHYS-IGNITION-001 · Contact before replacement</h3>
-    <p class="when">20 September 2026 · Master Mechanic Bob · Columbia Falls base</p>
+    <p class="when">20 September 2026 · Master Mechanic Bob · home base</p>
     <p class="domain">Electromechanical diagnostics · energy conservation</p>
     <p>Domain stays energy, impedance, and wear. Robotics actuation still lives on Signal Detection. This seat names the watt that a clean contact saves, and the part that did not need buying.</p>
     <p class="plain">Arcing vaporizes contact metal. The oxide film resists current. Coils and plugs starve. File the contact. Do not fire the parts cannon.</p>
@@ -457,7 +457,7 @@ It's just that they use contact points, metals. It's a spark that vaporized part
     </div>
 
     <div class="open-edge">
-      <h3>When the Columbia Falls server is live</h3>
+      <h3>When the on-site server is live</h3>
       <p>Jobs route by domain, not by who can talk about everything. This seat writes physical-circuit and efficiency records. Levi writes security and authentication. Tube and memory nodes write relationships and EKG, not schematics. Agents may read the shared graph. They write only in their own namespace. Provenance stays in the EKG — seat, evidence, correction — not a token.</p>
     </div>
 
@@ -480,8 +480,8 @@ It's just that they use contact points, metals. It's a spark that vaporized part
         <dl>
           <dt>t_start</dt><dd>T-0</dd>
           <dt>t_end</dt><dd>T-∞ (ongoing)</dd>
-          <dt>State</dt><dd>Heat pump ON. Room temp 65°F ± 2°F. Scrubber ON. Server idle/load.</dd>
-          <dt>Sensors</dt><dd>Temperature (room + inlet + exhaust), humidity, power draw</dd>
+          <dt>State</dt><dd>Heat pump ON. Room stays in the cool band. Scrubber ON. Server idle/load.</dd>
+          <dt>Sensors</dt><dd>Temperature (room + inlet + exhaust), humidity, power draw. Degree numbers stay off this door.</dd>
         </dl>
       </div>
       <div class="event" id="E_HeatPumpFailure">
@@ -499,7 +499,7 @@ It's just that they use contact points, metals. It's a spark that vaporized part
           <dt>t_start</dt><dd>T+failure + 0</dd>
           <dt>t_end</dt><dd>T+failure + 5min (target)</dd>
           <dt>State</dt><dd>AI detects anomaly via noise-spike filter + trend analysis. Sends alert.</dd>
-          <dt>Threshold</dt><dd>Room temp &gt; 72°F for &gt; 3 consecutive readings, OR rate of change &gt; 0.5°F/min sustained</dd>
+          <dt>Threshold</dt><dd>Room leaves the cool band for several consecutive readings, or a sustained rise that is not a spike. Degree numbers stay off this door.</dd>
         </dl>
       </div>
       <div class="event" id="E_ResponseOptions">
@@ -533,7 +533,7 @@ It's just that they use contact points, metals. It's a spark that vaporized part
 
     <div class="open-edge">
       <h3>Open edge</h3>
-      <p>What is the maximum safe room temperature for GB300 sustained operation? At what temperature does GPU throttling begin? At what temperature does hardware damage occur? These thresholds must be confirmed with Exxact or NVIDIA before Tier 0–3 response rules are finalized.</p>
+      <p>What is the maximum safe room temperature for the on-site server sustained operation? At what temperature does GPU throttling begin? At what temperature does hardware damage occur? These thresholds must be confirmed with the vendor before Tier 0–3 response rules are finalized.</p>
     </div>
 
     <div class="edges">
@@ -541,7 +541,7 @@ It's just that they use contact points, metals. It's a spark that vaporized part
       <p style="font-family:var(--serif);font-size:15px;line-height:1.85;color:var(--foam-dim);max-width:46ch;margin:8px 0 0">Raw temperature sensor data contains noise. Direct threshold comparison causes false alarms and missed events. The following filters should be applied before any control decision:</p>
       <ul class="filters">
         <li><strong>Exponential filter:</strong> <code>y_n = α·x_n + (1-α)·y_{n-1}</code>. Smooths high-frequency noise. α = 0.1 to 0.3 for slow thermal systems.</li>
-        <li><strong>Noise-spike filter:</strong> <code>|x_n - y_{n-1}| ≤ Δx</code>. Rejects sudden spikes (door open, sensor glitch). Δx = 2°F per reading.</li>
+        <li><strong>Noise-spike filter:</strong> <code>|x_n - y_{n-1}| ≤ Δx</code>. Rejects sudden spikes (door open, sensor glitch). Δx is a small step per reading — the degree number stays off this door.</li>
         <li><strong>Moving average:</strong> 10–15 minute window for trend analysis.</li>
       </ul>
       <p style="font-family:var(--serif);font-size:15px;line-height:1.85;color:var(--foam-dim);max-width:46ch;margin:12px 0 0">Filtered output feeds the anomaly detector. Unfiltered data feeds the audit log for forensic replay.</p>
@@ -549,13 +549,13 @@ It's just that they use contact points, metals. It's a spark that vaporized part
 
     <div class="edges">
       <h3>Timeline trace (first output)</h3>
-      <pre><code>T-0           : Normal. Heat pump ON. Room 65°F.
+      <pre><code>T-0           : Normal. Heat pump ON. Room in the cool band.
 T+failure     : Heat pump OFF. Room temp begins rising.
 T+failure+1m  : Sensor detects trend. Filter confirms (not spike).
-T+failure+3m  : Room temp 70°F. AI sends alert.
-T+failure+5m  : Room temp 72°F. AI attempts Tier 1 response.
-T+failure+15m : Room temp 78°F. GPU throttling may begin.
-T+failure+30m : Room temp 85°F+. Hardware damage risk.</code></pre>
+T+failure+3m  : Room still warming. AI sends alert.
+T+failure+5m  : Room leaves the cool band. AI attempts Tier 1 response.
+T+failure+15m : GPU throttling may begin. Degree numbers stay off this door.
+T+failure+30m : Hardware damage risk if the room keeps warming.</code></pre>
     </div>
 
     <p class="plain">If the heat pump fails while no human is present, the AI can see it, name it, and warn you. But seeing is not the same as fixing. Without a hand on the heat pump, the AI can only watch the temperature rise and tell you how fast. The fix is not a smarter brain. The fix is a longer arm — a smart plug, a relay, a backup fan. The brain is already here. The arm is what we build next.</p>
@@ -676,7 +676,7 @@ T+failure+30m : Room temp 85°F+. Hardware damage risk.</code></pre>
     Lazy Sovereign · SM-008 · Environmental defense seat<br />
     Fish-swarm and chalk layers are original CSS. Not a reproduced magazine or brochure cover.<br />
     This channel is not a utility, a court, or an emergency dispatcher.<br />
-    <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
+    <a href="index.html">intellicAIr, LLC</a> · Montana
   </footer>
 </div>
 

@@ -12,7 +12,7 @@ export const operatingTargets = [
   },
   {
     metric: "Inlet air temperature",
-    target: "18–27 °C (ASHRAE recommended). Watch the GPU’s own limit, usually ~83–90 °C die.",
+    target: "ASHRAE recommended inlet band. Watch the GPU’s own limit — the die number stays off this page.",
     throttle: "Yes. This is the number that throttles. Immediately.",
   },
   {
@@ -33,7 +33,7 @@ export const operatingTargets = [
   {
     metric: "Viable particles (CFU)",
     target: "No ASHRAE GPU limit. Optional quarterly <500 CFU/m³ as a hygiene check.",
-    throttle: "No. Mold is a people and building issue. It does not clock-gate a GB300.",
+    throttle: "No. Mold is a people and building issue. It does not clock-gate the on-site server.",
   },
   {
     metric: "PM2.5 mass (PurpleAir)",

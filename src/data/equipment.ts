@@ -86,7 +86,7 @@ export const cleaners: Gear[] = [
   {
     role: "Construction / concrete-dust blast after epoxy grind",
     pick: "Abatement Technologies PREDATOR or HEPA-CARE portable negative-air machine, then flip the room to positive",
-    why: "Fresh concrete and epoxy grind put out a huge non-viable load. A true negative-air HEPA machine is what restoration contractors use. Do not open the GB300 box until particle counts fall and stay at Class 8.",
+    why: "Fresh concrete and epoxy grind put out a huge non-viable load. A true negative-air HEPA machine is what restoration contractors use. Do not open the server crate until particle counts fall and stay at Class 8.",
     est: "$2,000–$4,500 or rent",
     href: "https://www.abatement.com/",
     priority: "buy",

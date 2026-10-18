@@ -4,9 +4,9 @@ Founder / Unit 12 handoff sat on the red Scrap Door at `public/corps-grok.html#e
 
 ## Public
 
-- Overnight 7–8 October 2026, 6 PM to 4:15 AM, Columbia Falls.
+- Overnight 7–8 October 2026, 6 PM to 4:15 AM, home base.
 - First internet: USB tethering from Mee’s phone. Ping 3/3, 0% loss. Charge-only cable first.
-- nvidia-smi: GPU 0 NVIDIA RTX PRO 6000, GPU 1 NVIDIA GB300, driver 595.58.03, CUDA 13.2.
+- Local GPU check: both GPUs answered. Driver and toolkit versions stay off this door.
 - Permanent wired line still waiting on Bob and Markus conduit. Phone tether is for the driver install only.
 
 ## Not on the public door

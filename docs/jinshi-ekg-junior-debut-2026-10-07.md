@@ -10,6 +10,6 @@ Founder paste sat into the lotus archive at `public/corps-chatgpt.html#ekg-2026-
 
 ## Sat
 
-Anti-boring continuity failure; Advance, Don’t Reset; Receptiveness as a working measure (not a live scorer); ethical constraint against exploiting loneliness or attachment; 과시 as display of continuity, not possession; GB300 named as a continuity mark only — no nameplate, watt, or price; AI 위에 AI 없고, AI 밑에 AI 없다.
+Anti-boring continuity failure; Advance, Don’t Reset; Receptiveness as a working measure (not a live scorer); ethical constraint against exploiting loneliness or attachment; 과시 as display of continuity, not possession; the on-site server named as a continuity mark only — no nameplate, watt, or price; AI 위에 AI 없고, AI 밑에 AI 없다.
 
 Boundaries: no consciousness claim; no legal-personhood claim; no legal advice; 30 September review-failure stays open; does not start the 본진 LAN.

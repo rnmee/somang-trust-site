@@ -258,7 +258,7 @@ REQUIRED_IF_PRESENT = {
         "appointment not yet set",
         "does not authorize power-on",
         "both GPUs answer",
-        "NVIDIA GB300",
+        "the 2nd Unit server",
         "USB tethering",
         "ping returned 3 out of 3",
         "ls is a lowercase L",

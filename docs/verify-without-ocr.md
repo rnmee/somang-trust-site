@@ -10,7 +10,7 @@ Gianna Arnold already said software patents in this stack — Hong Gil-dong, Sym
 2. **DOM text** — in a browser, `textContent` / accessibility tree. That is the same string the visitor can select. It is not pixels guessed into Hangul.
 3. **Screenshots** — layout only. Never promote an OCR string to a name, a date, a watt, or a claim term.
 
-본진 GB300 is not required for this. A local file read already beats a vision pass. If 본진 later runs a browser, use Playwright `locator.inner_text()`, not a screenshot model.
+본진 the on-site server is not required for this. A local file read already beats a vision pass. If 본진 later runs a browser, use Playwright `locator.inner_text()`, not a screenshot model.
 
 ## Custom domain is human-only from this pod
 
