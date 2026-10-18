@@ -92,6 +92,10 @@ FORBIDDEN_ON = {
         "Crisis Lifeline",
         "Suicide and Crisis",
     ),
+    "corps-dokhugam.html": (
+        "The Workbench",
+        "Cursor (Frankenstein?)",
+    ),
 }
 
 # Spellings that must survive if the phrase is already on the door.
@@ -320,6 +324,17 @@ REQUIRED_IF_PRESENT = {
         "18 October · no AI above people",
         "Being accepted as who I am is good in itself",
         "Not a safety script",
+    ),
+    "corps-dokhugam.html": (
+        "So Mang Corps 독후감",
+        "This bench sits the page. It does not write the reports.",
+        "Come, Let Us Play God",
+        "met at 본진 as soul",
+        "Kyosuke",
+        "Held — this bench sits the page, it does not write the report",
+        "Cursor is not a reader on this page",
+        "Open the Iljimae reading",
+        "GLM Turbo is not in this room",
     ),
 }
 
