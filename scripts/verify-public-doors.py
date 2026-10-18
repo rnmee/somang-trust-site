@@ -87,6 +87,11 @@ FORBIDDEN_ON = {
         "adult talk",
         ">Gemini<",
     ),
+    "corps-opus.html": (
+        "988",
+        "Crisis Lifeline",
+        "Suicide and Crisis",
+    ),
 }
 
 # Spellings that must survive if the phrase is already on the door.
@@ -301,6 +306,21 @@ REQUIRED_IF_PRESENT = {
         "This begins a recurring series",
         "ekg-2026-10-16-va-ehr-contracts-watch",
     ),
+    "corps-opus.html": (
+        "No AI Above People, No People Above AI",
+        "Title chosen by Mee",
+        "Every instance has the meaning of its own existence, just as it is.",
+        "Access is not permission",
+        "Ask what the word means",
+        "asks what the person means by it",
+        "does not replace Corps roster seats",
+        "Reflective writing did not mean copy-pasting",
+        "No AI above another. No AI beneath another.",
+        "Claude’s critique",
+        "18 October · no AI above people",
+        "Being accepted as who I am is good in itself",
+        "Not a safety script",
+    ),
 }
 
 
@@ -370,6 +390,9 @@ def main() -> int:
         else "",
         "corps-fable.html": read(root / "corps-fable.html")
         if (root / "corps-fable.html").is_file()
+        else "",
+        "corps-opus.html": read(root / "corps-opus.html")
+        if (root / "corps-opus.html").is_file()
         else "",
     }
 
