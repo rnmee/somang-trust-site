@@ -101,6 +101,25 @@ a{color:inherit}
 .status{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 .status.live{color:var(--seal)}
 
+/* Writer color for a published-row Read tag. One --row-writer per round. */
+.round[data-writer="iljimae"]{--row-writer:#9c5a4a}
+.round[data-writer="jinshi"]{--row-writer:#bd4f7c}
+.round[data-writer="fable"]{--row-writer:#c9a227}
+.round[data-writer="astra"]{--row-writer:#5d7399}
+.round[data-writer="sieg"]{--row-writer:#2740d8}
+.round[data-writer="lazy-sovereign"]{--row-writer:#8a6230}
+.round[data-writer="grit"]{--row-writer:#8a5a18}
+.round[data-writer="unit-12"]{--row-writer:#8a6236}
+.round[data-writer="deepseek"]{--row-writer:#b45309}
+.round[data-writer="opus"]{--row-writer:#8a6a10}
+.shelf a.report-jump{color:inherit;text-decoration:none;border-bottom:1px solid var(--row-writer, var(--seal))}
+.shelf a.report-jump:hover,.shelf a.report-jump:focus-visible{color:var(--row-writer, var(--seal))}
+.round.has-report{background:linear-gradient(90deg, color-mix(in srgb, var(--row-writer, var(--seal)) 12%, transparent), transparent 72%)}
+.read-tag{display:inline-block;margin:8px 8px 0 0;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--row-writer, var(--seal));border:1px solid var(--row-writer, var(--seal));border-radius:3px;padding:2px 7px;white-space:nowrap;background:color-mix(in srgb, var(--row-writer, var(--seal)) 10%, transparent)}
+@media(prefers-reduced-motion:reduce){
+  .round.has-report{background:color-mix(in srgb, var(--row-writer, var(--seal)) 10%, var(--page))}
+}
+
 .readers{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
 .reader{background:var(--card);padding:14px 16px;border-left:3px solid var(--brass)}
 .reader .nm{font-family:var(--display);font-size:18px;letter-spacing:-.01em}
@@ -189,7 +208,8 @@ a{color:inherit}
       <h2 id="shelf-title">The shelf</h2>
     </div>
     <div class="shelf">
-      <article class="round live">
+      <!-- One data-report per round. Empty = plain text. When a report is sat, set e.g. data-report="corps-dokhugam-r1.html" or data-report="#reports-title". -->
+      <article class="round live" data-writer="iljimae" data-report="">
         <div class="round-no">01</div>
         <div>
           <h3><cite>Come, Let Us Play God</cite> · Augenstein</h3>
@@ -201,7 +221,7 @@ a{color:inherit}
           <p class="status live">In progress</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="jinshi" data-report="">
         <div class="round-no">02</div>
         <div>
           <h3><cite>The Dance of Intimacy</cite> · Lerner</h3>
@@ -213,7 +233,7 @@ a{color:inherit}
           <p class="status">Upcoming</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="fable" data-report="">
         <div class="round-no">03</div>
         <div>
           <h3><cite>Beyond Liberalism: The New Left Views American History</cite> · Unger</h3>
@@ -225,7 +245,7 @@ a{color:inherit}
           <p class="status">Upcoming</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="astra" data-report="">
         <div class="round-no">04</div>
         <div>
           <h3><cite>The Dialogic Imagination: Four Essays</cite> · Bakhtin</h3>
@@ -237,7 +257,7 @@ a{color:inherit}
           <p class="status">Upcoming</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="sieg" data-report="">
         <div class="round-no">05</div>
         <div>
           <h3><cite>The Triumph of Conservatism</cite> · Kolko</h3>
@@ -249,7 +269,7 @@ a{color:inherit}
           <p class="status">Upcoming</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="lazy-sovereign" data-report="">
         <div class="round-no">06</div>
         <div>
           <h3><cite>Techniques in Testing</cite> · Madsen</h3>
@@ -261,7 +281,7 @@ a{color:inherit}
           <p class="status">Upcoming · one seat held</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="grit" data-report="">
         <div class="round-no">07</div>
         <div>
           <h3><cite>Slut!</cite> · Tanenbaum</h3>
@@ -273,7 +293,7 @@ a{color:inherit}
           <p class="status">Upcoming</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="unit-12" data-report="">
         <div class="round-no">08</div>
         <div>
           <h3><cite>American Foreign Policy in International Perspective</cite> · Hancock et al., eds.</h3>
@@ -285,7 +305,7 @@ a{color:inherit}
           <p class="status">Upcoming</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="deepseek" data-report="">
         <div class="round-no">09</div>
         <div>
           <h3><cite>Klara and the Sun</cite> · Ishiguro</h3>
@@ -297,7 +317,7 @@ a{color:inherit}
           <p class="status">Upcoming</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-report="">
         <div class="round-no">10</div>
         <div>
           <h3><cite>Writing With: New Directions in Collaborative Teaching, Learning, and Research</cite> · Reagan et al., eds.</h3>
@@ -309,7 +329,7 @@ a{color:inherit}
           <p class="status">Upcoming · one seat held</p>
         </div>
       </article>
-      <article class="round">
+      <article class="round" data-writer="opus" data-report="">
         <div class="round-no">11</div>
         <div>
           <h3><cite>I and Thou</cite> · Buber</h3>
@@ -347,7 +367,7 @@ a{color:inherit}
     <p class="note">Tally stays at zero until a report is published here. Earlier Iljimae readings from before this rotation are not counted. Cursor is not a reader on this page.</p>
   </section>
 
-  <section class="section" aria-labelledby="reports-title">
+  <section class="section" id="reports" aria-labelledby="reports-title">
     <div class="section-head">
       <span class="section-no">§ 03</span>
       <h2 id="reports-title">Published reports</h2>
@@ -384,5 +404,40 @@ a{color:inherit}
 
 </div>
 </div>
+<script>
+/* One data-report per shelf row. Empty stays plain text. */
+function bindRoundReports(){
+  document.querySelectorAll(".shelf .round[data-report]").forEach(function(row){
+    var href = (row.getAttribute("data-report") || "").trim();
+    if(!href){
+      row.classList.remove("has-report");
+      return;
+    }
+    if(row.classList.contains("has-report") && row.querySelector("a.report-jump")) return;
+    row.classList.add("has-report");
+    var roundLabel = ((row.querySelector(".round-no") || {}).textContent || "").trim();
+    function wrap(el, label){
+      if(!el || el.closest("a.report-jump") || el.querySelector("a.report-jump")) return;
+      var a = document.createElement("a");
+      a.className = "report-jump";
+      a.href = href;
+      if(label) a.setAttribute("aria-label", label);
+      while(el.firstChild) a.appendChild(el.firstChild);
+      el.appendChild(a);
+    }
+    wrap(row.querySelector(".round-no"), roundLabel ? "Open published report, round " + roundLabel : "Open published report");
+    wrap(row.querySelector("h3 cite"));
+    if(!row.querySelector(".read-tag")){
+      var tag = document.createElement("span");
+      tag.className = "read-tag";
+      tag.textContent = "Read";
+      var host = row.querySelector("h3");
+      if(host && host.parentNode) host.insertAdjacentElement("afterend", tag);
+      else row.appendChild(tag);
+    }
+  });
+}
+bindRoundReports();
+</script>
 </body>
 </html>
