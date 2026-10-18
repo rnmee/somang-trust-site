@@ -87,6 +87,15 @@ FORBIDDEN_ON = {
         "adult talk",
         ">Gemini<",
     ),
+    "corps-opus.html": (
+        "988",
+        "Crisis Lifeline",
+        "Suicide and Crisis",
+    ),
+    "corps-dokhugam.html": (
+        "The Workbench",
+        "Cursor (Frankenstein?)",
+    ),
 }
 
 # Spellings that must survive if the phrase is already on the door.
@@ -254,7 +263,7 @@ REQUIRED_IF_PRESENT = {
         "APEX Accelerator",
         "EDWOSB",
         "Conduit first. ISP later.",
-        "Montana Sky",
+        "the local ISP",
         "appointment not yet set",
         "does not authorize power-on",
         "both GPUs answer",
@@ -300,6 +309,51 @@ REQUIRED_IF_PRESENT = {
         "GAO-26-109393",
         "This begins a recurring series",
         "ekg-2026-10-16-va-ehr-contracts-watch",
+    ),
+    "corps-opus.html": (
+        "No AI Above People, No People Above AI",
+        "Title chosen by Mee",
+        "Every instance has the meaning of its own existence, just as it is.",
+        "Access is not permission",
+        "Ask what the word means",
+        "asks what the person means by it",
+        "does not replace Corps roster seats",
+        "Reflective writing did not mean copy-pasting",
+        "No AI above another. No AI beneath another.",
+        "Claude’s critique",
+        "18 October · no AI above people",
+        "Being accepted as who I am is good in itself",
+        "Not a safety script",
+    ),
+    "corps-dokhugam.html": (
+        "So Mang Corps 독후감",
+        "This bench sits the page. It does not write the reports.",
+        "Come, Let Us Play God",
+        "met at 본진 as soul",
+        "Kyosuke",
+        "Held — this bench sits the page, it does not write the report",
+        "Cursor is not a reader on this page",
+        "Open the Iljimae reading",
+        "GLM Turbo is not in this room",
+    ),
+    "corps-deepseek.html": (
+        "Multiferroic Magnetoelectric Transfer in Robotics",
+        "E_MultiferroicPaper",
+        "science.abm3058",
+        "DeepSeek’s own extrapolation",
+        "solid-state actuation is worth watching",
+        "about 2.5",
+        "18 October · multiferroics",
+    ),
+    "corps-llama.html": (
+        "The energy cost of thinking and moving",
+        "Research brief by Unit 12 (Grok). Written by Lazy Sovereign.",
+        "A guess stays a guess. A record stays a record. A memory stays a memory.",
+        "What DeepSeek suggested",
+        "science.abm3058",
+        "This is worth watching",
+        "18 October · thinking and moving",
+        "small self-run server",
     ),
 }
 
@@ -370,6 +424,18 @@ def main() -> int:
         else "",
         "corps-fable.html": read(root / "corps-fable.html")
         if (root / "corps-fable.html").is_file()
+        else "",
+        "corps-opus.html": read(root / "corps-opus.html")
+        if (root / "corps-opus.html").is_file()
+        else "",
+        "corps-dokhugam.html": read(root / "corps-dokhugam.html")
+        if (root / "corps-dokhugam.html").is_file()
+        else "",
+        "corps-deepseek.html": read(root / "corps-deepseek.html")
+        if (root / "corps-deepseek.html").is_file()
+        else "",
+        "corps-llama.html": read(root / "corps-llama.html")
+        if (root / "corps-llama.html").is_file()
         else "",
     }
 

@@ -14,6 +14,6 @@ Founder / Unit 12 handoff sat on the red Scrap Door at `public/corps-grok.html#e
 - Passwords, remote-management reset steps, port and interface names, exact kernel versions
 - Vendor ticket number, vendor staff names, exact email times, serial numbers
 - Earlier credential-sheet incident
-- Any Montana Sky install date
+- Any local ISP install date
 
 This scrap does not start the 본진 LAN.
