@@ -484,6 +484,24 @@ def main() -> int:
             f"corps-dokhugam.html: expected 11 data-report spots, found {len(report_spots)}"
         )
 
+    # Tiny labels stay --muted (#C4B3BC). Lilac #7A6977 is borders / 20px+ only.
+    for tiny in (
+        ".hero-caption",
+        ".kicker",
+        ".writer-kicker",
+        ".section-no",
+        ".next-kicker",
+    ):
+        rule = rf"(?<![a-z-]){re.escape(tiny)}\s*\{{[^}}]*"
+        if re.search(rule + r"color:var\(--lilac\)", dok):
+            failures.append(
+                f"corps-dokhugam.html: {tiny} still uses --lilac; use --muted"
+            )
+        if dok and not re.search(rule + r"color:var\(--muted\)", dok):
+            failures.append(
+                f"corps-dokhugam.html: {tiny} missing color:var(--muted)"
+            )
+
     if failures:
         print("FAIL source-text verify (not OCR)")
         for line in failures:
