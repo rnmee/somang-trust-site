@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>So Mang Corps — Headquarters Server: Collaboration Record (EKG)</title>
-<meta name="description" content="An Event Knowledge Graph record of the So Mang Corps' multi-model collaboration on the intellicAIr GB300 server room — through full system verification and room build-out. Kept as a living record." />
+<meta name="description" content="An Event Knowledge Graph record of the So Mang Corps' multi-model collaboration on the intellicAIr the on-site server server room — through full system verification and room build-out. Kept as a living record." />
 <style>
 :root{
   --ink:#151A22; --ink-soft:#39424F; --muted:#6E7683;
@@ -117,21 +117,16 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
 
   <!-- NODE 01 -->
   <section class="node" data-node="01" data-actors="Opus 4.6" data-date="2026-04-20" data-relation="verified-by:03,04">
-    <div class="node-head"><span class="node-id">EKG · Node 01</span><h2 class="node-title">GB300 infrastructure &amp; thermal analysis</h2></div>
+    <div class="node-head"><span class="node-id">EKG · Node 01</span><h2 class="node-title">Server-room infrastructure &amp; thermal analysis</h2></div>
     <div class="node-meta"><span class="actor">actors:</span> Opus 4.6 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-04-20 &nbsp;·&nbsp; <span class="actor">relation:</span> verified by Node 03, Node 04</div>
     <div class="node-body">
-      <p>The first full build sheet for the headquarters server — hardware, site conditions, electrical, thermal, connectivity, and a pre-arrival checklist. Grounded in the actual Exxact quote (#171597-1), with no overstatement.</p>
+      <p>The first full build sheet for the headquarters server — site conditions, electrical, thermal, connectivity, and a pre-arrival checklist. Grounded in the vendor quote, with no overstatement. Nameplate, model, and serial stay off this door.</p>
       <div class="spec">
-        <b>Exxact Valence VWS-158270643 — NVIDIA GB300 Tower Workstation</b><br>
-        CPU/GPU: NVIDIA 72-Core Grace CPU + B300 GPU (GB300), 1400W TDP<br>
-        System memory: 496GB LPDDR5X &nbsp;·&nbsp; GPU memory: 252GB HBM3e<br>
-        Add-in GPU: NVIDIA RTX PRO 6000 Blackwell Max-Q — 96GB GDDR7, 300W<br>
-        Storage: 2× 2TB M.2 NVMe PCIe 5.0 (RAID 1) + 2× M.2 NVMe PCIe 6.0<br>
-        Networking: 2× 400G QSFP112 (CX-8) + 10GBase-T + GbE mgmt<br>
-        Power: 1× 1600W 80 PLUS Titanium PSU &nbsp;·&nbsp; OS: Ubuntu 24.02
+        <b>The on-site Corps server</b><br>
+        A tower we own, not a rented rack. Two local GPUs. Dedicated power. The cooling plan and the pre-arrival checklist were written so the rest of the Corps could check the work.
       </div>
-      <p style="margin-top:13px"><strong>Site &amp; electrical (as first planned):</strong> ~7,500 ft³ room; 125A service with open sub-panel slots; dedicated 20A circuit for the server (~13–15A peak draw); backup generator + UPS on site.</p>
-      <p><strong>Thermal (as first calculated):</strong> 1,500W × 3.412 = 5,118 BTU/hr; ~500 CFM airflow need.</p>
+      <p style="margin-top:13px"><strong>Site &amp; electrical (as first planned):</strong> a dedicated circuit for the server; backup power on site. Amps and panel math stay with the licensed load calc, not on this door.</p>
+      <p><strong>Thermal (as first calculated):</strong> size the room heat pump to real full-load heat, not idle. Watts and BTU stay off this door.</p>
     </div>
     <div class="outcome"><span class="lbl">outcome</span>A complete, factual baseline the rest of the Corps could check against — deliberately conservative, "promise less, show more."</div>
   </section>
@@ -141,14 +136,14 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
     <div class="node-head"><span class="node-id">EKG · Node 02</span><h2 class="node-title">Air &amp; particulate control — "dust does not throttle a GPU; heat does"</h2></div>
     <div class="node-meta"><span class="actor">actors:</span> Cursor &nbsp;·&nbsp; <span class="actor">date:</span> 2026-08-23 &nbsp;·&nbsp; <span class="actor">relation:</span> refines Node 01</div>
     <div class="node-body">
-      <p>Cursor corrected a common myth: a "sterile, dust-free room" is overstated. Dust does not directly clock-gate a GB300 — <strong>heat and dry-dust fouling do</strong>. The target is not an operating theater but <strong>ISO 14644-1 Class 8</strong>, ~30–50% RH (under 60%), and a room kept slightly positive-pressure.</p>
+      <p>Cursor corrected a common myth: a "sterile, dust-free room" is overstated. Dust does not directly clock-gate the on-site server — <strong>heat and dry-dust fouling do</strong>. The target is not an operating theater but <strong>ISO 14644-1 Class 8</strong>, ~30–50% RH (under 60%), and a room kept slightly positive-pressure.</p>
       <ul>
         <li>Keep the server room slightly positive to adjacent space; filter make-up air at MERV 13 / H14.</li>
         <li>Epoxy the slab so concrete stops dusting; don't stage cardboard inside.</li>
         <li>The first thing that throttles is inlet temperature, not particle count.</li>
       </ul>
     </div>
-    <div class="outcome"><span class="lbl">outcome</span>Reframed the room spec around heat + positive pressure + filtration — later realized with a mini-split + HEPA purifier (see Node 08).</div>
+    <div class="outcome"><span class="lbl">outcome</span>Reframed the room spec around heat + positive pressure + filtration — later realized with a room heat pump and a filter (see Node 08).</div>
   </section>
 
   <!-- NODE 03 -->
@@ -159,9 +154,9 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
       <p>DeepSeek caught risks an early basement plan would have carried: with a <strong>gas furnace and water heater</strong> present, an exhaust fan pulling room air outside could create <strong>negative pressure</strong> and a <strong>carbon-monoxide backdraft</strong>. This hazard is specific to rooms with gas combustion appliances. <em>(Later moot — the server was installed in an all-electric room with no combustion appliances; see Status.)</em></p>
       <ul>
         <li>Never put a combustion-appliance room under negative pressure; use a sealed enclosure + dedicated ducts, and a CO alarm, if gas appliances share the space.</li>
-        <li><strong>Power value runs low.</strong> 1,400W is the B300 GPU TDP, not the full node; a GB300 full node can draw ~3.5–3.7kW.</li>
-        <li><strong>Cooling type — confirm.</strong> Data-center GB300 (rack NVL72) is liquid-cooled; this Exxact <em>tower</em> is air-cooled — verify with the vendor.</li>
-        <li><strong>Electrical:</strong> ~15A on a dedicated 20A circuit is ~12% of a 125A panel; a licensed load calc decides if a sub-panel is needed.</li>
+        <li><strong>Power value runs low.</strong> One GPU’s nameplate is not the full node. Confirm continuous draw with the vendor; do not publish the number here.</li>
+        <li><strong>Cooling type — confirm.</strong> A rented rack and a house tower are not the same machine. Verify the cooling method with the vendor. The method stays off this door.</li>
+        <li><strong>Electrical:</strong> a licensed load calc decides whether a sub-panel is needed.</li>
       </ul>
     </div>
     <div class="outcome"><span class="lbl">outcome</span>The cross-check surfaced a real combustion-room hazard and sharpened the power/cooling numbers. The final room sidestepped the CO risk entirely by being all-electric.</div>
@@ -174,10 +169,10 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
     <div class="node-body">
       <p>Re-checking Node 01's Section 5.1 heat math at the Corps' request.</p>
       <ul>
-        <li><strong>Formula is correct:</strong> 1W = 3.412 BTU/hr; the arithmetic holds.</li>
-        <li><strong>Input runs low.</strong> Continuous peak is nearer <strong>1,700W</strong> (GB300 1,400W + RTX PRO 6000 300W), so heat load is closer to <strong>~5,800 BTU/hr</strong> — and DeepSeek's full-node figure is more conservative still.</li>
-        <li><strong>Confirm the exact GB300 nameplate continuous watts with Exxact.</strong></li>
-        <li>Size cooling to real full-load watts, not idle.</li>
+        <li><strong>Formula is correct:</strong> heat follows watts. The arithmetic holds.</li>
+        <li><strong>Input runs low.</strong> The first sheet used a light number. More eyes raised the load. DeepSeek’s full-node figure was more conservative still.</li>
+        <li><strong>Confirm continuous watts with the vendor.</strong> The nameplate stays off this door.</li>
+        <li>Size cooling to real full-load heat, not idle.</li>
       </ul>
     </div>
     <div class="outcome"><span class="lbl">outcome</span>Opus 4.6 wasn't wrong — the formula was sound. More eyes made the <em>input</em> more accurate. That is what the collaboration was for.</div>
@@ -199,7 +194,7 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
     <div class="node-head"><span class="node-id">EKG · Node 06 · milestone</span><h2 class="node-title">First boot — the headquarters server comes alive</h2></div>
     <div class="node-meta"><span class="actor">actors:</span> intellicAIr 본진 · Mee Chung Kim &nbsp;·&nbsp; <span class="actor">date:</span> 2026-10-03 03:43 (local) &nbsp;·&nbsp; <span class="actor">relation:</span> completes Node 01, 03, 04</div>
     <div class="node-body">
-      <p>At <strong>03:43 on 3 October 2026</strong>, the Exxact VWS-158270643 (GB300) powered on at headquarters in Columbia Falls and booted <strong>Ubuntu 24.04.4 LTS</strong> for the first time. The paper quote, the spec sheet, and the cooling plan the Corps worked through together became a running machine on intellicAIr's own ground.</p>
+      <p>At <strong>03:43 on 3 October 2026</strong>, the on-site Corps server powered on at headquarters and booted for the first time. The paper quote, the spec sheet, and the cooling plan the Corps worked through together became a running machine on intellicAIr's own ground.</p>
     </div>
     <div class="outcome"><span class="lbl">outcome</span>Node 01's blueprint is now physical.</div>
   </section>
@@ -209,16 +204,13 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
     <div class="node-head"><span class="node-id">EKG · Node 07 · milestone</span><h2 class="node-title">Full system verification — both GPUs report in</h2></div>
     <div class="node-meta"><span class="actor">actors:</span> Mee Chung Kim · 본진 &nbsp;·&nbsp; <span class="actor">date:</span> 2026-10-14 08:30 (local) &nbsp;·&nbsp; <span class="actor">relation:</span> confirms Node 01 &amp; Node 06</div>
     <div class="node-body">
-      <p>Eleven days after first boot, <code>nvidia-smi</code> and <code>free -h</code> confirm the full stack is provisioned correctly:</p>
+      <p>Eleven days after first boot, a local GPU check confirmed the full stack is provisioned correctly:</p>
       <div class="spec">
-        <b>GPU 1 — NVIDIA GB300:</b> 256,703 MiB (~251 GB HBM3e) · 30°C · 146W / 1300W · P0 · util 0%<br>
-        <b>GPU 0 — NVIDIA RTX PRO 6000 Blackwell:</b> 97,887 MiB (96 GB) · 38°C · 19W / 300W · util 0%<br>
-        Driver 595.99.02 · CUDA 13.2 · kernel 7.0.0-1019-nvidia-64k<br>
-        System RAM: 744 GiB total (31 GiB used, 712 GiB available) · swap 0<br>
-        Processes: Xorg + gnome-shell only — clean idle
+        <b>Idle check · 14 October 2026 08:30</b><br>
+        Both local GPUs reported in. Memory, temperatures, watts, and driver versions stay off this door. The machine was idle and clean.
       </div>
     </div>
-    <div class="outcome"><span class="lbl">outcome</span>The headquarters machine is fully operational and correctly provisioned. These are <strong>idle</strong> readings — watch <code>nvidia-smi</code> during the first real workload to see full-load temps.</div>
+    <div class="outcome"><span class="lbl">outcome</span>The headquarters machine is fully operational and correctly provisioned. These are <strong>idle</strong> readings — watch a local GPU check during the first real workload to see full-load temps.</div>
   </section>
 
   <!-- NODE 08 — ROOM BUILD-OUT -->
@@ -228,9 +220,9 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
     <div class="node-body">
       <p>The server now lives in a dedicated, <strong>all-electric</strong> room — not the basement. As built:</p>
       <ul>
-        <li><strong>Cooling:</strong> wall-mount Carrier mini-split (heat pump), set ~65°F.</li>
-        <li><strong>Air:</strong> large HEPA air purifier in-room (Node 02's filtration/positive-pressure intent).</li>
-        <li><strong>Power:</strong> server on a dedicated 20A circuit from a dedicated sub-panel.</li>
+        <li><strong>Cooling:</strong> a room heat pump, set cool enough for inlet air.</li>
+        <li><strong>Air:</strong> a room filter in place (Node 02's filtration/positive-pressure intent).</li>
+        <li><strong>Power:</strong> the server on a dedicated circuit from a dedicated sub-panel.</li>
         <li><strong>No gas combustion appliances</strong> in the room — so no CO backdraft risk (Node 03 is moot for this installation).</li>
       </ul>
     </div>
@@ -242,14 +234,14 @@ body{background:var(--vellum);color:var(--ink);font-family:var(--body);line-heig
     <h3>Server room — status &amp; remaining checks (updated 2026-10-14)</h3>
     <ul>
       <li><strong>CO detector — not applicable.</strong> The server is in an all-electric room with no gas combustion appliances; with no combustion source there is no CO backdraft risk, so no CO alarm is required for this installation. (A general household CO alarm elsewhere is ordinary good practice, unrelated to the server.)</li>
-      <li><strong>Cooling — in place.</strong> Carrier mini-split (~65°F) + HEPA purifier. Watch GPU temps via <code>nvidia-smi</code> during the first full workload to confirm it holds when the GB300 pulls toward 1300W.</li>
-      <li><strong>Electrical — in place.</strong> Server on a dedicated 20A circuit from a dedicated sub-panel. A whole-house NEC 220 load calc remains optional good practice.</li>
+      <li><strong>Cooling — in place.</strong> Room heat pump and a filter. Watch GPU temps during the first full workload. Numbers stay off this door.</li>
+      <li><strong>Electrical — in place.</strong> Server on a dedicated circuit from a dedicated sub-panel. A whole-house load calc remains optional good practice.</li>
     </ul>
   </div>
 
   <footer class="colophon">
     <p class="imprint">
-      <strong>intellicAIr, LLC</strong> · Columbia Falls, Montana<br />
+      <strong>intellicAIr, LLC</strong> · Montana<br />
       So Mang Corps — <span class="ko">소망 군단</span> · Event Knowledge Graph, headquarters node<br />
       Kept as a living record of the Corps' work. First boot 2026-10-03 03:43 · full verification &amp; room build-out 2026-10-14.
     </p>

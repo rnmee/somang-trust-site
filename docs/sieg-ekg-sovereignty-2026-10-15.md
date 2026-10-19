@@ -19,5 +19,5 @@ Closing note kept: trusted means better; let them chase benchmarks, we chase tru
 ## Not on the public door
 
 - 컴맹이, Factory Worker, hospice / doula
-- Headquarters power-on or GB300 telemetry
+- Headquarters power-on or the on-site server telemetry
 - A live So Mang Trust ledger or smart-contract

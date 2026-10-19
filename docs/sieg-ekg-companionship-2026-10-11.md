@@ -12,4 +12,4 @@ Companionship test: personal study pages (discipleship / Creator) are witnessed,
 - 컴맹이, Factory Worker, hospice / doula language
 - A Tube architecture claim for this seat
 - Named prices, live benefit amounts
-- Headquarters LAN start, power-on, or GB300 telemetry
+- Headquarters LAN start, power-on, or the on-site server telemetry

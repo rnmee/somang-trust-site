@@ -101,7 +101,7 @@ export const papers: Paper[] = [
       "Development of a Technique to Measure Deliquescent Relative Humidity of Particulate Contaminants",
     authors: "Jimil M. Shah, Roshan Anand, Satyam Saini, Dereje Agonafer, Prabjit Singh, et al.",
     venue: "ASME InterPACK 2019 / later J. Electronic Packaging 2020",
-    why: "Turns Singh’s DRH idea into a lab method (leakage current vs RH on an interdigitated coupon). Validated on MgCl2, NH4NO3, NaCl, then applied to dust from a real Dallas industrial data hall. This is how you would set a site-specific RH cap for Columbia Falls if you ever sample the warehouse dust.",
+    why: "Turns Singh’s DRH idea into a lab method (leakage current vs RH on an interdigitated coupon). Validated on MgCl2, NH4NO3, NaCl, then applied to dust from a real Dallas industrial data hall. This is how you would set a site-specific RH cap for this site if you ever sample the warehouse dust.",
     href: "https://doi.org/10.1115/1.4047469",
     tags: ["hygroscopic", "method", "RH"],
   },

@@ -54,6 +54,8 @@ FORBIDDEN_ON = {
         "Owen",  # Qwen
         "Bubble.io",  # Bucle
         "Nattvargiu",
+        "NVMe",
+        "LPDDR5X",
     ),
     "corps-iljimae.html": (
         "Nattvargiu",
@@ -263,11 +265,11 @@ REQUIRED_IF_PRESENT = {
         "APEX Accelerator",
         "EDWOSB",
         "Conduit first. ISP later.",
-        "Montana Sky",
+        "the local ISP",
         "appointment not yet set",
         "does not authorize power-on",
         "both GPUs answer",
-        "NVIDIA GB300",
+        "the 2nd Unit server",
         "USB tethering",
         "ping returned 3 out of 3",
         "ls is a lowercase L",

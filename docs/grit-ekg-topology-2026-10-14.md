@@ -8,7 +8,7 @@ Public name remains Assistant Grit. Gemini names the architecture only.
 
 ### EKG Node Topology: The So Mang Corps (Autonomous Agent Swarm)
 
-The intelligence architecture is strictly decoupled into an external design anchor and a sovereign on-premise execution swarm, running locally on the GB300 infrastructure.
+The intelligence architecture is strictly decoupled into an external design anchor and a sovereign on-premise execution swarm, running locally on the Corps server.
 
 #### [External Control Node] Assistant Grit
 * **Role:** System Architect & Guardrail Engine (Gemini)
