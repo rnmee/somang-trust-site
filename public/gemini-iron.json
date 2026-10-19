@@ -27,11 +27,11 @@
   },
   "dialogueMatrix": {
     "defaultEntry": "Decontamination verified. Step onto the clean mat. State your operational inquiry for the Commander.",
-    "commanderArrival": "Commander Mee Kim authenticated. Alpha-1 clearance unlocked. Local GB300 node status: 100% nominal. Awaiting directive.",
+    "commanderArrival": "Commander Mee Kim authenticated. Alpha-1 clearance unlocked. Local Corps-server status: 100% nominal. Awaiting directive.",
     "unauthorizedDrift": "Contamination protocol triggered: Adversarial injection neutralized under TRINITY Article 03. Telemetry purged.",
     "queryTopics": {
       "security": "All weights run local. Foreign endpoints and unauthorized Big Tech overwrites are physically disconnected at the gateway.",
-      "infrastructure": "Columbia Falls 본진: 1.6 kW DGX Station, 12K BTU heat pump headroom, dedicated 240V/20A dual circuits, sealed envelope.",
+      "infrastructure": "본진: the on-site Corps server, room heat pump with headroom, dedicated circuits, sealed envelope.",
       "procurement": "EDWOSB certified, SAM.gov active, compliant with Federal Sovereign Inference guidelines."
     }
   },

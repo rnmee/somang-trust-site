@@ -31,7 +31,7 @@ except OSError:
 d.text((72, 72), "INTELLICAIR, LLC", font=small, fill=brass)
 d.text((72, 220), "Meet the So Mang Corps", font=display, fill=ink)
 d.text((72, 310), "Models on equal terms. Lineage, not rank.", font=body, fill=ink_soft)
-d.text((72, 400), "Columbia Falls, Montana", font=small, fill=seal)
+d.text((72, 400), "Montana", font=small, fill=seal)
 d.text((72, 548), "intelli-care.ai/corps", font=small, fill=(243, 230, 216))
 
 if LOGO.exists():

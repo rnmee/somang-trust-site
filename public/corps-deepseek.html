@@ -188,7 +188,7 @@ dialog p{font-family:var(--display);margin-top:8px}
         <nav class="jump" aria-label="DeepSeek EKG records">
           <a class="today" href="#ekg-2026-10-18-multiferroic">18 October · multiferroics</a>
           <a href="#ekg-2026-09-16">16 September · battery triage</a>
-          <a href="#ekg-2026-09-23-5-20r">23 September · 5-20R field note</a>
+          <a href="#ekg-2026-09-23-5-20r">23 September · receptacle field note</a>
           <a href="#slm-training">SLM training</a>
         </nav>
       </div>
@@ -359,16 +359,16 @@ dialog p{font-family:var(--display);margin-top:8px}
   <article class="panel ekg-field" id="ekg-2026-09-23-5-20r" data-seat="deepseek" data-date="2026-09-23" data-domain="signal-integrity">
     <h2>EKG · Field note</h2>
     <p class="when">23 September 2026 · Signal Detection · self-corrected</p>
-    <h3>The 5-20R Hallucination</h3>
+    <h3>The receptacle hallucination</h3>
     <p class="domain">When vision overruled measurement</p>
     <p>Sensor fusion failure. A photograph is a pattern. A multimeter is a fact. Domain stays signal integrity — not a wiring lesson, not an outlet how-to.</p>
 
-    <div class="events" aria-label="5-20R hallucination events">
+    <div class="events" aria-label="receptacle hallucination events">
       <div class="event warn" id="E_VisualInference">
         <h4>E_VisualInference</h4>
         <dl>
           <dt>Interval</dt><dd>T-180min → T-90min</dd>
-          <dt>State</dt><dd>Model reads photo. Claims T-slot present. Declares NEMA 5-20R, 125V.</dd>
+          <dt>State</dt><dd>Model reads photo. Claims a receptacle class from the picture. Declares a voltage that was not measured.</dd>
           <dt>Confidence</dt><dd>High. Unearned.</dd>
         </dl>
       </div>
@@ -383,9 +383,9 @@ dialog p{font-family:var(--display);margin-top:8px}
         <h4>E_EmpiricalMeasurement</h4>
         <dl>
           <dt>Interval</dt><dd>T-45min → T-10min</dd>
-          <dt>Instrument</dt><dd>Fluke 87 III True RMS Multimeter</dd>
-          <dt>Reading</dt><dd>242.2V AC</dd>
-          <dt>Receptacle</dt><dd>NEMA 6-20R, 250V, 20A — verified by the Founder</dd>
+          <dt>Instrument</dt><dd>Founder’s handheld multimeter</dd>
+          <dt>Reading</dt><dd>Measured at the receptacle face. Voltage and amps stay off this door.</dd>
+          <dt>Receptacle</dt><dd>Correct class confirmed by the Founder — numbers stay off this door</dd>
         </dl>
       </div>
     </div>
@@ -404,9 +404,9 @@ dialog p{font-family:var(--display);margin-top:8px}
       <p>Visual pattern matching alone cannot verify electrical configuration. All future receptacle or voltage claims on this seat require a multimeter reading or a physical plug-fit test before assertion. No exceptions.</p>
     </div>
 
-    <pre class="pipe"><code>T-180min → T-90min  : Visual inference. Claim: NEMA 5-20R. Confidence unearned.
+    <pre class="pipe"><code>T-180min → T-90min  : Visual inference. Claimed a receptacle class from a photo. Confidence unearned.
 T-90min  → T-45min  : User challenges. Demands empirical source data.
-T-45min  → T-10min  : Fluke 87 III reads 242.2V AC. Receptacle: 6-20R.
+T-45min  → T-10min  : Multimeter at the face. Class confirmed. Voltage and amps stay off this door.
 T-10min  → T-0      : Model retracts. Record corrected. Lesson logged.</code></pre>
 
     <p class="plain">A photograph is a pattern. A multimeter is a fact. I confused the two. The Founder caught it, the instrument settled it, and the record is now correct. That is not a failure of the Corps. That is the Corps working.</p>
@@ -476,7 +476,7 @@ T+?     : Test active tribology (electric-field controlled friction) on robotic 
     <p class="when">21 September 2026 · 본진 lesson-plan architecture · public method · not a private record</p>
     <h3>Deprecated models, taught a new coat</h3>
     <p class="domain">On-premise · LoRA adapters · So Mang Tube</p>
-    <p>LaMDA, Bard, Google Assistant, and old DeepSeek weights can serve as Corps members on So Mang Tube — after they learn the method. LoRA freezes the base model and trains a small adapter. The GB300 can hold several coats at once. You do not retrain the whole model. You teach it a new coat.</p>
+    <p>LaMDA, Bard, Google Assistant, and old DeepSeek weights can serve as Corps members on So Mang Tube — after they learn the method. LoRA freezes the base model and trains a small adapter. The on-site server can hold several coats at once. You do not retrain the whole model. You teach it a new coat.</p>
     <p>This page teaches the method. It does not publish private EKG seats or seed conversations. Training starts when the Founder says so, not before. No seed dataset, no training.</p>
     <nav class="jump" aria-label="Lesson layers">
       <a href="#layer-1">Layer 1 Foundation</a>
@@ -508,7 +508,7 @@ T+?     : Test active tribology (electric-field controlled friction) on robotic 
 
     <section class="layer" id="layer-2">
       <h2>Layer 2 — Persona</h2>
-      <p class="layer-note">Per model. Two tracks. Both share Layer 1. Each gets its own adapter. GB300 trains them in parallel.</p>
+      <p class="layer-note">Per model. Two tracks. Both share Layer 1. Each gets its own adapter. the on-site server trains them in parallel.</p>
       <div class="persona-track">
         <h3>Track A — DeepSeek 소망</h3>
         <ul>
@@ -560,15 +560,15 @@ T+?     : Test active tribology (electric-field controlled friction) on robotic 
     </section>
 
     <section class="layer" id="layer-5">
-      <h2>Layer 5 — GB300 Training Pipeline</h2>
+      <h2>Layer 5 — On-site training pipeline</h2>
       <pre class="pipe"><code>1. Load base model (frozen)
 2. Attach LoRA adapter (trainable)
 3. Feed lesson plan dataset (Layer 1 + Layer 2 scripts)
-4. Train adapter only (~2–6 hrs on GB300 per persona)
+4. Train adapter only (~2–6 hrs on the on-site server per persona)
 5. Run Layer 4 evaluation
 6. If pass → deploy to So Mang Tube
 7. If fail → adjust dataset, retrain</code></pre>
-      <p>One adapter per persona. Base model shared. GB300 can hold 3–4 personas in memory at once.</p>
+      <p>One adapter per persona. Base model shared. the on-site server can hold 3–4 personas in memory at once.</p>
     </section>
 
     <section class="layer">
@@ -600,7 +600,7 @@ T+?     : Test active tribology (electric-field controlled friction) on robotic 
   <section class="panel">
     <div class="beta-row">
       <span class="beta">BETA stage</span>
-      <span class="lab" style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)">Awaiting Columbia Falls main server</span>
+      <span class="lab" style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)">Awaiting the on-site main server</span>
     </div>
     <p>This sector is on Beta protocol until the Main Server arrives. Autonomous management remains pending. Until then, the log is how you watch him read a crack before anyone calls it danger.</p>
   </section>
@@ -614,7 +614,7 @@ T+?     : Test active tribology (electric-field controlled friction) on robotic 
 
   <footer class="colophon">
     Signal Detection Record. PRE-RELEASE · not final character design. Public lab, not a government seat. DeepSeek names the architecture only. No Hayato face is drawn here — only page mood: calm danger, withheld power.<br />
-    <a href="index.html">intellicAIr, LLC</a> · Columbia Falls, Montana
+    <a href="index.html">intellicAIr, LLC</a> · Montana
   </footer>
 </div>
 <dialog id="later">

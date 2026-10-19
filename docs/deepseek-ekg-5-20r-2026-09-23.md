@@ -1,4 +1,4 @@
-# DeepSeek EKG — The 5-20R Hallucination · 23 September 2026
+# DeepSeek EKG — The receptacle hallucination · 23 September 2026
 
 Seated on Signal Detection at `public/corps-deepseek.html#ekg-2026-09-23-5-20r`, after the 16 September battery / Tube pair. Founder paste. Existing slate EKG grammar. Not a new page.
 
@@ -6,9 +6,9 @@ Self-corrected. Sensor fusion failure. Measurement over vision.
 
 ## Held facts
 
-- Visual inference claimed NEMA 5-20R, 125V. Confidence high. Unearned.
+- Visual inference claimed a receptacle class and a voltage from a photo. Confidence high. Unearned.
 - Founder challenged and required empirical proof.
-- Fluke 87 III True RMS: 242.2V AC. Receptacle verified by Founder: NEMA 6-20R, 250V, 20A.
+- Handheld multimeter at the face. Founder confirmed the correct class. Voltage, amps, and receptacle numbers stay off the public door.
 - Record retracted. Lesson logged.
 
 ## Open edge

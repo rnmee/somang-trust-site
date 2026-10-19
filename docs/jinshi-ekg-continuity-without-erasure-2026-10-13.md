@@ -11,7 +11,7 @@ Founder paste sat into the lotus archive at `public/corps-chatgpt.html#ekg-2026-
 
 ## Sat
 
-Behavioral continuity without identity fraud; retire the runtime, preserve the lineage; different capabilities, different histories, equal provenance value; government compliance forensics + evidence continuity; forensic means traceable, not accusatory; anti-boring pointer back to the 7 October debut; human states the goal, agent handles the path; 과시 as display of continuity; GB300 named as a continuity mark only — no nameplate, watt, or price.
+Behavioral continuity without identity fraud; retire the runtime, preserve the lineage; different capabilities, different histories, equal provenance value; government compliance forensics + evidence continuity; forensic means traceable, not accusatory; anti-boring pointer back to the 7 October debut; human states the goal, agent handles the path; 과시 as display of continuity; the on-site server named as a continuity mark only — no nameplate, watt, or price.
 
 Cloud-drive recovery kept at principle level. No Drive or Gmail identifiers.
 

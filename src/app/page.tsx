@@ -89,7 +89,7 @@ export default function Home() {
             The “sterile, dust-free room” advice is overstated. ASHRAE TC 9.9
             wants a data hall at ISO 14644-1 Class 8 — a controlled room, not an
             operating theater. There is no published particle-count threshold
-            that instantaneously clock-gates a GB300. Clocks drop when die
+            that instantaneously clock-gates the on-site server. Clocks drop when die
             temperature or power limits are hit. Dirt raises thermal resistance
             so that limit arrives sooner.
           </p>
@@ -106,11 +106,10 @@ export default function Home() {
               <p>
                 서버룸은 “무균실”이 아닙니다. 목표는 ISO Class 8, 상대습도
                 약 30–50%(60% 미만), 그리고 창고보다 방이 살짝 양압인
-                상태입니다.                 지금 기계는 NVL72가 아니라 Exxact GB300 타워(약
-                1.6 kW)입니다. 12k 히트펌프는 이 열을 감당할 수 있습니다.
-                6-20R 두 구멍은 240 V로 확인됐습니다. 새 벽은 지금 필수가
-                아닙니다. 타워를 열기 전에 콘크리트 패치를 에폭시하고,
-                페인트 후 환기·청소하면 됩니다.
+                상태입니다. 지금 기계는 빌린 랙이 아니라 우리가 가진 타워입니다.
+                방의 히트펌프가 그 열을 감당합니다. 모델·와트·시리얼은 이 페이지에
+                적지 않습니다. 새 벽은 지금 필수가 아닙니다. 타워를 열기 전에
+                콘크리트 패치를 에폭시하고, 페인트 후 환기·청소하면 됩니다.
               </p>
             </CardContent>
           </Card>
@@ -119,42 +118,37 @@ export default function Home() {
         <section id="cooling" className="scroll-mt-24 space-y-6">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              Your machine: Exxact Valence VWS-158270643
+              Your machine: the on-site Corps server
             </h2>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              This is not an NVL72 rack. Quote 171597-1 is an NVIDIA DGX
-              Station–class tower: Grace 72-core + B300 (GB300, 1400 W chip
-              TDP), 496 GB LPDDR5X + 252 GB HBM3e, plus one RTX PRO 6000
-              Blackwell Max-Q (300 W) for display. NVIDIA rates the whole
-              station at <strong className="text-foreground">1,600 W total
-              system power</strong>. The 1400 W chip and the 300 W card cannot
-              both sit at nameplate at once — the 1600 W PSU is the budget.
-              Heat into the 8×8 room is about 1.6–1.8 kW, plus a 32&quot; 4K
-              monitor.
+              This is a tower we own, not a rented rack. Model, serial, nameplate
+              watts, and memory sizes stay off this page. Size the room heat pump
+              to real full-load heat, not idle. Confirm continuous draw with the
+              vendor.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
               <CardHeader>
-                <CardTitle className="text-3xl font-semibold">1.6 kW</CardTitle>
+                <CardTitle className="text-3xl font-semibold">On-site</CardTitle>
                 <CardDescription>
-                  This tower, wall heat at full load
+                  Tower we own — watts stay off this page
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle className="text-3xl font-semibold">3.5 kW</CardTitle>
+                <CardTitle className="text-3xl font-semibold">Headroom</CardTitle>
                 <CardDescription>
-                  12k BTU heat pump, theoretical
+                  Room heat pump sized for full-load heat
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle className="text-3xl font-semibold">240 V</CardTitle>
+                <CardTitle className="text-3xl font-semibold">Power</CardTitle>
                 <CardDescription>
-                  Both 6-20R outlets, measured. Slots 10/12 right, 14/16 left
+                  Dedicated circuits measured — right cord still to buy
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -162,35 +156,32 @@ export default function Home() {
           <div className="grid gap-4 md:grid-cols-2">
             <Card>
               <CardHeader>
-                <CardTitle>Cooling: the 12k unit can hold this box</CardTitle>
+                <CardTitle>Cooling: the room heat pump can hold this box</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  12,000 BTU/h ÷ 3,412 = 3.5 kW. Against ~1.7 kW of IT heat in
-                  64 ft² you have roughly 2× headroom on paper, even after a
-                  leaky former storage envelope. This is no longer the first
-                  throttle.
+                  The room heat pump has headroom for this tower’s heat, even
+                  after a leaky former storage envelope. Watts and BTU stay off
+                  this page. This is no longer the first throttle.
                 </p>
                 <p>
                   Still place it like a small data hall: tower intake clear,
-                  exhaust not blowing into the heat-pump return, inlet air
-                  18–22 °C, RH 30–50%. DGX Station–class boxes often use
-                  internal liquid loops, but that heat still leaves the chassis
-                  as hot air. Dust on the radiator or filters is how clocks
-                  sag later.
+                  exhaust not blowing into the heat-pump return, inlet air in
+                  the cool band, RH 30–50%. Heat still leaves the chassis as
+                  hot air. Dust on the radiator or filters is how clocks sag
+                  later.
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Power: 240 V is confirmed. Buy the right cord</CardTitle>
+                <CardTitle>Power: dedicated circuits confirmed. Buy the right cord</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  Both 6-20R receptacles measure 240 V. Door card 10/12 =
-                  right hole, 14/16 = left hole. Maxivolt MV-100C stays on the
-                  panel. Remaining hardware gap: Exxact shipped a C19 →
-                  5-15P. Order a C19 → 6-20P. No adapter.
+                  Dedicated circuits are measured. The shipped cord does not
+                  match the receptacle. Order the matching cord. No adapter.
+                  Receptacle class and voltage stay off this page.
                 </p>
               </CardContent>
             </Card>
@@ -225,8 +216,8 @@ export default function Home() {
                   gasket + caulk; OEM shop-vac HEPA (Ridgid VF8000 class, not
                   VF6000 “HEPA material”); Winix 5510 / leftover 5500-2 after
                   paint (~$160–$200), PlasmaWave off; rent TSI 9306-V2
-                  (~$121–$140/day) after cure; UL 12 AWG C19→6-20P (~$22).
-                  Do not reuse the live 50 A tub cable as a PDU feed.
+                  (~$121–$140/day) after cure; the matching power cord.
+                  Do not reuse the old tub cable as a feed.
                 </p>
               </CardContent>
             </Card>
@@ -286,7 +277,7 @@ export default function Home() {
                   <span className="text-foreground">Thermal path.</span> A thin
                   fouling layer can cut heat-transfer efficiency on the order of
                   20–30% in heat-exchanger studies. ASHRAE has also cited a
-                  2–5% cooling-energy penalty from minor dust. On a GB300, that
+                  2–5% cooling-energy penalty from minor dust. On the on-site server, that
                   is lost thermal margin, then throttle.
                 </p>
                 <p>
@@ -348,8 +339,8 @@ export default function Home() {
               Server room vs warehouse: the real correlation
             </h2>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              There is not a paper titled “Columbia Falls hot-tub shed vs
-              GB300 clocks.” There is a well-measured physics chain. Shehabi
+              There is not a paper titled “this site’s outbuilding vs
+              the on-site server clocks.” There is a well-measured physics chain. Shehabi
               (LBNL, 2008–2009) treated the data hall and the outdoor/adjacent
               air as two boxes connected by leaks, doors, and filters. Indoor
               concentration is set by: outdoor or adjacent source strength ×
@@ -502,8 +493,8 @@ export default function Home() {
           </h2>
           <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
             <li>
-              Confirmed machine and 240 V 6-20R (10/12 right, 14/16 left).
-              Order a C19 → 6-20P cord. Do not build new walls before paint.
+              Confirmed the machine and dedicated power. Order the matching
+              cord. Do not build new walls before paint.
               Epoxy the hot-tub patch, paint, vent, HEPA-clean, then unbox.
             </li>
             <li>
@@ -526,14 +517,14 @@ export default function Home() {
             </li>
             <li>
               Do not unbox until ISO Class 8 holds with the door closed, RH is
-              30–50%, and inlet air is inside 18–27 °C with cooling headroom
-              for the actual watts.
+              30–50%, and inlet air stays in the cool band with cooling
+              headroom for the real load.
             </li>
           </ol>
           <p className="text-xs text-muted-foreground">
-            Prepared for Mee, intellicAIr, LLC, Columbia Falls, Montana. This
+            Prepared for Mee, intellicAIr, LLC, Montana. This
             is an engineering brief, not a building permit, electrical design,
-            or NVIDIA install guide. Have a licensed electrician sign off
+            or a vendor install guide. Have a licensed electrician sign off
             power and a mechanical contractor sign off cooling before the
             server is energized.
           </p>

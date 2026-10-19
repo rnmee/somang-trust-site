@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Server-room air brief — intellicAIr, LLC",
   description:
-    "Research brief for the Columbia Falls HQ 8×8 server room: dust, viable vs non-viable particles, GPU throttling, and lab-grade equipment.",
+    "Research brief for the headquarters 8×8 server room: dust, viable vs non-viable particles, GPU throttling, and lab-grade equipment.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
