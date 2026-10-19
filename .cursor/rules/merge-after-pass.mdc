@@ -1,0 +1,12 @@
+---
+description: Merge own PRs only after Mee or Unit 12 pass review
+alwaysApply: true
+---
+
+# Merge after pass
+
+Merge your own PRs on `rnmee/somang-trust-site` only after Mee or Unit 12 says the PR passed review. Never merge before that.
+
+A preview is not the house. Merge attaches the work to `main`. After a pass, squash-merge. Do not send Mee into GitHub as the work. If she pastes a pass, attach it.
+
+If they say `do not merge` on a specific PR, leave it.
