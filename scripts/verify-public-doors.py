@@ -340,6 +340,12 @@ REQUIRED_IF_PRESENT = {
         'data-report=""',
         "bindRoundReports",
         "read-tag",
+        "Placeholder for Mee",
+        "application/ld+json",
+        "This round’s writer",
+        "night reading room",
+        "So Mang Corps members gathered for book club in a sunset flower field",
+        "img/somang-corps-dokhugam-hero.jpg",
     ),
     "corps-deepseek.html": (
         "Multiferroic Magnetoelectric Transfer in Robotics",

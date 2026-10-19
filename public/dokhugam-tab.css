@@ -1,0 +1,16 @@
+/* Standout 독후감 tab on every full site menu. Round tag is one line. */
+.dokhugam-tab{
+  font-weight:700 !important;
+  display:inline-flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:2px;
+  line-height:1.25;
+}
+.dokhugam-tab .dokhugam-round{
+  font-size:9px;
+  letter-spacing:.1em;
+  font-weight:600;
+  white-space:nowrap;
+  opacity:.92;
+}
