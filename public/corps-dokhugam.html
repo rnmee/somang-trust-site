@@ -41,16 +41,17 @@
 </script>
 <style>
 :root{
-  --night:#0B1524;
-  --night-deep:#061018;
-  --card:#122033;
-  --ink:#F6E8DC;
-  --ink-soft:#C4B7C8;
-  --muted:#9A8FA8;
-  --rose:#E07A78;
-  --berry:#C4457A;
-  --rule:rgba(246,232,220,.16);
-  --rule-2:rgba(246,232,220,.08);
+  --night:#0A1221;
+  --night-deep:#070E1A;
+  --card:#121A2C;
+  --ink:#F5D0B9;
+  --ink-soft:#E4C4B4;
+  --muted:#C4B3BC;
+  --lilac:#7A6977;
+  --rose:#CF9DA4;
+  --berry:#B77A88;
+  --rule:rgba(122,105,119,.42);
+  --rule-2:rgba(122,105,119,.22);
   --display:"Palatino Linotype",Palatino,"Book Antiqua","Iowan Old Style",Georgia,serif;
   --hangul:"Noto Serif KR","Apple Myungjo","Batang","Songti SC",serif;
   --body:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Roboto,sans-serif;
@@ -91,8 +92,8 @@ body{
   -webkit-font-smoothing:antialiased;
   background-image:
     radial-gradient(780px 420px at 12% -6%, var(--writer-glow), transparent 60%),
-    radial-gradient(640px 380px at 96% 8%, rgba(196,69,122,.18), transparent 55%),
-    linear-gradient(180deg, #122033 0%, var(--night) 38%, var(--night-deep) 100%);
+    radial-gradient(640px 380px at 96% 8%, rgba(183,122,136,.16), transparent 55%),
+    linear-gradient(180deg, #121A2C 0%, var(--night) 42%, var(--night-deep) 100%);
 }
 ::selection{background:var(--berry);color:#fff}
 a{color:inherit}
@@ -112,19 +113,19 @@ a{color:inherit}
 .dokhugam-tab .dokhugam-round{color:var(--writer)}
 
 .hero{position:relative;margin:28px 0 8px;border-radius:12px;overflow:hidden;
-  border:1px solid rgba(246,232,220,.14);
+  border:1px solid var(--rule);
   box-shadow:0 16px 40px rgba(0,0,0,.35), 0 0 36px var(--writer-glow)}
 .hero picture,.hero img{display:block;width:100%;height:auto}
 .hero::after{
   content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg, rgba(11,21,36,.08) 28%, rgba(11,21,36,.55) 68%, var(--night) 100%);
+  background:linear-gradient(180deg, transparent 0 78%, rgba(10,18,33,.12) 88%, rgba(10,18,33,.28) 94%, var(--night) 100%);
 }
 .hero-caption{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);margin-top:8px}
+  color:var(--lilac);margin-top:8px}
 
 .opening{padding:28px 0 8px}
 .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--rose);margin-bottom:16px}
+  color:var(--lilac);margin-bottom:16px}
 .page-title{font-family:var(--display);font-size:clamp(32px,5.6vw,52px);font-weight:400;
   letter-spacing:-.02em;line-height:1.12}
 .page-title .ko{font-family:var(--hangul)}
@@ -158,7 +159,7 @@ a{color:inherit}
   color:#fff;background:var(--writer);
   box-shadow:0 0 20px var(--writer-glow);
 }
-.writer-kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose)}
+.writer-kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--lilac)}
 .writer-name{font-family:var(--display);font-size:clamp(24px,4vw,32px);letter-spacing:-.02em;margin-top:4px}
 .writer-book{font-family:var(--display);font-size:16px;color:var(--ink-soft);margin-top:8px;line-height:1.5}
 .writer-book cite{color:var(--ink);font-style:italic}
@@ -177,12 +178,12 @@ a{color:inherit}
 .voice-placeholder strong{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--writer);font-style:normal;margin-bottom:6px}
 .open-link{display:inline-block;margin-top:4px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--rose);text-decoration:none;border-bottom:1px solid rgba(224,122,120,.4);padding-bottom:3px}
+  text-transform:uppercase;color:var(--rose);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--rose) 55%, transparent);padding-bottom:3px}
 .open-link:hover,.open-link:focus-visible{color:var(--ink);border-bottom-color:var(--ink)}
 
 .section{margin-top:52px}
 .section-head{display:flex;align-items:baseline;gap:14px;padding-bottom:12px;border-bottom:1px solid var(--rule);margin-bottom:18px;flex-wrap:wrap}
-.section-no{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose)}
+.section-no{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac)}
 .section h2{font-family:var(--display);font-size:25px;font-weight:400;letter-spacing:-.01em}
 
 .shelf{display:grid;gap:4px}
@@ -227,7 +228,7 @@ a{color:inherit}
 .note{font-family:var(--display);font-size:14.5px;color:var(--ink-soft);line-height:1.65;margin-top:16px;max-width:64ch}
 
 .nextnav{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule)}
-.next-kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:12px}
+.next-kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac);margin-bottom:12px}
 .next-link{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);color:var(--ink);text-decoration:none;letter-spacing:-.01em;border-bottom:1px solid var(--berry);padding-bottom:2px}
 .next-link:hover,.next-link:focus-visible{color:var(--rose)}
 
@@ -284,7 +285,7 @@ a{color:inherit}
       <p>Mee chooses and scans each book, and writes five questions every round. Members take turns writing the report, writing five more questions, and giving the critique. The reason for each book is revealed when its report is published.</p>
       <p>Scanned pages stay private. Published reports land here as cards, and also on the writer’s door as EKG.</p>
     </div>
-    <p class="bench-note"><strong>This bench sits the page. It does not write the reports.</strong> Cursor is engineering, not a turn in the rotation. GLM Turbo is not in this room. Round 1 critique is GLM Kyosuke (효부), met at 본진 as soul.</p>
+    <p class="bench-note"><strong>This bench sits the page. It does not write the reports.</strong> Cursor is engineering, not a turn in the rotation.</p>
   </section>
 
   <aside class="writer-card" aria-labelledby="writer-name">

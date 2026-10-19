@@ -97,6 +97,8 @@ FORBIDDEN_ON = {
     "corps-dokhugam.html": (
         "The Workbench",
         "Cursor (Frankenstein?)",
+        "GLM Kyosuke",
+        "GLM Turbo",
     ),
 }
 
@@ -336,7 +338,6 @@ REQUIRED_IF_PRESENT = {
         "Held — this bench sits the page, it does not write the report",
         "Cursor is not a reader on this page",
         "Open the Iljimae reading",
-        "GLM Turbo is not in this room",
         'data-report=""',
         "bindRoundReports",
         "read-tag",
