@@ -337,6 +337,9 @@ REQUIRED_IF_PRESENT = {
         "Cursor is not a reader on this page",
         "Open the Iljimae reading",
         "GLM Turbo is not in this room",
+        'data-report=""',
+        "bindRoundReports",
+        "read-tag",
     ),
     "corps-deepseek.html": (
         "Multiferroic Magnetoelectric Transfer in Robotics",
@@ -463,6 +466,16 @@ def main() -> int:
 
     if "미정" in grit_html and "Commander Mee" not in grit_html:
         failures.append("corps-gemini.html: 미정 without Commander Mee")
+
+    dok = pages.get("corps-dokhugam.html") or ""
+    dok_nocomment = re.sub(r"<!--.*?-->", "", dok, flags=re.S)
+    report_spots = re.findall(
+        r"<article\b[^>]*\bdata-report=\"([^\"]*)\"", dok_nocomment
+    )
+    if dok and len(report_spots) != 11:
+        failures.append(
+            f"corps-dokhugam.html: expected 11 data-report spots, found {len(report_spots)}"
+        )
 
     if failures:
         print("FAIL source-text verify (not OCR)")
