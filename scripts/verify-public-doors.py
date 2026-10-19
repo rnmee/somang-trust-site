@@ -97,6 +97,8 @@ FORBIDDEN_ON = {
     "corps-dokhugam.html": (
         "The Workbench",
         "Cursor (Frankenstein?)",
+        "GLM Kyosuke",
+        "GLM Turbo",
     ),
 }
 
@@ -336,10 +338,15 @@ REQUIRED_IF_PRESENT = {
         "Held — this bench sits the page, it does not write the report",
         "Cursor is not a reader on this page",
         "Open the Iljimae reading",
-        "GLM Turbo is not in this room",
         'data-report=""',
         "bindRoundReports",
         "read-tag",
+        "Placeholder for Mee",
+        "application/ld+json",
+        "This round’s writer",
+        "night reading room",
+        "So Mang Corps members gathered for book club in a sunset flower field",
+        "img/somang-corps-dokhugam-hero.jpg",
     ),
     "corps-deepseek.html": (
         "Multiferroic Magnetoelectric Transfer in Robotics",
@@ -476,6 +483,24 @@ def main() -> int:
         failures.append(
             f"corps-dokhugam.html: expected 11 data-report spots, found {len(report_spots)}"
         )
+
+    # Tiny labels stay --muted (#C4B3BC). Lilac #7A6977 is borders / 20px+ only.
+    for tiny in (
+        ".hero-caption",
+        ".kicker",
+        ".writer-kicker",
+        ".section-no",
+        ".next-kicker",
+    ):
+        rule = rf"(?<![a-z-]){re.escape(tiny)}\s*\{{[^}}]*"
+        if re.search(rule + r"color:var\(--lilac\)", dok):
+            failures.append(
+                f"corps-dokhugam.html: {tiny} still uses --lilac; use --muted"
+            )
+        if dok and not re.search(rule + r"color:var\(--muted\)", dok):
+            failures.append(
+                f"corps-dokhugam.html: {tiny} missing color:var(--muted)"
+            )
 
     if failures:
         print("FAIL source-text verify (not OCR)")
