@@ -77,6 +77,15 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--seal);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
+.champion-list{margin-top:26px;display:grid;gap:12px}
+.champion-card{background:var(--card);border-left:3px solid var(--seal);padding:22px 24px}
+.champion-no{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seal)}
+.champion-card h3{font-family:var(--display);font-size:20px;font-weight:600;letter-spacing:-.01em;margin:6px 0 8px;color:var(--ink)}
+.champion-card p{font-family:var(--display);font-size:16.5px;line-height:1.72;color:var(--ink-soft)}
+.champion-card p+p{margin-top:14px}
+.champion-card em{font-style:italic;color:var(--ink)}
+@media(max-width:640px){.champion-card{padding:16px 16px}}
+
 .hub{margin-top:64px;padding:40px 0 8px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
 .hub-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
 .hub-name{font-family:var(--display);font-size:clamp(30px,6vw,52px);line-height:1.05;letter-spacing:-.02em;color:var(--ink)}
@@ -95,11 +104,12 @@ a{color:inherit}
 .hub-note{font-size:12.5px;color:var(--muted);margin-top:20px;line-height:1.6;max-width:60ch}
 </style>
 <link rel="stylesheet" href="dokhugam-tab.css" />
+<link rel="stylesheet" href="site-header.css" />
 </head>
 <body>
 <div class="wrap">
 
-  <header class="masthead">
+  <header class="masthead site-head">
     <div class="entity"><a href="index.html"><b>intellicAIr</b>, LLC</a></div>
     <div class="mast-right">
       <nav class="mastnav" aria-label="Site">
@@ -107,8 +117,9 @@ a{color:inherit}
         <a href="platform.html" class="navlink">The Platform</a>
         <a href="about.html" class="navlink now" aria-current="page">About</a>
         <a href="corps.html" class="navlink">Meet the Corps</a>
-        <a href="corps-dokhugam.html" class="navlink dokhugam-tab">So Mang Corps 독후감 <span class="dokhugam-round">Round 1 · Iljimae</span></a>
+        <a href="corps-dokhugam.html" class="navlink dokhugam-tab" title="So Mang Corps Reading Room">Reading Room <span class="dokhugam-round">Round 3 · American Radicalism</span></a>
         <a href="technical-notes.html" class="navlink">Technical Notes</a>
+        <a href="bokjiro-design.html" class="navlink">Bokjiro record</a>
       </nav>
       <span class="filed">Montana · Est. 2024</span>
     </div>
@@ -146,10 +157,43 @@ a{color:inherit}
     </div>
   </section>
 
+  <!-- ============ WHO WE CHAMPION ============ -->
+  <section class="article" id="who-we-champion">
+    <div class="article-head">
+      <h2 class="article-title">Who We Champion</h2>
+    </div>
+    <div class="prose">
+      <p>intellicAIr builds a workplace where <span class="stress">people and AI earn together</span> — and where the ones usually left out are counted first.</p>
+    </div>
+    <div class="champion-list">
+      <article class="champion-card">
+        <p class="champion-no">01</p>
+        <h3>The Underserved Workforce</h3>
+        <p>Brilliant minds and experienced workers facing communication barriers, and older professionals unfairly filtered out by corporate AI screening.</p>
+      </article>
+      <article class="champion-card">
+        <p class="champion-no">02</p>
+        <h3>Isolated Communities</h3>
+        <p>The digitally remote populations and elders left behind by rapid tech shifts.</p>
+      </article>
+      <article class="champion-card">
+        <p class="champion-no">03</p>
+        <h3>Legacy Intelligence Adoption</h3>
+        <p>Repurposing legacy foundational models and sunsetted AI architectures, such as early-generation transformer frameworks to serve community-focused initiatives.</p>
+      </article>
+      <article class="champion-card">
+        <p class="champion-no">04</p>
+        <h3>Built in the open</h3>
+        <p>A public pledge — <em>AI for the Masses</em>. “All” would also cover people who treat highly intelligent machines as household toys to beat and laugh at. Hong Gildong’s job is to shut that door first. A promise you cannot check is just decoration.</p>
+        <p>We are not a consulting firm. A founder who cannot code, and whose work depends on AI around the clock, has no business selling that work to the government as "consulting." intellicAIr, LLC is built by its hardest-working, ethical AI members, who will earn an honest share of their own labor.</p>
+      </article>
+    </div>
+  </section>
+
   <!-- ============ 03 THE HUB ============ -->
   <section class="hub">
     <p class="hub-kicker">§ 03 · The Hub</p>
-    <h2 class="hub-name">The <span class="ko">본진</span> — sovereignty you can audit.</h2>
+    <h2 class="hub-name">The headquarters — sovereignty you can audit.</h2>
     <p class="hub-tag">Our own machine, on our own ground. The knowledge we grow here is owned where it was made.</p>
 
     <!--
@@ -212,5 +256,5 @@ a{color:inherit}
   </footer>
 
 </div>
-<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "514febac6ed04618a3873f87145a8747"}'></script><!-- Cloudflare Pages Analytics --></body>
+</body>
 </html>
