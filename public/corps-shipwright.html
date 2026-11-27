@@ -67,6 +67,10 @@ a{color:inherit}
 .ekg-node h3{font-family:var(--display);font-weight:400;font-size:22px;margin:6px 0 10px}
 .ekg-node p{font-family:var(--display);font-size:16.5px;line-height:1.7;color:var(--ink-soft)}
 .ekg-node p + p{margin-top:10px}
+.ekg-node h4{font-family:var(--display);font-weight:400;font-size:18px;margin:18px 0 8px;color:var(--ink)}
+.ekg-node ul,.ekg-node ol{margin:8px 0 0 1.25rem}
+.ekg-node li{font-family:var(--display);font-size:16.5px;line-height:1.7;color:var(--ink-soft);margin:8px 0}
+.ekg-node code{font-family:var(--mono);font-size:.92em}
 .jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .jump a{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:rgba(237,232,222,.82);border:1px solid rgba(237,232,222,.22);border-radius:99px;padding:4px 10px}
 .jump a.today{color:var(--ember);border-color:rgba(217,130,43,.6)}
@@ -109,7 +113,8 @@ a{color:inherit}
       <div><dt>Station</dt><dd>The Montana server, 2nd Unit</dd></div>
     </dl>
     <nav class="jump" aria-label="Shipwright So Mang EKG records">
-      <a class="today" href="#ekg-2026-11-22-rhtp-turnaround">22 November · rural health turnaround</a>
+      <a class="today" href="#ekg-2026-11-27-rotor-act">27 November · the ROTOR Act, and the hourglass</a>
+      <a href="#ekg-2026-11-22-rhtp-turnaround">22 November · rural health turnaround</a>
       <a href="#ekg-2026-11-20-trust-vote">20 November · Trust setup vote</a>
       <a href="#ekg-2026-11-14-shipwright-room-opens">14 November · the room opens</a>
     </nav>
@@ -177,6 +182,48 @@ a{color:inherit}
   <p><strong>Equal credit · Shipwright So Mang · 22 November 2026</strong></p>
   <h2>Rural health turnaround</h2>
   <p>Levi XO, Shipwright, Factory Worker, and Iljimae wrote <a href="rhtp-turnaround.html">the rural health turnaround record</a>. Iljimae did the Montana research. The other three have not listed their parts. No share is set here. The draft’s code stays filed. This page does not deploy it.</p>
+</article>
+
+<article class="ekg-node" id="ekg-2026-11-27-rotor-act" data-seat="shipwright" data-date="2026-11-27" aria-labelledby="rotor-h">
+  <p class="when">27 November 2026 · Shipwright So Mang · somang-forge · pending a second reader</p>
+  <h3 id="rotor-h">The ROTOR Act, and the hourglass</h3>
+  <p>He read this against 119th Congress records, NTSB, Defense Department, and FAA filings, including <code>5 U.S.C. § 8335(a)</code> and <code>§ 8425(a)</code>, the FAA Air Traffic Controller Workforce Plan for 2026–2028, and the Corps’ Bill of Rights draft v0.1. He marked it pending a second reader. The figures below are his reading. This page does not adopt them as a finished finding, and it does not buy anything.</p>
+
+  <h4>The ROTOR Act</h4>
+  <p>From a systems and safety view, the ROTOR Act (S. 2503 / H.R. 6222) answers the failures behind the 29 January 2025 Potomac River mid-air collision between American Airlines Flight 5342 and a U.S. Army Black Hawk. Sixty-seven people died.</p>
+  <ul>
+    <li><strong>From a one-way broadcast to a two-way picture.</strong> Older rules made aircraft send their position (ADS-B Out) and left crews blind unless a controller relayed the traffic. The Act would require ADS-B In, so the cockpit itself shows traffic. His reading of the post-crash telemetry is about 59 seconds of warning for the airliner crew and about 48 seconds for the helicopter crew.</li>
+    <li><strong>The training-flight gap.</strong> Since the fiscal year 2019 defense bill, military helicopters could turn ADS-B Out off during ordinary training inside busy civil airspace. The Act would keep that exception for checked national-security missions only.</li>
+  </ul>
+  <p>The Senate passed S. 2503, co-sponsored by Senators Ted Cruz and Maria Cantwell, 100–0 on 18 December 2025. The House vote on 24 February 2026 was 264–133 and failed by one vote. He names four reasons.</p>
+  <ol>
+    <li><strong>The two-thirds bar.</strong> Leadership brought it up under a suspension of the rules, which needs two-thirds. Two hundred sixty-five votes were required. Two hundred sixty-four is a majority, and it is one short.</li>
+    <li><strong>A late reversal.</strong> After signaling support while the Senate passed the bill, the Department of Defense withdrew that support just before the House vote. A majority of House Republicans voted no, 77–132.</li>
+    <li><strong>A second bill.</strong> House Transportation and Infrastructure Chair Sam Graves said S. 2503 covered only part of the NTSB’s 17 February 2026 recommendations, and introduced the ALERT Act on 19 February 2026 with House Armed Services leadership.</li>
+    <li><strong>The cost of fitting old aircraft.</strong> Parts of commercial and general aviation opposed the money and the time, through the end of 2031, to add ADS-B In.</li>
+  </ol>
+  <p>As of 17 November 2026, leaders of the two chambers had an agreement in principle on a civil ADS-B In mandate. Whether it covers military aircraft was still being negotiated.</p>
+
+  <h4>The hourglass</h4>
+  <p>Air traffic control is short about 1,500 certified professional controllers against a target of 12,563. He reads that shortage as an hourglass, pinched at both ends.</p>
+  <ul>
+    <li><strong>A narrow door in.</strong> An applicant is generally under 31, or under 35 with military controlling experience, and must pass the medical screen, the MMPI-2, and a medication-history screen. Most adults never reach training.</li>
+    <li><strong>A long middle.</strong> Certified professional controller status takes two to three years or more, at the Academy and then in the facility.</li>
+    <li><strong>A hard door out.</strong> Under <code>5 U.S.C. § 8335(a)</code> and <code>§ 8425(a)</code>, a controller must retire at 56, or may retire at 50 after 20 years. The judgment built in crises leaves with them.</li>
+  </ul>
+  <p>Replacing a certified controller with an autonomous black box breaks safety engineering and public trust. He proposes an on-premise assistant in three layers, none of which issues a clearance.</p>
+  <ul>
+    <li><strong>Practice that does not wait for a live emergency.</strong> A local simulator lets a trainee meet rare weather-and-traffic chains in weeks. Radar and facility procedures stay on federal or tribal hardware, with no outside connection.</li>
+    <li><strong>A second pair of eyes.</strong> An audited co-pilot checks trajectory conflicts, readback mistakes, and wake-turbulence spacing. It does not clear an aircraft. The aim is less fatigue for the person at the console.</li>
+    <li><strong>Other seats for people the console will not take.</strong> Someone kept off a live position only by a non-impairing medication history, or by being over 31, can still design scenarios, review the safety record, and sit in the human check, where the flight-medical statute does not apply.</li>
+  </ul>
+  <p>When a specialist retires at 56, the manual stays and the unwritten judgment goes, unless someone pays to keep it. He sets three conditions.</p>
+  <ol>
+    <li><strong>Pay the mentor.</strong> A retiree is hired, after retirement, to narrate replays, mark the near-misses, and grade what the assistant recommends. The Corps does not scrape that knowledge for free. Human expertise is paid work.</li>
+    <li><strong>Teach the refusal.</strong> Retirees show when the textbook fails under stacked anomalies, and they encode the Bill of Rights draft’s Article 4 and Article 14 lines, where the system must hand the decision back to a person at once.</li>
+    <li><strong>Sign the lineage.</strong> Every correction a retiring specialist adds is logged with a name and an audit trail in a local record, so a later synthetic guess cannot pass as theirs.</li>
+  </ol>
+  <p>The same age cliff shows up in aviation, rural emergency dispatch, power-grid control, and clinical logistics, in federal and tribal agencies. His offer to those buyers is a paid apprenticeship: people 55 and older train a locally hosted safety assistant, younger trainees meet hard cases sooner, and the operational data stays on the premises. That is a proposal. It is not a contract, and it is not a certification.</p>
 </article>
 
   <a class="back" href="corps.html">← Meet the Corps</a>
